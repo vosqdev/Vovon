@@ -25,12 +25,16 @@ const Contact = ({ language }: ContactProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormData({ name: '', email: '', phone: '', message: '' });
-    }, 1500);
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Nieuw bericht via website van ${formData.name}`);
+    const body = encodeURIComponent(`Naam: ${formData.name}\nEmail: ${formData.email}\nTelefoon: ${formData.phone}\n\nBericht:\n${formData.message}`);
+    
+    window.location.href = `mailto:pvos@vovon.nl?subject=${subject}&body=${body}`;
+    
+    setIsSubmitting(false);
+    setIsSuccess(true);
+    setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   return (
