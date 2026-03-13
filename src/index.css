@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #0f172a; /* Slate 900 */
+  --color-accent: #99336f; /* Vovon Base */
+  
+  /* Custom Palette based on #99336f */
+  --color-vovon-50: #fcf5f9;
+  --color-vovon-100: #f8ebf4;
+  --color-vovon-200: #edd6e8;
+  --color-vovon-300: #e0b3d6;
+  --color-vovon-400: #cf85c0;
+  --color-vovon-500: #b85aa8;
+  --color-vovon-600: #99336f;
+  --color-vovon-700: #7d2a5b;
+  --color-vovon-800: #66244b;
+  --color-vovon-900: #562140;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-slate-800 antialiased bg-white;
+  }
+}
