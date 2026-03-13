@@ -36,8 +36,8 @@ export const translations = {
     stats: {
       years: 'Years Experience',
       projects: 'Projects Completed',
-      energy: 'MW Energy Realized',
-      hectares: 'Hectares Developed',
+      energy: 'Megawatt Energy',
+      objects: 'Real Estate Objects',
     },
     process: {
       title: 'Our Working Method',
@@ -150,8 +150,8 @@ export const translations = {
     stats: {
       years: 'Jaren Ervaring',
       projects: 'Projecten Afgerond',
-      energy: 'MW Energie Gerealiseerd',
-      hectares: 'Hectares Ontwikkeld',
+      energy: 'Megawatt Energie',
+      objects: 'Vastgoed Objecten',
     },
     process: {
       title: 'Onze Werkwijze',

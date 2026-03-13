@@ -23,8 +23,8 @@ const About = ({ language }: AboutProps) => {
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://picsum.photos/seed/meeting_business/800/600"
-                alt="Team Meeting"
+                src="https://image2url.com/r2/default/images/1773423835376-e9d86027-8602-4ed3-af9f-708981dab43d.png"
+                alt="Patrick Vos"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -33,7 +33,11 @@ const About = ({ language }: AboutProps) => {
             {/* Founder Card */}
             <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 max-w-xs">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold">PV</div>
+                <img 
+                  src="https://image2url.com/r2/default/images/1773423835376-e9d86027-8602-4ed3-af9f-708981dab43d.png" 
+                  alt="Patrick Vos" 
+                  className="w-10 h-10 rounded-full object-cover border border-slate-200"
+                />
                 <div>
                   <p className="text-sm font-bold text-slate-900">Patrick Vos</p>
                   <p className="text-xs text-slate-500">{t.founderRole}</p>
