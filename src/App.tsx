@@ -9,6 +9,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Stats from './components/Stats';
 import Process from './components/Process';
+import ImageDivider from './components/ImageDivider';
 import Services from './components/Services';
 import AIData from './components/AIData';
 import References from './components/References';
@@ -26,6 +27,7 @@ export default function App() {
       <About language={language} />
       <Stats language={language} />
       <Process language={language} />
+      <ImageDivider />
       <Services language={language} />
       <AIData language={language} />
       <References language={language} />
