@@ -45,7 +45,7 @@ const Footer = ({ language }: FooterProps) => {
           <div>
             <h4 className="text-white font-semibold mb-4 uppercase tracking-wider text-sm">{t.connect}</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/patrick-vos-49527726/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
               </a>
               <a href="#" className="text-slate-400 hover:text-white transition-colors">
