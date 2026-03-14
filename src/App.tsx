@@ -15,6 +15,7 @@ import AIData from './components/AIData';
 import References from './components/References';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
 import { Language } from './translations';
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
       <References language={language} />
       <Contact language={language} />
       <Footer language={language} />
+      <CookieBanner />
     </div>
   );
 }
