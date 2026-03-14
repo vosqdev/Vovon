@@ -17,7 +17,7 @@ import Footer from './components/Footer';
 import { Language } from './translations';
 
 export default function App() {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>('nl');
 
   return (
     <div className="min-h-screen bg-white">

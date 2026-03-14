@@ -32,9 +32,9 @@ const References = ({ language }: ReferencesProps) => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <span className="h-px w-8 bg-purple-500"></span>
-            <span className="text-purple-600 font-semibold tracking-wider uppercase text-sm">{t.label}</span>
-            <span className="h-px w-8 bg-purple-500"></span>
+            <span className="h-px w-8 bg-vovon-500"></span>
+            <span className="text-vovon-600 font-semibold tracking-wider uppercase text-sm">{t.label}</span>
+            <span className="h-px w-8 bg-vovon-500"></span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t.title}</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -58,7 +58,7 @@ const References = ({ language }: ReferencesProps) => {
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-purple-700 uppercase tracking-wide flex items-center gap-1">
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-vovon-700 uppercase tracking-wide flex items-center gap-1">
                   <project.icon className="w-3 h-3" />
                   {project.category}
                 </div>
@@ -68,7 +68,7 @@ const References = ({ language }: ReferencesProps) => {
                   <MapPin className="w-4 h-4 mr-1" />
                   {project.location}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-purple-600 transition-colors">
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-vovon-600 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
@@ -84,7 +84,7 @@ const References = ({ language }: ReferencesProps) => {
              href="https://earth.google.com/earth/d/1hI_ZGbVZ9iA3BwuzB0XBQ_uUNUbEqJ7N?usp=sharing" 
              target="_blank" 
              rel="noopener noreferrer"
-             className="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors"
+             className="inline-flex items-center text-vovon-600 font-semibold hover:text-vovon-700 transition-colors"
            >
              {t.googleEarth}
              <MapPin className="ml-2 w-4 h-4" />

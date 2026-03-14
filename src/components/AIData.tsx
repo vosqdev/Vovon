@@ -19,7 +19,7 @@ const AIData = ({ language }: AIDataProps) => {
     <section id="ai-data" className="py-20 bg-slate-900 text-white relative overflow-hidden">
       {/* Abstract Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-500 rounded-full blur-[100px]" />
+        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-vovon-500 rounded-full blur-[100px]" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500 rounded-full blur-[100px]" />
       </div>
 
@@ -31,12 +31,12 @@ const AIData = ({ language }: AIDataProps) => {
             viewport={{ once: true }}
           >
             <div className="flex items-center space-x-2 mb-4">
-              <span className="h-px w-8 bg-purple-400"></span>
-              <span className="text-purple-400 font-semibold tracking-wider uppercase text-sm">{t.label}</span>
+              <span className="h-px w-8 bg-vovon-400"></span>
+              <span className="text-vovon-400 font-semibold tracking-wider uppercase text-sm">{t.label}</span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
               {t.title} <br />
-              <span className="text-purple-400">{t.titleHighlight}</span>
+              <span className="text-vovon-400">{t.titleHighlight}</span>
             </h2>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
               {t.description}
@@ -46,7 +46,7 @@ const AIData = ({ language }: AIDataProps) => {
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="bg-slate-800 p-3 rounded-lg border border-slate-700">
-                    <feature.icon className="w-6 h-6 text-purple-400" />
+                    <feature.icon className="w-6 h-6 text-vovon-400" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">{feature.title}</h3>
@@ -74,7 +74,7 @@ const AIData = ({ language }: AIDataProps) => {
                 <div className="w-full max-w-sm bg-slate-900/80 backdrop-blur-md rounded-xl p-6 border border-slate-700 shadow-2xl">
                    <div className="flex items-center justify-between mb-4">
                      <div className="h-3 w-24 bg-slate-700 rounded"></div>
-                     <div className="h-3 w-8 bg-purple-500 rounded"></div>
+                     <div className="h-3 w-8 bg-vovon-500 rounded"></div>
                    </div>
                    <div className="space-y-2">
                      <div className="h-2 w-full bg-slate-700/50 rounded"></div>

@@ -67,7 +67,7 @@ const Stats = ({ language }: StatsProps) => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="p-6"
             >
-              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-vovon-400 mb-2">
                 <AnimatedCounter value={stat.value} />
               </div>
               <div className="text-sm md:text-base text-slate-400 uppercase tracking-wider font-medium">

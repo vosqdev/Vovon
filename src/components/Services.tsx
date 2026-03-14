@@ -25,9 +25,9 @@ const Services = ({ language }: ServicesProps) => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <span className="h-px w-8 bg-purple-500"></span>
-            <span className="text-purple-600 font-semibold tracking-wider uppercase text-sm">{t.label}</span>
-            <span className="h-px w-8 bg-purple-500"></span>
+            <span className="h-px w-8 bg-vovon-500"></span>
+            <span className="text-vovon-600 font-semibold tracking-wider uppercase text-sm">{t.label}</span>
+            <span className="h-px w-8 bg-vovon-500"></span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t.title}</h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -45,8 +45,8 @@ const Services = ({ language }: ServicesProps) => {
               transition={{ delay: index * 0.1 }}
               className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group"
             >
-              <div className="w-14 h-14 bg-purple-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors duration-300">
-                <service.icon className="w-7 h-7 text-purple-600 group-hover:text-white transition-colors duration-300" />
+              <div className="w-14 h-14 bg-vovon-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-vovon-600 transition-colors duration-300">
+                <service.icon className="w-7 h-7 text-vovon-600 group-hover:text-white transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
               <p className="text-slate-600 leading-relaxed">{service.description}</p>

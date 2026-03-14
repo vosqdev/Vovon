@@ -58,7 +58,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-purple-500 ${
+                className={`text-sm font-medium transition-colors hover:text-vovon-500 ${
                   scrolled ? 'text-slate-700' : 'text-white/90'
                 }`}
               >
@@ -69,7 +69,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
             {/* Language Switcher */}
             <button
               onClick={toggleLanguage}
-              className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-purple-500 ${
+              className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-vovon-500 ${
                 scrolled ? 'text-slate-700' : 'text-white/90'
               }`}
             >
@@ -81,7 +81,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
               href="#contact"
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                 scrolled
-                  ? 'bg-purple-600 text-white hover:bg-purple-700'
+                  ? 'bg-vovon-600 text-white hover:bg-vovon-700'
                   : 'bg-white text-slate-900 hover:bg-slate-100'
               }`}
             >
@@ -127,7 +127,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-4 text-base font-medium text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-md border-b border-slate-100 last:border-0"
+                  className="block px-3 py-4 text-base font-medium text-slate-700 hover:text-vovon-600 hover:bg-slate-50 rounded-md border-b border-slate-100 last:border-0"
                 >
                   {link.name}
                 </a>

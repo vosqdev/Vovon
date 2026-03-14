@@ -26,19 +26,19 @@ const Footer = ({ language }: FooterProps) => {
           <div>
             <h4 className="text-white font-semibold mb-4 uppercase tracking-wider text-sm">{t.navigation}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#home" className="hover:text-purple-400 transition-colors">{navT.home}</a></li>
-              <li><a href="#about" className="hover:text-purple-400 transition-colors">{navT.about}</a></li>
-              <li><a href="#services" className="hover:text-purple-400 transition-colors">{navT.services}</a></li>
-              <li><a href="#projects" className="hover:text-purple-400 transition-colors">{navT.references}</a></li>
+              <li><a href="#home" className="hover:text-vovon-400 transition-colors">{navT.home}</a></li>
+              <li><a href="#about" className="hover:text-vovon-400 transition-colors">{navT.about}</a></li>
+              <li><a href="#services" className="hover:text-vovon-400 transition-colors">{navT.services}</a></li>
+              <li><a href="#projects" className="hover:text-vovon-400 transition-colors">{navT.references}</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-semibold mb-4 uppercase tracking-wider text-sm">{t.legal}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-purple-400 transition-colors">{t.privacy}</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors">{t.terms}</a></li>
-              <li><a href="#" className="hover:text-purple-400 transition-colors">{t.cookies}</a></li>
+              <li><a href="#" className="hover:text-vovon-400 transition-colors">{t.privacy}</a></li>
+              <li><a href="#" className="hover:text-vovon-400 transition-colors">{t.terms}</a></li>
+              <li><a href="#" className="hover:text-vovon-400 transition-colors">{t.cookies}</a></li>
             </ul>
           </div>
 

@@ -23,7 +23,7 @@ const About = ({ language }: AboutProps) => {
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://image2url.com/r2/default/images/1773423835376-e9d86027-8602-4ed3-af9f-708981dab43d.png"
+                src="https://image2url.com/r2/default/images/1773422002697-cfa20699-a82f-4782-a119-fbd45eb805a7.png"
                 alt="Patrick Vos"
                 className="w-full h-full object-cover"
               />
@@ -34,7 +34,7 @@ const About = ({ language }: AboutProps) => {
             <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 max-w-xs">
               <div className="flex items-center space-x-3">
                 <img 
-                  src="https://image2url.com/r2/default/images/1773423835376-e9d86027-8602-4ed3-af9f-708981dab43d.png" 
+                  src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" 
                   alt="Patrick Vos" 
                   className="w-10 h-10 rounded-full object-cover border border-slate-200"
                 />
@@ -54,11 +54,11 @@ const About = ({ language }: AboutProps) => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="flex items-center space-x-2 mb-4">
-              <span className="h-px w-8 bg-purple-500"></span>
-              <span className="text-purple-600 font-semibold tracking-wider uppercase text-sm">{t.label}</span>
+              <span className="h-px w-8 bg-vovon-500"></span>
+              <span className="text-vovon-600 font-semibold tracking-wider uppercase text-sm">{t.label}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
-              {t.title} <span className="text-purple-600">{t.titleHighlight}</span>
+              {t.title} <span className="text-vovon-600">{t.titleHighlight}</span>
             </h2>
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
               {t.description1}
@@ -70,7 +70,7 @@ const About = ({ language }: AboutProps) => {
             <ul className="space-y-4">
               {t.expertise.map((item, index) => (
                 <li key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="text-purple-600 w-5 h-5 flex-shrink-0" />
+                  <CheckCircle className="text-vovon-600 w-5 h-5 flex-shrink-0" />
                   <span className="text-base text-slate-800 font-medium">{item}</span>
                 </li>
               ))}

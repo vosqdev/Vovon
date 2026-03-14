@@ -12,8 +12,8 @@ export const translations = {
       cta: 'Get in Touch',
     },
     hero: {
-      title: 'Connect. Innovate.',
-      subtitle: 'Organize.',
+      title: 'Connect. Organize.',
+      subtitle: 'Innovate.',
       description: 'The place where real estate and energy transition come together. We bridge the gap between sustainable ambitions and practical realization.',
       ctaPrimary: 'Get in Touch',
       ctaSecondary: 'Our Expertise',
@@ -24,7 +24,7 @@ export const translations = {
       titleHighlight: 'Carbon Zero',
       description1: 'At VOVON, we specialize in the intersection of real estate and energy transition. We take control of complex development processes, ensuring that ambitious sustainability goals like Net Zero 2050 are not just visions, but realized projects.',
       description2: "Whether it's directing stakeholders, managing permits, or integrating smart energy grids, we provide the leadership needed to succeed.",
-      founderRole: 'Founder & Lead Developer',
+      founderRole: 'Director & Owner',
       expertise: [
         'Net Zero 2050 Strategies',
         'Integrated Energy Systems',
@@ -57,12 +57,12 @@ export const translations = {
       title: 'Need a Hand? Call Us.',
       subtitle: 'We offer independent, all-round support for advice, interim management, and development.',
       items: [
-        { title: 'Independent Advisory', description: 'Unbiased strategic advice for landowners, municipalities, and developers.' },
-        { title: 'Project Development', description: 'Full-cycle development from initial concept to realization and operation.' },
+        { title: 'Independent Advisory', description: 'We combine market insight, area knowledge, and data-driven analyses to arrive at robust and future-proof solutions with unbiased strategic advice.' },
+        { title: 'Project Development', description: 'Integral development of real estate over the full lifecycle: from initial concept to planning, realization, and operation. In every phase, spatial quality, feasibility, executability, and added value are connected.' },
         { title: 'Energy Transition', description: 'Integrating sustainable energy solutions into real estate projects.' },
-        { title: 'Interim Management', description: 'Temporary leadership to guide projects through critical phases.' },
+        { title: 'Interim Management', description: 'Through a structured approach and collaboration with partners in design, construction, energy, and operation, we translate ideas into concrete projects.' },
         { title: 'Strategic Roles', description: 'Taking on key roles to align stakeholders and drive progress.' },
-        { title: 'Area Development', description: 'Holistic planning for residential, commercial, and social real estate.' },
+        { title: 'Area Development', description: 'Through our integrated approach, we not only create a more efficient use of space and infrastructure, but also a resilient environment prepared for the challenges of tomorrow.' },
       ],
     },
     aiData: {
@@ -126,8 +126,8 @@ export const translations = {
       cta: 'Neem contact op',
     },
     hero: {
-      title: 'Verbinden. Vernieuwen.',
-      subtitle: 'Organiseren.',
+      title: 'Verbinden. Organiseren.',
+      subtitle: 'Vernieuwen.',
       description: 'Dé plek waar vastgoed en energietransitie samenkomen. Wij slaan de brug tussen duurzame ambities en praktische realisatie.',
       ctaPrimary: 'Neem contact op',
       ctaSecondary: 'Onze Expertise',
@@ -138,7 +138,7 @@ export const translations = {
       titleHighlight: 'Carbon Zero',
       description1: 'Bij VOVON zijn we gespecialiseerd in het snijvlak van vastgoed en energietransitie. Wij nemen de regie over complexe ontwikkelprocessen en zorgen ervoor dat ambitieuze duurzaamheidsdoelen zoals Net Zero 2050 geen visie blijven, maar gerealiseerde projecten worden.',
       description2: "Of het nu gaat om het aansturen van stakeholders, het beheren van vergunningen of het integreren van slimme energienetten, wij bieden het leiderschap dat nodig is om te slagen.",
-      founderRole: 'Oprichter & Lead Developer',
+      founderRole: 'Directeur & eigenaar',
       expertise: [
         'Net Zero 2050 Strategieën',
         'Geïntegreerde Energiesystemen',
@@ -171,12 +171,12 @@ export const translations = {
       title: 'Een handje nodig? Bel ons.',
       subtitle: 'Wij bieden onafhankelijke, allround ondersteuning voor advies, interim management en ontwikkeling.',
       items: [
-        { title: 'Onafhankelijk Advies', description: 'Onbevooroordeeld strategisch advies voor grondeigenaren, gemeenten en ontwikkelaars.' },
-        { title: 'Projectontwikkeling', description: 'Volledige cyclusontwikkeling van initieel concept tot realisatie en exploitatie.' },
+        { title: 'Onafhankelijk Advies', description: 'Daarbij combineren we marktinzicht, gebiedskennis en datagedreven analyses om tot robuuste en toekomstbestendige oplossingen te komen met onbevooroordeeld strategisch advies.' },
+        { title: 'Projectontwikkeling', description: 'Integrale ontwikkeling van vastgoed over de volledige levenscyclus: van eerste concept tot planvorming, realisatie en exploitatie. In elke fase worden ruimtelijke kwaliteit, haalbaarheid, uitvoerbaarheid en meerwaarde met elkaar verbonden.' },
         { title: 'Energietransitie', description: 'Integratie van duurzame energieoplossingen in vastgoedprojecten.' },
-        { title: 'Interim Management', description: 'Tijdelijk leiderschap om projecten door kritieke fasen te loodsen.' },
+        { title: 'Interim Management', description: 'Door een gestructureerde aanpak en samenwerking met partners in ontwerp, bouw, energie en exploitatie vertalen wij ideeën naar concrete projecten.' },
         { title: 'Strategische Rollen', description: 'Sleutelrollen vervullen om stakeholders op één lijn te krijgen en voortgang te boeken.' },
-        { title: 'Gebiedsontwikkeling', description: 'Holistische planning voor residentieel, commercieel en maatschappelijk vastgoed.' },
+        { title: 'Gebiedsontwikkeling', description: 'Door onze integrale benadering ontstaat niet alleen een efficiënter gebruik van ruimte en infrastructuur, maar ook een veerkrachtige omgeving die voorbereid is op de uitdagingen van morgen.' },
       ],
     },
     aiData: {

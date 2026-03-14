@@ -44,8 +44,8 @@ const Process = ({ language }: ProcessProps) => {
                 transition={{ delay: index * 0.1 }}
                 className="flex flex-col items-center group"
               >
-                <div className="w-16 h-16 rounded-full bg-white border-4 border-purple-100 flex items-center justify-center mb-4 shadow-sm group-hover:border-purple-500 transition-colors duration-300 z-10">
-                  <step.icon className="w-8 h-8 text-purple-600" />
+                <div className="w-16 h-16 rounded-full bg-white border-4 border-vovon-100 flex items-center justify-center mb-4 shadow-sm group-hover:border-vovon-500 transition-colors duration-300 z-10">
+                  <step.icon className="w-8 h-8 text-vovon-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">{step.title}</h3>
                 <p className="text-sm text-slate-500">{step.description}</p>

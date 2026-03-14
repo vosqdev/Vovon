@@ -14,7 +14,7 @@ const Hero = ({ language }: HeroProps) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://image2url.com/r2/default/images/1773422002697-cfa20699-a82f-4782-a119-fbd45eb805a7.png"
+          src="https://image2url.com/r2/default/images/1773423835376-e9d86027-8602-4ed3-af9f-708981dab43d.png"
           alt="Modern Architecture"
           className="w-full h-full object-cover"
         />
@@ -30,7 +30,7 @@ const Hero = ({ language }: HeroProps) => {
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight mb-6">
             {t.title} <br className="hidden md:block" />
-            <span className="text-purple-400">{t.subtitle}</span>
+            <span className="text-vovon-400">{t.subtitle}</span>
           </h1>
         </motion.div>
 
@@ -52,7 +52,7 @@ const Hero = ({ language }: HeroProps) => {
         >
           <a
             href="#contact"
-            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-purple-600 hover:bg-purple-700 transition-all shadow-lg hover:shadow-purple-500/30"
+            className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-vovon-600 hover:bg-vovon-700 transition-all shadow-lg hover:shadow-vovon-500/30"
           >
             {t.ctaPrimary}
             <ArrowRight className="ml-2 h-5 w-5" />

@@ -54,30 +54,30 @@ const Contact = ({ language }: ContactProps) => {
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="bg-purple-100 p-3 rounded-full">
-                  <Mail className="w-6 h-6 text-purple-600" />
+                <div className="bg-vovon-100 p-3 rounded-full">
+                  <Mail className="w-6 h-6 text-vovon-600" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900">Email</h3>
-                  <a href="mailto:pvos@vovon.nl" className="text-slate-600 hover:text-purple-600 transition-colors">
+                  <a href="mailto:pvos@vovon.nl" className="text-slate-600 hover:text-vovon-600 transition-colors">
                     pvos@vovon.nl
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="bg-purple-100 p-3 rounded-full">
-                  <Phone className="w-6 h-6 text-purple-600" />
+                <div className="bg-vovon-100 p-3 rounded-full">
+                  <Phone className="w-6 h-6 text-vovon-600" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900">Phone</h3>
-                  <a href="tel:+31611692001" className="text-slate-600 hover:text-purple-600 transition-colors">
+                  <a href="tel:+31611692001" className="text-slate-600 hover:text-vovon-600 transition-colors">
                     +31 6 116 92 001
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="bg-purple-100 p-3 rounded-full">
-                  <MapPin className="w-6 h-6 text-purple-600" />
+                <div className="bg-vovon-100 p-3 rounded-full">
+                  <MapPin className="w-6 h-6 text-vovon-600" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900">Office</h3>
@@ -100,14 +100,14 @@ const Contact = ({ language }: ContactProps) => {
           >
             {isSuccess ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                  <Send className="w-8 h-8 text-purple-600" />
+                <div className="w-16 h-16 bg-vovon-100 rounded-full flex items-center justify-center mb-4">
+                  <Send className="w-8 h-8 text-vovon-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">{t.form.successTitle}</h3>
                 <p className="text-slate-600">{t.form.successMessage}</p>
                 <button 
                   onClick={() => setIsSuccess(false)}
-                  className="mt-6 text-purple-600 font-medium hover:underline"
+                  className="mt-6 text-vovon-600 font-medium hover:underline"
                 >
                   {t.form.sendAnother}
                 </button>
@@ -125,7 +125,7 @@ const Contact = ({ language }: ContactProps) => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors outline-none"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-vovon-500 focus:border-vovon-500 transition-colors outline-none"
                     placeholder="John Doe"
                   />
                 </div>
@@ -140,7 +140,7 @@ const Contact = ({ language }: ContactProps) => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors outline-none"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-vovon-500 focus:border-vovon-500 transition-colors outline-none"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -154,7 +154,7 @@ const Contact = ({ language }: ContactProps) => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors outline-none"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-vovon-500 focus:border-vovon-500 transition-colors outline-none"
                     placeholder="+31 6 12345678"
                   />
                 </div>
@@ -169,14 +169,14 @@ const Contact = ({ language }: ContactProps) => {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors outline-none resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-vovon-500 focus:border-vovon-500 transition-colors outline-none resize-none"
                     placeholder="How can we help you?"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all ${
+                  className={`w-full flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-lg text-white bg-vovon-600 hover:bg-vovon-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-vovon-500 transition-all ${
                     isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
                   }`}
                 >
