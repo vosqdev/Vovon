@@ -1,12 +1,19 @@
+import { useState } from 'react';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 import { Language, translations } from '../translations';
 import { Logo } from './Logo';
+import PrivacyPolicyModal from './PrivacyPolicyModal';
+import DisclaimerModal from './DisclaimerModal';
+import TermsModal from './TermsModal';
 
 interface FooterProps {
   language: Language;
 }
 
 const Footer = ({ language }: FooterProps) => {
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+  const [isDisclaimerModalOpen, setIsDisclaimerModalOpen] = useState(false);
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
   const t = translations[language].footer;
   const navT = translations[language].nav;
 
@@ -36,9 +43,10 @@ const Footer = ({ language }: FooterProps) => {
           <div>
             <h4 className="text-white font-semibold mb-4 uppercase tracking-wider text-sm">{t.legal}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-vovon-400 transition-colors">{t.privacy}</a></li>
-              <li><a href="#" className="hover:text-vovon-400 transition-colors">{t.terms}</a></li>
-              <li><a href="#" className="hover:text-vovon-400 transition-colors">{t.cookies}</a></li>
+              <li><button onClick={() => setIsPrivacyModalOpen(true)} className="hover:text-vovon-400 transition-colors">{t.privacy}</button></li>
+              <li><button onClick={() => setIsDisclaimerModalOpen(true)} className="hover:text-vovon-400 transition-colors">{t.terms}</button></li>
+              <li><button onClick={() => setIsPrivacyModalOpen(true)} className="hover:text-vovon-400 transition-colors">{t.cookies}</button></li>
+              <li><button onClick={() => setIsTermsModalOpen(true)} className="hover:text-vovon-400 transition-colors">{t.generalTerms}</button></li>
             </ul>
           </div>
 
@@ -66,6 +74,21 @@ const Footer = ({ language }: FooterProps) => {
           <p className="mt-2 md:mt-0">{t.design}</p>
         </div>
       </div>
+      
+      <PrivacyPolicyModal 
+        isOpen={isPrivacyModalOpen} 
+        onClose={() => setIsPrivacyModalOpen(false)} 
+      />
+      
+      <DisclaimerModal 
+        isOpen={isDisclaimerModalOpen} 
+        onClose={() => setIsDisclaimerModalOpen(false)} 
+      />
+      
+      <TermsModal 
+        isOpen={isTermsModalOpen} 
+        onClose={() => setIsTermsModalOpen(false)} 
+      />
     </footer>
   );
 };
