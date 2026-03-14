@@ -66,28 +66,11 @@ const AIData = ({ language }: AIDataProps) => {
           >
             <div className="aspect-square rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-800/50 backdrop-blur-sm">
               <img 
-                src="https://picsum.photos/seed/digital_data/800/800" 
-                alt="Data Visualization" 
-                className="w-full h-full object-cover opacity-60 mix-blend-overlay"
+                src="https://image2url.com/r2/default/images/1773485568786-ad452fe3-b05c-4b38-86b4-4d7cb83df5e0.png" 
+                alt="VOVON Innovation" 
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
-                <div className="w-full max-w-sm bg-slate-900/80 backdrop-blur-md rounded-xl p-6 border border-slate-700 shadow-2xl">
-                   <div className="flex items-center justify-between mb-4">
-                     <div className="h-3 w-24 bg-slate-700 rounded"></div>
-                     <div className="h-3 w-8 bg-vovon-500 rounded"></div>
-                   </div>
-                   <div className="space-y-2">
-                     <div className="h-2 w-full bg-slate-700/50 rounded"></div>
-                     <div className="h-2 w-5/6 bg-slate-700/50 rounded"></div>
-                     <div className="h-2 w-4/6 bg-slate-700/50 rounded"></div>
-                   </div>
-                   <div className="mt-6 grid grid-cols-3 gap-2">
-                      <div className="h-16 bg-slate-800 rounded border border-slate-700"></div>
-                      <div className="h-16 bg-slate-800 rounded border border-slate-700"></div>
-                      <div className="h-16 bg-slate-800 rounded border border-slate-700"></div>
-                   </div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>

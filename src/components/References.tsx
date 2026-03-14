@@ -10,9 +10,9 @@ const References = ({ language }: ReferencesProps) => {
   const t = translations[language].references;
   const icons = [Home, Briefcase, Landmark];
   const images = [
-    'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Woningbouw
-    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Commercieel
-    'https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Maatschappelijk
+    'https://image2url.com/r2/default/images/1773486303291-4b5d0c7c-73fc-450d-a3a6-af3d453b9801.jpg', // Woningbouw
+    'https://image2url.com/r2/default/images/1773486555578-377d9761-92ba-48dd-a277-d75832d29293.jpg', // Commercieel
+    'https://image2url.com/r2/default/images/1773486248281-c6331375-a2b8-4ae2-8340-1da59b26f36b.jpg', // Maatschappelijk
   ];
 
   const projects = t.items.map((item, index) => ({

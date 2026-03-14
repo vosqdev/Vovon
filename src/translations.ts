@@ -136,8 +136,8 @@ export const translations = {
       label: 'Over VOVON',
       title: 'De weg naar',
       titleHighlight: 'Carbon Zero',
-      description1: 'Bij VOVON zijn we gespecialiseerd in het snijvlak van vastgoed en energietransitie. Wij nemen de regie over complexe ontwikkelprocessen en zorgen ervoor dat ambitieuze duurzaamheidsdoelen zoals Net Zero 2050 geen visie blijven, maar gerealiseerde projecten worden.',
-      description2: "Of het nu gaat om het aansturen van stakeholders, het beheren van vergunningen of het integreren van slimme energienetten, wij bieden het leiderschap dat nodig is om te slagen.",
+      description1: 'Bij VOVON zijn we gespecialiseerd op het snijvlak van vastgoed en energietransitie. Wij nemen de regie over complexe ruimtelijke ontwikkelprocessen en zorgen ervoor dat ambitieuze duurzaamheidsdoelen zoals NetZero 2050 geen visie blijven, maar gerealiseerde projecten worden.',
+      description2: "Of het nu gaat om het aansturen van stakeholders, het managen van projecten of het integreren van slimme energienetten, wij bieden het leiderschap dat nodig is om te slagen.",
       founderRole: 'Directeur & eigenaar',
       expertise: [
         'Net Zero 2050 Strategieën',
@@ -173,9 +173,9 @@ export const translations = {
       items: [
         { title: 'Onafhankelijk Advies', description: 'Daarbij combineren we marktinzicht, gebiedskennis en datagedreven analyses om tot robuuste en toekomstbestendige oplossingen te komen met onbevooroordeeld strategisch advies.' },
         { title: 'Projectontwikkeling', description: 'Integrale ontwikkeling van vastgoed over de volledige levenscyclus: van eerste concept tot planvorming, realisatie en exploitatie. In elke fase worden ruimtelijke kwaliteit, haalbaarheid, uitvoerbaarheid en meerwaarde met elkaar verbonden.' },
-        { title: 'Energietransitie', description: 'Integratie van duurzame energieoplossingen in vastgoedprojecten.' },
+        { title: 'Energietransitie', description: 'Wij koppelen vastgoedontwikkeling aan oplossingen zoals lokale opwekking, energieopslag, slimme netten en laadinfrastructuur. Daarmee ontstaat een robuuste energievoorziening die inspeelt op netcongestie, elektrificatie van mobiliteit en de groeiende vraag naar duurzame energie.' },
         { title: 'Interim Management', description: 'Door een gestructureerde aanpak en samenwerking met partners in ontwerp, bouw, energie en exploitatie vertalen wij ideeën naar concrete projecten.' },
-        { title: 'Strategische Rollen', description: 'Sleutelrollen vervullen om stakeholders op één lijn te krijgen en voortgang te boeken.' },
+        { title: 'Strategische Rollen', description: 'Sleutelrollen vervullen om stakeholders, bouwers, ontwikkelaars, netbeheerders en gemeente op één lijn te krijgen en voortgang te boeken.' },
         { title: 'Gebiedsontwikkeling', description: 'Door onze integrale benadering ontstaat niet alleen een efficiënter gebruik van ruimte en infrastructuur, maar ook een veerkrachtige omgeving die voorbereid is op de uitdagingen van morgen.' },
       ],
     },
@@ -188,7 +188,7 @@ export const translations = {
         { title: 'Webapplicaties', description: 'Voor projectstructurering, monitoring, scenario-analyse en besluitvorming.' },
         { title: 'AI Tools', description: 'Voor dataverrijking, conceptontwikkeling, risicoanalyse en strategische modellering.' },
         { title: 'Dataverrijking', description: 'Combineren van diverse datasets voor dieper inzicht in locatiepotentieel.' },
-        { title: 'Visuele Modellering', description: 'Interactieve visuele tools om complexe scenario\'s te communiceren naar stakeholders.' },
+        { title: 'Visuele Modellering', description: 'Visuele tools gebruiken om te inspireren en te communiceren naar stakeholders.' },
       ],
     },
     references: {

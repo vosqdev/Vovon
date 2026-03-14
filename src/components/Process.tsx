@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Lightbulb, Target, Settings, FileCheck, DollarSign, Hammer, Activity } from 'lucide-react';
+import { Lightbulb, Target, Settings, FileCheck, Euro, Hammer, Activity } from 'lucide-react';
 import { Language, translations } from '../translations';
 
 interface ProcessProps {
@@ -8,7 +8,7 @@ interface ProcessProps {
 
 const Process = ({ language }: ProcessProps) => {
   const t = translations[language].process;
-  const icons = [Lightbulb, Target, Settings, FileCheck, DollarSign, Hammer, Activity];
+  const icons = [Lightbulb, Target, Settings, FileCheck, Euro, Hammer, Activity];
 
   const steps = t.steps.map((step, index) => ({
     ...step,
