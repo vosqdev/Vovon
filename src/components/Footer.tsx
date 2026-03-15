@@ -70,7 +70,7 @@ const Footer = ({ language }: FooterProps) => {
         </div>
         
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Vovon Real Estate & Energy. {t.rights}</p>
+          <p>&copy; {new Date().getFullYear()} VOVON. {t.rights}</p>
           <p className="mt-2 md:mt-0">{t.design}</p>
         </div>
       </div>
