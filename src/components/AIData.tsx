@@ -95,7 +95,7 @@ const AIData = ({ language }: AIDataProps) => {
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle2 className="w-5 h-5 text-vovon-400 shrink-0 mt-0.5" />
-                  <span className="text-sm font-medium text-slate-200">Quickscan tool Zon-Opslag-Laadplein</span>
+                  <span className="text-sm font-medium text-slate-200">Quickscan tool energieoplossingen (ook tijdelijk)</span>
                 </li>
               </ul>
             </motion.div>
