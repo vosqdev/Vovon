@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Cpu, Database, Layout, BarChart3 } from 'lucide-react';
+import { Cpu, Database, Layout, BarChart3, Zap, CheckCircle2 } from 'lucide-react';
 import { Language, translations } from '../translations';
 
 interface AIDataProps {
@@ -64,14 +64,41 @@ const AIData = ({ language }: AIDataProps) => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-800/50 backdrop-blur-sm">
+            <div className="aspect-square rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-800/50 backdrop-blur-sm relative">
               <img 
                 src="https://image2url.com/r2/default/images/1773485568786-ad452fe3-b05c-4b38-86b4-4d7cb83df5e0.png" 
                 alt="VOVON Innovation" 
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
             </div>
+
+            {/* Floating Highlight Card */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="absolute -bottom-6 -left-4 sm:-left-12 sm:bottom-12 bg-slate-800/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-vovon-500/30 max-w-sm z-20"
+            >
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-10 h-10 bg-vovon-500/20 rounded-full flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-vovon-400" />
+                </div>
+                <h4 className="font-bold text-white text-sm uppercase tracking-wider">Nieuwe Tools</h4>
+              </div>
+              <ul className="space-y-4">
+                <li className="flex items-start space-x-3">
+                  <CheckCircle2 className="w-5 h-5 text-vovon-400 shrink-0 mt-0.5" />
+                  <span className="text-sm font-medium text-slate-200">Quickscan tool Energyhub</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle2 className="w-5 h-5 text-vovon-400 shrink-0 mt-0.5" />
+                  <span className="text-sm font-medium text-slate-200">Quickscan tool Zon-Opslag-Laadplein</span>
+                </li>
+              </ul>
+            </motion.div>
           </motion.div>
         </div>
       </div>
