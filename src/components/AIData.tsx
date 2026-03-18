@@ -80,7 +80,7 @@ const AIData = ({ language }: AIDataProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="absolute -bottom-6 -left-4 sm:-left-12 sm:bottom-12 bg-slate-800/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-vovon-500/30 max-w-sm z-20"
+              className="absolute -bottom-6 -right-4 sm:-right-12 sm:bottom-12 bg-slate-800/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-vovon-500/30 max-w-sm z-20"
             >
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-vovon-500/20 rounded-full flex items-center justify-center">

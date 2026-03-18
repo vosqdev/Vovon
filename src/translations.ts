@@ -21,7 +21,7 @@ export const translations = {
     about: {
       label: 'About VOVON',
       title: 'The Road to',
-      titleHighlight: 'Carbon Zero',
+      titleHighlight: 'Net Zero',
       description1: 'At VOVON, we specialize in the intersection of real estate and energy transition. We take control of complex development processes, ensuring that ambitious sustainability goals like Net Zero 2050 are not just visions, but realized projects.',
       description2: "Whether it's directing stakeholders, managing projects, or integrating smart energy grids, we provide the expertise needed to succeed.",
       founderRole: 'Director & Owner',
@@ -137,7 +137,7 @@ export const translations = {
     about: {
       label: 'Over VOVON',
       title: 'De weg naar',
-      titleHighlight: 'Carbon Zero',
+      titleHighlight: 'Net Zero',
       description1: 'Bij VOVON zijn we gespecialiseerd op het snijvlak van vastgoed en energietransitie. Wij nemen de regie over complexe ruimtelijke ontwikkelprocessen en zorgen ervoor dat ambitieuze duurzaamheidsdoelen zoals NetZero 2050 geen visie blijven, maar gerealiseerde projecten worden.',
       description2: "Of het nu gaat om het aansturen van stakeholders, het managen van projecten of het integreren van slimme energienetten, wij bieden de expertise dat nodig is om te slagen.",
       founderRole: 'Directeur & eigenaar',
