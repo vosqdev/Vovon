@@ -60,7 +60,7 @@ export const translations = {
       items: [
         { title: 'Independent Advisory', description: 'We combine market insight, area knowledge, and data-driven analyses to arrive at robust and future-proof solutions with unbiased strategic advice.' },
         { title: 'Project Development', description: 'Integral development of real estate over the full lifecycle: from initial concept to planning, realization, and operation. In every phase, spatial quality, feasibility, executability, and added value are connected.' },
-        { title: 'Energy Transition', description: 'Integrating sustainable energy solutions into real estate projects.' },
+        { title: 'Energy Transition', description: 'We connect real estate to solutions such as local generation, energy storage, smart grids, and charging infrastructure. This creates a robust energy supply that responds to grid congestion, electrification including mobility, and the growing demand for sustainable energy.' },
         { title: 'Interim Management', description: 'Through a structured approach and collaboration with partners in design, construction, energy, and operation, we translate ideas into concrete projects.' },
         { title: 'Strategic Roles', description: 'Taking on key roles to align stakeholders and drive progress.' },
         { title: 'Area Development', description: 'Through our integrated approach, we not only create a more efficient use of space and infrastructure, but also a resilient environment prepared for the challenges of tomorrow.' },
@@ -91,7 +91,7 @@ export const translations = {
     },
     contact: {
       title: 'Get in Touch',
-      description: 'Ready to discuss your next project? We are here to help you navigate the complexities of real estate and energy development.',
+      description: 'Ready to discuss your next project? We are here to help you navigate the complexities of real estate and energy.',
       form: {
         name: 'Full Name',
         email: 'Email Address',
@@ -176,7 +176,7 @@ export const translations = {
       items: [
         { title: 'Onafhankelijk Advies', description: 'Daarbij combineren we marktinzicht, gebiedskennis en datagedreven analyses om tot robuuste en toekomstbestendige oplossingen te komen met onbevooroordeeld strategisch advies.' },
         { title: 'Projectontwikkeling', description: 'Integrale ontwikkeling van vastgoed over de volledige levenscyclus: van eerste concept tot planvorming, realisatie en exploitatie. In elke fase worden ruimtelijke kwaliteit, haalbaarheid, uitvoerbaarheid en meerwaarde met elkaar verbonden.' },
-        { title: 'Energietransitie', description: 'Wij koppelen vastgoedontwikkeling aan oplossingen zoals lokale opwekking, energieopslag, slimme netten en laadinfrastructuur. Daarmee ontstaat een robuuste energievoorziening die inspeelt op netcongestie, elektrificatie van mobiliteit en de groeiende vraag naar duurzame energie.' },
+        { title: 'Energietransitie', description: 'Wij koppelen vastgoed aan oplossingen zoals lokale opwekking, energieopslag, slimme netten en laadinfrastructuur. Daarmee ontstaat een robuuste energievoorziening die inspeelt op netcongestie, elektrificatie ook van mobiliteit en de groeiende vraag naar duurzame energie.' },
         { title: 'Interim Management', description: 'Door een gestructureerde aanpak en samenwerking met partners in ontwerp, bouw, energie en exploitatie vertalen wij ideeën naar concrete projecten.' },
         { title: 'Strategische Rollen', description: 'Sleutelrollen vervullen om stakeholders, bouwers, ontwikkelaars, netbeheerders en gemeente op één lijn te krijgen en voortgang te boeken.' },
         { title: 'Gebiedsontwikkeling', description: 'Door onze integrale benadering ontstaat niet alleen een efficiënter gebruik van ruimte en infrastructuur, maar ook een veerkrachtige omgeving die voorbereid is op de uitdagingen van morgen.' },
@@ -207,7 +207,7 @@ export const translations = {
     },
     contact: {
       title: 'Neem Contact Op',
-      description: 'Klaar om uw volgende project te bespreken? Wij zijn er om u te helpen navigeren door de complexiteit van vastgoed- en energieontwikkeling.',
+      description: 'Klaar om uw volgende project te bespreken? Wij zijn er om u te helpen navigeren door de complexiteit van vastgoed en energie.',
       form: {
         name: 'Volledige Naam',
         email: 'E-mailadres',
