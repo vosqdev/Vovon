@@ -37,168 +37,134 @@ const PrivacyPolicyModal = ({ isOpen, onClose }: PrivacyPolicyModalProps) => {
             
             <div className="p-6 overflow-y-auto prose prose-slate max-w-none">
               <p>
-                Onze Cookie Policy en Privacy Policy zijn niet van toepassing op persoonsgegevens die van u op of via andere websites worden verzameld en verwerkt. Heeft u na het lezen van deze Privacy Policy vragen, neem dan gerust contact met ons op.
+                <strong>Privacyverklaring VOVON</strong>
+              </p>
+
+              <h3>Waarom verwerken wij persoonsgegevens?</h3>
+              <p>
+                Wanneer u gebruikmaakt van deze website, informatie opvraagt of een dienst afneemt, vraagt VOVON om persoonsgegevens. In deze verklaring leest u wat wij met uw gegevens doen. Wij handelen in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG).
+              </p>
+              <p>
+                Uw persoonsgegevens worden rechtstreeks aan VOVON verstrekt. Wij verwerken uitsluitend gegevens die u zelf aan ons verstrekt of waarvan duidelijk is dat deze aan ons worden verstrekt om te verwerken.
+              </p>
+              <p>
+                In sommige gevallen verstrekken wij gegevens aan bedrijven of professionals waarmee wij samenwerken. Met deze partijen zijn verwerkersovereenkomsten gesloten conform de AVG.
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
-              <h3>Persoonsgegevens</h3>
-              <p>Uw persoonsgegevens worden door ons verwerkt voor de volgende doeleinden:</p>
+              <h3>Waarvoor gebruiken wij uw gegevens?</h3>
+              <p>VOVON verwerkt uw persoonsgegevens voor de volgende doeleinden:</p>
               <ul>
-                <li>administratieve doeleinden of overeenkomsten;</li>
-                <li>communicatie over inschrijvingen en uitnodigingen;</li>
-                <li>het versturen van nieuwsbrieven.</li>
+                <li>het voeren van (kennismakings)gesprekken en het opstellen van offertes;</li>
+                <li>het uitvoeren van opdrachten en overeenkomsten;</li>
+                <li>het leveren van diensten;</li>
+                <li>de financiële afhandeling, waaronder facturatie;</li>
+                <li>het informeren over ontwikkelingen, projecten en dienstverlening van VOVON.</li>
               </ul>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
-              <h3>Welke gegevens verwerken wij</h3>
+              <h3>Welke gegevens verwerken wij?</h3>
+              <p>Wij verwerken onder andere de volgende persoonsgegevens:</p>
+              <ul>
+                <li>voor- en achternaam;</li>
+                <li>adresgegevens;</li>
+                <li>e-mailadres;</li>
+                <li>telefoonnummer;</li>
+                <li>IP-adres;</li>
+                <li>functie- en locatiegegevens (indien van toepassing).</li>
+              </ul>
               <p>
-                Uw voor- en achternaam, adres, e-mailadres, telefoonnummer, IP-adres en eventueel functie- en locatiegegevens. Het verwerken van persoonsgegevens houdt onder meer in het registreren, bewaren, gebruiken en inzien van persoonsgegevens.
+                Het verwerken van persoonsgegevens omvat onder meer het verzamelen, vastleggen, bewaren, raadplegen en gebruiken van gegevens.
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
-              <h3>Grondslagen om gegevens rechtmatig te verwerken</h3>
+              <h3>Grondslagen voor verwerking</h3>
+              <p>Wij verwerken persoonsgegevens op basis van één of meer van de volgende grondslagen:</p>
               <ul>
-                <li>dit is nodig voor de uitvoering van de opdracht of overeenkomst;</li>
-                <li>er is een gerechtvaardigd belang, zoals het informeren over actualiteiten of wijzigingen in onze dienstverlening;</li>
-                <li>er is een wettelijke verplichting;</li>
-                <li>u geeft zelf toestemming.</li>
+                <li>uitvoering van een overeenkomst;</li>
+                <li>gerechtvaardigd belang (zoals communicatie over onze dienstverlening);</li>
+                <li>wettelijke verplichting;</li>
+                <li>door u gegeven toestemming.</li>
               </ul>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
-              <h3>Verstrekking van uw persoonsgegevens aan derden</h3>
+              <h3>Verstrekking aan derden</h3>
+              <p>Wij verstrekken uw persoonsgegevens uitsluitend aan derden:</p>
+              <ul>
+                <li>met uw toestemming; of</li>
+                <li>indien dit noodzakelijk is voor de uitvoering van een overeenkomst.</li>
+              </ul>
               <p>
-                Wij verstrekken uw persoonsgegevens in beginsel alleen aan derde partijen als u daar zelf toestemming voor heeft gegeven. Gegevensverstrekking zonder uw toestemming vindt plaats als dat nodig is om de opdracht of overeenkomst tussen u en ons uit te kunnen voeren. Wij geven geen persoonsgegevens door aan landen buiten de Europese Economische Ruimte (EER).
+                Wij verstrekken geen persoonsgegevens aan landen buiten de Europese Economische Ruimte (EER).
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
               <h3>Bewaartermijnen</h3>
               <p>
-                Wij bewaren uw gegevens niet langer dan nodig is voor de in deze privacyverklaring beschreven doeleinden, tenzij dat moet op grond van een wettelijke verplichting. Voor het bewaren van uw gegevens en financiële gegevens geldt de wettelijke bewaartermijn van 7 jaar.
+                Wij bewaren uw persoonsgegevens niet langer dan noodzakelijk voor de doeleinden waarvoor deze zijn verzameld, tenzij een wettelijke verplichting anders voorschrijft.
+              </p>
+              <p>
+                Voor administratieve en financiële gegevens hanteren wij een wettelijke bewaartermijn van 7 jaar.
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
               <h3>Beveiliging</h3>
               <p>
-                Om uw gegevens zo goed mogelijk te beschermen, hebben wij passende organisatorische en technische beveiligingsmaatregelen getroffen.
+                Wij nemen passende technische en organisatorische maatregelen om uw persoonsgegevens te beschermen tegen verlies of onrechtmatige verwerking.
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
               <h3>Gebruik van cookies</h3>
+              <p>Voor het functioneren van onze website maken wij gebruik van cookies.</p>
+              <ul>
+                <li>Strikt noodzakelijke cookies worden zonder toestemming geplaatst;</li>
+                <li>Voor overige cookies vragen wij uw toestemming.</li>
+              </ul>
               <p>
-                Voor het functioneren van onze website maken wij gebruik van cookies. Volgens de wet mogen wij cookies op uw mobiele telefoon of laptop opslaan als ze strikt noodzakelijk zijn voor het gebruik van de website. Voor alle andere soorten cookies hebben we uw toestemming nodig.
-              </p>
-              <p>
-                In onze cookieverklaring leest u welke soorten cookies worden gebruikt en voor welke doeleinden. U kunt uw toestemming op elk moment wijzigen of intrekken.
-              </p>
-
-              <div className="text-center text-slate-400 my-4">⸻</div>
-
-              <h3>Bezoekgegevens</h3>
-              <p>
-                Op de website worden ook algemene bezoekgegevens bijgehouden, zoals onder meer de meest gevraagde pagina’s. Het doel hiervan is om de inrichting van de website te verbeteren, zodat wij onze dienstverlening verder kunnen optimaliseren.
+                In onze cookieverklaring leest u welke cookies worden gebruikt en voor welke doeleinden. U kunt uw toestemming op ieder moment wijzigen of intrekken.
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
-              <h3>Ongevraagd toegestuurde informatie</h3>
+              <h3>Uw rechten</h3>
+              <p>U heeft het recht om:</p>
+              <ul>
+                <li>inzage te krijgen in uw persoonsgegevens;</li>
+                <li>onjuiste gegevens te laten corrigeren;</li>
+                <li>uw gegevens te laten verwijderen (recht op vergetelheid);</li>
+                <li>bezwaar te maken tegen verwerking;</li>
+                <li>uw gegevens over te laten dragen (dataportabiliteit).</li>
+              </ul>
               <p>
-                In geval u ongevraagd ideeën en/of materialen, waaronder begrepen maar niet beperkt tot teksten, beelden, geluiden, software of andere informatie (de “Materialen”) op deze website plaatst of deze toestuurt via e-mail of anderszins, zijn wij gerechtigd deze materialen te gebruiken, te kopiëren en/of commercieel in de ruimste zin te exploiteren, zonder daarvoor enige vergoeding verschuldigd te zijn. Tevens zijn wij niet gehouden de betreffende Materialen geheim te houden.
-              </p>
-              <p>
-                U vrijwaart ons hierbij voor alle schade en kosten die voortvloeien uit aanspraken van derden dat het gebruik en/of de exploitatie van de Materialen inbreuk maakt op (intellectuele) eigendomsrechten van derden of anderszins onrechtmatig is.
-              </p>
-
-              <div className="text-center text-slate-400 my-4">⸻</div>
-
-              <h3>Nietigheid</h3>
-              <p>
-                Is of worden deze voorwaarden gedeeltelijk ongeldig, dan blijven partijen aan het overblijvende gedeelte gebonden. Partijen zullen het ongeldige gedeelte vervangen door bepalingen die wel geldig zijn en waarvan de rechtsgevolgen zoveel mogelijk overeenkomen met die van het ongeldige gedeelte.
-              </p>
-
-              <div className="text-center text-slate-400 my-4">⸻</div>
-
-              <h3>Cookie-beleid</h3>
-              <p>
-                Wij maken bij het aanbieden van onze elektronische diensten gebruik van cookies. Een cookie is een klein bestand dat op de harde schijf van uw computer wordt opgeslagen om u te herkennen als u de website opnieuw bezoekt.
-              </p>
-              <p>
-                Deze cookies worden enkel gebruikt om het gebruik van de website gemakkelijker te maken en om informatie over ons bedrijf en onze (nieuwe) producten en diensten te kunnen versturen.
-              </p>
-              <p>
-                U kunt uw browser zo instellen dat u bericht krijgt wanneer een cookie wordt geplaatst of dat het verzamelen van cookies niet mogelijk is. In dat geval kunt u mogelijk niet alle functionaliteiten van de website gebruiken.
-              </p>
-              <p>
-                Wij gebruiken uitsluitend functionele en analytische cookies die geen inbreuk maken op uw privacy. Door gebruik te maken van onze website stemt u in met het gebruik van cookies.
-              </p>
-
-              <div className="text-center text-slate-400 my-4">⸻</div>
-
-              <p>
-                De domeinnaam waaronder de cookies worden opgeslagen is www.VOSQ.nl. De geldigheidsduur van cookies varieert van de lengte van uw bezoek tot ongelimiteerd.
-              </p>
-              <p>
-                De opslag en doorgifte van gegevens via internet zijn beveiligd. U heeft het recht op toegang tot de van u via cookies verzamelde persoonsgegevens en op rectificatie en/of verwijdering van deze gegevens via het versturen van een e-mail.
-              </p>
-              <p>
-                Wij verzamelen geen persoonsgegevens via cookies.
-              </p>
-
-              <div className="text-center text-slate-400 my-4">⸻</div>
-
-              <h3>Hoe wordt Google Analytics gebruikt?</h3>
-              <p>
-                De onderneming maakt gebruik van Google Analytics om bij te houden hoe gebruikers de website gebruiken en hoe effectief Adwords-advertenties van de onderneming zijn.
-              </p>
-              <p>
-                De verkregen informatie, inclusief het geanonimiseerde IP-adres van uw computer, wordt overgebracht naar en door Google opgeslagen op servers in de Verenigde Staten.
-              </p>
-              <p>
-                Voor meer informatie verwijzen wij naar het privacybeleid van Google.
-              </p>
-
-              <div className="text-center text-slate-400 my-4">⸻</div>
-
-              <p>
-                Google gebruikt deze informatie om bij te houden hoe de website gebruikt wordt, om rapporten over websitegebruik te verstrekken en om adverteerders informatie te bieden over de effectiviteit van campagnes.
-              </p>
-              <p>
-                Google kan deze informatie aan derden verstrekken indien zij daartoe wettelijk wordt verplicht of voor zover deze derden de informatie namens Google verwerken. De onderneming heeft hier geen invloed op.
-              </p>
-              <p>
-                De onderneming heeft Google geen toestemming gegeven om via de onderneming verkregen Analytics-informatie te gebruiken voor andere Google-diensten.
+                U kunt een verzoek indienen via onze contactgegevens. Wij kunnen u vragen zich te identificeren. U ontvangt uiterlijk binnen vier weken een reactie.
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
               <h3>Wijzigingen</h3>
               <p>
-                Wij behouden ons het recht voor wijzigingen aan te brengen in deze Privacy Policy. Controleer daarom regelmatig deze Privacy Policy.
-              </p>
-              <p>
-                Indien u vragen heeft over deze Privacy Policy, kunt u contact met ons opnemen.
+                VOVON behoudt zich het recht voor deze privacyverklaring te wijzigen. Wij adviseren u deze verklaring regelmatig te raadplegen.
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
+              <h3>Klachten</h3>
               <p>
-                U kunt te allen tijde bezwaar maken tegen het gebruik van uw persoonsgegevens voor direct marketing doeleinden door ons een bericht of e-mail te sturen.
+                Indien u niet tevreden bent over de verwerking van uw persoonsgegevens en wij er samen niet uitkomen, kunt u een klacht indienen bij de Autoriteit Persoonsgegevens.
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
 
-              <h3>Klacht indienen</h3>
+              <h3>Contactgegevens / verwerkingsverantwoordelijke</h3>
               <p>
-                Mocht u onverhoopt niet tevreden zijn over de wijze waarop wij met uw gegevens omgaan en komen wij er samen niet uit, dan kunt u een klacht indienen bij de Autoriteit Persoonsgegevens. Dit kan via de website van de Autoriteit Persoonsgegevens.
-              </p>
-              <p>
-                Onze contactgegevens en de verwerkingsverantwoordelijke vindt u bij onze contactgegevens.
+                VOVON, zie gegevens op de website
               </p>
             </div>
           </motion.div>

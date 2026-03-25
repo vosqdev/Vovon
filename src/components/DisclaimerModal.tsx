@@ -37,6 +37,12 @@ const DisclaimerModal = ({ isOpen, onClose }: DisclaimerModalProps) => {
             
             <div className="p-6 overflow-y-auto prose prose-slate max-w-none">
               <p>
+                Wij hebben de informatie op deze website met de grootste zorgvuldigheid samengesteld. Op onze dienstverlening, projecten en het gebruik van deze website zijn onze algemene voorwaarden van toepassing. Daarin is een beperking van onze aansprakelijkheid opgenomen.
+              </p>
+              
+              <div className="text-center text-slate-400 my-4">⸻</div>
+
+              <p>
                 Gebruik van enige informatie verkregen middels deze website gebeurt voor risico van de gebruiker. Wij aanvaarden geen enkele aansprakelijkheid voor schade ontstaan uit het bezoeken van deze site of voor enige schade ontstaan uit verleende diensten, aangeboden of verwezen content.
               </p>
               
