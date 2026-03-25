@@ -12,6 +12,7 @@ import Process from './components/Process';
 import ImageDivider from './components/ImageDivider';
 import Services from './components/Services';
 import AIData from './components/AIData';
+import News from './components/News';
 import References from './components/References';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -31,6 +32,7 @@ export default function App() {
       <ImageDivider />
       <Services language={language} />
       <AIData language={language} />
+      <News language={language} />
       <References language={language} />
       <Contact language={language} />
       <Footer language={language} />
