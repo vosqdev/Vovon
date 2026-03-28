@@ -7,12 +7,12 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import VovonStory from './components/VovonStory';
 import Stats from './components/Stats';
 import Process from './components/Process';
 import ImageDivider from './components/ImageDivider';
 import Services from './components/Services';
 import AIData from './components/AIData';
-import News from './components/News';
 import References from './components/References';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -27,12 +27,12 @@ export default function App() {
       <Navbar language={language} setLanguage={setLanguage} />
       <Hero language={language} />
       <About language={language} />
+      <VovonStory language={language} />
       <Stats language={language} />
       <Process language={language} />
       <ImageDivider />
       <Services language={language} />
       <AIData language={language} />
-      <News language={language} />
       <References language={language} />
       <Contact language={language} />
       <Footer language={language} />

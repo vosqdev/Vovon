@@ -27,7 +27,6 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
     { name: t.about, href: '#about' },
     { name: t.services, href: '#services' },
     { name: t.aiData, href: '#ai-data' },
-    { name: t.news, href: '#news' },
     { name: t.references, href: '#references' },
     { name: t.contact, href: '#contact' },
   ];

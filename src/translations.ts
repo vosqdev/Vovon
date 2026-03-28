@@ -7,7 +7,6 @@ export const translations = {
       about: 'About',
       services: 'Services',
       aiData: 'AI & Data',
-      news: 'News',
       references: 'References',
       contact: 'Contact',
       cta: 'Get in Touch',
@@ -34,6 +33,14 @@ export const translations = {
         'Grid-Aware Building & Development',
         'Process Direction & Project Management',
       ],
+    },
+    story: {
+      title: 'The Origin of',
+      titleHighlight: 'VOVON',
+      description1: 'VOVON is derived from VOs, Vastgoed (Real Estate), Ontwikkeling (Development), and Nieuwbouw (New Construction). In our name, identity and energy come together.',
+      description2: 'With a combination of strategic insight, 20 years of work experience, process power, and a strong network, we work on sustainable living environments that activate space and create the future.',
+      callToAction: 'Need help or a coffee to explore collaboration? Feel free to call!',
+      imageAlt: 'VOVON Development',
     },
     stats: {
       years: 'Years Experience',
@@ -78,22 +85,6 @@ export const translations = {
         { title: 'Data Enrichment', description: 'Combining diverse datasets to gain deeper insights into location potential.' },
         { title: 'Visual Modeling', description: 'Interactive visual tools to communicate complex scenarios to stakeholders.' },
       ],
-    },
-    news: {
-      label: 'Latest Updates',
-      title: 'Company',
-      titleHighlight: 'News',
-      readMore: 'Read More',
-      items: [
-        {
-          id: '1',
-          date: 'March 25, 2026',
-          title: 'Founding of VOVON Development',
-          excerpt: 'We are proud to share that the founding of VOVON is official. With VOVON Development, we are taking the next step in further shaping integrated area development...',
-          content: 'We are proud to share that the founding of VOVON is official.\n\nWith VOVON Development, we are taking the next step in further shaping integrated area development, real estate development, and strategic project realization. Based on a sharp vision of space, energy, and innovation, VOVON focuses on projects where development, execution, and future-proofing come together.\n\nVOVON stands for a pragmatic and entrepreneurial approach. Close to the process, keen on opportunities, with an eye for complexity and feasibility. Especially in a time when space, energy, mobility, and quality of life are increasingly interconnected, we believe in development power that looks beyond the traditional task.\n\nNeed help or a coffee to explore collaboration? Feel free to call!',
-          image: 'https://image2url.com/r2/default/images/1774470344023-7ca5cb97-4e7c-4e40-afa0-edcc074e5509.png',
-        }
-      ]
     },
     references: {
       label: 'References',
@@ -140,7 +131,6 @@ export const translations = {
       about: 'Over ons',
       services: 'Diensten',
       aiData: 'AI & Data',
-      news: 'Nieuws',
       references: 'Referenties',
       contact: 'Contact',
       cta: 'Neem contact op',
@@ -167,6 +157,14 @@ export const translations = {
         'Netbewust bouwen & ontwikkelen',
         'Procesregie & Projectmanagement',
       ],
+    },
+    story: {
+      title: 'De Oorsprong van',
+      titleHighlight: 'VOVON',
+      description1: 'VOVON is afgeleid van VOs, Vastgoed, Ontwikkeling en Nieuwbouw. In onze naam komen identiteit en energie samen.',
+      description2: 'Met een combinatie van strategisch inzicht, 20 jaar werkervaring, proceskracht en een sterk netwerk werken aan duurzame leefomgeving die ruimte activeert en toekomst creëert.',
+      callToAction: 'Hulp nodig of koffie voor verkennen van samenwerking, bel gerust!',
+      imageAlt: 'VOVON Development',
     },
     stats: {
       years: 'Jaren Ervaring',
@@ -211,22 +209,6 @@ export const translations = {
         { title: 'Dataverrijking', description: 'Combineren van diverse datasets voor dieper inzicht in locatiepotentieel.' },
         { title: 'Visuele Modellering', description: 'Visuele tools gebruiken om te inspireren en te communiceren naar stakeholders.' },
       ],
-    },
-    news: {
-      label: 'Laatste Updates',
-      title: 'Bedrijfs',
-      titleHighlight: 'Nieuws',
-      readMore: 'Lees Meer',
-      items: [
-        {
-          id: '1',
-          date: '25 Maart 2026',
-          title: 'Oprichting VOVON Development',
-          excerpt: 'Met trots delen wij dat de oprichting van VOVON officieel is. Met VOVON Development zetten wij een volgende stap in het verder vormgeven van integrale gebiedsontwikkeling...',
-          content: 'Met trots delen wij dat de oprichting van VOVON officieel is.\n\nMet VOVON Development zetten wij een volgende stap in het verder vormgeven van integrale gebiedsontwikkeling, vastgoedontwikkeling en strategische projectrealisatie. Vanuit een scherpe visie op ruimte, energie en innovatie richt VOVON zich op projecten waarin ontwikkeling, uitvoering en toekomstbestendigheid samenkomen.\n\nVOVON staat voor een pragmatische en ondernemende aanpak. Dicht op het proces, scherp op kansen, met oog voor complexiteit én uitvoerbaarheid. Juist in een tijd waarin ruimte, energie, mobiliteit en leefkwaliteit steeds sterker met elkaar verbonden zijn, geloven wij in ontwikkelkracht die verder kijkt dan de traditionele opgave.\n\nHulp nodig of koffie voor verkennen van samenwerking, bel gerust!',
-          image: 'https://image2url.com/r2/default/images/1774470344023-7ca5cb97-4e7c-4e40-afa0-edcc074e5509.png',
-        }
-      ]
     },
     references: {
       label: 'Referenties',
