@@ -85,6 +85,14 @@ export const translations = {
         { title: 'Data Enrichment', description: 'Combining diverse datasets to gain deeper insights into location potential.' },
         { title: 'Visual Modeling', description: 'Interactive visual tools to communicate complex scenarios to stakeholders.' },
       ],
+      newTools: {
+        title: 'New Tools',
+        items: [
+          'Save time',
+          'Get a grip on the location',
+          'Strengthen the substantiation'
+        ]
+      }
     },
     references: {
       label: 'References',
@@ -93,8 +101,8 @@ export const translations = {
       googleEarth: 'View Past Projects on Google Earth',
       items: [
         { title: 'Residential', category: 'Housing', description: 'Development of future-proof and energy-efficient homes and residential areas.' },
-        { title: 'Commercial Real Estate', category: 'Commercial', description: 'Sustainable office spaces, business buildings, and commercial facilities.' },
-        { title: 'Social Real Estate', category: 'Social & Public', description: 'Schools, educational institutions, residential care centers, and health centers (MFA).' },
+        { title: 'Commercial Real Estate', category: 'Commercial', description: 'Sustainable shops, office spaces, business buildings, and commercial facilities.' },
+        { title: 'Social Real Estate', category: 'Social & Public', description: 'Residential care buildings, health centers (FA-hoed), educational institutions, multifunctional accommodations (MFA).' },
       ],
     },
     contact: {
@@ -105,6 +113,7 @@ export const translations = {
         email: 'Email Address',
         phone: 'Phone Number',
         message: 'Message',
+        messagePlaceholder: 'How can we help you?',
         submit: 'Send Message',
         sending: 'Sending...',
         successTitle: 'Message Sent!',
@@ -209,6 +218,14 @@ export const translations = {
         { title: 'Dataverrijking', description: 'Combineren van diverse datasets voor dieper inzicht in locatiepotentieel.' },
         { title: 'Visuele Modellering', description: 'Visuele tools gebruiken om te inspireren en te communiceren naar stakeholders.' },
       ],
+      newTools: {
+        title: 'Nieuwe Tools',
+        items: [
+          'Bespaar tijd',
+          'Krijg grip op de locatie',
+          'Versterk de onderbouwing'
+        ]
+      }
     },
     references: {
       label: 'Referenties',
@@ -217,8 +234,8 @@ export const translations = {
       googleEarth: 'Bekijk eerdere projecten op Google Earth',
       items: [
         { title: 'Woningbouw', category: 'Wonen', description: 'Ontwikkeling van toekomstbestendige en energiezuinige woningen en woonwijken.' },
-        { title: 'Commercieel Vastgoed', category: 'Commercieel', description: 'Duurzame kantoorruimtes, bedrijfsgebouwen en commerciële voorzieningen.' },
-        { title: 'Maatschappelijk Vastgoed', category: 'Maatschappelijk', description: 'Scholen, onderwijsinstellingen, woon-zorgcentra en gezondheidscentra (MFA).' },
+        { title: 'Commercieel Vastgoed', category: 'Commercieel', description: 'Duurzame winkels, kantoorruimtes, bedrijfsgebouwen en commerciële voorzieningen.' },
+        { title: 'Maatschappelijk Vastgoed', category: 'Maatschappelijk', description: 'Woon-zorggebouwen, gezondheidscentra (FA-hoed), onderwijsinstellingen, multifunctionele accomodatie (MFA).' },
       ],
     },
     contact: {
@@ -229,6 +246,7 @@ export const translations = {
         email: 'E-mailadres',
         phone: 'Telefoonnummer',
         message: 'Bericht',
+        messagePlaceholder: 'Hoe kunnen we je helpen?',
         submit: 'Verstuur Bericht',
         sending: 'Versturen...',
         successTitle: 'Bericht Verzonden!',

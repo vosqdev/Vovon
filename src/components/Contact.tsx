@@ -170,7 +170,7 @@ const Contact = ({ language }: ContactProps) => {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-vovon-500 focus:border-vovon-500 transition-colors outline-none resize-none"
-                    placeholder="How can we help you?"
+                    placeholder={t.form.messagePlaceholder}
                   />
                 </div>
                 <button

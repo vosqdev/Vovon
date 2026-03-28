@@ -86,17 +86,15 @@ const AIData = ({ language }: AIDataProps) => {
                 <div className="w-10 h-10 bg-vovon-500/20 rounded-full flex items-center justify-center">
                   <Zap className="w-5 h-5 text-vovon-400" />
                 </div>
-                <h4 className="font-bold text-white text-sm uppercase tracking-wider">Nieuwe Tools</h4>
+                <h4 className="font-bold text-white text-sm uppercase tracking-wider">{t.newTools.title}</h4>
               </div>
               <ul className="space-y-4">
-                <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-vovon-400 shrink-0 mt-0.5" />
-                  <span className="text-sm font-medium text-slate-200">Quickscan tool Energyhub</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-vovon-400 shrink-0 mt-0.5" />
-                  <span className="text-sm font-medium text-slate-200">Quickscan tool energieoplossingen (ook tijdelijk)</span>
-                </li>
+                {t.newTools.items.map((item, index) => (
+                  <li key={index} className="flex items-start space-x-3">
+                    <CheckCircle2 className="w-5 h-5 text-vovon-400 shrink-0 mt-0.5" />
+                    <span className="text-sm font-medium text-slate-200">{item}</span>
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </motion.div>
