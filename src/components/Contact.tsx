@@ -58,7 +58,7 @@ const Contact = ({ language }: ContactProps) => {
                   <Mail className="w-6 h-6 text-vovon-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-900">Email</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">{t.info.email}</h3>
                   <a href="mailto:pvos@vovon.nl" className="text-slate-600 hover:text-vovon-600 transition-colors">
                     pvos@vovon.nl
                   </a>
@@ -69,7 +69,7 @@ const Contact = ({ language }: ContactProps) => {
                   <Phone className="w-6 h-6 text-vovon-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-900">Phone</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">{t.info.phone}</h3>
                   <a href="tel:+31611692001" className="text-slate-600 hover:text-vovon-600 transition-colors">
                     +31 6 116 92 001
                   </a>
@@ -80,7 +80,7 @@ const Contact = ({ language }: ContactProps) => {
                   <MapPin className="w-6 h-6 text-vovon-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-slate-900">Office</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">{t.info.office}</h3>
                   <p className="text-slate-600">
                     Leeuwerik 4<br />
                     8081 ZJ ELBURG<br />

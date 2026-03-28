@@ -108,6 +108,11 @@ export const translations = {
     contact: {
       title: 'Get in Touch',
       description: 'Ready to discuss your next project? We are here to help you navigate the complexities of real estate and energy.',
+      info: {
+        email: 'Email',
+        phone: 'Phone',
+        office: 'Office',
+      },
       form: {
         name: 'Full Name',
         email: 'Email Address',
@@ -241,6 +246,11 @@ export const translations = {
     contact: {
       title: 'Neem Contact Op',
       description: 'Klaar om uw volgende project te bespreken? Wij zijn er om u te helpen navigeren door de complexiteit van vastgoed en energie.',
+      info: {
+        email: 'E-mail',
+        phone: 'Telefoon',
+        office: 'Vestiging',
+      },
       form: {
         name: 'Volledige Naam',
         email: 'E-mailadres',

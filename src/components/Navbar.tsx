@@ -54,7 +54,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            {navLinks.map((link) => (
+            {navLinks.filter(link => link.href !== '#contact').map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -66,17 +66,6 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
               </a>
             ))}
             
-            {/* Language Switcher */}
-            <button
-              onClick={toggleLanguage}
-              className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-vovon-500 ${
-                scrolled ? 'text-slate-700' : 'text-white/90'
-              }`}
-            >
-              <Globe size={18} />
-              <span>{language.toUpperCase()}</span>
-            </button>
-
             <a
               href="#contact"
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
@@ -87,6 +76,17 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
             >
               {t.cta}
             </a>
+
+            {/* Language Switcher */}
+            <button
+              onClick={toggleLanguage}
+              className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-vovon-500 ${
+                scrolled ? 'text-slate-700' : 'text-white/90'
+              }`}
+            >
+              <Globe size={18} />
+              <span>{language.toUpperCase()}</span>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
