@@ -112,6 +112,7 @@ export const translations = {
         email: 'Email',
         phone: 'Phone',
         office: 'Office',
+        country: 'The Netherlands',
       },
       form: {
         name: 'Full Name',
@@ -250,6 +251,7 @@ export const translations = {
         email: 'E-mail',
         phone: 'Telefoon',
         office: 'Vestiging',
+        country: 'Nederland',
       },
       form: {
         name: 'Volledige Naam',

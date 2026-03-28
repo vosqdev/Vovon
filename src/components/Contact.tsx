@@ -84,7 +84,7 @@ const Contact = ({ language }: ContactProps) => {
                   <p className="text-slate-600">
                     Leeuwerik 4<br />
                     8081 ZJ ELBURG<br />
-                    The Netherlands
+                    {t.info.country}
                   </p>
                 </div>
               </div>
