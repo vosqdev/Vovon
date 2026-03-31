@@ -27,10 +27,10 @@ const Contact = ({ language }: ContactProps) => {
     setIsSubmitting(true);
     
     // Create mailto link with form data
-    const subject = encodeURIComponent(`Nieuw bericht via website van ${formData.name}`);
+    const subject = encodeURIComponent(`Nieuw bericht via website VOVON development`);
     const body = encodeURIComponent(`Naam: ${formData.name}\nEmail: ${formData.email}\nTelefoon: ${formData.phone}\n\nBericht:\n${formData.message}`);
     
-    window.location.href = `mailto:pvos@vovon.nl?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@vovon.nl?subject=${subject}&body=${body}`;
     
     setIsSubmitting(false);
     setIsSuccess(true);
@@ -59,8 +59,8 @@ const Contact = ({ language }: ContactProps) => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900">{t.info.email}</h3>
-                  <a href="mailto:pvos@vovon.nl" className="text-slate-600 hover:text-vovon-600 transition-colors">
-                    pvos@vovon.nl
+                  <a href="mailto:info@vovon.nl" className="text-slate-600 hover:text-vovon-600 transition-colors">
+                    info@vovon.nl
                   </a>
                 </div>
               </div>

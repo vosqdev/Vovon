@@ -85,7 +85,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
               }`}
             >
               <Globe size={18} />
-              <span>{language.toUpperCase()}</span>
+              <span>{language === 'nl' ? 'EN' : 'NL'}</span>
             </button>
           </div>
 
@@ -98,7 +98,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
               }`}
             >
               <Globe size={18} />
-              <span>{language.toUpperCase()}</span>
+              <span>{language === 'nl' ? 'EN' : 'NL'}</span>
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
