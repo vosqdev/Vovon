@@ -122,13 +122,18 @@ const PrivacyPolicyModal = ({ isOpen, onClose }: PrivacyPolicyModalProps) => {
               <div className="text-center text-slate-400 my-4">⸻</div>
 
               <h3>Gebruik van cookies</h3>
-              <p>Voor het functioneren van onze website maken wij gebruik van cookies.</p>
-              <ul>
-                <li>Strikt noodzakelijke cookies worden zonder toestemming geplaatst;</li>
-                <li>Voor overige cookies vragen wij uw toestemming.</li>
-              </ul>
               <p>
-                In onze cookieverklaring leest u welke cookies worden gebruikt en voor welke doeleinden. U kunt uw toestemming op ieder moment wijzigen of intrekken.
+                https://vovon.nl/ plaatst cookies bij bezoekers. Dat doen we om informatie te verzamelen over de pagina’s die gebruikers op onze website bezoeken, om bij te houden hoe vaak bezoekers terug komen en om te zien welke pagina’s het goed doen op de website. Ook houden we bij welke informatie de browser deelt.
+              </p>
+
+              <h4>Cookies uitschakelen</h4>
+              <p>
+                U kunt er voor kiezen om cookies uit te schakelen. Dat doet u door gebruik te maken van de mogelijkheden van uw browser. U vindt meer informatie over deze mogelijkheden op de website van de aanbieder van uw browser.
+              </p>
+
+              <h4>Cookies van derde partijen</h4>
+              <p>
+                Het is mogelijk dat derde partijen, zoals Google, op onze website adverteren of dat wij gebruik maken van een andere dienst. Daarvoor plaatsen deze derde partijen in sommige gevallen cookies. Deze cookies zijn niet door https://vovon.nl te beïnvloeden.
               </p>
 
               <div className="text-center text-slate-400 my-4">⸻</div>
