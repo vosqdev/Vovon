@@ -26,11 +26,10 @@ export const translations = {
       description2: "Whether it's directing stakeholders, managing projects, or integrating smart energy grids, we provide the expertise needed to succeed.",
       founderRole: 'Founder',
       expertise: [
-        'Net Zero 2050 Strategies',
-        'Integrated Energy Systems',
-        'Complex Stakeholder Management',
         'Sustainable Real Estate & Area Development',
-        'Grid-Aware Building & Development',
+        'Concept Development',
+        'Integrated Energy Systems',
+        'Net Zero 2050 Strategies',
         'Process Direction & Project Management',
       ],
     },
@@ -103,6 +102,7 @@ export const translations = {
         { title: 'Residential', category: 'Housing', description: 'Development of future-proof and energy-efficient homes and residential areas.' },
         { title: 'Commercial Real Estate', category: 'Commercial', description: 'Sustainable shops, office spaces, business buildings, and commercial facilities.' },
         { title: 'Social Real Estate', category: 'Social & Public', description: 'Residential care buildings, health centers (FA-hoed), educational institutions, multifunctional accommodations (MFA).' },
+        { title: 'Energy Solutions', category: 'Energy', description: 'Storage, generation, distribution, EV charging infra, energy hub, smart grids, hydrogen.' },
       ],
     },
     contact: {
@@ -165,12 +165,11 @@ export const translations = {
       description2: "Of het nu gaat om het aansturen van stakeholders, het managen van projecten of het integreren van slimme energienetten, wij bieden de expertise dat nodig is om te slagen.",
       founderRole: 'Founder',
       expertise: [
-        'Net Zero 2050 Strategieën',
-        'Geïntegreerde Energiesystemen',
-        'Complex Stakeholdermanagement',
         'Duurzame vastgoed- & gebiedsontwikkeling',
-        'Netbewust bouwen & ontwikkelen',
-        'Procesregie & Projectmanagement',
+        'Conceptontwikkeling',
+        'Geïntegreerde Energiesystemen',
+        'NetZero 2050 Strategieën',
+        'Procesregie & projectmanagement',
       ],
     },
     story: {
@@ -242,6 +241,7 @@ export const translations = {
         { title: 'Woningbouw', category: 'Wonen', description: 'Ontwikkeling van toekomstbestendige en energiezuinige woningen en woonwijken.' },
         { title: 'Commercieel Vastgoed', category: 'Commercieel', description: 'Duurzame winkels, kantoorruimtes, bedrijfsgebouwen en commerciële voorzieningen.' },
         { title: 'Maatschappelijk Vastgoed', category: 'Maatschappelijk', description: 'Woon-zorggebouwen, gezondheidscentra (FA-hoed), onderwijsinstellingen, multifunctionele accomodatie (MFA).' },
+        { title: 'Energie oplossingen', category: 'Energie', description: 'Opslag, opwekking, distributie, EV-laad infra, energyhub, smart grids, waterstof.' },
       ],
     },
     contact: {

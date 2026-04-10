@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { MapPin, Home, Briefcase, Landmark } from 'lucide-react';
+import { MapPin, Home, Briefcase, Landmark, Zap } from 'lucide-react';
 import { Language, translations } from '../translations';
 
 interface ReferencesProps {
@@ -8,11 +8,12 @@ interface ReferencesProps {
 
 const References = ({ language }: ReferencesProps) => {
   const t = translations[language].references;
-  const icons = [Home, Briefcase, Landmark];
+  const icons = [Home, Briefcase, Landmark, Zap];
   const images = [
     'https://image2url.com/r2/default/images/1773486303291-4b5d0c7c-73fc-450d-a3a6-af3d453b9801.jpg', // Woningbouw
     'https://image2url.com/r2/default/images/1773486555578-377d9761-92ba-48dd-a277-d75832d29293.jpg', // Commercieel
     'https://image2url.com/r2/default/images/1773486248281-c6331375-a2b8-4ae2-8340-1da59b26f36b.jpg', // Maatschappelijk
+    'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop', // Energie
   ];
 
   const projects = t.items.map((item, index) => ({
@@ -42,7 +43,7 @@ const References = ({ language }: ReferencesProps) => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -50,9 +51,9 @@ const References = ({ language }: ReferencesProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-slate-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100"
+              className="bg-slate-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 flex flex-col"
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-48 overflow-hidden shrink-0">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -63,12 +64,12 @@ const References = ({ language }: ReferencesProps) => {
                   {project.category}
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex items-center text-slate-500 text-sm mb-2">
-                  <MapPin className="w-4 h-4 mr-1" />
+              <div className="p-5 flex-1 flex flex-col">
+                <div className="flex items-center text-slate-500 text-xs mb-2">
+                  <MapPin className="w-3.5 h-3.5 mr-1" />
                   {project.location}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-vovon-600 transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-vovon-600 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
