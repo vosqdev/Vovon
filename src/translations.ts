@@ -14,7 +14,7 @@ export const translations = {
     hero: {
       title: 'Connect. Organize.',
       subtitle: 'Innovate.',
-      description: 'The place where real estate and energy transition come together. We bridge the gap between sustainable ambitions and practical realization.',
+      description: 'The place where real estate and energy transition come together. VOVON bridges the gap between sustainable ambitions and practical realization.',
       ctaPrimary: 'Get in Touch',
       ctaSecondary: 'Our Expertise',
     },
@@ -153,7 +153,7 @@ export const translations = {
     hero: {
       title: 'Verbinden. Organiseren.',
       subtitle: 'Vernieuwen.',
-      description: 'Dé plek waar vastgoed en energietransitie samenkomen. Wij slaan de brug tussen duurzame ambities en praktische realisatie.',
+      description: 'Dé plek waar vastgoed en energietransitie samenkomen. VOVON slaat de brug tussen duurzame ambities en praktische realisatie.',
       ctaPrimary: 'Neem contact op',
       ctaSecondary: 'Onze Expertise',
     },
