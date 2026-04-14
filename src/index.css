@@ -28,3 +28,13 @@
     @apply font-sans text-slate-800 antialiased bg-white;
   }
 }
+
+/* Custom Leaflet Popup Styling */
+.vovon-popup .leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.vovon-popup .leaflet-popup-content {
+  margin: 16px;
+}

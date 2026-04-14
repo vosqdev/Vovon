@@ -7,359 +7,952 @@
     {
       "id": 1,
       "name": "Winkelcentrum 't Harde",
-      "longitude": 5.883222505178873,
       "latitude": 52.41500547299878,
-      "project_context": "t Harde – uitbreiding en transformatie naar een toekomstbestendige woon- en winkelomgeving."
+      "longitude": 5.883222505178873,
+      "project_context": "t Harde – uitbreiding en transformatie naar een toekomstbestendige woon- en winkelomgeving.",
+      "planperiode": "2010-2016",
+      "programma_items": [
+        "woningbouw: ±200 woningen",
+        "voorzieningen: ca. 15.000 m²",
+        "(openbaar)gebied: ca. 4 hectare",
+        "Energie&mobiliteit: laadplein, BESS, zonnepanelen"
+      ],
+      "ambitie_items": [
+        "Energieneutraal wijkconcept",
+        "Circulaire materialen",
+        "Waterrobust en klimaatadaptief",
+        "Buurtschap 2.0 principes"
+      ],
+      "partners_items": [
+        "Gemeente Elburg, marktpartijen, energiepartners, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 2,
       "name": "Thomashuis",
-      "longitude": 5.881804809545925,
       "latitude": 52.41716072104534,
-      "project_context": "t Harde – kleinschalige zorgopvang"
+      "longitude": 5.881804809545925,
+      "project_context": "t Harde – kleinschalige zorgopvang",
+      "planperiode": "2012-2015",
+      "programma_items": [
+        "woningen ±15 eenheden",
+        "voorzieningen:",
+        "(openbaar)gebied: ca. 1 hectare",
+        "Energie&mobiliteit:"
+      ],
+      "ambitie_items": [
+        "terug bouw scenario"
+      ],
+      "partners_items": [
+        "Gemeente Elburg, DrieNotenBomen Thomashuizen."
+      ]
     },
     {
       "id": 3,
       "name": "Plan Heidezoom",
-      "longitude": 5.867817858142816,
       "latitude": 52.41233125182147,
-      "project_context": "t Harde – Plan heidezoom uitleg locatie"
+      "longitude": 5.867817858142816,
+      "project_context": "t Harde – Plan heidezoom uitleg locatie",
+      "planperiode": "2008-2013",
+      "programma_items": [
+        "woningbouw: 80 huur-koopwoningen",
+        "voorzieningen:",
+        "(openbaar)gebied: ca. 8 hectare",
+        "Energie&mobiliteit: op maaiveld"
+      ],
+      "ambitie_items": [
+        "Energie wijkconcept"
+      ],
+      "partners_items": [
+        "Gemeente Elburg, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Omnia Wonen"
+      ]
     },
     {
       "id": 4,
       "name": "Heidestate",
-      "longitude": 5.869491391641237,
       "latitude": 52.41301968517805,
-      "project_context": "t Harde – Heidestate"
+      "longitude": 5.869491391641237,
+      "project_context": "t Harde – Heidestate",
+      "planperiode": "2010-2014",
+      "programma_items": [
+        "woningbouw: ±24 zorgeenheden"
+      ],
+      "ambitie_items": [
+        "zorg vastgoed"
+      ],
+      "partners_items": [
+        "Gemeente Elburg, Zorggroep Careander bouwteampartner Schutte Bouw",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 5,
       "name": "Baron van Lynden",
-      "longitude": 5.841682049564643,
       "latitude": 52.44524447056516,
-      "project_context": "Elburg – Baron van Lynden, FA-hoed en huur-koopappartementen"
+      "longitude": 5.841682049564643,
+      "project_context": "Elburg – Baron van Lynden, FA-hoed en huur-koopappartementen",
+      "planperiode": "2008-2012",
+      "programma_items": [
+        "woningbouw: ±200 woningen",
+        "voorzieningen: ca. 1.200 m²",
+        "(openbaar)gebied: ca. 1 hectare"
+      ],
+      "ambitie_items": [
+        "Mixed use"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, zorgpartners, huisartsen, bouwteam",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 6,
       "name": "Plan Koeland",
-      "longitude": 5.894340584760378,
       "latitude": 52.44121644127083,
-      "project_context": "Oldebroek – woongebouw"
+      "longitude": 5.894340584760378,
+      "project_context": "Oldebroek – woongebouw",
+      "planperiode": "2010-2013",
+      "programma_items": [
+        "woningbouw: 26 huurwoningen"
+      ],
+      "ambitie_items": [
+        "afname huuraandeel uit plan Koeland"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 7,
       "name": "Sytzemalaan",
-      "longitude": 5.899272481894804,
       "latitude": 52.44620872173819,
-      "project_context": "Oldebroek – woongebouw Sytzema"
+      "longitude": 5.899272481894804,
+      "project_context": "Oldebroek – woongebouw Sytzema",
+      "planperiode": "2010-2013",
+      "programma_items": [
+        "woningbouw: 20 huurwoningen"
+      ],
+      "ambitie_items": [
+        "transformatie winkelcentrum"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 8,
       "name": "Plan Molenbeek",
-      "longitude": 5.789995560635626,
       "latitude": 52.38914736746572,
-      "project_context": "Nunspeet – gebiedsontwikkeling plan Molenbeek RugaanRug woningen en concept woningbouw"
+      "longitude": 5.789995560635626,
+      "project_context": "Nunspeet – gebiedsontwikkeling plan Molenbeek RugaanRug woningen en concept woningbouw",
+      "planperiode": "2016-2020",
+      "programma_items": [
+        "woningbouw: ±70 huurwoningen",
+        "(openbaar)gebied: ca. 3 hectare",
+        "Energie&mobiliteit: gasloos"
+      ],
+      "ambitie_items": [
+        "Energieneutraal wijkconcept",
+        "20 NOM huurwoningen",
+        "Woonconcept MorgenWonen"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, energiepartners, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Omnia Wonen"
+      ]
     },
     {
       "id": 9,
       "name": "Prinsenhof",
-      "longitude": 5.632418352513717,
       "latitude": 52.33445048921362,
-      "project_context": "Harderwijk – woongebouw Prinsenhof"
+      "longitude": 5.632418352513717,
+      "project_context": "Harderwijk – woongebouw Prinsenhof",
+      "planperiode": "2010-2013",
+      "programma_items": [
+        "woningbouw: ±49 huurappartementen"
+      ],
+      "ambitie_items": [
+        "geen bijzonderheden"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 10,
       "name": "Plan Het Trefpunt",
-      "longitude": 5.622029248538492,
       "latitude": 52.31374685590939,
-      "project_context": "Ermelo – gebiedstransformatie naar een toekomstbestendige woonomgeving (tender gemeente Ermelo)."
+      "longitude": 5.622029248538492,
+      "project_context": "Ermelo – gebiedstransformatie naar een toekomstbestendige woonomgeving (tender gemeente Ermelo).",
+      "planperiode": "2007-2016",
+      "programma_items": [
+        "woningbouw: ±220 woningen",
+        "(openbaar)gebied: ca. 9 hectare"
+      ],
+      "ambitie_items": [
+        "co-housing concept",
+        "waterrobust en klimaatadaptief",
+        "zorg thomashuis"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, DrieNotenBomen, zorgpartners, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 11,
       "name": "Plan de Verbinding",
-      "longitude": 5.631124592799816,
       "latitude": 52.30188314570279,
-      "project_context": "Ermelo – herstructurering en gebiedstransformatie 'De Verbinding' een toekomstbestendige woon- en winkelomgeving."
+      "longitude": 5.631124592799816,
+      "project_context": "Ermelo – herstructurering en gebiedstransformatie 'De Verbinding' een toekomstbestendige woon- en winkelomgeving.",
+      "planperiode": "2010-2016",
+      "programma_items": [
+        "woningbouw: ±200 woningen",
+        "voorzieningen: ca. 5.000 m²",
+        "(openbaar)gebied: ca. 4 hectare"
+      ],
+      "ambitie_items": [
+        "bouwconcept"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, investeerders ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 12,
       "name": "Plan Herbergier",
-      "longitude": 5.628234816014793,
       "latitude": 52.30088822098632,
-      "project_context": "Ermelo – transformatie taxibakker naar een nieuwbouw zorg De Herbergier"
+      "longitude": 5.628234816014793,
+      "project_context": "Ermelo – transformatie taxibakker naar een nieuwbouw zorg De Herbergier",
+      "planperiode": "2008-2013",
+      "programma_items": [
+        "woningbouw: ±30 zorgeenheden"
+      ],
+      "ambitie_items": [
+        "woon-zorgconcept De Herbergier"
+      ],
+      "partners_items": [
+        "Gemeente, zorgpartners, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 13,
       "name": "Zorgcomplex 'De ijsvogel'",
-      "longitude": 5.616279247273965,
       "latitude": 52.2943700694661,
-      "project_context": "Ermelo – De IJsvogel is een moderne woonzorglocatie, intramurale zorg verpleging en langdurig thuis wonen gecombineerd op 1 plek"
+      "longitude": 5.616279247273965,
+      "project_context": "Ermelo – De IJsvogel is een moderne woonzorglocatie, intramurale zorg verpleging en langdurig thuis wonen gecombineerd op 1 plek",
+      "planperiode": "2008-2012",
+      "programma_items": [
+        "woningbouw: ±50 zorgeenheden"
+      ],
+      "ambitie_items": [
+        "moderne woonzorglocatie",
+        "mixed-use vastgoed WOZOCO",
+        "beschermd wonen"
+      ],
+      "partners_items": [
+        "Gemeente, zorgpartners, onderwijs, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 14,
       "name": "Plan Salem",
-      "longitude": 5.623486273908087,
       "latitude": 52.30553870341552,
-      "project_context": "Ermelo – Astmabehandelcentrum Salem, is een moderne zorglocatie, niet alleen vanwege de architectuur, maar ook door de doordachte achter dit centrum."
+      "longitude": 5.623486273908087,
+      "project_context": "Ermelo – Astmabehandelcentrum Salem, is een moderne zorglocatie, niet alleen vanwege de architectuur, maar ook door de doordachte achter dit centrum.",
+      "planperiode": "2007-2012",
+      "programma_items": [
+        "woningbouw:",
+        "voorzieningen: 1.500m2",
+        "(openbaar)gebied:"
+      ],
+      "ambitie_items": [],
+      "partners_items": [
+        "Gemeente, zorgpartners, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 15,
       "name": "Park Viventra",
-      "longitude": 5.624756018187407,
       "latitude": 52.29218754467526,
-      "project_context": "Ermelo – Park Viventra een gebiedstransformatie naar een toekomstbestendige woonomgeving."
+      "longitude": 5.624756018187407,
+      "project_context": "Ermelo – Park Viventra een gebiedstransformatie naar een toekomstbestendige woonomgeving.",
+      "planperiode": "2007-2015",
+      "programma_items": [
+        "woningbouw: ±150 woningen",
+        "(openbaar)gebied: ca. 3 hectare"
+      ],
+      "ambitie_items": [
+        "architectuur"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 16,
       "name": "Woonzorgcomplex Amaniet",
-      "longitude": 5.635706969220371,
       "latitude": 52.29469671315439,
-      "project_context": "Ermelo – De Amaniet is een moderne woonzorglocatie, niet alleen vanwege de architectuur, maar ook door de gedachte achter dit centrum. Het verbindt jong en oud: de kinderen van basisschool De Cantharel, buitenschoolse opvang Beertje Puk, de peuterspeelzaal en de ouderen die er wonen en zorg krijgen."
+      "longitude": 5.635706969220371,
+      "project_context": "Ermelo – De Amaniet is een moderne woonzorglocatie, niet alleen vanwege de architectuur, maar ook door de gedachte achter dit centrum. Het verbindt jong en oud: de kinderen van basisschool De Cantharel, buitenschoolse opvang Beertje Puk, de peuterspeelzaal en de ouderen die er wonen en zorg krijgen.",
+      "planperiode": "2008-2015",
+      "programma_items": [
+        "woningbouw: ±50 zorgeenheden",
+        "voorzieningen: 2.000m2",
+        "(openbaar)gebied: 2 hectare"
+      ],
+      "ambitie_items": [
+        "moderne woonzorglocatie",
+        "mixed-use vastgoed WOZOCO",
+        "beschermd wonen"
+      ],
+      "partners_items": [
+        "Gemeente, zorgpartners, onderwijs, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 17,
       "name": "Herderlaan",
-      "longitude": 5.610374744882467,
       "latitude": 52.29070557801472,
-      "project_context": "Ermelo – De Herderlaan een  woonzorglocatie."
+      "longitude": 5.610374744882467,
+      "project_context": "Ermelo – De Herderlaan een  woonzorglocatie.",
+      "planperiode": "2007-2010",
+      "programma_items": [
+        "woningbouw: ±25 zorgeenheden"
+      ],
+      "ambitie_items": [
+        "moderne woonzorglocatie"
+      ],
+      "partners_items": [
+        "Gemeente, zorgpartners, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever UWOON"
+      ]
     },
     {
       "id": 18,
       "name": "Sportfondsenbad",
-      "longitude": 5.394601351741189,
       "latitude": 52.15109119851336,
-      "project_context": "Amersfoort – het sportfondsenbad locatie gebiedstransformatie naar een toekomstbestendige woonomgeving (oud zwembad locatie)."
+      "longitude": 5.394601351741189,
+      "project_context": "Amersfoort – het sportfondsenbad locatie gebiedstransformatie naar een toekomstbestendige woonomgeving (oud zwembad locatie).",
+      "planperiode": "2015-2020",
+      "programma_items": [
+        "woningbouw: 48 huurappartementen",
+        "(openbaar)gebied: ca. 1 hectare"
+      ],
+      "ambitie_items": [
+        "waterrobust en klimaatadaptief",
+        "mixed use gebied met koopappartementen"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Omnia Wonen"
+      ]
     },
     {
       "id": 19,
       "name": "Soetserhof",
-      "longitude": 5.360393912360313,
       "latitude": 52.15742780153518,
-      "project_context": "Amersfoort – gebiedstransformatie naar een toekomstbestendige woonomgeving (Soetserhof is onderdeel tender gebied wagenwerkplaats NS)."
+      "longitude": 5.360393912360313,
+      "project_context": "Amersfoort – gebiedstransformatie naar een toekomstbestendige woonomgeving (Soetserhof is onderdeel tender gebied wagenwerkplaats NS).",
+      "planperiode": "2015-2020",
+      "programma_items": [
+        "woningbouw: 34 huurwoningen",
+        "(openbaar)gebied: ca. 1 hectare"
+      ],
+      "ambitie_items": [
+        "inkoop vanuit CPO Collectief Particulier Opdrachtgeverschap"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Omnia Wonen"
+      ]
     },
     {
       "id": 20,
       "name": "Bruispad",
-      "longitude": 5.387694627676378,
       "latitude": 52.17317532088612,
-      "project_context": "Amersfoort – Op de plek van het voormalige wijkcentrum De Trefhorst en basisschool De Zevensprong een gebiedstransformatie naar een toekomstbestendige woon-leeromgeving."
+      "longitude": 5.387694627676378,
+      "project_context": "Amersfoort – Op de plek van het voormalige wijkcentrum De Trefhorst en basisschool De Zevensprong een gebiedstransformatie naar een toekomstbestendige woon-leeromgeving.",
+      "planperiode": "2015-2020",
+      "programma_items": [
+        "woningbouw: ±43 eenheden huur&koop",
+        "voorzieningen: 1.000m2",
+        "(openbaar)gebied: ca. 1 hectare"
+      ],
+      "ambitie_items": [
+        "integrale gebiedsontwikkeling"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Omnia Wonen"
+      ]
     },
     {
       "id": 21,
       "name": "De Pionier",
-      "longitude": 5.373741014416655,
       "latitude": 52.1622251889567,
-      "project_context": "Amersfoort – de Pioneer tijdelijke huisvesting. De Pionier is een bijzondere, nieuwe woonplek in de stad. Op het voormalig Smeeing terrein is dit complex gerealiseerd voor jongeren tot en met 30 jaar."
+      "longitude": 5.373741014416655,
+      "project_context": "Amersfoort – de Pioneer tijdelijke huisvesting. De Pionier is een bijzondere, nieuwe woonplek in de stad. Op het voormalig Smeeing terrein is dit complex gerealiseerd voor jongeren tot en met 30 jaar.",
+      "planperiode": "2015-2020",
+      "programma_items": [
+        "woningbouw: ±208 studio's",
+        "(openbaar)gebied: ca. 1 hectare"
+      ],
+      "ambitie_items": [
+        "flexwonen",
+        "samenwerking woningcorporaties Portaal en Omnia Wonen"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Omnia Wonen"
+      ]
     },
     {
       "id": 22,
       "name": "Softwareweg",
-      "longitude": 5.411102456450061,
       "latitude": 52.17319164886419,
-      "project_context": "Amersfoort – Softwareweg locatie maakt onderdeel uit van de gebiedstransformatie 'De Hoef'."
+      "longitude": 5.411102456450061,
+      "project_context": "Amersfoort – Softwareweg locatie maakt onderdeel uit van de gebiedstransformatie 'De Hoef'.",
+      "planperiode": "2020-2024",
+      "programma_items": [
+        "woningbouw: 60 appartementen",
+        "voorzieningen: 300m2 bog-vastgoed"
+      ],
+      "ambitie_items": [
+        "gronddeal doorverkocht"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever BEMOG"
+      ]
     },
     {
       "id": 23,
       "name": "Plan de Dijkjes",
-      "longitude": 5.86174124235916,
       "latitude": 52.45684750355829,
-      "project_context": "Elburg – gebiedsontwikkeling plan de Dijkjes 1e gasloze woonwijk NoordWest Veluwe"
+      "longitude": 5.86174124235916,
+      "project_context": "Elburg – gebiedsontwikkeling plan de Dijkjes 1e gasloze woonwijk NoordWest Veluwe",
+      "planperiode": "2016-2020",
+      "programma_items": [
+        "woningbouw: ±225 woningen",
+        "(openbaar)gebied: ca. 9 hectare",
+        "Energie&mobiliteit: gasloos"
+      ],
+      "ambitie_items": [
+        "Energieneutraal wijkconcept",
+        "90 NOM huurwoningen",
+        "Woonconcept Fijn Wonen"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, energiepartners, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Omnia Wonen"
+      ]
     },
     {
       "id": 24,
       "name": "Rotonde 14",
-      "longitude": 5.415130226374647,
       "latitude": 52.18943061891478,
-      "project_context": "Amersfoort – Rotonde 14 nieuwbouw mixed-use vastgoedcomplex, FA-hoed en huurappartementen"
+      "longitude": 5.415130226374647,
+      "project_context": "Amersfoort – Rotonde 14 nieuwbouw mixed-use vastgoedcomplex, FA-hoed en huurappartementen",
+      "planperiode": "2015-2020",
+      "programma_items": [
+        "woningbouw: ±30 huurappartementen",
+        "voorzieningen: 1.200m2",
+        "(openbaar)gebied: ca. 1 hectare"
+      ],
+      "ambitie_items": [
+        "co-creatie mixed use vastgoed"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Omnia Wonen"
+      ]
     },
     {
       "id": 25,
       "name": "Aldi locatie",
-      "longitude": 5.788959781761376,
       "latitude": 52.38625464025148,
-      "project_context": "Nunspeet – nieuwbouw mixed-use woongebouw"
+      "longitude": 5.788959781761376,
+      "project_context": "Nunspeet – nieuwbouw mixed-use woongebouw",
+      "planperiode": "2018-2020",
+      "programma_items": [
+        "woningbouw: ±30 huurwoningen",
+        "voorzieningen: 2.000m2 supermarkt",
+        "Energie&mobiliteit: gasloos"
+      ],
+      "ambitie_items": [
+        "energie neutraal wijkconcept",
+        "supermarkt"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Omnia Wonen"
+      ]
     },
     {
       "id": 26,
       "name": "Plan Jukweg",
-      "longitude": 5.857941774085957,
       "latitude": 52.43982114322723,
-      "project_context": "Elburg – gebiedsontwikkeling uitleg in WvG gebied"
+      "longitude": 5.857941774085957,
+      "project_context": "Elburg – gebiedsontwikkeling uitleg in WvG gebied",
+      "planperiode": "2021-2024",
+      "programma_items": [
+        "woningbouw: ±125 woningen",
+        "(openbaar)gebied: ca. 6 hectare"
+      ],
+      "ambitie_items": [
+        "energie netbewust wijkconcept",
+        "flex woningen",
+        "verwerving grond- opstalexploitatie"
+      ],
+      "partners_items": [
+        "Gemeente, de Gilde Kampen",
+        "Opdrachtgever Bemog Projektontwikkeling"
+      ]
     },
     {
       "id": 27,
       "name": "Plan Horstkamp",
-      "longitude": 5.865597523584166,
       "latitude": 52.45148677645992,
-      "project_context": "Elburg – uitbreiding woningbouw en gebiedsontwikkeling naar een toekomstbestendige woonomgeving."
+      "longitude": 5.865597523584166,
+      "project_context": "Elburg – uitbreiding woningbouw en gebiedsontwikkeling naar een toekomstbestendige woonomgeving.",
+      "planperiode": "2020-2024",
+      "programma_items": [
+        "woningbouw: ±225 woningen",
+        "(openbaar)gebied: ca. 9 hectare"
+      ],
+      "ambitie_items": [
+        "Energie neutraal wijkconcept",
+        "Waterrobust en klimaatadaptief",
+        "Verwerving grond-opstalexploitatie"
+      ],
+      "partners_items": [
+        "Gemeente Elburg, Zondag ontwikkeling",
+        "Opdrachtgever Bemog Projektontwikkeling"
+      ]
     },
     {
       "id": 28,
       "name": "Nigtevecht",
-      "longitude": 5.040867130763957,
       "latitude": 52.24379605975315,
-      "project_context": "Vreeland – gebiedsontwikkeling aan de Vecht, recreatief gebiedsconcept"
+      "longitude": 5.040867130763957,
+      "project_context": "Vreeland – gebiedsontwikkeling aan de Vecht, recreatief gebiedsconcept",
+      "planperiode": "2020-2024",
+      "programma_items": [
+        "recreatief: 25 luxe bungalows"
+      ],
+      "ambitie_items": [
+        "gronddeal doorverkocht"
+      ],
+      "partners_items": [
+        "Gemeente, Boskalis",
+        "Opdrachtgever Bemog Projektontwikkeling"
+      ]
     },
     {
       "id": 29,
       "name": "Zeeburgerpad",
-      "longitude": 4.942196834169765,
       "latitude": 52.3670301131295,
-      "project_context": "📍 Amsterdam – strategisch gelegen transformatiegebied met potentie voor opstalontwikkeling."
+      "longitude": 4.942196834169765,
+      "project_context": "📍 Amsterdam – strategisch gelegen transformatiegebied met potentie voor opstalontwikkeling.",
+      "planperiode": "2022-2024",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven."
+      ],
+      "partners_items": [
+        "Gemeente, Tegeldepot vd Pol.",
+        "Opdrachtgever Bemog Projektontwikkeling."
+      ]
     },
     {
       "id": 30,
       "name": "De Spoordriehoek",
-      "longitude": 4.976165007466995,
       "latitude": 52.34106226193644,
-      "project_context": "📍 Diemen – de Spoordriehoek strategisch gelegen uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling."
+      "longitude": 4.976165007466995,
+      "project_context": "📍 Diemen – de Spoordriehoek strategisch gelegen uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 600 woningen 🏢 ca. 10.000–15.000 m² 🌳 ruim openbaar groen, waterstructuur en ecologische zones 🔋 energie- en mobiliteitshub (slimme laadinfrastructuur, BESS-optie) 🚀 Ambitie Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en duurzame economische groei. 📌 Status 2020 - 2024 🤝 Partners & Stakeholders Van Drunen & Bemog Projektontwikkeling",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en duurzame economische groei.",
+        "📌",
+        "Status",
+        "2020 - 2024"
+      ],
+      "partners_items": [
+        "Van Drunen & Bemog Projektontwikkeling"
+      ]
     },
     {
       "id": 31,
       "name": "Oldebroek west II",
-      "longitude": 5.89593671580749,
       "latitude": 52.44042729044759,
-      "project_context": "Oldebroek – Gebiedsontwikkeling gemeente-markt"
+      "longitude": 5.89593671580749,
+      "project_context": "Oldebroek – Gebiedsontwikkeling gemeente-markt",
+      "planperiode": "2022-2024",
+      "programma_items": [
+        "woningbouw: 30 koopwoningen",
+        "verwerving grondpositie"
+      ],
+      "ambitie_items": [],
+      "partners_items": [
+        "Gemeente",
+        "Opdrachtgever Bemog Projektontwikkeling."
+      ]
     },
     {
       "id": 32,
       "name": "Hanzekwartier",
-      "longitude": 5.716789229564638,
       "latitude": 52.5317354316436,
-      "project_context": "📍 Dronten – strategisch gelegen transformatiegebied met meerdere grondeigenaren."
+      "longitude": 5.716789229564638,
+      "project_context": "📍 Dronten – strategisch gelegen transformatiegebied met meerdere grondeigenaren.",
+      "planperiode": "2022-2024",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven."
+      ],
+      "partners_items": [
+        "Gemeente, Bramer, vd Steeg, Knipscheer",
+        "Opdrachtgever Bemog Projektontwikkeling."
+      ]
     },
     {
       "id": 33,
       "name": "Versterkingsprogramma CC2",
-      "longitude": 6.740923831370054,
       "latitude": 53.33416764903804,
-      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen."
+      "longitude": 6.740923831370054,
+      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [],
+      "partners_items": []
     },
     {
       "id": 34,
       "name": "Versterkingsprogramma CC2",
-      "longitude": 6.602127467290629,
       "latitude": 53.29969969815865,
-      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen."
+      "longitude": 6.602127467290629,
+      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [],
+      "partners_items": []
     },
     {
       "id": 35,
       "name": "Versterkingsprogramma CC2",
-      "longitude": 6.600325356558607,
       "latitude": 53.30432804637132,
-      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen."
+      "longitude": 6.600325356558607,
+      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [],
+      "partners_items": []
     },
     {
       "id": 36,
       "name": "Versterkingsporgramma CC2",
-      "longitude": 6.605302344308894,
       "latitude": 53.30153804755204,
-      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen."
+      "longitude": 6.605302344308894,
+      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [],
+      "partners_items": []
     },
     {
       "id": 37,
       "name": "Rietweg-Hamlaan",
-      "longitude": 5.690697170802894,
       "latitude": 52.51553997550236,
-      "project_context": "📍 Dronten – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling."
+      "longitude": 5.690697170802894,
+      "project_context": "📍 Dronten – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 300 woningen 🏢 ca. 2.000 m² 🌳 ecologische zones 🔋 energie- en mobiliteitshub 🚀 Ambitie Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en Paris proof, op basis van het buurtschap concept. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw. Opdrachtgever Circul8 development",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en Paris proof, op basis van het buurtschap concept.",
+        "📌",
+        "Status",
+        "scouting"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Circul8 development"
+      ]
     },
     {
       "id": 38,
       "name": "De Rede",
-      "longitude": 5.719594347966519,
       "latitude": 52.52322056948027,
-      "project_context": "📍 Dronten –  potentie voor een binnenstedelijke herontwikkeling."
+      "longitude": 5.719594347966519,
+      "project_context": "📍 Dronten –  potentie voor een binnenstedelijke herontwikkeling. 📐 I ndicatief programma 🏡 ± 50 woningen 🏢 ca. 1.000 m² 🌳 openbaar groen 🔋 energie- en mobiliteitshub 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw. Opdrachtgever Circul8 development",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven",
+        "📌",
+        "Status",
+        "scouting"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Circul8 development"
+      ]
     },
     {
       "id": 39,
       "name": "Haven Emmeloord",
-      "longitude": 5.766471345796877,
       "latitude": 52.72607782710864,
-      "project_context": "📍 Emmeloord –  strategisch gelegen met potentie voor transformatie met gebiedsontwikkeling."
+      "longitude": 5.766471345796877,
+      "project_context": "📍 Emmeloord –  strategisch gelegen met potentie voor transformatie met gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 50 woningen 🌳 openbaar en verkeer zones 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale opgaven. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw.",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare ontwikkeling die aansluit bij lokale opgaven.",
+        "📌",
+        "Status",
+        "scouting"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw."
+      ]
     },
     {
       "id": 40,
       "name": "Chez Marknesse",
-      "longitude": 5.877797877766849,
       "latitude": 52.70899575169119,
-      "project_context": "acquisitie | ontwikkeling"
+      "longitude": 5.877797877766849,
+      "project_context": "acquisitie | ontwikkeling",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [],
+      "partners_items": []
     },
     {
       "id": 41,
       "name": "Ossenkampweg",
-      "longitude": 5.538146582478265,
       "latitude": 52.36207035430165,
-      "project_context": "📍 Zeewolde – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling."
+      "longitude": 5.538146582478265,
+      "project_context": "📍 Zeewolde – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 1.000 woningen 🏢 ca. 10.000–15.000 m² 🌳 ruim openbaar groen, waterstructuur en ecologische zones 🔋 energie- en mobiliteitshub (slimme laadinfrastructuur, BESS-optie) 🚀 Ambitie Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en duurzame economische groei. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw. Opdrachtgever Circul8 development",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en duurzame economische groei.",
+        "📌",
+        "Status",
+        "scouting"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Circul8 development"
+      ]
     },
     {
       "id": 42,
       "name": "Zandlaan",
-      "longitude": 5.649160490813816,
       "latitude": 52.34127323848439,
-      "project_context": "📍 Harderwijk –  Zandlaan strategisch gelegen transformatiegebied met potentie voor energyhub."
+      "longitude": 5.649160490813816,
+      "project_context": "📍 Harderwijk –  Zandlaan strategisch gelegen transformatiegebied met potentie voor energyhub. 📐 I ndicatief programma 🌳 openbaar en verkeer zones 🔋 energie- en mobiliteitshub 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale energieopgaven. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw.",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare ontwikkeling die aansluit bij lokale energieopgaven.",
+        "📌",
+        "Status",
+        "scouting"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw."
+      ]
     },
     {
       "id": 43,
       "name": "Paasloweg",
-      "longitude": 5.671075782790764,
       "latitude": 52.34587678756203,
-      "project_context": "📍 Harderwijk – Paasloweg strategisch gelegen transformatiegebied met potentie voor grootschalige gebiedsontwikkeling."
+      "longitude": 5.671075782790764,
+      "project_context": "📍 Harderwijk – Paasloweg strategisch gelegen transformatiegebied met potentie voor grootschalige gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 100 woningen 🌳 openbaar en verkeer zones 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale woon en energie opgaven. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw.",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare ontwikkeling die aansluit bij lokale woon en energie opgaven.",
+        "📌",
+        "Status",
+        "scouting"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw."
+      ]
     },
     {
       "id": 44,
       "name": "Biosciencecenter",
-      "longitude": 5.563940277540662,
       "latitude": 52.52653058442389,
-      "project_context": "📍 Lelystad – transformatie en herontwikkeling"
+      "longitude": 5.563940277540662,
+      "project_context": "📍 Lelystad – transformatie en herontwikkeling 📐 I ndicatief programma 🏢 ca. 10.000 m² 🌳 ecologische zones 🔋 energie- en mobiliteitshub 🚀 Ambitie Circulair en off-grid 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, Wageningen University & research, ontwerp en stedenbouw. Opdrachtgever Circul8 development",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [
+        "Circulair en off-grid",
+        "📌",
+        "Status",
+        "scouting"
+      ],
+      "partners_items": [
+        "Gemeente, Wageningen University & research, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Circul8 development"
+      ]
     },
     {
       "id": 45,
       "name": "Hollandsche Rading",
-      "longitude": 5.172281315384057,
       "latitude": 52.16873788901349,
-      "project_context": "📍 De Bilt – strategisch gelegen transformatiegebied met potentie voor netbewuste gebiedsontwikkeling."
+      "longitude": 5.172281315384057,
+      "project_context": "📍 De Bilt – strategisch gelegen transformatiegebied met potentie voor netbewuste gebiedsontwikkeling. 📐 Indicatief programma 🏡 ± 70 woningen 🌳 openbaar en verkeer zones 🔋 energie- en mobiliteitshub 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw.",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [
+        "Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven.",
+        "📌",
+        "Status",
+        "scouting"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, ontwerp",
+        "en stedenbouw."
+      ]
     },
     {
       "id": 46,
       "name": "Zuiderzeestraatweg",
-      "longitude": 5.833839986870983,
       "latitude": 52.44090329611763,
-      "project_context": "Elburg – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap"
+      "longitude": 5.833839986870983,
+      "project_context": "Elburg – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap",
+      "planperiode": "2024-2030",
+      "programma_items": [
+        "woningbouw: ±80 woningen",
+        "voorzieningen: ca. 2.500m²",
+        "(openbaar)gebied: ca. 5 hectare",
+        "Energie&mobiliteit: laadplein, BESS"
+      ],
+      "ambitie_items": [
+        "Paris proofconcept",
+        "Circulaire materialen",
+        "Waterrobust en klimaatadaptief",
+        "Buurtschap 2.0 principes"
+      ],
+      "partners_items": [
+        "Gemeente Elburg, marktpartijen, energiepartners, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Metropool - Lidl"
+      ]
     },
     {
       "id": 47,
       "name": "Cornelius Douwesterrein",
-      "longitude": 4.874294876497696,
       "latitude": 52.41083473301984,
-      "project_context": "📍 Amsterdam –  Toetsenbordweg strategisch gelegen transformatiegebied met potentie voor energyhub."
+      "longitude": 4.874294876497696,
+      "project_context": "📍 Amsterdam –  Toetsenbordweg strategisch gelegen transformatiegebied met potentie voor energyhub. 📌 Status scouting",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [],
+      "partners_items": []
     },
     {
       "id": 48,
       "name": "Bergen",
-      "longitude": 4.715392549780115,
       "latitude": 52.65841503894613,
-      "project_context": "Elburg – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap"
+      "longitude": 4.715392549780115,
+      "project_context": "Elburg – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap",
+      "planperiode": "2026-2030",
+      "programma_items": [
+        "woningbouw: ±80 woningen",
+        "voorzieningen: ca. 2.500m²",
+        "(openbaar)gebied: ca. 5 hectare",
+        "Energie&mobiliteit: laadplein, BESS"
+      ],
+      "ambitie_items": [
+        "Paris proofconcept",
+        "Circulaire materialen",
+        "Waterrobust en klimaatadaptief",
+        "Buurtschap 2.0 principes"
+      ],
+      "partners_items": [
+        "Gemeente, marktpartijen, energiepartners, ontwerp",
+        "en stedenbouw.",
+        "Opdrachtgever Metropool - Lidl"
+      ]
     },
     {
       "id": 49,
       "name": "Hoorn",
-      "longitude": 5.02781451303364,
       "latitude": 52.65215474948947,
-      "project_context": "📍 Hoorn –  Op de gemeente grens Koggenland - Hoorn strategisch gelegen transformatiegebied met potentie om vanuit mobiliteits-energyhub door te groeien naar gebiedsontwikkeling."
+      "longitude": 5.02781451303364,
+      "project_context": "📍 Hoorn –  Op de gemeente grens Koggenland - Hoorn strategisch gelegen transformatiegebied met potentie om vanuit mobiliteits-energyhub door te groeien naar gebiedsontwikkeling. 📌 Status scouting",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [],
+      "partners_items": []
     },
     {
       "id": 50,
       "name": "Schagen",
-      "longitude": 4.778127851560365,
       "latitude": 52.79039808600129,
-      "project_context": "📍 Schagen –  Herontwikkeling in onderzoek"
+      "longitude": 4.778127851560365,
+      "project_context": "📍 Schagen –  Herontwikkeling in onderzoek 📌 Status scouting",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [],
+      "partners_items": []
     },
     {
       "id": 51,
       "name": "Burgerbrug",
-      "longitude": 4.702468957930177,
       "latitude": 52.74659102740613,
-      "project_context": "📍 Burgerbrug –  In verkenning"
+      "longitude": 4.702468957930177,
+      "project_context": "📍 Burgerbrug –  In verkenning 📌 Status scouting",
+      "planperiode": "",
+      "programma_items": [],
+      "ambitie_items": [],
+      "partners_items": []
     }
   ]
 }
