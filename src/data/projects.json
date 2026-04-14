@@ -1,0 +1,365 @@
+{
+  "dataset_name": "VOVON Projects",
+  "source_file": "Projects VOVON.kml",
+  "coordinate_system": "WGS84 (latitude/longitude)",
+  "project_count": 51,
+  "projects": [
+    {
+      "id": 1,
+      "name": "Winkelcentrum 't Harde",
+      "longitude": 5.883222505178873,
+      "latitude": 52.41500547299878,
+      "project_context": "t Harde – uitbreiding en transformatie naar een toekomstbestendige woon- en winkelomgeving."
+    },
+    {
+      "id": 2,
+      "name": "Thomashuis",
+      "longitude": 5.881804809545925,
+      "latitude": 52.41716072104534,
+      "project_context": "t Harde – kleinschalige zorgopvang"
+    },
+    {
+      "id": 3,
+      "name": "Plan Heidezoom",
+      "longitude": 5.867817858142816,
+      "latitude": 52.41233125182147,
+      "project_context": "t Harde – Plan heidezoom uitleg locatie"
+    },
+    {
+      "id": 4,
+      "name": "Heidestate",
+      "longitude": 5.869491391641237,
+      "latitude": 52.41301968517805,
+      "project_context": "t Harde – Heidestate"
+    },
+    {
+      "id": 5,
+      "name": "Baron van Lynden",
+      "longitude": 5.841682049564643,
+      "latitude": 52.44524447056516,
+      "project_context": "Elburg – Baron van Lynden, FA-hoed en huur-koopappartementen"
+    },
+    {
+      "id": 6,
+      "name": "Plan Koeland",
+      "longitude": 5.894340584760378,
+      "latitude": 52.44121644127083,
+      "project_context": "Oldebroek – woongebouw"
+    },
+    {
+      "id": 7,
+      "name": "Sytzemalaan",
+      "longitude": 5.899272481894804,
+      "latitude": 52.44620872173819,
+      "project_context": "Oldebroek – woongebouw Sytzema"
+    },
+    {
+      "id": 8,
+      "name": "Plan Molenbeek",
+      "longitude": 5.789995560635626,
+      "latitude": 52.38914736746572,
+      "project_context": "Nunspeet – gebiedsontwikkeling plan Molenbeek RugaanRug woningen en concept woningbouw"
+    },
+    {
+      "id": 9,
+      "name": "Prinsenhof",
+      "longitude": 5.632418352513717,
+      "latitude": 52.33445048921362,
+      "project_context": "Harderwijk – woongebouw Prinsenhof"
+    },
+    {
+      "id": 10,
+      "name": "Plan Het Trefpunt",
+      "longitude": 5.622029248538492,
+      "latitude": 52.31374685590939,
+      "project_context": "Ermelo – gebiedstransformatie naar een toekomstbestendige woonomgeving (tender gemeente Ermelo)."
+    },
+    {
+      "id": 11,
+      "name": "Plan de Verbinding",
+      "longitude": 5.631124592799816,
+      "latitude": 52.30188314570279,
+      "project_context": "Ermelo – herstructurering en gebiedstransformatie 'De Verbinding' een toekomstbestendige woon- en winkelomgeving."
+    },
+    {
+      "id": 12,
+      "name": "Plan Herbergier",
+      "longitude": 5.628234816014793,
+      "latitude": 52.30088822098632,
+      "project_context": "Ermelo – transformatie taxibakker naar een nieuwbouw zorg De Herbergier"
+    },
+    {
+      "id": 13,
+      "name": "Zorgcomplex 'De ijsvogel'",
+      "longitude": 5.616279247273965,
+      "latitude": 52.2943700694661,
+      "project_context": "Ermelo – De IJsvogel is een moderne woonzorglocatie, intramurale zorg verpleging en langdurig thuis wonen gecombineerd op 1 plek"
+    },
+    {
+      "id": 14,
+      "name": "Plan Salem",
+      "longitude": 5.623486273908087,
+      "latitude": 52.30553870341552,
+      "project_context": "Ermelo – Astmabehandelcentrum Salem, is een moderne zorglocatie, niet alleen vanwege de architectuur, maar ook door de doordachte achter dit centrum."
+    },
+    {
+      "id": 15,
+      "name": "Park Viventra",
+      "longitude": 5.624756018187407,
+      "latitude": 52.29218754467526,
+      "project_context": "Ermelo – Park Viventra een gebiedstransformatie naar een toekomstbestendige woonomgeving."
+    },
+    {
+      "id": 16,
+      "name": "Woonzorgcomplex Amaniet",
+      "longitude": 5.635706969220371,
+      "latitude": 52.29469671315439,
+      "project_context": "Ermelo – De Amaniet is een moderne woonzorglocatie, niet alleen vanwege de architectuur, maar ook door de gedachte achter dit centrum. Het verbindt jong en oud: de kinderen van basisschool De Cantharel, buitenschoolse opvang Beertje Puk, de peuterspeelzaal en de ouderen die er wonen en zorg krijgen."
+    },
+    {
+      "id": 17,
+      "name": "Herderlaan",
+      "longitude": 5.610374744882467,
+      "latitude": 52.29070557801472,
+      "project_context": "Ermelo – De Herderlaan een  woonzorglocatie."
+    },
+    {
+      "id": 18,
+      "name": "Sportfondsenbad",
+      "longitude": 5.394601351741189,
+      "latitude": 52.15109119851336,
+      "project_context": "Amersfoort – het sportfondsenbad locatie gebiedstransformatie naar een toekomstbestendige woonomgeving (oud zwembad locatie)."
+    },
+    {
+      "id": 19,
+      "name": "Soetserhof",
+      "longitude": 5.360393912360313,
+      "latitude": 52.15742780153518,
+      "project_context": "Amersfoort – gebiedstransformatie naar een toekomstbestendige woonomgeving (Soetserhof is onderdeel tender gebied wagenwerkplaats NS)."
+    },
+    {
+      "id": 20,
+      "name": "Bruispad",
+      "longitude": 5.387694627676378,
+      "latitude": 52.17317532088612,
+      "project_context": "Amersfoort – Op de plek van het voormalige wijkcentrum De Trefhorst en basisschool De Zevensprong een gebiedstransformatie naar een toekomstbestendige woon-leeromgeving."
+    },
+    {
+      "id": 21,
+      "name": "De Pionier",
+      "longitude": 5.373741014416655,
+      "latitude": 52.1622251889567,
+      "project_context": "Amersfoort – de Pioneer tijdelijke huisvesting. De Pionier is een bijzondere, nieuwe woonplek in de stad. Op het voormalig Smeeing terrein is dit complex gerealiseerd voor jongeren tot en met 30 jaar."
+    },
+    {
+      "id": 22,
+      "name": "Softwareweg",
+      "longitude": 5.411102456450061,
+      "latitude": 52.17319164886419,
+      "project_context": "Amersfoort – Softwareweg locatie maakt onderdeel uit van de gebiedstransformatie 'De Hoef'."
+    },
+    {
+      "id": 23,
+      "name": "Plan de Dijkjes",
+      "longitude": 5.86174124235916,
+      "latitude": 52.45684750355829,
+      "project_context": "Elburg – gebiedsontwikkeling plan de Dijkjes 1e gasloze woonwijk NoordWest Veluwe"
+    },
+    {
+      "id": 24,
+      "name": "Rotonde 14",
+      "longitude": 5.415130226374647,
+      "latitude": 52.18943061891478,
+      "project_context": "Amersfoort – Rotonde 14 nieuwbouw mixed-use vastgoedcomplex, FA-hoed en huurappartementen"
+    },
+    {
+      "id": 25,
+      "name": "Aldi locatie",
+      "longitude": 5.788959781761376,
+      "latitude": 52.38625464025148,
+      "project_context": "Nunspeet – nieuwbouw mixed-use woongebouw"
+    },
+    {
+      "id": 26,
+      "name": "Plan Jukweg",
+      "longitude": 5.857941774085957,
+      "latitude": 52.43982114322723,
+      "project_context": "Elburg – gebiedsontwikkeling uitleg in WvG gebied"
+    },
+    {
+      "id": 27,
+      "name": "Plan Horstkamp",
+      "longitude": 5.865597523584166,
+      "latitude": 52.45148677645992,
+      "project_context": "Elburg – uitbreiding woningbouw en gebiedsontwikkeling naar een toekomstbestendige woonomgeving."
+    },
+    {
+      "id": 28,
+      "name": "Nigtevecht",
+      "longitude": 5.040867130763957,
+      "latitude": 52.24379605975315,
+      "project_context": "Vreeland – gebiedsontwikkeling aan de Vecht, recreatief gebiedsconcept"
+    },
+    {
+      "id": 29,
+      "name": "Zeeburgerpad",
+      "longitude": 4.942196834169765,
+      "latitude": 52.3670301131295,
+      "project_context": "📍 Amsterdam – strategisch gelegen transformatiegebied met potentie voor opstalontwikkeling."
+    },
+    {
+      "id": 30,
+      "name": "De Spoordriehoek",
+      "longitude": 4.976165007466995,
+      "latitude": 52.34106226193644,
+      "project_context": "📍 Diemen – de Spoordriehoek strategisch gelegen uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling."
+    },
+    {
+      "id": 31,
+      "name": "Oldebroek west II",
+      "longitude": 5.89593671580749,
+      "latitude": 52.44042729044759,
+      "project_context": "Oldebroek – Gebiedsontwikkeling gemeente-markt"
+    },
+    {
+      "id": 32,
+      "name": "Hanzekwartier",
+      "longitude": 5.716789229564638,
+      "latitude": 52.5317354316436,
+      "project_context": "📍 Dronten – strategisch gelegen transformatiegebied met meerdere grondeigenaren."
+    },
+    {
+      "id": 33,
+      "name": "Versterkingsprogramma CC2",
+      "longitude": 6.740923831370054,
+      "latitude": 53.33416764903804,
+      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen."
+    },
+    {
+      "id": 34,
+      "name": "Versterkingsprogramma CC2",
+      "longitude": 6.602127467290629,
+      "latitude": 53.29969969815865,
+      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen."
+    },
+    {
+      "id": 35,
+      "name": "Versterkingsprogramma CC2",
+      "longitude": 6.600325356558607,
+      "latitude": 53.30432804637132,
+      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen."
+    },
+    {
+      "id": 36,
+      "name": "Versterkingsporgramma CC2",
+      "longitude": 6.605302344308894,
+      "latitude": 53.30153804755204,
+      "project_context": "Het \"versterkingsprogramma CC2/3\" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen."
+    },
+    {
+      "id": 37,
+      "name": "Rietweg-Hamlaan",
+      "longitude": 5.690697170802894,
+      "latitude": 52.51553997550236,
+      "project_context": "📍 Dronten – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling."
+    },
+    {
+      "id": 38,
+      "name": "De Rede",
+      "longitude": 5.719594347966519,
+      "latitude": 52.52322056948027,
+      "project_context": "📍 Dronten –  potentie voor een binnenstedelijke herontwikkeling."
+    },
+    {
+      "id": 39,
+      "name": "Haven Emmeloord",
+      "longitude": 5.766471345796877,
+      "latitude": 52.72607782710864,
+      "project_context": "📍 Emmeloord –  strategisch gelegen met potentie voor transformatie met gebiedsontwikkeling."
+    },
+    {
+      "id": 40,
+      "name": "Chez Marknesse",
+      "longitude": 5.877797877766849,
+      "latitude": 52.70899575169119,
+      "project_context": "acquisitie | ontwikkeling"
+    },
+    {
+      "id": 41,
+      "name": "Ossenkampweg",
+      "longitude": 5.538146582478265,
+      "latitude": 52.36207035430165,
+      "project_context": "📍 Zeewolde – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling."
+    },
+    {
+      "id": 42,
+      "name": "Zandlaan",
+      "longitude": 5.649160490813816,
+      "latitude": 52.34127323848439,
+      "project_context": "📍 Harderwijk –  Zandlaan strategisch gelegen transformatiegebied met potentie voor energyhub."
+    },
+    {
+      "id": 43,
+      "name": "Paasloweg",
+      "longitude": 5.671075782790764,
+      "latitude": 52.34587678756203,
+      "project_context": "📍 Harderwijk – Paasloweg strategisch gelegen transformatiegebied met potentie voor grootschalige gebiedsontwikkeling."
+    },
+    {
+      "id": 44,
+      "name": "Biosciencecenter",
+      "longitude": 5.563940277540662,
+      "latitude": 52.52653058442389,
+      "project_context": "📍 Lelystad – transformatie en herontwikkeling"
+    },
+    {
+      "id": 45,
+      "name": "Hollandsche Rading",
+      "longitude": 5.172281315384057,
+      "latitude": 52.16873788901349,
+      "project_context": "📍 De Bilt – strategisch gelegen transformatiegebied met potentie voor netbewuste gebiedsontwikkeling."
+    },
+    {
+      "id": 46,
+      "name": "Zuiderzeestraatweg",
+      "longitude": 5.833839986870983,
+      "latitude": 52.44090329611763,
+      "project_context": "Elburg – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap"
+    },
+    {
+      "id": 47,
+      "name": "Cornelius Douwesterrein",
+      "longitude": 4.874294876497696,
+      "latitude": 52.41083473301984,
+      "project_context": "📍 Amsterdam –  Toetsenbordweg strategisch gelegen transformatiegebied met potentie voor energyhub."
+    },
+    {
+      "id": 48,
+      "name": "Bergen",
+      "longitude": 4.715392549780115,
+      "latitude": 52.65841503894613,
+      "project_context": "Elburg – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap"
+    },
+    {
+      "id": 49,
+      "name": "Hoorn",
+      "longitude": 5.02781451303364,
+      "latitude": 52.65215474948947,
+      "project_context": "📍 Hoorn –  Op de gemeente grens Koggenland - Hoorn strategisch gelegen transformatiegebied met potentie om vanuit mobiliteits-energyhub door te groeien naar gebiedsontwikkeling."
+    },
+    {
+      "id": 50,
+      "name": "Schagen",
+      "longitude": 4.778127851560365,
+      "latitude": 52.79039808600129,
+      "project_context": "📍 Schagen –  Herontwikkeling in onderzoek"
+    },
+    {
+      "id": 51,
+      "name": "Burgerbrug",
+      "longitude": 4.702468957930177,
+      "latitude": 52.74659102740613,
+      "project_context": "📍 Burgerbrug –  In verkenning"
+    }
+  ]
+}

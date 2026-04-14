@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { MapPin, Home, Briefcase, Landmark, Zap } from 'lucide-react';
 import { Language, translations } from '../translations';
+import ProjectMap from './ProjectMap';
 
 interface ReferencesProps {
   language: Language;
@@ -79,6 +80,8 @@ const References = ({ language }: ReferencesProps) => {
             </motion.div>
           ))}
         </div>
+        
+        <ProjectMap />
         
         <div className="mt-12 text-center">
            <a 
