@@ -4,8 +4,20 @@ import { GoogleGenAI } from '@google/genai';
 import Markdown from 'react-markdown';
 import projectsData from '../data/projects.json';
 
-// Initialize Gemini API
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+// We don't initialize it globally to prevent crashes if the API key is missing
+let aiClient: GoogleGenAI | null = null;
+
+const getAIClient = () => {
+  if (!aiClient) {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey) {
+      console.warn('GEMINI_API_KEY is not set. AI Assistant will not work.');
+      return null;
+    }
+    aiClient = new GoogleGenAI({ apiKey });
+  }
+  return aiClient;
+};
 
 // Prepare context from projects
 const projectsContext = projectsData.projects.map(p => 
@@ -51,13 +63,16 @@ export default function AIAssistant() {
   useEffect(() => {
     // Initialize chat session
     try {
-      chatRef.current = ai.chats.create({
-        model: 'gemini-3-flash-preview',
-        config: {
-          systemInstruction: systemInstruction,
-          temperature: 0.7,
-        }
-      });
+      const ai = getAIClient();
+      if (ai) {
+        chatRef.current = ai.chats.create({
+          model: 'gemini-3-flash-preview',
+          config: {
+            systemInstruction: systemInstruction,
+            temperature: 0.7,
+          }
+        });
+      }
     } catch (e) {
       console.error("Failed to initialize chat", e);
     }
