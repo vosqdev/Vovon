@@ -26,7 +26,7 @@ function parseCSV(text) {
       i++; // Skip next quote
     } else if (char === '"') {
       inQuotes = !inQuotes;
-    } else if (char === ',' && !inQuotes) {
+    } else if (char === ';' && !inQuotes) {
       row.push(currentValue);
       currentValue = '';
     } else if ((char === '\n' || char === '\r') && !inQuotes) {

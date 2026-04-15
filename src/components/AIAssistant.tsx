@@ -42,8 +42,8 @@ const getAIClient = () => {
 
 // Prepare context from projects
 const projectsContext = projectsData.projects.map(p => 
-  `- ${p.name} (${p.planperiode || 'Onbekend'}): ${p.project_context}. Programma: ${p.programma_items?.join(', ')}. Ambitie: ${p.ambitie_items?.join(', ')}.`
-).join('\n');
+  `- Project: ${p.name}\n  Projectinfo: ${p.project_context}\n  Programma: ${p.programma_items?.join(', ') || 'Niet gespecificeerd'}\n  Ambities: ${p.ambitie_items?.join(', ') || 'Niet gespecificeerd'}\n  Partners: ${p.partners_items?.join(', ') || 'Niet gespecificeerd'}`
+).join('\n\n');
 
 const systemInstruction = `Je bent de AI-assistent van VOVON, een expert op het snijvlak van vastgoed en energietransitie. 
 Jouw expertise omvat:

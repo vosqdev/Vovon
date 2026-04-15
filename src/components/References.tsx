@@ -81,19 +81,13 @@ const References = ({ language }: ReferencesProps) => {
           ))}
         </div>
         
-        <ProjectMap />
-        
-        <div className="mt-12 text-center">
-           <a 
-             href="https://earth.google.com/earth/d/1hI_ZGbVZ9iA3BwuzB0XBQ_uUNUbEqJ7N?usp=sharing" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             className="inline-flex items-center text-vovon-600 font-semibold hover:text-vovon-700 transition-colors"
-           >
-             {t.googleEarth}
-             <MapPin className="ml-2 w-4 h-4" />
-           </a>
+        <div className="mt-16 text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            {language === 'nl' ? 'Bekijk de eerder projecten' : 'View previous projects'}
+          </h2>
         </div>
+        
+        <ProjectMap />
       </div>
     </section>
   );

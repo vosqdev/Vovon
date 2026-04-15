@@ -1,5 +1,5 @@
-id,name,latitude,longitude,altitude,planperiode,project_context,programma_items,ambitie_items,partners_items,description_text
-1,Winkelcentrum 't Harde,52.41500547299878,5.883222505178873,8.191075048426137,2010-2016,t Harde – uitbreiding en transformatie naar een toekomstbestendige woon- en winkelomgeving.,"woningbouw: ±200 woningen | voorzieningen: ca. 15.000 m² | (openbaar)gebied: ca. 4 hectare | Energie&mobiliteit: laadplein, BESS, zonnepanelen",Energieneutraal wijkconcept | Circulaire materialen | Waterrobust en klimaatadaptief | Buurtschap 2.0 principes,"Gemeente Elburg, marktpartijen, energiepartners, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+id;name;latitude;longitude;altitude;planperiode;project_context;programma_items;ambitie_items;partners_items;description_text
+1;Winkelcentrum 't Harde;52.41500547299878;5.883222505178873;8.191075048426137;2010-2016;t Harde – uitbreiding en transformatie naar een toekomstbestendige woon- en winkelomgeving.;woningbouw: ±200 woningen (koop-huur-zorg) | voorzieningen: ca. 6.000 m² 2 supermarkten en retail | (openbaar)gebied: ca. 4 hectare ;Herstructurering, revitalisering van een monotoom winkelcentrum. 30 zorgappartementen voor ’s Heerenloo;Gemeente Elburg, marktpartijen Volkerwessels & Kondor Wessels Projecten, supermarkten Boni & Deen  | Opdrachtgever UWOON;"🏙
  t Harde
  – uitbreiding en transformatie naar een
 toekomstbestendige woon- en winkelomgeving.
@@ -22,7 +22,7 @@ Partners & Stakeholders
 Gemeente Elburg, marktpartijen, energiepartners, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-2,Thomashuis,52.41716072104534,5.881804809545925,11.02408022721899,2012-2015,t Harde – kleinschalige zorgopvang,woningen ±15 eenheden | voorzieningen: | (openbaar)gebied: ca. 1 hectare | Energie&mobiliteit:,terug bouw scenario,"Gemeente Elburg, DrieNotenBomen Thomashuizen.","🏙
+2;Thomashuis;52.41716072104534;5.881804809545925;11.02408022721899;2012-2015;t Harde – kleinschalige zorgopvang;woningen ±15 eenheden | voorzieningen: | (openbaar)gebied: ca. 1 hectare;Gezinsvervangend huis voor zorg met terugbouw scenario naar reguliere woningbouw;Gemeente Elburg, DrieNotenBomen Thomashuizen | Opdrachtgever UWOON;"🏙
  t Harde
  – kleinschalige zorgopvang
 📅
@@ -39,7 +39,7 @@ Programma
 🤝
 Partners & Stakeholders
 Gemeente Elburg, DrieNotenBomen Thomashuizen."
-3,Plan Heidezoom,52.41233125182147,5.867817858142816,6.532763108447059,2008-2013,t Harde – Plan heidezoom uitleg locatie,woningbouw: 80 huur-koopwoningen | voorzieningen: | (openbaar)gebied: ca. 8 hectare | Energie&mobiliteit: op maaiveld,Energie wijkconcept,"Gemeente Elburg, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Omnia Wonen","🏙
+3;Plan Heidezoom;52.41233125182147;5.867817858142816;6.532763108447059;2008-2013;t Harde – Plan heidezoom uitleg locatie;woningbouw: 80 huur-koopwoningen | voorzieningen: | (openbaar)gebied: ca. 8 hectare;Gebiedsontwikkeling;Gemeente Elburg, marktpartijen VanWonen | Opdrachtgever Omnia Wonen;"🏙
  t Harde
  – Plan heidezoom uitleg locatie
 📅
@@ -58,7 +58,7 @@ Partners & Stakeholders
 Gemeente Elburg, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Omnia Wonen"
-4,Heidestate,52.41301968517805,5.869491391641237,9.518229382890027,2010-2014,t Harde – Heidestate,woningbouw: ±24 zorgeenheden,zorg vastgoed,"Gemeente Elburg, Zorggroep Careander bouwteampartner Schutte Bouw | Opdrachtgever UWOON","🏙
+4;Heidestate;52.41301968517805;5.869491391641237;9.518229382890027;2010-2014;t Harde – Heidestate;zorg vastgoed: ±24 zorgeenheden;Nieuwbouw;Gemeente Elburg, Zorggroep Careander | Opdrachtgever UWOON;"🏙
  t Harde
  – Heidestate
 📅
@@ -73,7 +73,7 @@ Programma
 Partners & Stakeholders
 Gemeente Elburg, Zorggroep Careander bouwteampartner Schutte Bouw
 Opdrachtgever UWOON"
-5,Baron van Lynden,52.44524447056516,5.841682049564643,2.001273862613706,2008-2012,"Elburg – Baron van Lynden, FA-hoed en huur-koopappartementen",woningbouw: ±200 woningen | voorzieningen: ca. 1.200 m² | (openbaar)gebied: ca. 1 hectare,Mixed use,"Gemeente, marktpartijen, zorgpartners, huisartsen, bouwteam | Opdrachtgever UWOON","🏙
+5;Baron van Lynden;52.44524447056516;5.841682049564643;2.001273862613706;2008-2012;Elburg – Baron van Lynden, FA-hoed en huur-koopappartementen;woningbouw: ±200 woningen | voorzieningen: ca. 1.200 m² gezondheidscentrum (FA-hoed) | (openbaar)gebied: ca. 1 hectare;Mixed use gebiedsontwikkeling;Gemeente, marktpartij BPD, apotheek, fysio, huisartsen | Opdrachtgever UWOON;"🏙
  Elburg
  – Baron van Lynden, FA-hoed en huur-koopappartementen
 📅
@@ -90,7 +90,7 @@ Programma
 Partners & Stakeholders
 Gemeente, marktpartijen, zorgpartners, huisartsen, bouwteam
 Opdrachtgever UWOON"
-6,Plan Koeland,52.44121644127083,5.894340584760378,2.001227163655426,2010-2013,Oldebroek – woongebouw,woningbouw: 26 huurwoningen,afname huuraandeel uit plan Koeland,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+6;Plan Koeland;52.44121644127083;5.894340584760378;2.001227163655426;2010-2013;Oldebroek – woongebouw;woningbouw: 26 huurwoningen en een gezinsvervangend huis;Woningbouw in combinatie met zorgvastgoed;Gemeente, marktpartij Prins Bouw, zorg S’ Heerenloo | Opdrachtgever UWOON;"🏙
  Oldebroek
  – woongebouw
 📅
@@ -106,7 +106,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-7,Sytzemalaan,52.44620872173819,5.899272481894804,3.513743507283273,2010-2013,Oldebroek – woongebouw Sytzema,woningbouw: 20 huurwoningen,transformatie winkelcentrum,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+7;Sytzemalaan;52.44620872173819;5.899272481894804;3.513743507283273;2010-2013;Oldebroek – woongebouw Sytzema;woningbouw: 20 huurappartementen;Transformatie winkelcentrum;Gemeente, marktpartij Prins Bouw | Opdrachtgever UWOON;"🏙
  Oldebroek
  – woongebouw Sytzema
 📅
@@ -122,7 +122,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-8,Plan Molenbeek,52.38914736746572,5.789995560635626,4.011098568886331,2016-2020,Nunspeet – gebiedsontwikkeling plan Molenbeek RugaanRug woningen en concept woningbouw,woningbouw: ±70 huurwoningen | (openbaar)gebied: ca. 3 hectare | Energie&mobiliteit: gasloos,Energieneutraal wijkconcept | 20 NOM huurwoningen | Woonconcept MorgenWonen,"Gemeente, marktpartijen, energiepartners, ontwerp | en stedenbouw. | Opdrachtgever Omnia Wonen","🏙
+8;Plan Molenbeek;52.38914736746572;5.789995560635626;4.011098568886331;2016-2020;Nunspeet – gebiedsontwikkeling plan Molenbeek RugaanRug woningen en concept woningbouw;woningbouw: ±20 huurwoningen;Energieneutraal wijkconcept | Nul op de Meter huurwoningen | Woonconcept MorgenWonen;Gemeente, marktpartij Volker Wessels | Opdrachtgever Omnia Wonen;"🏙
  Nunspeet
  – gebiedsontwikkeling plan Molenbeek RugaanRug woningen en concept woningbouw
 📅
@@ -142,7 +142,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, energiepartners, ontwerp
 en stedenbouw.
 Opdrachtgever Omnia Wonen"
-9,Prinsenhof,52.33445048921362,5.632418352513717,6.394065796193895,2010-2013,Harderwijk – woongebouw Prinsenhof,woningbouw: ±49 huurappartementen,geen bijzonderheden,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+9;Prinsenhof;52.33445048921362;5.632418352513717;6.394065796193895;2010-2013;Harderwijk – woongebouw Prinsenhof;woningbouw: ±49 huurappartementen;woningbouw;Gemeente | Opdrachtgever UWOON;"🏙
  Harderwijk
  – woongebouw Prinsenhof
 📅
@@ -158,7 +158,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-10,Plan Het Trefpunt,52.31374685590939,5.622029248538492,14.4698815133255,2007-2016,Ermelo – gebiedstransformatie naar een toekomstbestendige woonomgeving (tender gemeente Ermelo).,woningbouw: ±220 woningen | (openbaar)gebied: ca. 9 hectare,co-housing concept | waterrobust en klimaatadaptief | zorg thomashuis,"Gemeente, marktpartijen, DrieNotenBomen, zorgpartners, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+10;Plan Het Trefpunt;52.31374685590939;5.622029248538492;14.4698815133255;2007-2016;Ermelo – gebiedstransformatie naar een toekomstbestendige woonomgeving (tender gemeente Ermelo).;woningbouw: ±220 woningen | (openbaar)gebied: ca. 9 hectare | zorg vastgoed Thomashuis;co-housing concept | waterrobust en klimaatadaptief | zorg thomashuis | landschappelijk inpassing ;Gemeente, DrieNotenBomen | Opdrachtgever UWOON;"🏙
  Ermelo
  – gebiedstransformatie naar een
 toekomstbestendige woonomgeving (tender gemeente Ermelo).
@@ -178,7 +178,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, DrieNotenBomen, zorgpartners, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-11,Plan de Verbinding,52.30188314570279,5.631124592799816,18.32133032906536,2010-2016,Ermelo – herstructurering en gebiedstransformatie 'De Verbinding' een toekomstbestendige woon- en winkelomgeving.,woningbouw: ±200 woningen | voorzieningen: ca. 5.000 m² | (openbaar)gebied: ca. 4 hectare,bouwconcept,"Gemeente, marktpartijen, investeerders ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+11;Plan de Verbinding;52.30188314570279;5.631124592799816;18.32133032906536;2010-2016;Ermelo – herstructurering en gebiedstransformatie 'De Verbinding' een toekomstbestendige woon- en winkelomgeving.;woningbouw: ±200 woningen | voorzieningen: ca. 5.000 m² | (openbaar)gebied: ca. 4 hectare;bouwconcept;Gemeente, marktpartijen Albert Heijn, Volker Wessels, Green | Opdrachtgever UWOON;"🏙
  Ermelo
  – herstructurering en gebiedstransformatie 'De Verbinding' een
 toekomstbestendige woon- en winkelomgeving.
@@ -197,7 +197,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, investeerders ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-12,Plan Herbergier,52.30088822098632,5.628234816014793,15.4524026694394,2008-2013,Ermelo – transformatie taxibakker naar een nieuwbouw zorg De Herbergier,woningbouw: ±30 zorgeenheden,woon-zorgconcept De Herbergier,"Gemeente, zorgpartners, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+12;Plan Herbergier;52.30088822098632;5.628234816014793;15.4524026694394;2008-2013;Ermelo – transformatie taxibakker naar een nieuwbouw zorg De Herbergier;Zorg vastgoed: ±30 zorgeenheden;woon-zorgconcept De Herbergier;Gemeente, De Drie Notenbomen | Opdrachtgever UWOON;"🏙
  Ermelo
  – transformatie taxibakker naar een nieuwbouw zorg De Herbergier
 📅
@@ -213,7 +213,7 @@ Partners & Stakeholders
 Gemeente, zorgpartners, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-13,Zorgcomplex 'De ijsvogel',52.2943700694661,5.616279247273965,14.40603032516933,2008-2012,"Ermelo – De IJsvogel is een moderne woonzorglocatie, intramurale zorg verpleging en langdurig thuis wonen gecombineerd op 1 plek",woningbouw: ±50 zorgeenheden,moderne woonzorglocatie | mixed-use vastgoed WOZOCO | beschermd wonen,"Gemeente, zorgpartners, onderwijs, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+13;Zorgcomplex 'De ijsvogel';52.2943700694661;5.616279247273965;14.40603032516933;2008-2012;Ermelo – De IJsvogel is een moderne woonzorglocatie, intramurale zorg verpleging en langdurig thuis wonen gecombineerd op 1 plek;Zorg vastgoed: ±50 zorgeenheden;moderne woonzorglocatie, mixed-use vastgoed WOZOCO, beschermd wonen;Gemeente, Zorggroep NoordWest Veluwe | Opdrachtgever UWOON;"🏙
  Ermelo
  – De IJsvogel is een moderne woonzorglocatie, intramurale zorg verpleging en langdurig thuis wonen gecombineerd op 1 plek
 📅
@@ -231,7 +231,7 @@ Partners & Stakeholders
 Gemeente, zorgpartners, onderwijs, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-14,Plan Salem,52.30553870341552,5.623486273908087,18.47638141393066,2007-2012,"Ermelo – Astmabehandelcentrum Salem, is een moderne zorglocatie, niet alleen vanwege de architectuur, maar ook door de doordachte achter dit centrum.",woningbouw: | voorzieningen: 1.500m2 | (openbaar)gebied:,,"Gemeente, zorgpartners, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+14;Plan Salem;52.30553870341552;5.623486273908087;18.47638141393066;2007-2012;Ermelo – Astmabehandelcentrum Salem, is een moderne zorglocatie, niet alleen vanwege de architectuur, maar ook door de doordachte achter dit centrum.;Astmabehandelcentrum;Maatwerk zorg vastgoed;Gemeente, st Jansdal | Opdrachtgever UWOON;"🏙
  Ermelo
  – Astmabehandelcentrum Salem, is een moderne zorglocatie, niet alleen vanwege de architectuur, maar ook door de doordachte achter dit centrum.
 📅
@@ -247,7 +247,7 @@ Partners & Stakeholders
 Gemeente, zorgpartners, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-15,Park Viventra,52.29218754467526,5.624756018187407,18.13033595954761,2007-2015,Ermelo – Park Viventra een gebiedstransformatie naar een toekomstbestendige woonomgeving.,woningbouw: ±150 woningen | (openbaar)gebied: ca. 3 hectare,architectuur,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+15;Park Viventra;52.29218754467526;5.624756018187407;18.13033595954761;2007-2015;Ermelo – Park Viventra een gebiedstransformatie naar een toekomstbestendige woonomgeving.;Woningbouw: ±150 woningen en 50 zorgeenheden| (openbaar)gebied: ca. 3 hectare;Beschermd wonen in combinatie met woningbouw;Gemeente, Bartimeus | Opdrachtgever UWOON;"🏙
  Ermelo
  – Park Viventra een gebiedstransformatie naar een
 toekomstbestendige woonomgeving.
@@ -265,7 +265,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-16,Woonzorgcomplex Amaniet,52.29469671315439,5.635706969220371,18.16631446470124,2008-2015,"Ermelo – De Amaniet is een moderne woonzorglocatie, niet alleen vanwege de architectuur, maar ook door de gedachte achter dit centrum. Het verbindt jong en oud: de kinderen van basisschool De Cantharel, buitenschoolse opvang Beertje Puk, de peuterspeelzaal en de ouderen die er wonen en zorg krijgen.",woningbouw: ±50 zorgeenheden | voorzieningen: 2.000m2 | (openbaar)gebied: 2 hectare,moderne woonzorglocatie | mixed-use vastgoed WOZOCO | beschermd wonen,"Gemeente, zorgpartners, onderwijs, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+16;Woonzorgcomplex Amaniet;52.29469671315439;5.635706969220371;18.16631446470124;2008-2015;Ermelo – De Amaniet is een moderne woonzorglocatie, niet alleen vanwege de architectuur, maar ook door de gedachte achter dit centrum. Het verbindt jong en oud: de kinderen van basisschool De Cantharel, buitenschoolse opvang Beertje Puk, de peuterspeelzaal en de ouderen die er wonen en zorg krijgen.;Zorgvastgoed: ±50 zorgeenheden | voorzieningen: 2.000m2 basiskool en buitenschoolse opvang;moderne woonzorglocatie | mixed-use vastgoed WOZOCO | beschermd wonen;Gemeente | Opdrachtgever UWOON;"🏙
  Ermelo
  – De Amaniet is een moderne woonzorglocatie, niet alleen vanwege de architectuur, maar ook door de gedachte achter dit centrum. Het verbindt jong en oud: de kinderen van basisschool De Cantharel, buitenschoolse opvang Beertje Puk, de peuterspeelzaal en de ouderen die er wonen en zorg krijgen.
 📅
@@ -285,7 +285,7 @@ Partners & Stakeholders
 Gemeente, zorgpartners, onderwijs, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-17,Herderlaan,52.29070557801472,5.610374744882467,12.28250385368434,2007-2010,Ermelo – De Herderlaan een  woonzorglocatie.,woningbouw: ±25 zorgeenheden,moderne woonzorglocatie,"Gemeente, zorgpartners, ontwerp | en stedenbouw. | Opdrachtgever UWOON","🏙
+17;Herderlaan;52.29070557801472;5.610374744882467;12.28250385368434;2007-2010;Ermelo – De Herderlaan een  woonzorglocatie.;woningbouw: ±25 zorgeenheden;moderne woonzorglocatie;Gemeente, zorgpartner s’ Heerenloo | Opdrachtgever UWOON;"🏙
  Ermelo
  – De Herderlaan een  woonzorglocatie.
 📅
@@ -301,7 +301,7 @@ Partners & Stakeholders
 Gemeente, zorgpartners, ontwerp
 en stedenbouw.
 Opdrachtgever UWOON"
-18,Sportfondsenbad,52.15109119851336,5.394601351741189,-0.9445225231447818,2015-2020,Amersfoort – het sportfondsenbad locatie gebiedstransformatie naar een toekomstbestendige woonomgeving (oud zwembad locatie).,woningbouw: 48 huurappartementen | (openbaar)gebied: ca. 1 hectare,waterrobust en klimaatadaptief | mixed use gebied met koopappartementen,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Omnia Wonen","🏙
+18;Sportfondsenbad;52.15109119851336;5.394601351741189;-0.9445225231447818;2015-2020;Amersfoort – het sportfondsenbad locatie gebiedstransformatie naar een toekomstbestendige woonomgeving (oud zwembad locatie).;woningbouw: 48 huurappartementen | (openbaar)gebied: ca. 1 hectare;waterrobust en klimaatadaptief | mixed use gebied met koop&huurappartementen;Gemeente | Opdrachtgever Omnia Wonen;"🏙
  Amersfoort
  – het sportfondsenbad locatie gebiedstransformatie naar een
 toekomstbestendige woonomgeving (oud zwembad locatie).
@@ -320,7 +320,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Omnia Wonen"
-19,Soetserhof,52.15742780153518,5.360393912360313,5.330549840086047,2015-2020,Amersfoort – gebiedstransformatie naar een toekomstbestendige woonomgeving (Soetserhof is onderdeel tender gebied wagenwerkplaats NS).,woningbouw: 34 huurwoningen | (openbaar)gebied: ca. 1 hectare,inkoop vanuit CPO Collectief Particulier Opdrachtgeverschap,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Omnia Wonen","🏙
+19;Soetserhof;52.15742780153518;5.360393912360313;5.330549840086047;2015-2020;Amersfoort – gebiedstransformatie naar een toekomstbestendige woonomgeving (Soetserhof is onderdeel tender gebied wagenwerkplaats NS).;woningbouw: 34 huurwoningen | (openbaar)gebied: ca. 1 hectare;inkoop vanuit CPO Collectief Particulier Opdrachtgeverschap;Gemeente, CPO Soesterhof | Opdrachtgever Omnia Wonen;"🏙
  Amersfoort
 – gebiedstransformatie naar een
 toekomstbestendige woonomgeving (Soetserhof is onderdeel tender gebied wagenwerkplaats NS).
@@ -338,7 +338,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Omnia Wonen"
-20,Bruispad,52.17317532088612,5.387694627676378,6.530889013371093,2015-2020,Amersfoort – Op de plek van het voormalige wijkcentrum De Trefhorst en basisschool De Zevensprong een gebiedstransformatie naar een toekomstbestendige woon-leeromgeving.,woningbouw: ±43 eenheden huur&koop | voorzieningen: 1.000m2 | (openbaar)gebied: ca. 1 hectare,integrale gebiedsontwikkeling,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Omnia Wonen","🏙
+20;Bruispad;52.17317532088612;5.387694627676378;6.530889013371093;2015-2020;Amersfoort – Op de plek van het voormalige wijkcentrum De Trefhorst en basisschool De Zevensprong een gebiedstransformatie naar een toekomstbestendige woon-leeromgeving.;woningbouw: ±43 eenheden huur&koop | voorzieningen: 1.000m2 | (openbaar)gebied: ca. 1 hectare;integrale gebiedsontwikkeling;Gemeente | Opdrachtgever Omnia Wonen;"🏙
  Amersfoort
 – Op de plek van het voormalige wijkcentrum De Trefhorst en basisschool De Zevensprong een
 gebiedstransformatie naar een
@@ -358,7 +358,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Omnia Wonen"
-21,De Pionier,52.1622251889567,5.373741014416655,1.254024901759516,2015-2020,"Amersfoort – de Pioneer tijdelijke huisvesting. De Pionier is een bijzondere, nieuwe woonplek in de stad. Op het voormalig Smeeing terrein is dit complex gerealiseerd voor jongeren tot en met 30 jaar.",woningbouw: ±208 studio's | (openbaar)gebied: ca. 1 hectare,flexwonen | samenwerking woningcorporaties Portaal en Omnia Wonen,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Omnia Wonen","🏙
+21;De Pionier;52.1622251889567;5.373741014416655;1.254024901759516;2015-2020;Amersfoort – de Pioneer tijdelijke huisvesting. De Pionier is een bijzondere, nieuwe woonplek in de stad. Op het voormalig Smeeing terrein is dit complex gerealiseerd voor jongeren tot en met 30 jaar.;woningbouw: ±208 studio's | (openbaar)gebied: ca. 1 hectare;flexwonen | samenwerking woningcorporaties Portaal en Omnia Wonen;Gemeente, corporatie Portaal | Opdrachtgever Omnia Wonen;"🏙
  Amersfoort
  – de Pioneer tijdelijke huisvesting. De Pionier is een bijzondere, nieuwe woonplek in de stad. Op het voormalig Smeeing terrein is dit complex gerealiseerd voor jongeren tot en met 30 jaar.
 📅
@@ -376,7 +376,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Omnia Wonen"
-22,Softwareweg,52.17319164886419,5.411102456450061,0.4901400124261857,2020-2024,Amersfoort – Softwareweg locatie maakt onderdeel uit van de gebiedstransformatie 'De Hoef'.,woningbouw: 60 appartementen | voorzieningen: 300m2 bog-vastgoed,gronddeal doorverkocht,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever BEMOG","🏙
+22;Softwareweg;52.17319164886419;5.411102456450061;0.4901400124261857;2020-2024;Amersfoort – Softwareweg locatie maakt onderdeel uit van de gebiedstransformatie 'De Hoef'.;woningbouw: 60 appartementen | voorzieningen: 300m2 bog-vastgoed;gronddeal doorverkocht aan Slokker Vastgoed;Gemeente, | Opdrachtgever Bemog projectontwikkeling;"🏙
  Amersfoort
  – Softwareweg locatie maakt onderdeel uit van de gebiedstransformatie 'De Hoef'.
 📅
@@ -393,7 +393,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever BEMOG"
-23,Plan de Dijkjes,52.45684750355829,5.86174124235916,1.791903592355502,2016-2020,Elburg – gebiedsontwikkeling plan de Dijkjes 1e gasloze woonwijk NoordWest Veluwe,woningbouw: ±225 woningen | (openbaar)gebied: ca. 9 hectare | Energie&mobiliteit: gasloos,Energieneutraal wijkconcept | 90 NOM huurwoningen | Woonconcept Fijn Wonen,"Gemeente, marktpartijen, energiepartners, ontwerp | en stedenbouw. | Opdrachtgever Omnia Wonen","🏙
+23;Plan de Dijkjes;52.45684750355829;5.86174124235916;1.791903592355502;2016-2020;Elburg – gebiedsontwikkeling plan de Dijkjes 1e gasloze woonwijk NoordWest Veluwe;woningbouw: ±225 woningen | (openbaar)gebied: ca. 9 hectare | Energie&mobiliteit: gasloos;Energieneutraal wijkconcept | 90 NOM huurwoningen | Woonconcept Fijn Wonen;Gemeente, Van Wijnen | Opdrachtgever Omnia Wonen;"🏙
  Elburg
  – gebiedsontwikkeling plan de Dijkjes 1e gasloze woonwijk NoordWest Veluwe
 📅
@@ -413,7 +413,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, energiepartners, ontwerp
 en stedenbouw.
 Opdrachtgever Omnia Wonen"
-24,Rotonde 14,52.18943061891478,5.415130226374647,0.0734406171565194,2015-2020,"Amersfoort – Rotonde 14 nieuwbouw mixed-use vastgoedcomplex, FA-hoed en huurappartementen",woningbouw: ±30 huurappartementen | voorzieningen: 1.200m2 | (openbaar)gebied: ca. 1 hectare,co-creatie mixed use vastgoed,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Omnia Wonen","🏙
+24;Rotonde 14;52.18943061891478;5.415130226374647;0.0734406171565194;2015-2020;Amersfoort – Rotonde 14 nieuwbouw mixed-use vastgoedcomplex, FA-hoed en huurappartementen;woningbouw: ±30 huurappartementen | voorzieningen: 1.200m2 | (openbaar)gebied: ca. 1 hectare;co-creatie mixed use vastgoed;Gemeente | Opdrachtgever Omnia Wonen;"🏙
  Amersfoort
 – Rotonde 14 nieuwbouw mixed-use vastgoedcomplex, FA-hoed en huurappartementen
 📅
@@ -431,7 +431,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Omnia Wonen"
-25,Aldi locatie,52.38625464025148,5.788959781761376,6.872156260786126,2018-2020,Nunspeet – nieuwbouw mixed-use woongebouw,woningbouw: ±30 huurwoningen | voorzieningen: 2.000m2 supermarkt | Energie&mobiliteit: gasloos,energie neutraal wijkconcept | supermarkt,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Omnia Wonen","🏙
+25;Aldi locatie;52.38625464025148;5.788959781761376;6.872156260786126;2018-2020;Nunspeet – nieuwbouw mixed-use woongebouw;woningbouw: ±30 huurwoningen | voorzieningen: 2.000m2 supermarkt | Energie&mobiliteit: gasloos;energie neutraal wijkconcept | supermarkt;Gemeente | Opdrachtgever Omnia Wonen;"🏙
  Nunspeet
  – nieuwbouw mixed-use woongebouw
 📅
@@ -450,7 +450,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Omnia Wonen"
-26,Plan Jukweg,52.43982114322723,5.857941774085957,2.696853290086365,2021-2024,Elburg – gebiedsontwikkeling uitleg in WvG gebied,woningbouw: ±125 woningen | (openbaar)gebied: ca. 6 hectare,energie netbewust wijkconcept | flex woningen | verwerving grond- opstalexploitatie,"Gemeente, de Gilde Kampen | Opdrachtgever Bemog Projektontwikkeling","🏙
+26;Plan Jukweg;52.43982114322723;5.857941774085957;2.696853290086365;2021-2024;Elburg – gebiedsontwikkeling uitleg in WvG gebied;woningbouw: ±125 woningen | (openbaar)gebied: ca. 6 hectare;energie netbewust wijkconcept | flex woningen | verwerving grond- opstalexploitatie;Gemeente, de Gilde Kampen | Opdrachtgever Bemog Projektontwikkeling;"🏙
  Elburg
  – gebiedsontwikkeling uitleg in WvG gebied
 📅
@@ -468,7 +468,7 @@ Programma
 Partners & Stakeholders
 Gemeente, de Gilde Kampen
 Opdrachtgever Bemog Projektontwikkeling"
-27,Plan Horstkamp,52.45148677645992,5.865597523584166,1.270625710177518,2020-2024,Elburg – uitbreiding woningbouw en gebiedsontwikkeling naar een toekomstbestendige woonomgeving.,woningbouw: ±225 woningen | (openbaar)gebied: ca. 9 hectare,Energie neutraal wijkconcept | Waterrobust en klimaatadaptief | Verwerving grond-opstalexploitatie,"Gemeente Elburg, Zondag ontwikkeling | Opdrachtgever Bemog Projektontwikkeling","🏙
+27;Plan Horstkamp;52.45148677645992;5.865597523584166;1.270625710177518;2020-2024;Elburg – uitbreiding woningbouw en gebiedsontwikkeling naar een toekomstbestendige woonomgeving.;woningbouw: ±225 woningen | (openbaar)gebied: ca. 9 hectare;Energie neutraal wijkconcept | Waterrobust en klimaatadaptief | Verwerving grond-opstalexploitatie;Gemeente Elburg, Zondag ontwikkeling | Opdrachtgever Bemog Projektontwikkeling;"🏙
  Elburg
 – uitbreiding woningbouw en gebiedsontwikkeling naar een
 toekomstbestendige woonomgeving.
@@ -487,7 +487,7 @@ Programma
 Partners & Stakeholders
 Gemeente Elburg, Zondag ontwikkeling
 Opdrachtgever Bemog Projektontwikkeling"
-28,Nigtevecht,52.24379605975315,5.040867130763957,0.3218809411292489,2020-2024,"Vreeland – gebiedsontwikkeling aan de Vecht, recreatief gebiedsconcept",recreatief: 25 luxe bungalows,gronddeal doorverkocht,"Gemeente, Boskalis | Opdrachtgever Bemog Projektontwikkeling","🏙
+28;Nigtevecht;52.24379605975315;5.040867130763957;0.3218809411292489;2020-2024;Vreeland – gebiedsontwikkeling aan de Vecht, recreatief gebiedsconcept;recreatief: 25 luxe bungalows;gronddeal doorverkocht;Gemeente, Boskalis | Opdrachtgever Bemog Projektontwikkeling;"🏙
  Vreeland
  – gebiedsontwikkeling aan de Vecht, recreatief gebiedsconcept
 📅
@@ -502,7 +502,7 @@ Programma
 Partners & Stakeholders
 Gemeente, Boskalis
 Opdrachtgever Bemog Projektontwikkeling"
-29,Zeeburgerpad,52.3670301131295,4.942196834169765,3.7545136529085,2022-2024,📍 Amsterdam – strategisch gelegen transformatiegebied met potentie voor opstalontwikkeling.,,Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven.,"Gemeente, Tegeldepot vd Pol. | Opdrachtgever Bemog Projektontwikkeling.","📍
+29;Zeeburgerpad;52.3670301131295;4.942196834169765;3.7545136529085;2022-2024;Amsterdam – strategisch gelegen transformatiegebied met potentie voor opstalontwikkeling.;Woningbouw: 70 appartementen en in de plint 700m2 bedrijfsruimte;Gebiedstransformatie;Gemeente, Tegeldepot vd Pol. | Opdrachtgever Bemog Projektontwikkeling.;"📍
 Amsterdam
 – strategisch gelegen transformatiegebied met potentie voor opstalontwikkeling.
 📅
@@ -519,7 +519,7 @@ Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven.
 Partners & Stakeholders
 Gemeente, Tegeldepot vd Pol.
 Opdrachtgever Bemog Projektontwikkeling."
-30,De Spoordriehoek,52.34106226193644,4.976165007466995,-1.031407033499865,,"📍 Diemen – de Spoordriehoek strategisch gelegen uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 600 woningen 🏢 ca. 10.000–15.000 m² 🌳 ruim openbaar groen, waterstructuur en ecologische zones 🔋 energie- en mobiliteitshub (slimme laadinfrastructuur, BESS-optie) 🚀 Ambitie Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en duurzame economische groei. 📌 Status 2020 - 2024 🤝 Partners & Stakeholders Van Drunen & Bemog Projektontwikkeling",,"Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en duurzame economische groei. | 📌 | Status | 2020 - 2024",Van Drunen & Bemog Projektontwikkeling,"📍
+30;De Spoordriehoek;52.34106226193644;4.976165007466995;-1.031407033499865;;📍 Diemen – de Spoordriehoek strategisch gelegen uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling.;In onderzoek;Status scouting;Van Drunen & Bemog Projektontwikkeling;"📍
 Diemen
  – de Spoordriehoek strategisch gelegen uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling.
 📐 I
@@ -537,7 +537,7 @@ Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netco
 🤝
 Partners & Stakeholders
 Van Drunen & Bemog Projektontwikkeling"
-31,Oldebroek west II,52.44042729044759,5.89593671580749,2.001022742717908,2022-2024,Oldebroek – Gebiedsontwikkeling gemeente-markt,woningbouw: 30 koopwoningen | verwerving grondpositie,,Gemeente | Opdrachtgever Bemog Projektontwikkeling.,"🏙
+31;Oldebroek west II;52.44042729044759;5.89593671580749;2.001022742717908;2022-2024;Oldebroek – Gebiedsontwikkeling gemeente-markt;woningbouw: 30 koopwoningen | verwerving grondpositie;;Gemeente | Opdrachtgever Bemog Projektontwikkeling.;"🏙
  Oldebroek
  – Gebiedsontwikkeling gemeente-markt
 📅
@@ -551,7 +551,7 @@ Programma
 Partners & Stakeholders
 Gemeente
 Opdrachtgever Bemog Projektontwikkeling."
-32,Hanzekwartier,52.5317354316436,5.716789229564638,-1.423110615067505,2022-2024,📍 Dronten – strategisch gelegen transformatiegebied met meerdere grondeigenaren.,,Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven.,"Gemeente, Bramer, vd Steeg, Knipscheer | Opdrachtgever Bemog Projektontwikkeling.","📍
+32;Hanzekwartier;52.5317354316436;5.716789229564638;-1.423110615067505;2022-2024;📍 Dronten – strategisch gelegen transformatiegebied met meerdere grondeigenaren.;In onderzoek;Status scouting;Gemeente, Bramer, vd Steeg, Knipscheer | Opdrachtgever Bemog Projektontwikkeling.;"📍
 Dronten
 – strategisch gelegen transformatiegebied met meerdere grondeigenaren.
 📅
@@ -568,11 +568,11 @@ Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven.
 Partners & Stakeholders
 Gemeente, Bramer, vd Steeg, Knipscheer
 Opdrachtgever Bemog Projektontwikkeling."
-33,Versterkingsprogramma CC2,53.33416764903804,6.740923831370054,-0.9168685964193057,,"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen",,,,"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen"
-34,Versterkingsprogramma CC2,53.29969969815865,6.602127467290629,2.097377370627416,,"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen",,,,"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen"
-35,Versterkingsprogramma CC2,53.30432804637132,6.600325356558607,4.291886294064753,,"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen",,,,"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen"
-36,Versterkingsporgramma CC2,53.30153804755204,6.605302344308894,4.11187600589066,,"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen",,,,"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen"
-37,Rietweg-Hamlaan,52.51553997550236,5.690697170802894,-0.2302068450817607,,"📍 Dronten – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 300 woningen 🏢 ca. 2.000 m² 🌳 ecologische zones 🔋 energie- en mobiliteitshub 🚀 Ambitie Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en Paris proof, op basis van het buurtschap concept. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw. Opdrachtgever Circul8 development",,"Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en Paris proof, op basis van het buurtschap concept. | 📌 | Status | scouting","Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Circul8 development","📍
+33;Versterkingsprogramma CC2;53.33416764903804;6.740923831370054;-0.9168685964193057;;"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen";Schoolgebouw;;;"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen"
+34;Versterkingsprogramma CC2;53.29969969815865;6.602127467290629;2.097377370627416;;"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen";Schoolgebouw;;;"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen"
+35;Versterkingsprogramma CC2;53.30432804637132;6.600325356558607;4.291886294064753;;"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen";Schoolgebouw;;;"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen"
+36;Versterkingsporgramma CC2;53.30153804755204;6.605302344308894;4.11187600589066;;"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen";Schoolgebouw;;;"Het ""versterkingsprogramma CC2/3"" verwijst naar het programma voor het aardbevingsbestendig maken van complexere gebouwen (zoals kantoorpanden, scholen, etc.) in Groningen, onder de paraplu van de Nationaal Coördinator Groningen (NCG) (NCG). Het programma omvatte het inventariseren en versterken van deze gebouwen door middel of andere technieken, met als doel ze veiliger te maken tegen de gevolgen van gaswinningsaardbevingen"
+37;Rietweg-Hamlaan;52.51553997550236;5.690697170802894;-0.2302068450817607;;📍 Dronten – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling.;In onderzoek;Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en Paris proof, gebiedsconcept Netgenoten;Gemeente, Metropool vastgoedontwikkeling & Lidl supermarkten | Opdrachtgever Circul8 development;"📍
 Dronten
 – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling.
 📐 I
@@ -592,7 +592,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Circul8 development"
-38,De Rede,52.52322056948027,5.719594347966519,-0.6288175577972788,,"📍 Dronten –  potentie voor een binnenstedelijke herontwikkeling. 📐 I ndicatief programma 🏡 ± 50 woningen 🏢 ca. 1.000 m² 🌳 openbaar groen 🔋 energie- en mobiliteitshub 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw. Opdrachtgever Circul8 development",,Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven | 📌 | Status | scouting,"Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Circul8 development","📍
+38;De Rede;52.52322056948027;5.719594347966519;-0.6288175577972788;;📍 Dronten –  potentie voor een binnenstedelijke herontwikkeling.;In onderzoek;Herstructurering;Gemeente | Opdrachtgever Circul8 development;"📍
 Dronten
 –  potentie voor een binnenstedelijke herontwikkeling.
 📐 I
@@ -612,7 +612,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Circul8 development"
-39,Haven Emmeloord,52.72607782710864,5.766471345796877,-0.4882299216217212,,"📍 Emmeloord –  strategisch gelegen met potentie voor transformatie met gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 50 woningen 🌳 openbaar en verkeer zones 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale opgaven. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw.",,Een schaalbare ontwikkeling die aansluit bij lokale opgaven. | 📌 | Status | scouting,"Gemeente, marktpartijen, ontwerp | en stedenbouw.","📍
+39;Haven Emmeloord;52.72607782710864;5.766471345796877;-0.4882299216217212;;📍 Emmeloord –  strategisch gelegen met potentie voor transformatie met gebiedsontwikkeling.;In onderzoek;Status scouting;Gemeente | Opdrachtgever Circul8 development;"📍
 Emmeloord
 –  strategisch gelegen met potentie voor transformatie met gebiedsontwikkeling.
 📐 I
@@ -629,8 +629,8 @@ scouting
 Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw."
-40,Chez Marknesse,52.70899575169119,5.877797877766849,-0.4888820745333944,,acquisitie | ontwikkeling,,,,acquisitie | ontwikkeling
-41,Ossenkampweg,52.36207035430165,5.538146582478265,-3.957223894313173,,"📍 Zeewolde – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 1.000 woningen 🏢 ca. 10.000–15.000 m² 🌳 ruim openbaar groen, waterstructuur en ecologische zones 🔋 energie- en mobiliteitshub (slimme laadinfrastructuur, BESS-optie) 🚀 Ambitie Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en duurzame economische groei. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw. Opdrachtgever Circul8 development",,"Een schaalbare gebiedsontwikkeling die aansluit bij regionale woonopgaven, netcongestie-oplossingen en duurzame economische groei. | 📌 | Status | scouting","Gemeente, marktpartijen, ontwerp | en stedenbouw. | Opdrachtgever Circul8 development","📍
+40;Chez Marknesse;52.70899575169119;5.877797877766849;-0.4888820745333944;;📍 Marknesse – transformatie van oude discotheek;In onderzoek;Revitalisering, transformatie;Gemeente | Opdrachtgever Circul8 development;acquisitie | ontwikkeling
+41;Ossenkampweg;52.36207035430165;5.538146582478265;-3.957223894313173;;📍 Zeewolde – multimodale energyhub, voor toekomstige gebiedsontwikkeling;In onderzoek;Multimodale energyhub, BESS, waterstof, laaadinfra, smart grid, GDS, smartgrid, DC-grid;Gemeente, netbeheerders | Opdrachtgever Circul8 development;"📍
 Zeewolde
 – uitbreidingsgebied met potentie voor grootschalige gebiedsontwikkeling.
 📐 I
@@ -650,7 +650,7 @@ Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw.
 Opdrachtgever Circul8 development"
-42,Zandlaan,52.34127323848439,5.649160490813816,3.480458160237865,,"📍 Harderwijk –  Zandlaan strategisch gelegen transformatiegebied met potentie voor energyhub. 📐 I ndicatief programma 🌳 openbaar en verkeer zones 🔋 energie- en mobiliteitshub 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale energieopgaven. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw.",,Een schaalbare ontwikkeling die aansluit bij lokale energieopgaven. | 📌 | Status | scouting,"Gemeente, marktpartijen, ontwerp | en stedenbouw.","📍
+42;Zandlaan;52.34127323848439;5.649160490813816;3.480458160237865;;📍 Harderwijk –  Zandlaan strategisch gelegen transformatiegebied met potentie voor energyhub.;In onderzoek;Energyhub: Een schaalbare ontwikkeling die aansluit bij lokale woon en energie opgaven. Waterstof, BESS;Gemeente, netbeheerders | Opdrachtgever Circul8 development;"📍
 Harderwijk
 –  Zandlaan strategisch gelegen transformatiegebied met potentie voor energyhub.
 📐 I
@@ -667,7 +667,7 @@ scouting
 Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw."
-43,Paasloweg,52.34587678756203,5.671075782790764,4.702662925713453,,"📍 Harderwijk – Paasloweg strategisch gelegen transformatiegebied met potentie voor grootschalige gebiedsontwikkeling. 📐 I ndicatief programma 🏡 ± 100 woningen 🌳 openbaar en verkeer zones 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale woon en energie opgaven. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw.",,Een schaalbare ontwikkeling die aansluit bij lokale woon en energie opgaven. | 📌 | Status | scouting,"Gemeente, marktpartijen, ontwerp | en stedenbouw.","📍
+43;Paasloweg;52.34587678756203;5.671075782790764;4.702662925713453;;📍 Harderwijk – Paasloweg strategisch gelegen transformatiegebied met potentie;In onderzoek;Erfdelen, erftransformatie;Gemeente | Opdrachtgever Circul8 development;"📍
 Harderwijk
 – Paasloweg strategisch gelegen transformatiegebied met potentie voor grootschalige gebiedsontwikkeling.
 📐 I
@@ -684,7 +684,7 @@ scouting
 Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw."
-44,Biosciencecenter,52.52653058442389,5.563940277540662,-3.822678255398844,,"📍 Lelystad – transformatie en herontwikkeling 📐 I ndicatief programma 🏢 ca. 10.000 m² 🌳 ecologische zones 🔋 energie- en mobiliteitshub 🚀 Ambitie Circulair en off-grid 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, Wageningen University & research, ontwerp en stedenbouw. Opdrachtgever Circul8 development",,Circulair en off-grid | 📌 | Status | scouting,"Gemeente, Wageningen University & research, ontwerp | en stedenbouw. | Opdrachtgever Circul8 development","📍
+44;Biosciencecenter;52.52653058442389;5.563940277540662;-3.822678255398844;;📍 Lelystad – transformatie en herontwikkeling;In Onderzoek;Circulair en off-grid;Gemeente | Opdrachtgever Circul8 development;"📍
 Lelystad
 – transformatie en herontwikkeling
 📐 I
@@ -703,7 +703,7 @@ Partners & Stakeholders
 Gemeente, Wageningen University & research, ontwerp
 en stedenbouw.
 Opdrachtgever Circul8 development"
-45,Hollandsche Rading,52.16873788901349,5.172281315384057,2.649790625702775,,"📍 De Bilt – strategisch gelegen transformatiegebied met potentie voor netbewuste gebiedsontwikkeling. 📐 Indicatief programma 🏡 ± 70 woningen 🌳 openbaar en verkeer zones 🔋 energie- en mobiliteitshub 🚀 Ambitie Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven. 📌 Status scouting 🤝 Partners & Stakeholders Gemeente, marktpartijen, ontwerp en stedenbouw.",,Een schaalbare ontwikkeling die aansluit bij lokale woonopgaven. | 📌 | Status | scouting,"Gemeente, marktpartijen, ontwerp | en stedenbouw.","📍
+45;Hollandsche Rading;52.16873788901349;5.172281315384057;2.649790625702775;;📍 De Bilt – strategisch gelegen transformatiegebied met potentie voor netbewuste gebiedsontwikkeling;In onderzoek;Status scouting;Gemeente | Opdrachtgever Circul8 development;"📍
 De Bilt
 – strategisch gelegen transformatiegebied met potentie voor netbewuste gebiedsontwikkeling.
 📐
@@ -721,7 +721,7 @@ scouting
 Partners & Stakeholders
 Gemeente, marktpartijen, ontwerp
 en stedenbouw."
-46,Zuiderzeestraatweg,52.44090329611763,5.833839986870983,1.169252232290239,2024-2030,Elburg – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap,"woningbouw: ±80 woningen | voorzieningen: ca. 2.500m² | (openbaar)gebied: ca. 5 hectare | Energie&mobiliteit: laadplein, BESS",Paris proofconcept | Circulaire materialen | Waterrobust en klimaatadaptief | Buurtschap 2.0 principes,"Gemeente Elburg, marktpartijen, energiepartners, ontwerp | en stedenbouw. | Opdrachtgever Metropool - Lidl","🏙
+46;Zuiderzeestraatweg;52.44090329611763;5.833839986870983;1.169252232290239;2024-2030;📍 Elburg – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap;In onderzoek;Paris proofconcept | Circulaire materialen | Waterrobust en klimaatadaptief | gebiedsconcept Netgenoten;Gemeente, Metropool vastgoedontwikkeling & Lidl supermarkten | Opdrachtgever Circul8 development;"🏙
  Elburg
  – uitbreiding en gebiedsontwikkeling naar een
 toekomstbestendig buurtschap
@@ -744,13 +744,13 @@ Partners & Stakeholders
 Gemeente Elburg, marktpartijen, energiepartners, ontwerp
 en stedenbouw.
 Opdrachtgever Metropool - Lidl"
-47,Cornelius Douwesterrein,52.41083473301984,4.874294876497696,0.5160259476568463,,📍 Amsterdam –  Toetsenbordweg strategisch gelegen transformatiegebied met potentie voor energyhub. 📌 Status scouting,,,,"📍
+47;Cornelius Douwesterrein;52.41083473301984;4.874294876497696;0.5160259476568463;;📍 Amsterdam –  Toetsenbordweg strategisch gelegen transformatiegebied met potentie voor energyhub.;In onderzoek;Status scouting;Gemeente | Opdrachtgever Circul8 development;"📍
 Amsterdam
 –  Toetsenbordweg strategisch gelegen transformatiegebied met potentie voor energyhub.
 📌
  Status
 scouting"
-48,Bergen,52.65841503894613,4.715392549780115,2.353176377272854,2026-2030,Elburg – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap,"woningbouw: ±80 woningen | voorzieningen: ca. 2.500m² | (openbaar)gebied: ca. 5 hectare | Energie&mobiliteit: laadplein, BESS",Paris proofconcept | Circulaire materialen | Waterrobust en klimaatadaptief | Buurtschap 2.0 principes,"Gemeente, marktpartijen, energiepartners, ontwerp | en stedenbouw. | Opdrachtgever Metropool - Lidl","🏙
+48;Bergen;52.65841503894613;4.715392549780115;2.353176377272854;2026-2030;📍 Bergen – uitbreiding en gebiedsontwikkeling naar een toekomstbestendig buurtschap;In onderzoek;Paris proofconcept | Circulaire materialen | Waterrobust en klimaatadaptief | gebiedsconcept Netgenoten;Gemeente, Metropool vastgoedontwikkeling & Lidl supermarkten | Opdrachtgever Circul8 development;"🏙
  Elburg
  – uitbreiding en gebiedsontwikkeling naar een
 toekomstbestendig buurtschap
@@ -773,19 +773,19 @@ Partners & Stakeholders
 Gemeente, marktpartijen, energiepartners, ontwerp
 en stedenbouw.
 Opdrachtgever Metropool - Lidl"
-49,Hoorn,52.65215474948947,5.02781451303364,1.010983601789799,,📍 Hoorn –  Op de gemeente grens Koggenland - Hoorn strategisch gelegen transformatiegebied met potentie om vanuit mobiliteits-energyhub door te groeien naar gebiedsontwikkeling. 📌 Status scouting,,,,"📍
+49;Hoorn;52.65215474948947;5.02781451303364;1.010983601789799;;📍 Hoorn –  Op de gemeente grens Koggenland - Hoorn strategisch gelegen transformatiegebied met potentie om vanuit mobiliteits-energyhub door te groeien naar gebiedsontwikkeling. 📌 Status scouting;Energyhub & toekomstige gebiedsontwikkeling;Status scouting;;;"📍
 Hoorn
 –  Op de gemeente grens Koggenland - Hoorn strategisch gelegen transformatiegebied met potentie om vanuit mobiliteits-energyhub door te groeien naar gebiedsontwikkeling.
 📌
  Status
 scouting"
-50,Schagen,52.79039808600129,4.778127851560365,0.9636450088214477,,📍 Schagen –  Herontwikkeling in onderzoek 📌 Status scouting,,,,"📍
+50;Schagen;52.79039808600129;4.778127851560365;0.9636450088214477;;📍 Schagen –  Herontwikkeling in onderzoek;In onderzoek;Status scouting;;;"📍
 Schagen
 –  Herontwikkeling in onderzoek
 📌
  Status
 scouting"
-51,Burgerbrug,52.74659102740613,4.702468957930177,-0.613111921910019,,📍 Burgerbrug –  In verkenning 📌 Status scouting,,,,"📍
+51;Burgerbrug;52.74659102740613;4.702468957930177;-0.613111921910019;;📍 Burgerbrug –  In verkenning;Woningbouwontwikkeling;Status scouting;;;"📍
 Burgerbrug
 –  In verkenning
 📌
