@@ -9,9 +9,30 @@ let aiClient: GoogleGenAI | null = null;
 
 const getAIClient = () => {
   if (!aiClient) {
-    const apiKey = process.env.GEMINI_API_KEY;
+    let apiKey = '';
+    
+    // Check Vite environment variable first (for Netlify/external deployments)
+    try {
+      if (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_GEMINI_API_KEY) {
+        apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      }
+    } catch (e) {
+      // Ignore errors if import.meta.env is not available
+    }
+    
+    // Fallback to process.env (for AI Studio environment)
     if (!apiKey) {
-      console.warn('GEMINI_API_KEY is not set. AI Assistant will not work.');
+      try {
+        if (typeof process !== 'undefined' && process.env && process.env.GEMINI_API_KEY) {
+          apiKey = process.env.GEMINI_API_KEY;
+        }
+      } catch (e) {
+        // Ignore errors if process.env is not available
+      }
+    }
+
+    if (!apiKey) {
+      console.warn('GEMINI_API_KEY or VITE_GEMINI_API_KEY is not set. AI Assistant will not work.');
       return null;
     }
     aiClient = new GoogleGenAI({ apiKey });
