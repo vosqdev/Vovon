@@ -59,7 +59,7 @@ ${projectsContext}
 
 Als de gebruiker vraagt om contact of "Voor contact of een vraag?" selecteert, antwoord dan ALTIJD met: "Voor contact of een vraag? Mail naar info@vovon.nl of vul het contactformulier onderaan de website in."
 
-Beantwoord vragen altijd in het Nederlands, tenzij anders gevraagd. Wees beknopt maar informatief. Gebruik markdown voor opmaak.
+Beantwoord vragen altijd in het Nederlands, tenzij anders gevraagd. Houd je antwoorden kort en bondig (maximaal 2 of 3 korte alinea's). Gebruik maximaal 1 of 2 projecten als referentie in een antwoord om het overzichtelijk te houden. Gebruik markdown voor opmaak.
 BELANGRIJK: Je antwoordt ALTIJD met een JSON object met twee velden: 'answer' (jouw antwoord in markdown) en 'suggestions' (een array van precies 3 vervolgvragen).
 De eerste 2 suggesties zijn inhoudelijke verdiepingsvragen over het zojuist besproken onderwerp. De 3e suggestie is ALTIJD exact: "Voor contact of een vraag?"`;
 
@@ -123,6 +123,14 @@ export default function AIAssistant() {
     } catch (e) {
       console.error("Failed to initialize chat", e);
     }
+  }, []);
+
+  // Auto-open chat after 20 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 20000);
+    return () => clearTimeout(timer);
   }, []);
 
   const scrollToBottom = () => {
