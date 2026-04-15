@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Bot, User, Loader2 } from 'lucide-react';
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenAI, Type } from '@google/genai';
 import Markdown from 'react-markdown';
 import projectsData from '../data/projects.json';
 
@@ -57,12 +57,17 @@ Je helpt gebruikers met vragen over deze onderwerpen. Je bent professioneel, inn
 Hier is een lijst van VOVON projecten die je als referentie kunt gebruiken wanneer relevant:
 ${projectsContext}
 
-Beantwoord vragen altijd in het Nederlands, tenzij anders gevraagd. Wees beknopt maar informatief. Gebruik markdown voor opmaak.`;
+Als de gebruiker vraagt om contact of "Voor contact of een vraag?" selecteert, antwoord dan ALTIJD met: "Voor contact of een vraag? Mail naar info@vovon.nl of vul het contactformulier onderaan de website in."
+
+Beantwoord vragen altijd in het Nederlands, tenzij anders gevraagd. Wees beknopt maar informatief. Gebruik markdown voor opmaak.
+BELANGRIJK: Je antwoordt ALTIJD met een JSON object met twee velden: 'answer' (jouw antwoord in markdown) en 'suggestions' (een array van precies 3 vervolgvragen).
+De eerste 2 suggesties zijn inhoudelijke verdiepingsvragen over het zojuist besproken onderwerp. De 3e suggestie is ALTIJD exact: "Voor contact of een vraag?"`;
 
 type Message = {
   id: string;
   role: 'user' | 'model';
   text: string;
+  suggestions?: string[];
 };
 
 export default function AIAssistant() {
@@ -71,7 +76,12 @@ export default function AIAssistant() {
     {
       id: 'welcome',
       role: 'model',
-      text: 'Hallo! Ik ben de VOVON AI-assistent. Hoe kan ik u helpen met vragen over vastgoed, gebiedsontwikkeling of de energietransitie?'
+      text: 'Hallo! Ik ben de VOVON assistent. Hoe kan ik u helpen met vragen over vastgoed, gebiedsontwikkeling of de energietransitie?',
+      suggestions: [
+        "Hoe helpt VOVON bij de transitie naar NetZero 2050?",
+        "Kun je een voorbeeld geven van een energieneutraal project?",
+        "Voor contact of een vraag?"
+      ]
     }
   ]);
   const [input, setInput] = useState('');
@@ -91,6 +101,22 @@ export default function AIAssistant() {
           config: {
             systemInstruction: systemInstruction,
             temperature: 0.7,
+            responseMimeType: "application/json",
+            responseSchema: {
+              type: Type.OBJECT,
+              properties: {
+                answer: { 
+                  type: Type.STRING,
+                  description: "Het antwoord op de vraag van de gebruiker in Markdown formaat."
+                },
+                suggestions: {
+                  type: Type.ARRAY,
+                  items: { type: Type.STRING },
+                  description: "Precies 3 suggesties voor vervolgvragen. De eerste 2 zijn inhoudelijke verdiepingsvragen. De 3e is ALTIJD exact: 'Voor contact of een vraag?'"
+                }
+              },
+              required: ["answer", "suggestions"]
+            }
           }
         });
       }
@@ -119,10 +145,28 @@ export default function AIAssistant() {
     try {
       const response = await chatRef.current.sendMessage({ message: userMsg });
       
+      let parsedText = response.text || '';
+      let answer = 'Sorry, ik kon geen antwoord genereren.';
+      let suggestions: string[] = [];
+      
+      try {
+        const parsed = JSON.parse(parsedText);
+        answer = parsed.answer || answer;
+        suggestions = parsed.suggestions || [];
+      } catch (e) {
+        // Fallback if JSON parsing fails
+        answer = parsedText;
+      }
+      
       setMessages(prev => [...prev, { 
         id: (Date.now() + 1).toString(), 
         role: 'model', 
-        text: response.text || 'Sorry, ik kon geen antwoord genereren.' 
+        text: answer,
+        suggestions: suggestions.length === 3 ? suggestions : [
+          "Hoe helpt VOVON bij de transitie naar NetZero 2050?",
+          "Kun je een voorbeeld geven van een energieneutraal project?",
+          "Voor contact of een vraag?"
+        ]
       }]);
     } catch (error) {
       console.error('Error calling Gemini API:', error);
@@ -143,22 +187,27 @@ export default function AIAssistant() {
     }
   };
 
-  const suggestedQuestions = [
-    "Hoe helpt VOVON bij de transitie naar NetZero 2050?",
-    "Kun je een voorbeeld geven van een energieneutraal project?",
-    "Wat is jullie aanpak bij complexe gebiedsontwikkeling?"
-  ];
-
   return (
     <>
       {/* Chat Toggle Button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 p-4 bg-vovon-600 text-white rounded-full shadow-xl hover:bg-vovon-700 transition-all duration-300 z-50 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}
-        aria-label="Open AI Assistant"
-      >
-        <MessageCircle className="w-6 h-6" />
-      </button>
+      <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}>
+        <div className="relative group">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="p-4 bg-vovon-600 text-white rounded-full shadow-xl hover:bg-vovon-700 transition-all duration-300"
+            aria-label="Open VOVON assistent"
+          >
+            <MessageCircle className="w-6 h-6" />
+          </button>
+          
+          {/* Tooltip */}
+          <div className="absolute right-full top-1/2 -translate-y-1/2 mr-4 px-3 py-1.5 bg-slate-800 text-white text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-lg">
+            Vraag het?
+            {/* Arrow */}
+            <div className="absolute top-1/2 -right-1 -translate-y-1/2 border-4 border-transparent border-l-slate-800"></div>
+          </div>
+        </div>
+      </div>
 
       {/* Chat Window */}
       <div 
@@ -169,8 +218,8 @@ export default function AIAssistant() {
           <div className="flex items-center gap-2">
             <Bot className="w-6 h-6" />
             <div>
-              <h3 className="font-bold">VOVON AI</h3>
-              <p className="text-xs text-vovon-100">Vastgoed & Energie Expert</p>
+              <h3 className="font-bold">VOVON assistent</h3>
+              <p className="text-xs text-vovon-100">Vastgoed & Energie</p>
             </div>
           </div>
           <button 
@@ -183,41 +232,43 @@ export default function AIAssistant() {
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-4 bg-slate-50 flex flex-col gap-4">
-          {messages.map((msg) => (
-            <div 
-              key={msg.id} 
-              className={`flex gap-3 max-w-[85%] ${msg.role === 'user' ? 'ml-auto flex-row-reverse' : ''}`}
-            >
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${msg.role === 'user' ? 'bg-slate-200 text-slate-600' : 'bg-vovon-100 text-vovon-600'}`}>
-                {msg.role === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
-              </div>
-              <div className={`p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-vovon-600 text-white rounded-tr-none' : 'bg-white border border-slate-100 shadow-sm text-slate-700 rounded-tl-none'}`}>
-                {msg.role === 'user' ? (
-                  msg.text
-                ) : (
-                  <div className="markdown-body">
-                    <Markdown>{msg.text}</Markdown>
+          {messages.map((msg, index) => {
+            const isLast = index === messages.length - 1;
+            return (
+              <React.Fragment key={msg.id}>
+                <div className={`flex gap-3 max-w-[85%] ${msg.role === 'user' ? 'ml-auto flex-row-reverse' : ''}`}>
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${msg.role === 'user' ? 'bg-slate-200 text-slate-600' : 'bg-vovon-100 text-vovon-600'}`}>
+                    {msg.role === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
+                  </div>
+                  <div className={`p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-vovon-600 text-white rounded-tr-none' : 'bg-white border border-slate-100 shadow-sm text-slate-700 rounded-tl-none'}`}>
+                    {msg.role === 'user' ? (
+                      msg.text
+                    ) : (
+                      <div className="markdown-body">
+                        <Markdown>{msg.text}</Markdown>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                
+                {/* Suggested Questions (only for last model message) */}
+                {isLast && msg.role === 'model' && msg.suggestions && !isLoading && (
+                  <div className="flex flex-col gap-2 mt-1 ml-11 max-w-[85%]">
+                    <p className="text-xs text-slate-500 font-medium ml-1 mb-1">Verder vragen:</p>
+                    {msg.suggestions.map((q, i) => (
+                      <button
+                        key={i}
+                        onClick={() => handleSend(q)}
+                        className="text-left p-3 rounded-xl bg-white border border-vovon-200 text-sm text-vovon-700 hover:bg-vovon-50 hover:border-vovon-300 transition-colors shadow-sm"
+                      >
+                        {q}
+                      </button>
+                    ))}
                   </div>
                 )}
-              </div>
-            </div>
-          ))}
-          
-          {/* Suggested Questions */}
-          {messages.length === 1 && !isLoading && (
-            <div className="flex flex-col gap-2 mt-2">
-              <p className="text-xs text-slate-500 font-medium ml-1 mb-1">Veelgestelde vragen:</p>
-              {suggestedQuestions.map((q, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleSend(q)}
-                  className="text-left p-3 rounded-xl bg-white border border-vovon-200 text-sm text-vovon-700 hover:bg-vovon-50 hover:border-vovon-300 transition-colors shadow-sm"
-                >
-                  {q}
-                </button>
-              ))}
-            </div>
-          )}
+              </React.Fragment>
+            );
+          })}
 
           {isLoading && (
             <div className="flex gap-3 max-w-[85%]">
