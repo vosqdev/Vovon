@@ -17,6 +17,7 @@ import References from './components/References';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
+import AIAssistant from './components/AIAssistant';
 import { Language } from './translations';
 
 export default function App() {
@@ -37,6 +38,7 @@ export default function App() {
       <Contact language={language} />
       <Footer language={language} />
       <CookieBanner />
+      <AIAssistant />
     </div>
   );
 }
