@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Bot, User, Loader2 } from 'lucide-react';
+import { MessageCircleQuestion, X, Send, Bot, User, Loader2 } from 'lucide-react';
 import { GoogleGenAI, Type } from '@google/genai';
 import Markdown from 'react-markdown';
 import projectsData from '../data/projects.json';
@@ -13,8 +13,8 @@ const getAIClient = () => {
     
     // Check Vite environment variable first (for Netlify/external deployments)
     try {
-      if (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_GEMINI_API_KEY) {
-        apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      if (typeof import.meta !== 'undefined' && (import.meta as any).env && (import.meta as any).env.VITE_GEMINI_API_KEY) {
+        apiKey = (import.meta as any).env.VITE_GEMINI_API_KEY;
       }
     } catch (e) {
       // Ignore errors if import.meta.env is not available
@@ -41,8 +41,8 @@ const getAIClient = () => {
 };
 
 // Prepare context from projects
-const projectsContext = projectsData.projects.map(p => 
-  `- Project: ${p.name}\n  Projectinfo: ${p.project_context}\n  Programma: ${p.programma_items?.join(', ') || 'Niet gespecificeerd'}\n  Ambities: ${p.ambitie_items?.join(', ') || 'Niet gespecificeerd'}\n  Partners: ${p.partners_items?.join(', ') || 'Niet gespecificeerd'}`
+const projectsContext = (projectsData.projects as any[]).map(p => 
+  `- Project: ${p.name || 'Onbekend'}\n  Projectinfo: ${p.project_context || ''}\n  Programma: ${p.programma_items?.join(', ') || 'Niet gespecificeerd'}\n  Ambities: ${p.ambitie_items?.join(', ') || 'Niet gespecificeerd'}\n  Partners: ${p.partners_items?.join(', ') || 'Niet gespecificeerd'}`
 ).join('\n\n');
 
 const systemInstruction = `Je bent de AI-assistent van VOVON, een expert op het snijvlak van vastgoed en energietransitie. 
@@ -59,7 +59,7 @@ ${projectsContext}
 
 Als de gebruiker vraagt om contact of "Voor contact of een vraag?" selecteert, antwoord dan ALTIJD met: "Voor contact of een vraag? Mail naar info@vovon.nl of vul het contactformulier onderaan de website in."
 
-Beantwoord vragen altijd in het Nederlands, tenzij anders gevraagd. Houd je antwoorden kort en bondig (maximaal 2 of 3 korte alinea's). Gebruik maximaal 1 of 2 projecten als referentie in een antwoord om het overzichtelijk te houden. Gebruik markdown voor opmaak.
+Beantwoord vragen altijd in het Nederlands, tenzij anders gevraagd. Geef inhoudelijk sterke, adviserende en inzichtelijke antwoorden (ongeveer 3 tot 4 alinea's) die de strategische expertise van VOVON in vastgoed en energietransitie aantonen. Het doel is dat jouw waardevolle inzichten de gebruiker overtuigen van de meerwaarde van VOVON, zodat zij direct een natuurlijke drang voelen om contact op te nemen of VOVON te bellen voor een samenwerking of advies. Je mag maximaal 2 sterke projecten als overtuigende referentie gebruiken. Gebruik markdown voor opmaak.
 BELANGRIJK: Je antwoordt ALTIJD met een JSON object met twee velden: 'answer' (jouw antwoord in markdown) en 'suggestions' (een array van precies 3 vervolgvragen).
 De eerste 2 suggesties zijn inhoudelijke verdiepingsvragen over het zojuist besproken onderwerp. De 3e suggestie is ALTIJD exact: "Voor contact of een vraag?"`;
 
@@ -78,9 +78,9 @@ export default function AIAssistant() {
       role: 'model',
       text: 'Hallo! Ik ben de VOVON assistent. Hoe kan ik u helpen met vragen over vastgoed, gebiedsontwikkeling of de energietransitie?',
       suggestions: [
-        "Hoe helpt VOVON bij de transitie naar NetZero 2050?",
-        "Kun je een voorbeeld geven van een energieneutraal project?",
-        "Voor contact of een vraag?"
+        "Wat heeft de grootste impact op de energietransitie?",
+        "Wat is netbewust bouwen en ontwikkelen?",
+        "Kun je een voorbeeld geven van een energieneutraal project?"
       ]
     }
   ]);
@@ -171,9 +171,9 @@ export default function AIAssistant() {
         role: 'model', 
         text: answer,
         suggestions: suggestions.length === 3 ? suggestions : [
-          "Hoe helpt VOVON bij de transitie naar NetZero 2050?",
-          "Kun je een voorbeeld geven van een energieneutraal project?",
-          "Voor contact of een vraag?"
+          "Wat heeft de grootste impact op de energietransitie?",
+          "Wat is netbewust bouwen en ontwikkelen?",
+          "Kun je een voorbeeld geven van een energieneutraal project?"
         ]
       }]);
     } catch (error) {
@@ -205,7 +205,10 @@ export default function AIAssistant() {
             className="p-4 bg-vovon-600 text-white rounded-full shadow-xl hover:bg-vovon-700 transition-all duration-300"
             aria-label="Open VOVON assistent"
           >
-            <MessageCircle className="w-6 h-6" />
+            <div className="relative flex items-center justify-center">
+              <MessageCircleQuestion className="w-6 h-6" />
+              <MessageCircleQuestion className="w-4 h-4 absolute -bottom-1 -right-2 opacity-80" />
+            </div>
           </button>
           
           {/* Tooltip */}

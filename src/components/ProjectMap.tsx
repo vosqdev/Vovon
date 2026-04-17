@@ -25,7 +25,7 @@ const ProjectMap = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {projectsData.projects.map((project) => (
+        {(projectsData.projects as any[]).map((project) => (
           <Marker 
             key={project.id} 
             position={[project.latitude, project.longitude]}
