@@ -976,6 +976,59 @@
         "Gemeente,",
         "Opdrachtgever Tesla europe"
       ]
+    },
+    {
+      "id": 54,
+      "name": "Oldebroek",
+      "latitude": 52.463280,
+      "longitude": 5.989700,
+      "project_context": "📍 Oldebroek – Langs de A28, op een strategisch locatie samen met Ermelo (Buitenbrinkweg 83) binnen een straal van 25 kilometer, bouwen aan een: slimme, schaalbare ontwikkelingen die alles in zich hebben om de energietransitie te versnellen.",
+      "planperiode": "",
+      "programma_items": [
+        "In verkenning"
+      ],
+      "ambitie_items": [
+        "Direct aan de snelweg én nabij logistieke knooppunten samen met lokale productie, de perfecte mix van duurzame energie (zon & wind), snelladers, energieopslag (batterijen) en innovatieve netkoppelingen en in de toekomst duurzaam vastgoed."
+      ],
+      "partners_items": []
+    },
+    {
+      "id": 55,
+      "name": "Tholen",
+      "latitude": 51.5492,
+      "longitude": 4.2384,
+      "project_context": "📍 Tholen – Vanuit een GDS - smartgrid bouwen aan een: slimme, schaalbare ontwikkelingen die alles in zich hebben om de energietransitie te versnellen.",
+      "planperiode": "",
+      "programma_items": [
+        "In verkenning"
+      ],
+      "ambitie_items": [
+        "Om een grotere bijdrage te kunnen leveren aan de oplossing van netcongestie en toename van hernieuwbare energieproductie te stimuleren, is naast korte termijn energieopslag ook Long Duration Energy Storage – LDES) nodig. Dit betreft opslag van meer dan 8 uur tot enkele dagen. Belangrijk dus voor onze energietransitie."
+      ],
+      "partners_items": [
+        "Equans",
+        "Opdrachtgever Circul8 development BV"
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Sterksel",
+      "latitude": 51.3500,
+      "longitude": 5.6167,
+      "project_context": "📍 Sterksel  – In januari 2021 heeft het Varkens Innovatie Centrum (VIC) in Sterksel na vijftig jaar de deuren gesloten. Dit was de laatste van de proefboerderijen voor de varkenshouderij, nadat eerder al de locaties in Lelystad (2006) en Raalte (2009) werden afgestoten door Wageningen Universiteit.",
+      "planperiode": "",
+      "programma_items": [
+        "In onderzoek"
+      ],
+      "ambitie_items": [
+        "Om het innovatieve karakter van het VIC te behouden, de locatie transformeren naar een proeftuin voor:",
+        "Circulaire bouwmaterialen: Toepassing van hergebruikte bouwmaterialen en biobased grondstoffen zoals hout en hennep.",
+        "Smart living: Slimme technologieën voor energiebeheer en watergebruik."
+      ],
+      "partners_items": [
+        "Wageningen University",
+        "Opdrachtgever Circul8 development BV"
+      ]
     }
   ]
 }
