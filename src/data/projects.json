@@ -583,7 +583,8 @@
         "Status scouting"
       ],
       "partners_items": [
-        "Van Drunen & Bemog Projektontwikkeling"
+        "Gemeente, Van Drunen",
+        "Opdrachtgever Bemog Projektontwikkeling"
       ]
     },
     {
@@ -939,6 +940,42 @@
         "Status scouting"
       ],
       "partners_items": []
+    },
+    {
+      "id": 52,
+      "name": "Nürnberg",
+      "latitude": 49.467812,
+      "longitude": 11.115843,
+      "project_context": "Nürnberg – Transformatie van een oude Mercedes Benz locatie naar een full service sales centrum voor Tesla motors",
+      "planperiode": "2016-2017",
+      "programma_items": [
+        "retail: 10.000m2"
+      ],
+      "ambitie_items": [
+        "fullservices sale automotive en Tesla Superchargers voor snel opladen"
+      ],
+      "partners_items": [
+        "Gemeente, Eikenaar",
+        "Opdrachtgever Tesla europe"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "München",
+      "latitude": 48.1408,
+      "longitude": 11.4116,
+      "project_context": "München – een service sales centrum voor Tesla motors",
+      "planperiode": "2016-2017",
+      "programma_items": [
+        "retail: 5.000m2"
+      ],
+      "ambitie_items": [
+        "services sale automotive en Tesla Superchargers voor snel opladen"
+      ],
+      "partners_items": [
+        "Gemeente,",
+        "Opdrachtgever Tesla europe"
+      ]
     }
   ]
 }
