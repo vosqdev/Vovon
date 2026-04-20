@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Info } from 'lucide-react';
+import { useState } from 'react';
 import { Language, translations } from '../translations';
+import FounderModal from './FounderModal';
 
 interface AboutProps {
   language: Language;
@@ -8,6 +10,7 @@ interface AboutProps {
 
 const About = ({ language }: AboutProps) => {
   const t = translations[language].about;
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section id="about" className="py-20 bg-white">
@@ -25,22 +28,29 @@ const About = ({ language }: AboutProps) => {
               <img
                 src="https://image2url.com/r2/default/images/1773422002697-cfa20699-a82f-4782-a119-fbd45eb805a7.png"
                 alt="Patrick Vos"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-700"
+                onClick={() => setIsModalOpen(true)}
               />
             </div>
             <div className="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-slate-100 rounded-2xl -z-10" />
             
             {/* Founder Card */}
-            <div className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 max-w-xs">
+            <div 
+              onClick={() => setIsModalOpen(true)}
+              className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 max-w-xs cursor-pointer hover:bg-white transition-colors group"
+            >
               <div className="flex items-center space-x-3">
                 <img 
                   src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" 
                   alt="Patrick Vos" 
                   className="w-10 h-10 rounded-full object-cover border border-slate-200"
                 />
-                <div>
-                  <p className="text-sm font-bold text-slate-900">Patrick Vos</p>
+                <div className="flex-1">
+                  <p className="text-sm font-bold text-slate-900 group-hover:text-vovon-600 transition-colors">Patrick Vos</p>
                   <p className="text-xs text-slate-500">{t.founderRole}</p>
+                </div>
+                <div className="bg-vovon-50 p-1.5 rounded-full text-vovon-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Info className="w-4 h-4" />
                 </div>
               </div>
             </div>
@@ -78,6 +88,9 @@ const About = ({ language }: AboutProps) => {
           </motion.div>
         </div>
       </div>
+      
+      {/* Founder Modal Overlay */}
+      <FounderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };
