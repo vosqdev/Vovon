@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
-import { Cpu, Database, Layout, BarChart3, Zap, CheckCircle2 } from 'lucide-react';
+import { Cpu, Database, Layout, BarChart3, Zap, CheckCircle2, Play } from 'lucide-react';
+import { useState } from 'react';
 import { Language, translations } from '../translations';
+import ToolModal from './ToolModal';
 
 interface AIDataProps {
   language: Language;
@@ -9,6 +11,7 @@ interface AIDataProps {
 const AIData = ({ language }: AIDataProps) => {
   const t = translations[language].aiData;
   const icons = [Layout, Cpu, Database, BarChart3];
+  const [isToolOpen, setIsToolOpen] = useState(false);
 
   const features = t.features.map((feature, index) => ({
     ...feature,
@@ -64,14 +67,29 @@ const AIData = ({ language }: AIDataProps) => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-800/50 backdrop-blur-sm relative">
+            <div className="aspect-square rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-800/50 backdrop-blur-sm relative group">
               <img 
                 src="https://image2url.com/r2/default/images/1773485568786-ad452fe3-b05c-4b38-86b4-4d7cb83df5e0.png" 
                 alt="VOVON Innovation" 
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+              
+              {/* Play / Run Tool Button over the image */}
+              <div className="absolute inset-0 flex flex-col justify-end p-8 sm:p-12 z-10 transition-transform">
+                <h3 className="text-xl md:text-3xl font-bold text-white mb-3 shadow-black drop-shadow-md">Netbewust Scantool</h3>
+                <p className="text-slate-200 mb-6 font-medium shadow-black drop-shadow-md max-w-sm">
+                  Krijg inzicht in het systeem en gebiedspotentie.
+                </p>
+                <button
+                  onClick={() => setIsToolOpen(true)}
+                  className="flex items-center space-x-3 w-max bg-vovon-600 hover:bg-vovon-500 text-white px-6 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(30,64,175,0.6)] hover:shadow-[0_0_40px_rgba(59,130,246,0.8)] transition-all group/btn"
+                >
+                  <Play className="w-5 h-5 fill-current" />
+                  <span>Start de Tool</span>
+                </button>
+              </div>
             </div>
 
             {/* Floating Highlight Card */}
@@ -80,7 +98,7 @@ const AIData = ({ language }: AIDataProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="absolute -bottom-6 -right-4 sm:-right-12 sm:bottom-12 bg-slate-800/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-vovon-500/30 max-w-sm z-20"
+              className="absolute -top-6 -right-4 sm:-right-8 sm:top-12 bg-slate-800/95 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-vovon-500/30 max-w-xs z-20"
             >
               <div className="flex items-center space-x-3 mb-4">
                 <div className="w-10 h-10 bg-vovon-500/20 rounded-full flex items-center justify-center">
@@ -100,6 +118,13 @@ const AIData = ({ language }: AIDataProps) => {
           </motion.div>
         </div>
       </div>
+      
+      {/* External Tool Modal via Iframe */}
+      <ToolModal 
+        isOpen={isToolOpen} 
+        onClose={() => setIsToolOpen(false)} 
+        url="https://netbewust-bouwen-ontwikkelen-48587376692.us-west1.run.app/" 
+      />
     </section>
   );
 };
