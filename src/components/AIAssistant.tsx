@@ -72,6 +72,7 @@ type Message = {
 
 export default function AIAssistant() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showWidgetPrompt, setShowWidgetPrompt] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 'welcome',
@@ -125,13 +126,15 @@ export default function AIAssistant() {
     }
   }, []);
 
-  // Auto-open chat after 20 seconds
+  // Auto-open chat prompt after 3 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 20000);
+      if (!isOpen) {
+        setShowWidgetPrompt(true);
+      }
+    }, 3000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isOpen]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -147,6 +150,8 @@ export default function AIAssistant() {
     if (!userMsg || isLoading || !chatRef.current) return;
 
     setInput('');
+    setShowWidgetPrompt(false);
+    if (!isOpen) setIsOpen(true);
     setMessages(prev => [...prev, { id: Date.now().toString(), role: 'user', text: userMsg }]);
     setIsLoading(true);
 
@@ -197,65 +202,118 @@ export default function AIAssistant() {
 
   return (
     <>
-      {/* Chat Toggle Button */}
-      <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isOpen ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}`}>
-        <div className="relative group">
-          <button
-            onClick={() => setIsOpen(true)}
-            className="p-4 bg-vovon-600 text-white rounded-full shadow-xl hover:bg-vovon-700 transition-all duration-300"
-            aria-label="Open VOVON assistent"
-          >
-            <div className="relative flex items-center justify-center">
-              <MessageCircleQuestion className="w-6 h-6" />
-              <MessageCircleQuestion className="w-4 h-4 absolute -bottom-1 -right-2 opacity-80" />
+      {/* The Initial Widget Prompt (Closed State) */}
+      {!isOpen && showWidgetPrompt && (
+        <div className="fixed bottom-[88px] right-6 z-[60] flex flex-col items-end gap-2 animate-in fade-in slide-in-from-bottom-4 duration-500 pointer-events-auto">
+          {/* Welcome Bubble */}
+          <div className="relative bg-white p-5 rounded-2xl shadow-xl w-[280px] mb-1 border border-slate-100/50">
+            <div className="absolute -top-4 -left-4 w-14 h-14 bg-slate-200 rounded-full border-[3px] border-white shadow-sm overflow-hidden flex items-center justify-center">
+              <img src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" alt="Patrick Vos" className="w-full h-full object-cover" />
             </div>
-          </button>
-          
-          {/* Tooltip */}
-          <div className="absolute right-full top-1/2 -translate-y-1/2 mr-4 px-3 py-1.5 bg-slate-800 text-white text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap shadow-lg">
-            Vraag het?
-            {/* Arrow */}
-            <div className="absolute top-1/2 -right-1 -translate-y-1/2 border-4 border-transparent border-l-slate-800"></div>
+            <button 
+              onClick={(e) => { e.stopPropagation(); setShowWidgetPrompt(false); }} 
+              className="absolute top-2 right-2 p-1.5 text-slate-400 hover:text-slate-600 bg-slate-50 hover:bg-slate-100 rounded-full transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+            <div className="pl-6 space-y-1">
+              <p className="text-[15px] font-bold text-slate-900">Patrick - VOVON</p>
+              <p className="text-sm text-slate-800 mt-2 font-medium">Goedendag 👋</p>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Heb je een vraag? Ik help je graag verder met je vraagstuk:
+              </p>
+            </div>
+          </div>
+
+          {/* By VOVON Badge */}
+          <div className="bg-slate-800 text-slate-100 text-[10px] px-2.5 py-1 rounded-md font-medium tracking-wide flex items-center shadow-sm mb-2">
+            ⚡ by VOVON
+          </div>
+
+          {/* Suggestion Pills */}
+          <div className="flex flex-col items-end gap-2.5">
+            <button 
+              onClick={() => handleSend("Wat heeft de grootste impact op de energietransitie?")} 
+              className="bg-vovon-600 text-white hover:bg-vovon-700 text-[13px] font-medium px-5 py-2.5 rounded-full shadow-lg transition-transform hover:-translate-y-0.5 border border-vovon-700 flex items-center gap-2 whitespace-nowrap"
+            >
+              Impact op energietransitie 🌍
+            </button>
+            <button 
+              onClick={() => handleSend("Wat is netbewust bouwen en ontwikkelen?")} 
+              className="bg-white text-slate-800 hover:bg-slate-50 text-[13px] font-medium px-5 py-2.5 rounded-full shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-0.5 border border-slate-100 flex items-center gap-2 whitespace-nowrap"
+            >
+              Netbewust bouwen 🏗️
+            </button>
+            <button 
+              onClick={() => { setShowWidgetPrompt(false); setIsOpen(true); }} 
+              className="bg-white text-slate-800 hover:bg-slate-50 text-[13px] font-medium px-5 py-2.5 rounded-full shadow-[0_4px_14px_0_rgba(0,0,0,0.1)] transition-transform hover:-translate-y-0.5 border border-slate-100 flex items-center gap-2 whitespace-nowrap"
+            >
+              Ik heb een vraag 🙋‍♂️
+            </button>
           </div>
         </div>
+      )}
+
+      {/* Main Floating Toggle Button */}
+      <div className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${isOpen ? 'scale-0 opacity-0 pointer-events-none' : 'scale-100 opacity-100'}`}>
+        <button
+          onClick={() => { setShowWidgetPrompt(false); setIsOpen(true); }}
+          className="relative p-4 bg-vovon-600 text-white rounded-full shadow-xl hover:bg-vovon-700 transition-all duration-300 group hover:scale-105"
+          aria-label="Open VOVON assistent"
+        >
+          <div className="relative flex items-center justify-center">
+            <MessageCircleQuestion className="w-7 h-7" />
+          </div>
+          
+          {/* Red Notification Badge */}
+          {showWidgetPrompt && (
+            <div className="absolute -top-1 -right-1 bg-red-500 text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white shadow-sm">
+              1
+            </div>
+          )}
+        </button>
       </div>
 
       {/* Chat Window */}
       <div 
-        className={`fixed bottom-6 right-6 w-[380px] h-[600px] max-h-[80vh] max-w-[calc(100vw-3rem)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 z-50 transform origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}
+        className={`fixed bottom-6 right-6 w-[380px] h-[600px] max-h-[85vh] max-w-[calc(100vw-3rem)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 z-[70] transform origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}
       >
         {/* Header */}
-        <div className="bg-vovon-600 p-4 text-white flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <Bot className="w-6 h-6" />
+        <div className="bg-vovon-600 p-4 text-white flex justify-between items-center shrink-0">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-vovon-300/30">
+              <img src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" alt="VOVON" className="w-full h-full object-cover" />
+            </div>
             <div>
-              <h3 className="font-bold">VOVON assistent</h3>
-              <p className="text-xs text-vovon-100">Vastgoed & Energie</p>
+              <h3 className="font-bold text-sm">VOVON Assistent</h3>
+              <p className="text-[11px] text-vovon-100 font-medium">Vastgoed & Energie Expert</p>
             </div>
           </div>
           <button 
             onClick={() => setIsOpen(false)}
-            className="p-1 hover:bg-vovon-700 rounded-md transition-colors"
+            className="p-1.5 hover:bg-vovon-700 rounded-lg transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 bg-slate-50 flex flex-col gap-4">
+        <div className="flex-1 overflow-y-auto p-4 bg-slate-50 flex flex-col gap-5 custom-scrollbar">
           {messages.map((msg, index) => {
             const isLast = index === messages.length - 1;
             return (
               <React.Fragment key={msg.id}>
                 <div className={`flex gap-3 max-w-[85%] ${msg.role === 'user' ? 'ml-auto flex-row-reverse' : ''}`}>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${msg.role === 'user' ? 'bg-slate-200 text-slate-600' : 'bg-vovon-100 text-vovon-600'}`}>
-                    {msg.role === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
-                  </div>
-                  <div className={`p-3 rounded-2xl text-sm ${msg.role === 'user' ? 'bg-vovon-600 text-white rounded-tr-none' : 'bg-white border border-slate-100 shadow-sm text-slate-700 rounded-tl-none'}`}>
+                  {msg.role === 'model' && (
+                    <div className="w-8 h-8 rounded-full overflow-hidden shrink-0 border border-slate-200 mt-1 shadow-sm">
+                      <img src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" alt="VOVON" className="w-full h-full object-cover" />
+                    </div>
+                  )}
+                  <div className={`p-3.5 rounded-2xl text-[14px] leading-relaxed shadow-sm ${msg.role === 'user' ? 'bg-vovon-600 text-white rounded-tr-sm' : 'bg-white border border-slate-100 text-slate-800 rounded-tl-sm'}`}>
                     {msg.role === 'user' ? (
                       msg.text
                     ) : (
-                      <div className="markdown-body">
+                      <div className="markdown-body text-sm prose prose-sm max-w-none">
                         <Markdown>{msg.text}</Markdown>
                       </div>
                     )}
@@ -265,12 +323,12 @@ export default function AIAssistant() {
                 {/* Suggested Questions (only for last model message) */}
                 {isLast && msg.role === 'model' && msg.suggestions && !isLoading && (
                   <div className="flex flex-col gap-2 mt-1 ml-11 max-w-[85%]">
-                    <p className="text-xs text-slate-500 font-medium ml-1 mb-1">Verder vragen:</p>
+                    <p className="text-[11px] text-slate-400 font-bold uppercase tracking-wider mb-1">Verder vragen</p>
                     {msg.suggestions.map((q, i) => (
                       <button
                         key={i}
                         onClick={() => handleSend(q)}
-                        className="text-left p-3 rounded-xl bg-white border border-vovon-200 text-sm text-vovon-700 hover:bg-vovon-50 hover:border-vovon-300 transition-colors shadow-sm"
+                        className="text-left p-3 rounded-xl bg-white border border-vovon-200/60 text-[13px] font-medium text-vovon-700 hover:bg-vovon-50 hover:border-vovon-400 hover:shadow-sm transition-all"
                       >
                         {q}
                       </button>
@@ -283,12 +341,12 @@ export default function AIAssistant() {
 
           {isLoading && (
             <div className="flex gap-3 max-w-[85%]">
-              <div className="w-8 h-8 rounded-full bg-vovon-100 text-vovon-600 flex items-center justify-center shrink-0">
-                <Bot className="w-4 h-4" />
+              <div className="w-8 h-8 rounded-full overflow-hidden shrink-0 border border-slate-200 mt-1 shadow-sm">
+                 <img src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" alt="VOVON" className="w-full h-full object-cover" />
               </div>
-              <div className="p-4 bg-white border border-slate-100 shadow-sm rounded-2xl rounded-tl-none flex items-center gap-2">
+              <div className="p-4 bg-white border border-slate-100 shadow-sm rounded-2xl rounded-tl-sm flex items-center gap-3">
                 <Loader2 className="w-4 h-4 text-vovon-600 animate-spin" />
-                <span className="text-sm text-slate-500">Aan het denken...</span>
+                <span className="text-[13px] text-slate-500 font-medium">Patrick typt een bericht...</span>
               </div>
             </div>
           )}
@@ -296,7 +354,7 @@ export default function AIAssistant() {
         </div>
 
         {/* Input */}
-        <div className="p-4 bg-white border-t border-slate-100">
+        <div className="p-4 bg-white border-t border-slate-100 shrink-0">
           <div className="relative flex items-end gap-2">
             <textarea
               value={input}
@@ -314,7 +372,7 @@ export default function AIAssistant() {
               <Send className="w-4 h-4" />
             </button>
           </div>
-          <p className="text-[10px] text-center text-slate-400 mt-2">
+          <p className="text-[10px] text-center text-slate-400 mt-3 font-medium">
             AI kan fouten maken. Controleer belangrijke informatie.
           </p>
         </div>
