@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircleQuestion, X, Send, Bot, User, Loader2 } from 'lucide-react';
+import { MessageCircleQuestion, X, Send, Bot, User, Loader2, Sparkles } from 'lucide-react';
 import { GoogleGenAI, Type } from '@google/genai';
 import Markdown from 'react-markdown';
 import projectsData from '../data/projects.json';
@@ -207,8 +207,9 @@ export default function AIAssistant() {
         <div className="fixed bottom-[88px] right-6 z-[60] flex flex-col items-end gap-2 animate-in fade-in slide-in-from-bottom-4 duration-500 pointer-events-auto">
           {/* Welcome Bubble */}
           <div className="relative bg-white p-5 rounded-2xl shadow-xl w-[280px] mb-1 border border-slate-100/50">
-            <div className="absolute -top-4 -left-4 w-14 h-14 bg-slate-200 rounded-full border-[3px] border-white shadow-sm overflow-hidden flex items-center justify-center">
-              <img src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" alt="Patrick Vos" className="w-full h-full object-cover" />
+            <div className="absolute -top-4 -left-4 w-14 h-14 bg-gradient-to-br from-vovon-500 to-vovon-800 rounded-full border-[3px] border-white shadow-sm overflow-hidden flex items-center justify-center">
+              <Bot className="w-6 h-6 text-white" />
+              <Sparkles className="w-3 h-3 text-vovon-200 absolute top-2 right-2" />
             </div>
             <button 
               onClick={(e) => { e.stopPropagation(); setShowWidgetPrompt(false); }} 
@@ -217,7 +218,7 @@ export default function AIAssistant() {
               <X className="w-4 h-4" />
             </button>
             <div className="pl-6 space-y-1">
-              <p className="text-[15px] font-bold text-slate-900">Patrick - VOVON</p>
+              <p className="text-[15px] font-bold text-slate-900">VOVON Assistent</p>
               <p className="text-sm text-slate-800 mt-2 font-medium">Goedendag 👋</p>
               <p className="text-sm text-slate-600 leading-relaxed">
                 Heb je een vraag? Ik help je graag verder met je vraagstuk:
@@ -281,8 +282,9 @@ export default function AIAssistant() {
         {/* Header */}
         <div className="bg-vovon-600 p-4 text-white flex justify-between items-center shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden border-2 border-vovon-300/30">
-              <img src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" alt="VOVON" className="w-full h-full object-cover" />
+            <div className="w-10 h-10 bg-gradient-to-br from-white to-slate-100 rounded-full flex items-center justify-center overflow-hidden shadow-sm relative">
+              <Bot className="w-5 h-5 text-vovon-600" />
+              <Sparkles className="w-2.5 h-2.5 text-vovon-400 absolute top-2 right-2" />
             </div>
             <div>
               <h3 className="font-bold text-sm">VOVON Assistent</h3>
@@ -305,8 +307,9 @@ export default function AIAssistant() {
               <React.Fragment key={msg.id}>
                 <div className={`flex gap-3 max-w-[85%] ${msg.role === 'user' ? 'ml-auto flex-row-reverse' : ''}`}>
                   {msg.role === 'model' && (
-                    <div className="w-8 h-8 rounded-full overflow-hidden shrink-0 border border-slate-200 mt-1 shadow-sm">
-                      <img src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" alt="VOVON" className="w-full h-full object-cover" />
+                    <div className="w-8 h-8 rounded-full overflow-hidden shrink-0 shadow-sm bg-gradient-to-br from-vovon-500 to-vovon-800 flex items-center justify-center relative mt-1">
+                      <Bot className="w-4 h-4 text-white" />
+                      <Sparkles className="w-2 h-2 text-vovon-200 absolute top-1.5 right-1.5" />
                     </div>
                   )}
                   <div className={`p-3.5 rounded-2xl text-[14px] leading-relaxed shadow-sm ${msg.role === 'user' ? 'bg-vovon-600 text-white rounded-tr-sm' : 'bg-white border border-slate-100 text-slate-800 rounded-tl-sm'}`}>
@@ -341,12 +344,13 @@ export default function AIAssistant() {
 
           {isLoading && (
             <div className="flex gap-3 max-w-[85%]">
-              <div className="w-8 h-8 rounded-full overflow-hidden shrink-0 border border-slate-200 mt-1 shadow-sm">
-                 <img src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" alt="VOVON" className="w-full h-full object-cover" />
+              <div className="w-8 h-8 rounded-full overflow-hidden shrink-0 shadow-sm bg-gradient-to-br from-vovon-500 to-vovon-800 flex items-center justify-center relative mt-1">
+                 <Bot className="w-4 h-4 text-white" />
+                 <Sparkles className="w-2 h-2 text-vovon-200 absolute top-1.5 right-1.5" />
               </div>
               <div className="p-4 bg-white border border-slate-100 shadow-sm rounded-2xl rounded-tl-sm flex items-center gap-3">
                 <Loader2 className="w-4 h-4 text-vovon-600 animate-spin" />
-                <span className="text-[13px] text-slate-500 font-medium">Patrick typt een bericht...</span>
+                <span className="text-[13px] text-slate-500 font-medium">Aan het denken...</span>
               </div>
             </div>
           )}
