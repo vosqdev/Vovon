@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Target, Combine, Building2, User } from 'lucide-react';
+import { X, Target, Combine, Building2, User, Briefcase, Linkedin } from 'lucide-react';
 import { useEffect } from 'react';
 
 interface FounderModalProps {
@@ -178,8 +178,60 @@ export default function FounderModal({ isOpen, onClose }: FounderModalProps) {
 
                   <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm">
                     <p className="text-slate-700 italic leading-relaxed font-medium">
-                      "Het verbinden, vernieuwen en organiseren van markt, overheid en energie en vastgoed vraagstukken tot realiseerbare projecten."
+                      "Het verbinden, vernieuwen en organiseren van markt, overheid en energie, maar ook vastgoed vraagstukken tot realiseerbare projecten."
                     </p>
+                  </div>
+
+                  {/* Compact CV */}
+                  <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm mt-6">
+                    <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wide mb-5 flex items-center">
+                      <Briefcase className="w-4 h-4 mr-2 text-vovon-600" />
+                      Werkervaring (Uitgelicht)
+                    </h3>
+                    
+                    <div className="space-y-6">
+                      {/* Publiek / Semi-publiek */}
+                      <div>
+                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Publieke & Corporatie Sector</h4>
+                        <ul className="text-sm text-slate-700 space-y-2">
+                          <li className="flex items-center">
+                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mr-2.5" />
+                            <span className="font-semibold text-slate-800">Omnia Wonen</span>
+                          </li>
+                          <li className="flex items-center">
+                            <div className="w-1.5 h-1.5 rounded-full bg-slate-300 mr-2.5" />
+                            <span className="font-semibold text-slate-800">Uwoon</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      {/* Private */}
+                      <div>
+                        <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Private Sector</h4>
+                        <ul className="text-sm text-slate-700 space-y-2">
+                          <li className="flex items-center">
+                            <div className="w-1.5 h-1.5 rounded-full bg-vovon-500 mr-2.5" />
+                            <span className="font-semibold text-slate-800">Volker Wessels</span>
+                          </li>
+                          <li className="flex items-center">
+                            <div className="w-1.5 h-1.5 rounded-full bg-vovon-500 mr-2.5" />
+                            <span className="font-semibold text-slate-800">Bemog Projektontwikkeling</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 pt-5 border-t border-slate-100">
+                      <a 
+                        href="https://www.linkedin.com/in/patrick-vos-49527726/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-full py-2.5 px-4 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 text-[#0a66c2] text-sm font-bold rounded-xl transition-colors group"
+                      >
+                        <Linkedin className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                        Bekijk profiel op LinkedIn
+                      </a>
+                    </div>
                   </div>
                 </div>
 
