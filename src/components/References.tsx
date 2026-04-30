@@ -1,13 +1,16 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Home, Briefcase, Landmark, Zap } from 'lucide-react';
 import { Language, translations } from '../translations';
 import ProjectMap from './ProjectMap';
+import CategoryProjectsModal from './CategoryProjectsModal';
 
 interface ReferencesProps {
   language: Language;
 }
 
 const References = ({ language }: ReferencesProps) => {
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const t = translations[language].references;
   const icons = [Home, Briefcase, Landmark, Zap];
   const images = [
@@ -48,11 +51,12 @@ const References = ({ language }: ReferencesProps) => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
+              onClick={() => setSelectedCategory(project.category)}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-slate-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 flex flex-col"
+              className="bg-slate-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 flex flex-col cursor-pointer"
             >
               <div className="relative h-48 overflow-hidden shrink-0">
                 <img
@@ -63,6 +67,11 @@ const References = ({ language }: ReferencesProps) => {
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-vovon-700 uppercase tracking-wide flex items-center gap-1">
                   <project.icon className="w-3 h-3" />
                   {project.category}
+                </div>
+                <div className="absolute inset-0 bg-vovon-900/0 group-hover:bg-vovon-900/10 transition-colors duration-300 flex items-center justify-center">
+                  <span className="bg-white/95 text-vovon-700 px-4 py-2 rounded-full text-sm font-semibold opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                    {language === 'nl' ? 'Bekijk projecten' : 'View projects'}
+                  </span>
                 </div>
               </div>
               <div className="p-5 flex-1 flex flex-col">
@@ -83,12 +92,20 @@ const References = ({ language }: ReferencesProps) => {
         
         <div className="mt-16 text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            {language === 'nl' ? 'Bekijk de eerder projecten' : 'View previous projects'}
+            {language === 'nl' ? 'Bekijk de eerdere projecten' : 'View previous projects'}
           </h2>
         </div>
         
         <ProjectMap />
       </div>
+
+      {selectedCategory && (
+        <CategoryProjectsModal 
+          category={selectedCategory} 
+          onClose={() => setSelectedCategory(null)} 
+          language={language} 
+        />
+      )}
     </section>
   );
 };
