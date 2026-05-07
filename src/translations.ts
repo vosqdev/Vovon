@@ -130,7 +130,7 @@ export const translations = {
     footer: {
       description: 'Connecting Energy, Real Estate and Innovation. Building a sustainable future together.',
       navigation: 'Navigation',
-      legal: 'Legal',
+      legal: 'Other',
       connect: 'Connect',
       privacy: 'Privacy Policy',
       terms: 'Disclaimer',
@@ -269,7 +269,7 @@ export const translations = {
     footer: {
       description: 'Verbinden van Energie, Vastgoed en Innovatie. Samen bouwen aan een duurzame toekomst.',
       navigation: 'Navigatie',
-      legal: 'Juridisch',
+      legal: 'Overige',
       connect: 'Verbinden',
       privacy: 'Privacybeleid',
       terms: 'Disclaimer',
