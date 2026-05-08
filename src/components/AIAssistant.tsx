@@ -8,23 +8,22 @@ import projectsData from '../data/projects.json';
 let aiClient: GoogleGenAI | null = null;
 
 const getAIClient = () => {
-  if (!aiClient) {
-    let apiKey = '';
-    
-    // Check Vite environment variable first (for external deployments)
-    try {
-      apiKey = import.meta.env.VITE_GEMINI_API_KEY || process.env.GEMINI_API_KEY || '';
-    } catch (e) {
-      console.warn('Could not read API key', e);
-    }
-
-    if (!apiKey) {
-      console.warn('GEMINI_API_KEY or VITE_GEMINI_API_KEY is not set. AI Assistant will not work.');
-      return null;
-    }
-    aiClient = new GoogleGenAI({ apiKey });
+  let apiKey = '';
+  
+  // Check Vite environment variable first (for external deployments)
+  try {
+    apiKey = import.meta.env.VITE_GEMINI_API_KEY || (process.env as any).API_KEY || process.env.GEMINI_API_KEY || '';
+  } catch (e) {
+    console.warn('Could not read API key', e);
   }
-  return aiClient;
+
+  if (!apiKey) {
+    console.warn('API key not set. AI Assistant will not work.');
+    return null;
+  }
+  
+  // Create a new instance every time to ensure it picks up the latest key if selected via UI
+  return new GoogleGenAI({ apiKey });
 };
 
 // Prepare context from projects
@@ -55,6 +54,7 @@ type Message = {
   role: 'user' | 'model';
   text: string;
   suggestions?: string[];
+  needsApiKey?: boolean;
 };
 
 export default function AIAssistant() {
@@ -80,37 +80,7 @@ export default function AIAssistant() {
   const chatRef = useRef<any>(null);
 
   useEffect(() => {
-    // Initialize chat session
-    try {
-      const ai = getAIClient();
-      if (ai) {
-        chatRef.current = ai.chats.create({
-          model: 'gemini-3-flash-preview',
-          config: {
-            systemInstruction: systemInstruction,
-            temperature: 0.7,
-            responseMimeType: "application/json",
-            responseSchema: {
-              type: Type.OBJECT,
-              properties: {
-                answer: { 
-                  type: Type.STRING,
-                  description: "Het antwoord op de vraag van de gebruiker in Markdown formaat."
-                },
-                suggestions: {
-                  type: Type.ARRAY,
-                  items: { type: Type.STRING },
-                  description: "Precies 3 suggesties voor vervolgvragen. De eerste 2 zijn inhoudelijke verdiepingsvragen. De 3e is ALTIJD exact: 'Voor contact of een vraag?'"
-                }
-              },
-              required: ["answer", "suggestions"]
-            }
-          }
-        });
-      }
-    } catch (e) {
-      console.error("Failed to initialize chat", e);
-    }
+    // Initial chat session is handled during handleSend to support dynamic API keys
   }, []);
 
   // Auto-open chat prompt after 3 seconds
@@ -134,16 +104,55 @@ export default function AIAssistant() {
   const handleSend = async (textToSend?: string | React.MouseEvent) => {
     // If textToSend is a string, use it. Otherwise use input state.
     const userMsg = typeof textToSend === 'string' ? textToSend.trim() : input.trim();
-    if (!userMsg || isLoading || !chatRef.current) return;
+    if (!userMsg || isLoading) return;
 
     setInput('');
     setShowWidgetPrompt(false);
     if (!isOpen) setIsOpen(true);
-    setMessages(prev => [...prev, { id: Date.now().toString(), role: 'user', text: userMsg }]);
+    
+    // Create new message array with the user message
+    const newMessages = [...messages, { id: Date.now().toString(), role: 'user' as const, text: userMsg }];
+    setMessages(newMessages);
     setIsLoading(true);
 
     try {
-      const response = await chatRef.current.sendMessage({ message: userMsg });
+      const ai = getAIClient();
+      if (!ai) throw new Error("API Client not initialized. Please set an API key.");
+
+      // Recreate chat session every time to ensure it uses the latest API key and history
+      const history = messages
+        .filter(m => !m.needsApiKey && m.id !== 'welcome') // exclude errors and welcome
+        .map(m => ({ 
+          role: m.role, 
+          parts: [{ text: m.text }] 
+        }));
+
+      const chat = ai.chats.create({
+        model: 'gemini-3-flash-preview',
+        history: history,
+        config: {
+          systemInstruction: systemInstruction,
+          temperature: 0.7,
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: Type.OBJECT,
+            properties: {
+              answer: { 
+                type: Type.STRING,
+                description: "Het antwoord op de vraag van de gebruiker in Markdown formaat."
+              },
+              suggestions: {
+                type: Type.ARRAY,
+                items: { type: Type.STRING },
+                description: "Precies 3 suggesties voor vervolgvragen. De eerste 2 zijn inhoudelijke verdiepingsvragen. De 3e is ALTIJD exact: 'Voor contact of een vraag?'"
+              }
+            },
+            required: ["answer", "suggestions"]
+          }
+        }
+      });
+
+      const response = await chat.sendMessage({ message: userMsg });
       
       let parsedText = response.text || '';
       let answer = 'Sorry, ik kon geen antwoord genereren.';
@@ -170,10 +179,14 @@ export default function AIAssistant() {
       }]);
     } catch (error: any) {
       console.error('Error calling Gemini API:', error);
+      const errMessage = error?.message || String(error);
+      const isSuspended = errMessage.includes('suspended') || errMessage.includes('PERMISSION_DENIED');
+      
       setMessages(prev => [...prev, { 
         id: (Date.now() + 1).toString(), 
         role: 'model', 
-        text: 'Er is een fout opgetreden: ' + (error?.message || String(error))
+        text: 'Er is een fout opgetreden: ' + errMessage,
+        needsApiKey: isSuspended
       }]);
     } finally {
       setIsLoading(false);
@@ -323,6 +336,21 @@ export default function AIAssistant() {
                         {q}
                       </button>
                     ))}
+                  </div>
+                )}
+                {/* Button for API key if suspended */}
+                {isLast && msg.role === 'model' && msg.needsApiKey && !isLoading && (
+                  <div className="flex flex-col gap-2 mt-1 ml-11 max-w-[85%]">
+                    <button
+                      onClick={() => window.aistudio?.openSelectKey?.()}
+                      className="text-left p-3 rounded-xl bg-red-50 border border-red-200 text-[13px] font-medium text-red-700 hover:bg-red-100 transition-all flex items-center justify-between"
+                    >
+                      <span>Stel je eigen API sleutel in</span>
+                      <Sparkles className="w-4 h-4 ml-2 opacity-50" />
+                    </button>
+                    <p className="text-[11px] text-slate-500 mt-1">
+                      Het standaard limiet is bereikt of het account is geschorst. Je kunt je eigen API sleutel toevoegen via de Developer console of de knop hierboven.
+                    </p>
                   </div>
                 )}
               </React.Fragment>
