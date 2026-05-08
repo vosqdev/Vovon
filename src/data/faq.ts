@@ -1,7 +1,7 @@
 export const faqData = {
   nl: {
     title: "Veelgestelde vragen",
-    subtitle: "Hieronder een Q&A / Veelgestelde vragen, passend bij VOVON Development als combinatie van vastgoedontwikkeling, gebiedsontwikkeling, verduurzaming, energie vraagstukken, oplossingen en procesregie.",
+    subtitle: "Hieronder een Q&A, passend bij VOVON Development als combinatie van vastgoedontwikkeling, gebiedsontwikkeling, verduurzaming, energie vraagstukken, oplossingen en procesregie.",
     qas: [
       {
         q: "Wat doet VOVON Development?",
@@ -89,7 +89,7 @@ export const faqData = {
   },
   en: {
     title: "Frequently Asked Questions",
-    subtitle: "Below is a Q&A / FAQ related to VOVON Development as a combination of real estate development, area development, sustainability, energy challenges, solutions, and process management.",
+    subtitle: "Below is a Q&A related to VOVON Development as a combination of real estate development, area development, sustainability, energy challenges, solutions, and process management.",
     qas: [
       {
         q: "What does VOVON Development do?",

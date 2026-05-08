@@ -23,9 +23,6 @@ export default function FAQ({ language }: FAQProps) {
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
             {data.title}
           </h2>
-          <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-            {data.subtitle}
-          </p>
         </div>
 
         <div className="max-w-4xl mx-auto space-y-4">
