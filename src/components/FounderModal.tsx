@@ -44,7 +44,7 @@ export default function FounderModal({ isOpen, onClose }: FounderModalProps) {
           <div className="sticky top-0 z-20 flex justify-between items-center px-6 py-4 bg-white/80 backdrop-blur-md border-b border-slate-100">
             <div className="flex items-center space-x-3">
               <img 
-                src="https://image2url.com/r2/default/images/1773481924466-d01e0950-66db-4902-a880-8deace030649.png" 
+                src="https://www.image2url.com/r2/default/images/1778272409083-db33f987-0a94-45f6-9667-4d00551c6598.png" 
                 alt="Patrick Vos" 
                 className="w-12 h-12 rounded-full object-cover border-2 border-vovon-100"
               />

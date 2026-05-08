@@ -24,7 +24,7 @@ export const translations = {
       titleHighlight: 'NetZero',
       description1: 'VOVON specializes in the intersection of real estate and energy transition. We direct complex spatial and sustainable development processes, turning ambitions—such as grid-aware building and NetZero 2050—into concrete projects with results.',
       description2: 'Young at heart, with a solid dose of experience. In a world that never stands still, we move with the market and respond to the wishes and needs of today and the future. With expertise in project direction and smart energy solutions, we gladly help public and private parties successfully realize future-proof developments.',
-      founderRole: 'Founder',
+      founderRole: 'Director',
       expertise: [
         'Real Estate & Area Development',
         'Complex Stakeholder Management',
@@ -163,7 +163,7 @@ export const translations = {
       titleHighlight: 'NetZero',
       description1: 'VOVON is gespecialiseerd op het snijvlak van vastgoed en energietransitie. Wij voeren de regie over complexe ruimtelijke en duurzame ontwikkelprocessen en maken van ambities, zoals netbewust bouwen -NetZero 2050-, concrete projecten met resultaat.',
       description2: 'Jong van geest, mét een flinke dosis ervaring. In een wereld die nooit stilstaat, bewegen we mee met de markt en spelen we in op de wensen en behoeftes van nu en voor de toekomst. Met expertise in projectregie en slimme energieoplossingen helpen wij graag publieke en private partijen om toekomstbestendige ontwikkelingen succesvol te realiseren.',
-      founderRole: 'Founder',
+      founderRole: 'Directeur',
       expertise: [
         'Vastgoed- & gebiedsontwikkeling',
         'Complexe stakeholdermanagement',
