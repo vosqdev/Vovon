@@ -73,8 +73,8 @@ const TermsModal = ({ isOpen, onClose }: TermsModalProps) => {
       }
     });
 
-    const opt = {
-      margin:       [15, 15],
+    const opt: any = {
+      margin:       15,
       filename:     'Algemene_Voorwaarden_VOVON_Development.pdf',
       image:        { type: 'jpeg', quality: 0.98 },
       html2canvas:  { scale: 2, useCORS: true },
