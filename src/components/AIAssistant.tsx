@@ -11,24 +11,11 @@ const getAIClient = () => {
   if (!aiClient) {
     let apiKey = '';
     
-    // Check Vite environment variable first (for Netlify/external deployments)
+    // Check Vite environment variable first (for external deployments)
     try {
-      if (typeof import.meta !== 'undefined' && (import.meta as any).env && (import.meta as any).env.VITE_GEMINI_API_KEY) {
-        apiKey = (import.meta as any).env.VITE_GEMINI_API_KEY;
-      }
+      apiKey = import.meta.env.VITE_GEMINI_API_KEY || process.env.GEMINI_API_KEY || '';
     } catch (e) {
-      // Ignore errors if import.meta.env is not available
-    }
-    
-    // Fallback to process.env (for AI Studio environment)
-    if (!apiKey) {
-      try {
-        if (typeof process !== 'undefined' && process.env && process.env.GEMINI_API_KEY) {
-          apiKey = process.env.GEMINI_API_KEY;
-        }
-      } catch (e) {
-        // Ignore errors if process.env is not available
-      }
+      console.warn('Could not read API key', e);
     }
 
     if (!apiKey) {
