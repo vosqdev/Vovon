@@ -38,7 +38,7 @@ export default function App() {
       <Contact language={language} />
       <Footer language={language} />
       <CookieBanner />
-      <AIAssistant />
+      {/* <AIAssistant /> */}
     </div>
   );
 }
