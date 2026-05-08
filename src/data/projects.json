@@ -1029,6 +1029,24 @@
         "Wageningen University",
         "Opdrachtgever Circul8 development BV"
       ]
+    },
+    {
+      "id": 57,
+      "name": "Iliasstraat 52",
+      "latitude": 52.3552530,
+      "longitude": 5.1455538,
+      "project_context": "📍 Almere – tender twee poortgebouwen",
+      "planperiode": "2021-2023 (gerealiseerd 2025)",
+      "programma_items": [
+        "2 woongebouwen met 36 appartementen, tender gemeente Almere Columbuspoort"
+      ],
+      "ambitie_items": [
+        "architectuur met landschappelijk inpassing"
+      ],
+      "partners_items": [
+        "Gemeente Almere",
+        "Opdrachtgever Bemog Projektontwikkeling en Mateboer"
+      ]
     }
   ]
 }
