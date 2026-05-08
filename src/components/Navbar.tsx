@@ -61,19 +61,19 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
             {navLinks.filter(link => link.href !== '/#contact').map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className={`text-sm font-medium transition-colors hover:text-vovon-500 ${
                   isNavSolid ? 'text-slate-700' : 'text-white/90'
                 }`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             
-            <a
-              href="/#contact"
+            <Link
+              to="/#contact"
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
                 isNavSolid
                   ? 'bg-vovon-600 text-white hover:bg-vovon-700'
@@ -81,7 +81,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
               }`}
             >
               {t.cta}
-            </a>
+            </Link>
 
             {/* Language Switcher */}
             <button
@@ -129,14 +129,14 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
           >
             <div className="px-4 pt-2 pb-6 space-y-1">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsOpen(false)}
                   className="block px-3 py-4 text-base font-medium text-slate-700 hover:text-vovon-600 hover:bg-slate-50 rounded-md border-b border-slate-100 last:border-0"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
