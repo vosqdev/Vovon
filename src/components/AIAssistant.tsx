@@ -168,12 +168,12 @@ export default function AIAssistant() {
           "Kun je een voorbeeld geven van een energieneutraal project?"
         ]
       }]);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error calling Gemini API:', error);
       setMessages(prev => [...prev, { 
         id: (Date.now() + 1).toString(), 
         role: 'model', 
-        text: 'Er is een fout opgetreden bij het communiceren met de AI. Zorg ervoor dat de GEMINI_API_KEY correct is ingesteld.' 
+        text: 'Er is een fout opgetreden: ' + (error?.message || String(error))
       }]);
     } finally {
       setIsLoading(false);
