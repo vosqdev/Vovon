@@ -6,9 +6,18 @@ import { MapPin } from 'lucide-react';
 import projectsData from '../data/projects.json';
 
 // Custom marker icon in brand color (vovon-600: #99336f)
-const customIcon = L.divIcon({
+const defaultIcon = L.divIcon({
   className: 'custom-marker',
   html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#99336f" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 32px; height: 32px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3" fill="white"></circle></svg>`,
+  iconSize: [32, 32],
+  iconAnchor: [16, 32],
+  popupAnchor: [0, -32],
+});
+
+// Icon for projects with a planperiode: completely purple, no white outline, white checkmark
+const completedIcon = L.divIcon({
+  className: 'custom-marker',
+  html: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#99336f" stroke="none" style="width: 32px; height: 32px; filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#99336f" stroke-width="2" stroke-linejoin="round"></path><polyline points="9 10 11.5 12.5 15.5 7.5" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></polyline></svg>`,
   iconSize: [32, 32],
   iconAnchor: [16, 32],
   popupAnchor: [0, -32],
@@ -29,7 +38,7 @@ const ProjectMap = () => {
           <Marker 
             key={project.id} 
             position={[project.latitude, project.longitude]}
-            icon={customIcon}
+            icon={(project.planperiode && project.planperiode !== 'null' && project.planperiode.trim() !== '') ? completedIcon : defaultIcon}
           >
             <Popup className="vovon-popup">
               <div className="min-w-[240px] max-w-[320px] max-h-[320px] overflow-y-auto pr-2">
