@@ -93,6 +93,16 @@ export const translations = {
         ]
       }
     },
+    news: {
+      title: 'Be further inspired',
+      filters: {
+        all: 'All',
+        news: 'News',
+        article: 'Article',
+        insight: 'Insight'
+      },
+      readMore: 'Read more',
+    },
     references: {
       label: 'References',
       title: 'Broadly Applicable',
@@ -231,6 +241,16 @@ export const translations = {
           'Versterk de onderbouwing'
         ]
       }
+    },
+    news: {
+      title: 'Laat je verder inspireren',
+      filters: {
+        all: 'Alles',
+        news: 'Nieuws',
+        article: 'Artikel',
+        insight: 'Insight'
+      },
+      readMore: 'Lees meer',
     },
     references: {
       label: 'Referenties',

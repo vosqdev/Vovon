@@ -14,6 +14,7 @@ import Process from './components/Process';
 import ImageDivider from './components/ImageDivider';
 import Services from './components/Services';
 import AIData from './components/AIData';
+import News from './components/News';
 import References from './components/References';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
@@ -52,6 +53,7 @@ function HomePage({ language }: { language: Language }) {
       <ImageDivider />
       <Services language={language} />
       <AIData language={language} />
+      <News language={language} />
       <References language={language} />
     </>
   );
