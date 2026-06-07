@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { MapPin, Globe, Layers } from 'lucide-react';
+import { MapPin, Globe, Layers, Compass } from 'lucide-react';
 import projectsData from '../data/projects.json';
 
 interface ProjectMapProps {
@@ -170,6 +170,18 @@ const ProjectMap = ({ selectedProject, language }: ProjectMapProps) => {
                       </ul>
                     </div>
                   )}
+                  
+                  <div className="mt-4 pt-3 border-t border-slate-200/60 flex justify-end">
+                    <a
+                      href={`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${project.latitude},${project.longitude}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-white bg-vovon-600 hover:bg-vovon-700 rounded-lg transition-all duration-200 shadow-sm cursor-pointer hover:shadow-md"
+                    >
+                      <Compass className="w-3.5 h-3.5" />
+                      <span>{language === 'nl' ? 'Bekijk Street View' : 'View Street View'}</span>
+                    </a>
+                  </div>
                   
                 </div>
               </div>
