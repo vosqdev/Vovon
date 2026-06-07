@@ -21,6 +21,20 @@ interface NewsItem {
 
 const dummyItems: NewsItem[] = [
   {
+    id: '7',
+    type: 'insight',
+    date: '7 juni 2026',
+    title: 'Netcongestie, Gebiedsontwikkeling en Woningbouw: Een Systeembewuste Aanpak',
+    image: 'https://cdn.phototourl.com/free/2026-06-07-454225b0-f75d-43bf-8b97-31c2861db649.jpg',
+    content: [
+      'De druk op onze fysieke ruimte en netinfrastructuur bereikt een kookpunt. Netcongestie is niet langer een theoretisch risico, maar een dagelijkse realiteit die de woningbouwopgave en de verduurzaming van Nederland op veel plekken rechtstreeks remt of zelfs stillegt.',
+      'Om deze impasse te doorbreken, moeten we de manier waarop we gebieden ontwikkelen fundamenteel herontwerpen. Wonen, mobiliteit, levensonderhoud en energie kunnen niet langer onafhankelijk van elkaar worden gepland. Traditionele silo’s moeten plaatsmaken voor een geïntegreerde, systeembewuste benadering.',
+      'Bij VOVON Development geloven we dat netcongestie juist de katalysator moet zijn voor slimmere gebiedsontwikkelingen. Door het lokale energiesysteem vanaf de allereerste planfase integraal mee te ontwerpen – met slimme sturing, lokale opwek, batterijopslag en flexibele energietarieven – ontstaat er weer reële ontwikkelruimte op plekken waar het net zogenaamd ‘vol’ zit.',
+      'Dit vraagt om een vernieuwde en gedurfde ketensamenwerking. Gemeenten, netbeheerders, ontwikkelaars, grondeigenaren, energiecoöperaties en bewoners moeten van begin af aan met elkaar om de tafel. Alleen door data, investeringskracht en visie samen te brengen, bouwen we aan gebieden die niet alleen toekomstbestendig zijn, maar ook daadwerkelijk aangesloten kunnen worden.',
+      'Deel dit bericht en discussieer mee op LinkedIn: www.linkedin.com/posts/patrick-vos-49527726_netcongestie-gebiedsontwikkeling-woningbouw-share-7465626938246742016-LdAo'
+    ]
+  },
+  {
     id: '6',
     type: 'insight',
     date: '15 mei 2026',
