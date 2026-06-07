@@ -1,12 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import { MapPin } from 'lucide-react';
+import { MapPin, Globe, Layers } from 'lucide-react';
 import projectsData from '../data/projects.json';
 
 interface ProjectMapProps {
   selectedProject?: any;
+  language: 'nl' | 'en';
 }
 
 const MapController = ({ selectedProject, markerRefs }: { selectedProject: any; markerRefs: React.MutableRefObject<{ [key: string]: any }> }) => {
@@ -53,18 +54,54 @@ const completedIcon = L.divIcon({
   popupAnchor: [0, -32],
 });
 
-const ProjectMap = ({ selectedProject }: ProjectMapProps) => {
+const ProjectMap = ({ selectedProject, language }: ProjectMapProps) => {
   // Center of the Netherlands
   const center: [number, number] = [52.3702, 5.9251];
   const markerRefs = useRef<{ [key: string]: any }>({});
+  const [mapType, setMapType] = useState<'streets' | 'satellite'>('streets');
 
   return (
     <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-lg border border-slate-200 mt-16 relative z-0">
+      {/* Floating Map Style Switcher Widget */}
+      <div className="absolute top-4 right-4 z-[1000] bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-slate-200 p-1 flex gap-1 transition-all duration-200 hover:shadow-lg">
+        <button
+          onClick={() => setMapType('streets')}
+          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-md transition-all duration-200 cursor-pointer ${
+            mapType === 'streets'
+              ? 'bg-vovon-600 text-white shadow-sm'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+          }`}
+          title={language === 'nl' ? 'Standaard kaartweergave' : 'Standard map view'}
+        >
+          <Layers className="w-3.5 h-3.5" />
+          <span>{language === 'nl' ? 'Kaart' : 'Map'}</span>
+        </button>
+        <button
+          onClick={() => setMapType('satellite')}
+          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-md transition-all duration-200 cursor-pointer ${
+            mapType === 'satellite'
+              ? 'bg-vovon-600 text-white shadow-sm'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+          }`}
+          title={language === 'nl' ? 'Satellietbeeld' : 'Satellite imagery'}
+        >
+          <Globe className="w-3.5 h-3.5" />
+          <span>{language === 'nl' ? 'Satelliet' : 'Satellite'}</span>
+        </button>
+      </div>
+
       <MapContainer center={center} zoom={8} scrollWheelZoom={false} className="w-full h-full">
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+        {mapType === 'streets' ? (
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+        ) : (
+          <TileLayer
+            attribution='Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+            url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+          />
+        )}
         <MapController selectedProject={selectedProject} markerRefs={markerRefs} />
         {(projectsData.projects as any[]).map((project) => (
           <Marker 

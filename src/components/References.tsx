@@ -112,7 +112,7 @@ const References = ({ language }: ReferencesProps) => {
             </h2>
           </div>
           
-          <ProjectMap selectedProject={selectedProject} />
+          <ProjectMap selectedProject={selectedProject} language={language} />
         </div>
       </div>
 
