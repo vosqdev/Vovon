@@ -171,7 +171,7 @@ export const translations = {
       label: 'Over VOVON',
       title: 'De weg naar',
       titleHighlight: 'NetZero',
-      description1: 'VOVON is gespecialiseerd op het snijvlak van vastgoed en energietransitie. Wij voeren de regie over complexe ruimtelijke en duurzame ontwikkelprocessen en maken van ambities, zoals netbewust bouwen -NetZero 2050-, concrete projecten met resultaat.',
+      description1: 'VOVON is gespecialiseerd op het snijvlak van vastgoed en energie. Wij voeren de regie over complexe ruimtelijke en duurzame ontwikkelprocessen en maken van ambities, zoals netbewust bouwen -NetZero 2050-, concrete projecten met resultaat.',
       description2: 'Jong van geest, mét een flinke dosis ervaring. In een wereld die nooit stilstaat, bewegen we mee met de markt en spelen we in op de wensen en behoeftes van nu en voor de toekomst. Met expertise in projectregie en slimme energieoplossingen helpen wij graag publieke en private partijen om toekomstbestendige ontwikkelingen succesvol te realiseren.',
       founderRole: 'Directeur',
       expertise: [

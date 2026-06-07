@@ -6,6 +6,7 @@ interface CategoryProjectsModalProps {
   category: string;
   onClose: () => void;
   language: 'nl' | 'en';
+  onSelectProject: (project: any) => void;
 }
 
 const getProjectsForCategory = (category: string) => {
@@ -122,7 +123,7 @@ const getProjectsForCategory = (category: string) => {
   return filtered.slice(0, 6); // Take up to 6 representational examples
 };
 
-export default function CategoryProjectsModal({ category, onClose, language }: CategoryProjectsModalProps) {
+export default function CategoryProjectsModal({ category, onClose, language, onSelectProject }: CategoryProjectsModalProps) {
   const categoryProjects = getProjectsForCategory(category);
   
   const title = language === 'nl' 
@@ -165,7 +166,8 @@ export default function CategoryProjectsModal({ category, onClose, language }: C
               {categoryProjects.map((project: any) => (
                 <div 
                   key={project.id} 
-                  className="bg-white rounded-xl border border-slate-200/60 shadow-sm hover:shadow-lg transition-all duration-300 group flex flex-col overflow-hidden"
+                  onClick={() => onSelectProject(project)}
+                  className="bg-white rounded-xl border border-slate-200/60 shadow-sm hover:shadow-lg hover:border-vovon-200 transition-all duration-300 group flex flex-col overflow-hidden cursor-pointer"
                 >
                   <div className="p-6 flex-1 flex flex-col">
                     <div className="flex items-start justify-between mb-4">

@@ -11,6 +11,21 @@ interface ReferencesProps {
 
 const References = ({ language }: ReferencesProps) => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  
+  const handleSelectProject = (project: any) => {
+    setSelectedCategory(null);
+    setSelectedProject(project);
+    
+    // Smooth scroll to the Map container
+    setTimeout(() => {
+      const element = document.getElementById('project-map-container');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 150);
+  };
+
   const t = translations[language].references;
   const icons = [Home, Briefcase, Landmark, Zap];
   const images = [
@@ -90,13 +105,15 @@ const References = ({ language }: ReferencesProps) => {
           ))}
         </div>
         
-        <div className="mt-16 text-center mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            {language === 'nl' ? 'Bekijk de eerdere projecten' : 'View previous projects'}
-          </h2>
+        <div id="project-map-container" className="scroll-mt-24 mt-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              {language === 'nl' ? 'Bekijk de eerdere projecten' : 'View previous projects'}
+            </h2>
+          </div>
+          
+          <ProjectMap selectedProject={selectedProject} />
         </div>
-        
-        <ProjectMap />
       </div>
 
       {selectedCategory && (
@@ -104,6 +121,7 @@ const References = ({ language }: ReferencesProps) => {
           category={selectedCategory} 
           onClose={() => setSelectedCategory(null)} 
           language={language} 
+          onSelectProject={handleSelectProject}
         />
       )}
     </section>

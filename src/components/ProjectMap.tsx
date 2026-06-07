@@ -1,9 +1,39 @@
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React, { useEffect, useRef } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import { MapPin } from 'lucide-react';
 import projectsData from '../data/projects.json';
+
+interface ProjectMapProps {
+  selectedProject?: any;
+}
+
+const MapController = ({ selectedProject, markerRefs }: { selectedProject: any; markerRefs: React.MutableRefObject<{ [key: string]: any }> }) => {
+  const map = useMap();
+
+  useEffect(() => {
+    if (selectedProject) {
+      // First fly to the position
+      map.flyTo([selectedProject.latitude, selectedProject.longitude], 13, {
+        animate: true,
+        duration: 1.5
+      });
+
+      // After flying, open the popup
+      const timer = setTimeout(() => {
+        const marker = markerRefs.current[selectedProject.id];
+        if (marker) {
+          marker.openPopup();
+        }
+      }, 1000); // Allow some panning before showing popup
+
+      return () => clearTimeout(timer);
+    }
+  }, [selectedProject, map, markerRefs]);
+
+  return null;
+};
 
 // Custom marker icon in brand color (vovon-600: #99336f)
 const defaultIcon = L.divIcon({
@@ -23,9 +53,10 @@ const completedIcon = L.divIcon({
   popupAnchor: [0, -32],
 });
 
-const ProjectMap = () => {
+const ProjectMap = ({ selectedProject }: ProjectMapProps) => {
   // Center of the Netherlands
   const center: [number, number] = [52.3702, 5.9251];
+  const markerRefs = useRef<{ [key: string]: any }>({});
 
   return (
     <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-lg border border-slate-200 mt-16 relative z-0">
@@ -34,11 +65,19 @@ const ProjectMap = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <MapController selectedProject={selectedProject} markerRefs={markerRefs} />
         {(projectsData.projects as any[]).map((project) => (
           <Marker 
             key={project.id} 
             position={[project.latitude, project.longitude]}
             icon={(project.planperiode && project.planperiode !== 'null' && project.planperiode.trim() !== '') ? completedIcon : defaultIcon}
+            ref={(ref) => {
+              if (ref) {
+                markerRefs.current[project.id] = ref;
+              } else {
+                delete markerRefs.current[project.id];
+              }
+            }}
           >
             <Popup className="vovon-popup">
               <div className="min-w-[240px] max-w-[320px] max-h-[320px] overflow-y-auto pr-2">
