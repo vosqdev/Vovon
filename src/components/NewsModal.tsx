@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Compass, Globe } from 'lucide-react';
+import { X, Compass, Globe, Zap, Cpu, Battery, Users } from 'lucide-react';
 
 interface NewsModalProps {
   isOpen: boolean;
@@ -63,7 +63,85 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                   {item.title}
                 </h2>
 
-                {item.id === '7' && item.content && item.content.length >= 4 ? (
+                {item.id === '8' && item.content ? (
+                  <div className="text-slate-600 max-w-none">
+                    {/* Full-width Lead Intro */}
+                    <div className="text-[10pt] font-extrabold text-slate-800 leading-relaxed border-l-4 border-vovon-600 pl-6 mb-8 py-1">
+                      {item.content[0]}
+                    </div>
+                    
+                    {/* 2-Column Content Layout for the introduction text */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start mb-10">
+                      {/* Column 1 */}
+                      <div className="space-y-6">
+                        <p className="text-[10pt] leading-relaxed text-slate-600">
+                          {item.content[1]}
+                        </p>
+                        <p className="text-[10pt] leading-relaxed text-slate-600">
+                          {item.content[2]}
+                        </p>
+                      </div>
+                      
+                      {/* Column 2 */}
+                      <div className="space-y-6 flex flex-col h-full justify-between">
+                        <p className="text-[10pt] leading-relaxed text-slate-600 mb-2">
+                          {item.content[3]}
+                        </p>
+                        
+                        {/* Custom styled Callout Card to open form directly */}
+                        <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                          <div className="flex items-center gap-3 mb-3">
+                            <span className="p-2 bg-vovon-50 text-vovon-600 rounded-lg">
+                              <Compass className="w-4 h-4" />
+                            </span>
+                            <span className="text-[10px] font-extrabold tracking-wider text-slate-500 uppercase">
+                              Volledig scherm
+                            </span>
+                          </div>
+                          <p className="text-xs font-semibold text-slate-800 mb-4 leading-normal">
+                            Lukt het invullen op deze pagina niet optimaal? Open de Quickscan dan direct op smartphone- of desktopscherm.
+                          </p>
+                          <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSdGLQcc_jwDSR1-f1cu-BMZ4_svVtFPoGKM8C8tUXe-HmqdGg/viewform"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex w-full items-center justify-center gap-2 px-4 py-2.5 text-xs font-bold text-white bg-vovon-600 hover:bg-vovon-700 active:bg-vovon-800 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer"
+                          >
+                            <span>Open in nieuw tabblad</span>
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Integrated Embedded Form Container */}
+                    <div className="border-t border-slate-200/60 pt-8 pb-4">
+                      <div className="text-center mb-6">
+                        <h3 className="text-lg font-bold text-slate-900">Quickscan Formulier</h3>
+                        <p className="text-xs text-slate-500">Vul hieronder direct uw gegevens en energiewensen in</p>
+                      </div>
+                      
+                      <div className="w-full bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden shadow-inner p-1 sm:p-2 flex justify-center">
+                        <div className="w-full max-w-[640px] bg-white rounded-xl overflow-hidden shadow-sm border border-slate-200/50">
+                          <iframe 
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSdGLQcc_jwDSR1-f1cu-BMZ4_svVtFPoGKM8C8tUXe-HmqdGg/viewform?embedded=true" 
+                            width="100%" 
+                            height="3053" 
+                            frameBorder="0" 
+                            marginHeight={0} 
+                            marginWidth={0}
+                            className="w-full rounded-xl transition-all duration-300"
+                            title="Quickscan Energievraag Formulier"
+                          >
+                            Laden…
+                          </iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : item.id === '7' && item.content && item.content.length >= 4 ? (
                   <div className="text-slate-600 max-w-none">
                     {/* Full-width Lead Intro */}
                     <div className="text-[10pt] font-extrabold text-slate-800 leading-relaxed border-l-4 border-vovon-600 pl-6 mb-8 py-1">
@@ -121,12 +199,45 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                 ) : item.id === '5' && item.content && item.content.length >= 6 ? (
                   <div className="text-slate-600 max-w-none">
                     {/* Full-width Lead Intro */}
-                    <div className="text-[10pt] font-extrabold text-slate-800 leading-relaxed border-l-4 border-vovon-600 pl-6 mb-8 py-1">
+                    <div className="text-[10pt] font-extrabold text-slate-800 leading-relaxed border-l-4 border-vovon-600 pl-6 mb-8 py-1.5 bg-slate-50/50 rounded-r-xl pr-4">
                       {item.content[0]}
                     </div>
                     
+                    {/* Bento Highlight Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                      <div className="bg-gradient-to-br from-vovon-50/40 to-slate-50 border border-vovon-100/55 p-5 rounded-2xl">
+                        <div className="p-2 bg-vovon-50 text-vovon-600 rounded-lg w-fit mb-3">
+                          <Users className="w-4 h-4" />
+                        </div>
+                        <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Netbewust Concept</h4>
+                        <p className="text-[9.5pt] leading-relaxed text-slate-600">
+                          Wonen, mobiliteit, levensonderhoud en energie integraal ontworpen om direct ontwikkelruimte te creëren.
+                        </p>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-vovon-50/40 to-slate-50 border border-vovon-100/55 p-5 rounded-2xl">
+                        <div className="p-2 bg-vovon-50 text-vovon-600 rounded-lg w-fit mb-3">
+                          <Battery className="w-4 h-4" />
+                        </div>
+                        <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">WijkEMS Beheer</h4>
+                        <p className="text-[9.5pt] leading-relaxed text-slate-600">
+                          Een slim systeem verbindt woningen, warmtepompen, PV-panelen, laadpunten en opslagbatterijen live.
+                        </p>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-vovon-50/40 to-slate-50 border border-vovon-100/55 p-5 rounded-2xl">
+                        <div className="p-2 bg-vovon-50 text-vovon-600 rounded-lg w-fit mb-3">
+                          <Zap className="w-4 h-4" />
+                        </div>
+                        <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Zonder Comfortverlies</h4>
+                        <p className="text-[9.5pt] leading-relaxed text-slate-600">
+                          Duurzame sturing en opslag afgestemd op de bewoner, zonder in te leveren op comfort of betaalbaarheid.
+                        </p>
+                      </div>
+                    </div>
+
                     {/* 2-Column Content Layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start mb-10 border-b border-slate-100 pb-8">
                       {/* Column 1 */}
                       <div className="space-y-6">
                         <p className="text-[10pt] leading-relaxed text-slate-600">
@@ -149,9 +260,9 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                     </div>
 
                     {/* Concluding Full-width & Card */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-6 border-t border-slate-200/60">
-                      <div className="md:col-span-2 space-y-4">
-                        <p className="text-[10pt] font-extrabold text-slate-800 leading-relaxed">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-2">
+                      <div className="md:col-span-2 space-y-4 flex flex-col justify-center">
+                        <p className="text-[10.5pt] font-extrabold text-slate-900 leading-relaxed">
                           {item.content[5]}
                         </p>
                         <p className="text-[10pt] leading-relaxed text-slate-600">
@@ -190,12 +301,45 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                 ) : item.id === '6' && item.content && item.content.length >= 7 ? (
                   <div className="text-slate-600 max-w-none">
                     {/* Full-width Lead Intro */}
-                    <div className="text-[10pt] font-extrabold text-slate-800 leading-relaxed border-l-4 border-vovon-600 pl-6 mb-8 py-1">
+                    <div className="text-[10pt] font-extrabold text-slate-800 leading-relaxed border-l-4 border-vovon-600 pl-6 mb-8 py-1.5 bg-slate-50/50 rounded-r-xl pr-4">
                       {item.content[0]}
                     </div>
                     
+                    {/* Bento Highlight Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                      <div className="bg-gradient-to-br from-vovon-50/40 to-slate-50 border border-vovon-100/55 p-5 rounded-2xl">
+                        <div className="p-2 bg-vovon-50 text-vovon-600 rounded-lg w-fit mb-3">
+                          <Globe className="w-4 h-4" />
+                        </div>
+                        <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Systeemkoppeling</h4>
+                        <p className="text-[9.5pt] leading-relaxed text-slate-600">
+                          Samenhang realiseren tussen ruimte, energie, data, vastgoed en dagelijks gebruik van de leefomgeving.
+                        </p>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-vovon-50/40 to-slate-50 border border-vovon-100/55 p-5 rounded-2xl">
+                        <div className="p-2 bg-vovon-50 text-vovon-600 rounded-lg w-fit mb-3">
+                          <Cpu className="w-4 h-4" />
+                        </div>
+                        <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">Digitale Innovatie</h4>
+                        <p className="text-[9.5pt] leading-relaxed text-slate-600">
+                          Inzetten van online quickscans, flexibiliteitsmodellen en slimme sturing vóór projecten fysiek vastlopen.
+                        </p>
+                      </div>
+
+                      <div className="bg-gradient-to-br from-vovon-50/40 to-slate-50 border border-vovon-100/55 p-5 rounded-2xl">
+                        <div className="p-2 bg-vovon-50 text-vovon-600 rounded-lg w-fit mb-3">
+                          <Users className="w-4 h-4" />
+                        </div>
+                        <h4 className="text-xs font-bold text-slate-930 uppercase tracking-wider mb-2">Actieve Coalities</h4>
+                        <p className="text-[9.5pt] leading-relaxed text-slate-600">
+                          Overheid, netbeheerders, bouwers en energiepartijen vroegtijdig verbinden aan gedeelde prestaties.
+                        </p>
+                      </div>
+                    </div>
+
                     {/* 2-Column Content Layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start mb-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start mb-8 pb-8 border-b border-slate-100">
                       {/* Column 1 */}
                       <div className="space-y-6">
                         <p className="text-[10pt] leading-relaxed text-slate-600">
@@ -204,29 +348,37 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                         <p className="text-[10pt] leading-relaxed text-slate-600">
                           {item.content[2]}
                         </p>
-                        <p className="text-[10pt] leading-relaxed text-slate-600">
-                          {item.content[3]}
-                        </p>
                       </div>
                       
                       {/* Column 2 */}
-                      <div className="space-y-6 flex flex-col h-full justify-between">
-                        <div className="space-y-6 mb-6">
+                      <div className="space-y-6">
+                        <p className="text-[10pt] leading-relaxed text-slate-600">
+                          {item.content[3]}
+                        </p>
+                        <p className="text-[10pt] leading-relaxed text-slate-600">
+                          {item.content[4]}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Concluding Full-width & Card */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-2">
+                      <div className="md:col-span-2 space-y-4 flex flex-col justify-center">
+                        <p className="text-[10.5pt] font-extrabold text-vovon-600 leading-relaxed">
+                          {item.content[5]}
+                        </p>
+                        <p className="text-[10pt] italic text-slate-700 leading-relaxed">
+                          {item.content[6]}
+                        </p>
+                        {item.content[7] && (
                           <p className="text-[10pt] leading-relaxed text-slate-600">
-                            {item.content[4]}
+                            {item.content[7]}
                           </p>
-                          <div className="border-t border-slate-100 pt-4 space-y-3">
-                            <p className="text-[10pt] font-extrabold text-vovon-600 leading-relaxed">
-                              {item.content[5]}
-                            </p>
-                            <p className="text-[10pt] italic text-slate-700 leading-relaxed">
-                              {item.content[6]}
-                            </p>
-                          </div>
-                        </div>
-                        
-                        {/* Systeembewust Callout Card */}
-                        <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                        )}
+                      </div>
+                      
+                      <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                        <div>
                           <div className="flex items-center gap-3 mb-3">
                             <span className="p-2 bg-vovon-50 text-vovon-600 rounded-lg">
                               <Globe className="w-4 h-4" />
@@ -238,18 +390,18 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                           <p className="text-xs font-semibold text-slate-800 mb-4 leading-normal">
                             Ontdek hoe Systeembewust plannen integraal ontwikkelt van abstracte transitie naar concrete gebiedsontwikkeling.
                           </p>
-                          <a
-                            href="https://www.systeembewust.nl"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex w-full items-center justify-center gap-2 px-4 py-2.5 text-xs font-bold text-white bg-vovon-600 hover:bg-vovon-700 active:bg-vovon-800 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer"
-                          >
-                            <span>Bezoek Systeembewust.nl</span>
-                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                          </a>
                         </div>
+                        <a
+                          href="https://www.systeembewust.nl"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex w-full items-center justify-center gap-2 px-4 py-2.5 text-xs font-bold text-white bg-vovon-600 hover:bg-vovon-700 active:bg-vovon-800 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer"
+                        >
+                          <span>Bezoek Systeembewust.nl</span>
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
                       </div>
                     </div>
                   </div>

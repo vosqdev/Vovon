@@ -21,8 +21,22 @@ interface NewsItem {
 
 const dummyItems: NewsItem[] = [
   {
+    id: '8',
+    type: 'news',
+    date: '8 juni 2026',
+    title: 'Quickscan Energievraag: Breng direct uw capaciteitbehoefte in kaart',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    featured: true,
+    content: [
+      'Heeft u te maken met netcongestie, zoekt u naar een energieoplossing, of wilt u uw toekomstige energiebehoefte integraal in kaart brengen? VOVON helpt u graag op weg.',
+      'Met een Quickscan brengen we samen de belangrijkste energie-indicatoren van uw huidige situatie of uw geplande ontwikkeling in kaart. Denk hierbij aan uw gewenste aansluitwaarde, geplande laadinfrastructuur, mogelijkheden voor lokale opwek en de mate van flexibiliteit in uw dagelijkse bedrijfsvoering.',
+      'Na ontvangst van de gegevens kijken we snel waar de kansen en knelpunten liggen voor uw project of locatie. Wij nemen vervolgens zo snel mogelijk contact met u op voor meer informatie indien nog om te komen tot een concreet advies.',
+      'U kunt het formulier hieronder direct invullen. Mocht u vragen hebben of uw project liever direct persoonlijk doorspreken, aarzel dan niet om contact met ons op te nemen.'
+    ]
+  },
+  {
     id: '7',
-    type: 'insight',
+    type: 'news',
     date: '7 juni 2026',
     title: 'Netcongestie, Gebiedsontwikkeling en Woningbouw: Een Systeembewuste Aanpak',
     image: 'https://cdn.phototourl.com/free/2026-06-07-454225b0-f75d-43bf-8b97-31c2861db649.jpg',
