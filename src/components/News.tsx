@@ -122,15 +122,15 @@ const News = ({ language }: NewsProps) => {
         </div>
 
         {/* Filters */}
-        <div className="flex justify-center space-x-6 mb-10 border-b border-slate-100">
+        <div className="flex flex-wrap justify-center gap-2 mb-8 border-b border-transparent">
           {(['all', 'news', 'article', 'insight'] as FilterType[]).map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`pb-3 px-1 text-sm md:text-base font-extrabold transition-all relative border-b-2 -mb-[2px] cursor-pointer ${
+              className={`px-4 py-1.5 rounded-full text-xs font-extrabold transition-all relative cursor-pointer ${
                 activeFilter === filter
-                  ? 'border-vovon-600 text-vovon-600'
-                  : 'border-transparent text-slate-500 hover:text-slate-900'
+                  ? 'bg-vovon-600 text-white shadow-md shadow-vovon-600/10 hover:bg-vovon-700'
+                  : 'bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-200/60 hover:text-slate-950'
               }`}
             >
               {t.filters[filter]}
@@ -141,42 +141,48 @@ const News = ({ language }: NewsProps) => {
         <AnimatePresence mode="wait">
           <motion.div 
             key={activeFilter}
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.25 }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start"
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.22 }}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch"
           >
             {/* Left Column: Featured Item */}
             {featuredItem && (
               <div 
-                className="lg:col-span-5 bg-slate-50 border border-slate-100 rounded-2xl relative group cursor-pointer overflow-hidden flex flex-col h-full hover:shadow-md transition-all duration-300"
+                className="lg:col-span-5 bg-slate-50 border border-slate-200/60 rounded-2xl relative group cursor-pointer overflow-hidden flex flex-col h-full hover:shadow-lg hover:border-vovon-200 transition-all duration-300"
                 onClick={() => setSelectedItem(featuredItem)}
               >
-                <div className="relative w-full aspect-[16/10.5] overflow-hidden bg-slate-200">
+                <div className="relative w-full aspect-[16/10] overflow-hidden bg-slate-200 border-b border-slate-100">
                   <img 
                     src={featuredItem.image} 
                     alt={featuredItem.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                   />
+                  <div className="absolute top-4 left-4 flex gap-1.5">
+                    <span className={`px-2.5 py-0.5 rounded text-[10px] font-extrabold tracking-wider uppercase border shadow-sm ${
+                      featuredItem.type === 'news' 
+                        ? 'bg-amber-50 text-amber-800 border-amber-200/70' 
+                        : featuredItem.type === 'insight' 
+                        ? 'bg-emerald-50 text-emerald-850 border-emerald-200/70' 
+                        : 'bg-sky-50 text-sky-800 border-sky-200/70'
+                    }`}>
+                      {t.filters[featuredItem.type === 'news' ? 'news' : featuredItem.type === 'article' ? 'article' : 'insight']}
+                    </span>
+                  </div>
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between bg-slate-50">
                   <div>
-                    <div className="flex items-center space-x-3 mb-2.5">
-                      <span className="bg-white border border-slate-200/80 px-2.5 py-0.5 rounded text-[10px] font-extrabold tracking-wider text-slate-700 uppercase">
-                        {t.filters[featuredItem.type === 'news' ? 'news' : featuredItem.type === 'article' ? 'article' : 'insight']}
-                      </span>
-                      <span className="text-xs font-semibold text-slate-500">{featuredItem.date}</span>
-                    </div>
-                    <h3 className="text-lg md:text-xl font-extrabold text-slate-900 leading-snug group-hover:text-vovon-600 transition-colors">
+                    <div className="text-xs font-semibold text-slate-500 mb-2">{featuredItem.date}</div>
+                    <h3 className="text-base md:text-lg font-extrabold text-slate-900 leading-snug group-hover:text-vovon-600 transition-colors">
                       {featuredItem.title}
                     </h3>
                   </div>
 
-                  <div className="mt-4 pt-3.5 border-t border-slate-200/40 flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-extrabold text-vovon-600 group-hover:text-vovon-700 transition-colors">
+                  <div className="mt-4 pt-3 border-t border-slate-200/50 flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1 text-xs font-extrabold text-vovon-600 group-hover:text-vovon-700 transition-colors">
                       <span>{t.readMore}</span>
-                      <svg className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
                       </svg>
                     </span>
@@ -186,46 +192,52 @@ const News = ({ language }: NewsProps) => {
             )}
 
             {/* Right Column: Regular Items */}
-            <div className="lg:col-span-7 flex flex-col space-y-4">
+            <div className="lg:col-span-7 flex flex-col gap-3.5">
               {regularItems.map(item => (
                 <div 
                   key={item.id} 
-                  className="bg-slate-50 border border-slate-100 rounded-2xl flex flex-col sm:flex-row cursor-pointer overflow-hidden group hover:shadow-md transition-all duration-300"
+                  className="bg-slate-50 border border-slate-200/60 rounded-2xl flex flex-col sm:flex-row cursor-pointer overflow-hidden group hover:shadow-lg hover:border-vovon-205 transition-all duration-300"
                   onClick={() => setSelectedItem(item)}
                 >
-                  <div className="p-5 sm:w-[68%] flex flex-col justify-between bg-slate-50">
+                  <div className="p-4 sm:w-[70%] flex flex-col justify-between bg-slate-50">
                     <div>
-                      <div className="flex items-center space-x-3 mb-2">
-                        <span className="bg-white border border-slate-200/80 px-2.5 py-0.5 rounded text-[10px] font-extrabold tracking-wider text-slate-700 uppercase">
+                      <div className="flex items-center space-x-2.5 mb-2">
+                        <span className={`px-2 py-0.5 rounded text-[9px] font-extrabold tracking-wider uppercase border shadow-sm ${
+                          item.type === 'news' 
+                            ? 'bg-amber-50 text-amber-850 border-amber-200/50' 
+                            : item.type === 'insight' 
+                            ? 'bg-emerald-50 text-emerald-850 border-emerald-200/50' 
+                            : 'bg-sky-50 text-sky-850 border-sky-200/50'
+                        }`}>
                           {t.filters[item.type === 'news' ? 'news' : item.type === 'article' ? 'article' : 'insight']}
                         </span>
                         <span className="text-xs font-semibold text-slate-500">{item.date}</span>
                       </div>
-                      <h3 className="text-base font-extrabold text-slate-900 leading-snug group-hover:text-vovon-600 transition-colors line-clamp-2 md:line-clamp-3 mb-3">
+                      <h3 className="text-[10.5pt] font-extrabold text-slate-900 leading-snug group-hover:text-vovon-600 transition-colors line-clamp-2">
                         {item.title}
                       </h3>
                     </div>
                     
-                    <div className="flex items-center justify-between mt-1">
-                      <span className="inline-flex items-center gap-1.5 text-xs font-extrabold text-vovon-600 group-hover:text-vovon-700 transition-colors">
+                    <div className="flex items-center justify-between mt-3">
+                      <span className="inline-flex items-center gap-1 text-[10.5pt] font-extrabold text-vovon-600 group-hover:text-vovon-700 transition-colors">
                         <span>{t.readMore}</span>
-                        <svg className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
                         </svg>
                       </span>
                     </div>
                   </div>
-                  <div className="sm:w-[32%] relative overflow-hidden h-36 sm:h-auto bg-slate-200">
+                  <div className="sm:w-[30%] relative overflow-hidden h-28 sm:h-auto bg-slate-200 border-l border-slate-100">
                     <img 
                       src={item.image} 
                       alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                     />
                   </div>
                 </div>
               ))}
               {regularItems.length === 0 && (
-                <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center text-sm font-semibold text-slate-500">
+                <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center text-xs font-semibold text-slate-500">
                   Geen items gevonden voor dit filter.
                 </div>
               )}
