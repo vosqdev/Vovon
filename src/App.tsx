@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -69,7 +69,8 @@ export default function App() {
         <Navbar language={language} setLanguage={setLanguage} />
         <Routes>
           <Route path="/" element={<HomePage language={language} />} />
-          <Route path="/qa" element={<FAQ language={language} />} />
+          <Route path="/qa" element={<Navigate to="/faq" replace />} />
+          <Route path="/faq" element={<FAQ language={language} />} />
         </Routes>
         <Contact language={language} />
         <Footer language={language} />
