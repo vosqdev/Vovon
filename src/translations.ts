@@ -28,8 +28,8 @@ export const translations = {
       founderRole: 'Owner',
       expertise: [
         'Real Estate & Area Development',
-        'Complex Stakeholder Management',
-        'Integrated Energy Systems',
+        'Stakeholder Management',
+        'Energy Spatial Planning',
         'NetZero 2050 Strategies',
         'Process Direction & Project Management',
       ],
@@ -178,9 +178,9 @@ export const translations = {
       founderRole: 'Eigenaar',
       expertise: [
         'Vastgoed- & gebiedsontwikkeling',
-        'Complexe stakeholdermanagement',
-        'Geïntegreerde Energiesystemen',
-        'NetZero 2050 Strategieën',
+        'Stakeholdermanagement',
+        'Energieplanologie',
+        'NetZero 2050 strategieën',
         'Procesregie & projectmanagement',
       ],
     },
