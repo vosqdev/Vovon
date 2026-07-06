@@ -21,38 +21,6 @@ interface NewsItem {
 
 const dummyItems: NewsItem[] = [
   {
-    id: '9',
-    type: 'article',
-    date: '6 juli 2026',
-    title: 'Tilburg laat zien waarom woningbouw geen vastgoedvraagstuk meer is',
-    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-    featured: true,
-    content: [
-      'Afgelopen weekend gebeurde iets wat tot voor kort vrijwel ondenkbaar was. Netbeheerder Enexis schakelde uit voorzorg een deel van het elektriciteitsnet rondom Tilburg tijdelijk uit om overbelasting van het net te voorkomen. Tienduizenden huishoudens en bedrijven zaten korte tijd zonder stroom. Volgens netbeheerders is zo\'n maatregel uitzonderlijk, maar tegelijkertijd een duidelijk signaal dat het energiesysteem steeds vaker zijn grenzen bereikt.',
-      'Voor veel mensen lijkt dit een incident. Wij zien vooral een voorproefje van de werkelijkheid waarin Nederland zich bevindt.',
-      'Jarenlang werd woningbouw vooral benaderd als een ruimtelijk en financieel vraagstuk. Beschikbare grond, bestemmingsplannen, financiën en bouwcapaciteit bepaalden het tempo van ontwikkelingen.',
-      'Die werkelijkheid bestaat niet meer.',
-      'De woningbouwopgave is uitgegroeid tot een systeemvraagstuk waarin energie-infrastructuur, mobiliteit, water, digitalisering, klimaatadaptatie en publieke voorzieningen volledig met elkaar verweven zijn. Zonder voldoende netcapaciteit kunnen woningen niet worden aangesloten. Zonder slimme mobiliteitsoplossingen ontstaan nieuwe piekbelastingen. Zonder energieopslag en flexibiliteit loopt het systeem vast.',
-      'Het incident in Tilburg maakt zichtbaar wat in de praktijk al langer voelbaar is: het elektriciteitsnet is geen ondersteunende voorziening meer, maar een bepalende randvoorwaarde voor ruimtelijke ontwikkeling.',
-      'Vanaf 1 juli 2026 verandert het speelveld fundamenteel. De nieuwe ACM-prioritering bepaalt dat beschikbare netcapaciteit in congestiegebieden niet langer automatisch beschikbaar is voor nieuwe ontwikkelingen. Projecten worden beoordeeld op maatschappelijke prioriteit en hun bijdrage aan het energiesysteem. Daarnaast zorgen Europese ontwikkelingen zoals ETS2 en RED III ervoor dat elektrificatie en verduurzaming de komende jaren aanzienlijk versnellen. Dat betekent dat steeds meer woningen, bedrijven, mobiliteit en warmtevoorzieningen afhankelijk worden van hetzelfde elektriciteitsnet.',
-      'Wie vandaag nog ontwikkelt alsof energie later wel wordt opgelost, loopt morgen vast in procedures, wachtrijen of aansluitproblemen.',
-      'Bij VOVON noemen wij dit systeembewuste gebiedsontwikkeling. Dat begint niet bij een gebouw, maar bij het totale systeem waarin een gebied functioneert. Daarbij worden vanaf de eerste schets onder meer de volgende vragen integraal meegenomen:',
-      'Hoe ontwikkelt de energievraag zich over de komende twintig jaar?',
-      'Welke netcapaciteit is beschikbaar?',
-      'Waar kunnen batterijen, energiehubs en flexibiliteit worden ingezet?',
-      'Hoe beïnvloeden mobiliteit, laden en parkeren het energiesysteem?',
-      'Welke publieke en private investeringen versterken elkaar?',
-      'Hoe creëren we maatschappelijke meerwaarde in plaats van afzonderlijke deeloplossingen?',
-      'Juist deze integrale benadering voorkomt dat energie een sluitpost wordt en maakt versnelling van gebiedsontwikkeling mogelijk.',
-      'Geen enkele partij kan deze transitie alleen realiseren. Gemeenten beschikken over ruimtelijke instrumenten. Netbeheerders beheren de infrastructuur. Ontwikkelaars realiseren projecten. Investeerders financieren de benodigde versnelling. Energiebedrijven leveren flexibiliteit en innovatieve oplossingen. Pas wanneer deze partijen vanaf het begin gezamenlijk optrekken, ontstaan gebieden die daadwerkelijk toekomstbestendig zijn.',
-      'De traditionele volgorde — eerst ontwerpen, daarna vergunningen en vervolgens een netaansluiting aanvragen — voldoet simpelweg niet meer.',
-      'Het afschakelen van een deel van het stroomnet in Tilburg was uitzonderlijk. Dat het energiesysteem steeds vaker onder druk komt te staan, is dat niet. Nederland elektrificeert in hoog tempo. De vraag naar elektriciteit groeit sneller dan de uitbreiding van het net. Tegelijkertijd moeten honderdduizenden woningen worden gebouwd, mobiliteit verduurzamen en bedrijven overstappen op elektrische processen. Dat vraagt om een andere manier van ontwikkelen. Niet langer vanuit afzonderlijke disciplines, maar vanuit het complete systeem.',
-      'Want uiteindelijk geldt één eenvoudige conclusie: Woningbouw is steeds minder een vastgoedvraagstuk en steeds meer een systeemvraagstuk.',
-      'Bij VOVON geloven wij dat juist daar de grootste kansen liggen. Door vanaf het eerste initiatief energie, mobiliteit, infrastructuur, publieke belangen en private investeringen integraal te verbinden, kunnen we gebiedsontwikkelingen versnellen én toekomstbestendig maken.',
-      'Systeembewuste gebiedsontwikkeling is daarmee geen visie voor morgen, maar een noodzakelijke werkwijze voor vandaag.'
-    ]
-  },
-  {
     id: '8',
     type: 'news',
     date: '8 juni 2026',
