@@ -63,7 +63,198 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                   {item.title}
                 </h2>
 
-                {item.id === '8' && item.content ? (
+                {item.id === '9' && item.content && item.content.length >= 22 ? (
+                  <div className="text-slate-600 max-w-none">
+                    {/* Author Block */}
+                    <div className="flex items-center space-x-3 mb-6 bg-slate-50 border border-slate-200/55 p-4 rounded-xl">
+                      <div className="w-10 h-10 rounded-full bg-vovon-100/70 border border-vovon-200 text-vovon-700 flex items-center justify-center font-extrabold text-sm tracking-wide shrink-0">
+                        PV
+                      </div>
+                      <div>
+                        <div className="text-sm font-extrabold text-slate-900 leading-none mb-1">Patrick Vos</div>
+                        <div className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">Netbewust ontwikkelen en bouwen</div>
+                      </div>
+                    </div>
+
+                    {/* Lead Paragraph */}
+                    <div className="text-[10.5pt] font-extrabold text-slate-950 leading-relaxed border-l-4 border-vovon-600 pl-5 mb-6 py-1.5 bg-slate-50/50 rounded-r-xl pr-4">
+                      {item.content[0]}
+                    </div>
+
+                    <p className="text-[10pt] leading-relaxed text-slate-600 mb-6 font-semibold text-slate-800">
+                      {item.content[1]}
+                    </p>
+
+                    {/* Section 1: Van vastgoed naar systeemdenken */}
+                    <div className="mb-8 border-t border-slate-200/50 pt-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="p-1.5 bg-blue-50 text-blue-600 rounded-lg">
+                          <Globe className="w-4 h-4" />
+                        </span>
+                        <h3 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
+                          Van vastgoed naar systeemdenken
+                        </h3>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+                        <div className="space-y-4">
+                          <p className="text-[10pt] leading-relaxed text-slate-600">
+                            {item.content[2]}
+                          </p>
+                          <div className="text-[10.5pt] font-extrabold text-vovon-600 leading-relaxed bg-vovon-50/30 p-4 rounded-xl border border-vovon-100/40">
+                            {item.content[3]}
+                          </div>
+                        </div>
+                        <div className="space-y-4">
+                          <p className="text-[10pt] leading-relaxed text-slate-600">
+                            {item.content[4]}
+                          </p>
+                          <p className="text-[10pt] leading-relaxed text-slate-600">
+                            {item.content[5]}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Section 2: Nieuwe regelgeving versnelt deze ontwikkeling */}
+                    <div className="mb-8 border-t border-slate-200/50 pt-6 bg-slate-50/40 -mx-4 sm:-mx-8 md:-mx-12 px-4 sm:px-8 md:px-12 py-6 rounded-2xl border-y border-slate-200/40">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="p-1.5 bg-amber-50 text-amber-600 rounded-lg">
+                          <Zap className="w-4 h-4" />
+                        </span>
+                        <h3 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
+                          Nieuwe regelgeving versnelt deze ontwikkeling
+                        </h3>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <p className="text-[10pt] leading-relaxed text-slate-600">
+                          {item.content[6]}
+                        </p>
+                        <div className="bg-white border border-slate-200/60 p-4.5 rounded-xl">
+                          <p className="text-[10pt] font-extrabold text-slate-900 leading-relaxed italic border-l-3 border-amber-500 pl-4 py-1">
+                            "{item.content[7]}"
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Section 3: Systeembewuste gebiedsontwikkeling */}
+                    <div className="mb-8 border-t border-slate-200/50 pt-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="p-1.5 bg-emerald-50 text-emerald-600 rounded-lg">
+                          <Cpu className="w-4 h-4" />
+                        </span>
+                        <h3 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
+                          Systeembewuste gebiedsontwikkeling
+                        </h3>
+                      </div>
+                      <p className="text-[10pt] leading-relaxed text-slate-600 mb-6 font-semibold text-slate-800">
+                        {item.content[8]}
+                      </p>
+
+                      {/* Grid of 6 integral questions */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 mb-6">
+                        <div className="bg-slate-50 border border-slate-200/50 p-4 rounded-xl hover:border-vovon-300 hover:shadow-sm transition-all duration-200 flex flex-col justify-between">
+                          <div className="text-[10px] font-extrabold text-vovon-600 uppercase tracking-wider mb-2">Energievraag</div>
+                          <p className="text-[9.5pt] font-extrabold text-slate-800 leading-snug">{item.content[9]}</p>
+                        </div>
+                        <div className="bg-slate-50 border border-slate-200/50 p-4 rounded-xl hover:border-vovon-300 hover:shadow-sm transition-all duration-200 flex flex-col justify-between">
+                          <div className="text-[10px] font-extrabold text-vovon-600 uppercase tracking-wider mb-2">Netcapaciteit</div>
+                          <p className="text-[9.5pt] font-extrabold text-slate-800 leading-snug">{item.content[10]}</p>
+                        </div>
+                        <div className="bg-slate-50 border border-slate-200/50 p-4 rounded-xl hover:border-vovon-300 hover:shadow-sm transition-all duration-200 flex flex-col justify-between">
+                          <div className="text-[10px] font-extrabold text-vovon-600 uppercase tracking-wider mb-2">Opslag & hubs</div>
+                          <p className="text-[9.5pt] font-extrabold text-slate-800 leading-snug">{item.content[11]}</p>
+                        </div>
+                        <div className="bg-slate-50 border border-slate-200/50 p-4 rounded-xl hover:border-vovon-300 hover:shadow-sm transition-all duration-200 flex flex-col justify-between">
+                          <div className="text-[10px] font-extrabold text-vovon-600 uppercase tracking-wider mb-2">Mobiliteit</div>
+                          <p className="text-[9.5pt] font-extrabold text-slate-800 leading-snug">{item.content[12]}</p>
+                        </div>
+                        <div className="bg-slate-50 border border-slate-200/50 p-4 rounded-xl hover:border-vovon-300 hover:shadow-sm transition-all duration-200 flex flex-col justify-between">
+                          <div className="text-[10px] font-extrabold text-vovon-600 uppercase tracking-wider mb-2">Investeringen</div>
+                          <p className="text-[9.5pt] font-extrabold text-slate-800 leading-snug">{item.content[13]}</p>
+                        </div>
+                        <div className="bg-slate-50 border border-slate-200/50 p-4 rounded-xl hover:border-vovon-300 hover:shadow-sm transition-all duration-200 flex flex-col justify-between">
+                          <div className="text-[10px] font-extrabold text-vovon-600 uppercase tracking-wider mb-2">Meerwaarde</div>
+                          <p className="text-[9.5pt] font-extrabold text-slate-800 leading-snug">{item.content[14]}</p>
+                        </div>
+                      </div>
+
+                      <p className="text-[10pt] leading-relaxed text-slate-600 mb-6 italic">
+                        {item.content[15]}
+                      </p>
+                    </div>
+
+                    {/* Section 4: Publiek & Privaat samenwerken */}
+                    <div className="mb-8 border-t border-slate-200/50 pt-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="p-1.5 bg-indigo-50 text-indigo-600 rounded-lg">
+                          <Users className="w-4 h-4" />
+                        </span>
+                        <h3 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
+                          Publiek en privaat kunnen dit niet meer afzonderlijk oplossen
+                        </h3>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+                        <p className="text-[10pt] leading-relaxed text-slate-600">
+                          {item.content[16]}
+                        </p>
+                        <div className="bg-indigo-50/25 border border-indigo-100 p-4.5 rounded-xl flex flex-col justify-center">
+                          <p className="text-[10pt] font-extrabold text-indigo-950 leading-relaxed">
+                            {item.content[17]}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Section 5: Tilburg is geen uitzondering */}
+                    <div className="mb-8 border-t border-slate-200/50 pt-6">
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="p-1.5 bg-rose-50 text-rose-600 rounded-lg">
+                          <Battery className="w-4 h-4" />
+                        </span>
+                        <h3 className="text-xs font-extrabold text-slate-900 uppercase tracking-wider">
+                          Tilburg is geen uitzondering
+                        </h3>
+                      </div>
+                      <p className="text-[10pt] leading-relaxed text-slate-600 mb-6">
+                        {item.content[18]}
+                      </p>
+                    </div>
+
+                    {/* Bottom Takeaway Key Action Banner */}
+                    <div className="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 p-6 sm:p-8 rounded-2xl text-white mt-10 shadow-lg relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-48 h-48 bg-vovon-600/10 rounded-full blur-3xl pointer-events-none" />
+                      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div className="space-y-3 max-w-xl">
+                          <p className="text-[10px] font-extrabold text-vovon-400 uppercase tracking-widest">
+                            Kernconclusie
+                          </p>
+                          <h4 className="text-[11.5pt] font-extrabold text-white leading-snug">
+                            {item.content[19]}
+                          </h4>
+                          <p className="text-[9.5pt] text-slate-300 leading-relaxed">
+                            {item.content[20]}
+                          </p>
+                          <p className="text-[9.5pt] font-bold text-vovon-400">
+                            {item.content[21]}
+                          </p>
+                        </div>
+                        <div className="shrink-0">
+                          <a
+                            href="/#contact"
+                            onClick={onClose}
+                            className="inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-extrabold text-slate-950 bg-white hover:bg-slate-100 active:bg-slate-200 rounded-xl transition-all duration-200 shadow-md cursor-pointer"
+                          >
+                            <span>Neem contact op</span>
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : item.id === '8' && item.content ? (
                   <div className="text-slate-600 max-w-none">
                     {/* Full-width Lead Intro */}
                     <div className="text-[10pt] font-extrabold text-slate-800 leading-relaxed border-l-4 border-vovon-600 pl-6 mb-8 py-1">
