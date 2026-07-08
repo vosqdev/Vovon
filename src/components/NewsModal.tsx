@@ -63,7 +63,34 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                   {item.title}
                 </h2>
 
-                {item.id === '8' && item.content ? (
+                {item.id === '10' ? (
+                  <div className="space-y-8">
+                    {/* The Poster Block - actual uploaded image */}
+                    <div className="relative rounded-2xl overflow-hidden border border-slate-200/80 shadow-lg bg-slate-50">
+                      <img
+                        src="https://www.image2url.com/r2/default/images/1783491443749-d055237e-09ab-4ce4-affb-cbda8c4f3de0.png"
+                        alt="Fijne zomer! - VOVON Development"
+                        className="w-full h-auto object-contain max-h-[520px] mx-auto block"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+
+                    {/* Explanatory text */}
+                    <div className="text-slate-600 max-w-none space-y-4">
+                      <p className="text-[10pt] leading-relaxed">
+                        Tijdens deze zomervakantie is het kantoor van VOVON Development tijdelijk gesloten van <strong>maandag 27 juli tot en met vrijdag 14 augustus</strong>. 
+                        In deze periode laden wij de batterij op om daarna weer vol energie en met een frisse blik aan de slag te gaan.
+                      </p>
+                      <p className="text-[10pt] leading-relaxed">
+                        Vanaf <strong>maandag 17 augustus</strong> zijn wij weer volledig bereikbaar en pakken we lopende en nieuwe projecten met veel enthousiasme op. 
+                        Heeft u voor of tijdens onze vakantie een dringende vraag? Stuur dan gerust een e-mail naar ons algemene e-mailadres via ons contactformulier; wij reageren dan zo spoedig mogelijk bij terugkomst.
+                      </p>
+                      <p className="text-[10pt] leading-relaxed font-semibold text-slate-800">
+                        Wij wensen al onze relaties, opdrachtgevers en partners een hele fijne, ontspannen en zonnige zomer toe!
+                      </p>
+                    </div>
+                  </div>
+                ) : item.id === '8' && item.content ? (
                   <div className="text-slate-600 max-w-none">
                     {/* Full-width Lead Intro */}
                     <div className="text-[10pt] font-extrabold text-slate-800 leading-relaxed border-l-4 border-vovon-600 pl-6 mb-8 py-1">

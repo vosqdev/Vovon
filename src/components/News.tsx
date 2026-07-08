@@ -21,6 +21,20 @@ interface NewsItem {
 
 const dummyItems: NewsItem[] = [
   {
+    id: '10',
+    type: 'news',
+    date: '7 juli 2026',
+    title: 'Fijne zomer! (Vakantiesluiting 2026)',
+    image: 'https://www.image2url.com/r2/default/images/1783491443749-d055237e-09ab-4ce4-affb-cbda8c4f3de0.png',
+    featured: true,
+    content: [
+      'Fijne zomer!',
+      'Maandag 27 juli tot en met vrijdag 14 augustus genieten wij van onze vakantie.',
+      'Gedurende deze periode is het kantoor van VOVON Development gesloten. Vanaf maandag 17 augustus staan wij weer volledig voor u klaar om samen met u te werken aan netbewuste gebiedsontwikkeling, energiesystemen en projectrealisatie.',
+      'Wij wensen al onze partners, opdrachtgevers en relaties een fantastische, zonnige en ontspannen zomerperiode toe!'
+    ]
+  },
+  {
     id: '8',
     type: 'news',
     date: '8 juni 2026',
