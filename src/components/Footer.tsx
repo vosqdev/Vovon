@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Language, translations } from '../translations';
 import { Logo } from './Logo';
 import PrivacyPolicyModal from './PrivacyPolicyModal';
@@ -33,10 +34,12 @@ const Footer = ({ language }: FooterProps) => {
           <div>
             <h4 className="text-white font-semibold mb-4 uppercase tracking-wider text-sm">{t.navigation}</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#home" className="hover:text-vovon-400 transition-colors">{navT.home}</a></li>
-              <li><a href="#about" className="hover:text-vovon-400 transition-colors">{navT.about}</a></li>
-              <li><a href="#services" className="hover:text-vovon-400 transition-colors">{navT.services}</a></li>
-              <li><a href="#projects" className="hover:text-vovon-400 transition-colors">{navT.references}</a></li>
+              <li><Link to="/#home" className="hover:text-vovon-400 transition-colors">{navT.home}</Link></li>
+              <li><Link to="/#about" className="hover:text-vovon-400 transition-colors">{navT.about}</Link></li>
+              <li><Link to="/#services" className="hover:text-vovon-400 transition-colors">{navT.services}</Link></li>
+              <li><Link to="/#references" className="hover:text-vovon-400 transition-colors">{navT.references}</Link></li>
+              <li><Link to="/faq" className="hover:text-vovon-400 transition-colors">{navT.faq}</Link></li>
+              <li><Link to="/netbewust" className="hover:text-vovon-400 transition-colors">{navT.netbewust}</Link></li>
             </ul>
           </div>
 

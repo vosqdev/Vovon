@@ -15,7 +15,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
   const t = translations[language].nav;
   const location = useLocation();
-  const isFAQ = location.pathname === '/faq';
+  const isNavPage = location.pathname === '/faq' || location.pathname === '/netbewust';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +32,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
     { name: t.aiData, href: '/#ai-data' },
     { name: t.references, href: '/#references' },
     { name: t.faq, href: '/faq' },
+    { name: t.netbewust, href: '/netbewust' },
     { name: t.contact, href: '/#contact' },
   ];
 
@@ -39,7 +40,7 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
     setLanguage(language === 'en' ? 'nl' : 'en');
   };
 
-  const isNavSolid = scrolled || isFAQ;
+  const isNavSolid = scrolled || isNavPage;
 
   return (
     <nav
