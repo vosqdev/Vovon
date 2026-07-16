@@ -1047,6 +1047,44 @@
         "Gemeente Almere",
         "Opdrachtgever Bemog Projektontwikkeling en Mateboer"
       ]
+    },
+    {
+      "id": 58,
+      "name": "Lelystad",
+      "latitude": 52.570076,
+      "longitude": 5.540175,
+      "project_context": "📍 Lelystad – zoekgebied nabij het 380kV hoogspanningsnetwerk voor een GDS onderstation in combinatie met een 500MegaWatt batterij.",
+      "planperiode": "",
+      "programma_items": [
+        "In onderzoek opvolging van het eerdere succesvolle Smart Grid Flevoland met een koppeling op het 150kV hoogspanningsnetwerk"
+      ],
+      "ambitie_items": [
+        "Een systeemoplossing voor lokale, regionale en nationale energieopgaven."
+      ],
+      "partners_items": [
+        "Gemeente",
+        "Equans",
+        "Giga Storage",
+        "Opdrachtgever Circul8 Energy BV"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Hattemerbroek",
+      "latitude": 52.483279,
+      "longitude": 6.013003,
+      "project_context": "📍 Hattemerbroek – zonnepark A28 in combinatie met 6-10 MW bess.",
+      "planperiode": "",
+      "programma_items": [
+        "Netcongestieverzachtende contractering met netbeheerder Liander"
+      ],
+      "ambitie_items": [
+        "Een systeemoplossing voor lokale en regionale energieopgaven."
+      ],
+      "partners_items": [
+        "Gemeente",
+        "Opdrachtgever Circul8 development"
+      ]
     }
   ]
 }

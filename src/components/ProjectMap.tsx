@@ -61,36 +61,38 @@ const ProjectMap = ({ selectedProject, language }: ProjectMapProps) => {
   const [mapType, setMapType] = useState<'streets' | 'satellite'>('streets');
 
   return (
-    <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-lg border border-slate-200 mt-16 relative z-0">
-      {/* Floating Map Style Switcher Widget */}
-      <div className="absolute top-4 right-4 z-[1000] bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-slate-200 p-1 flex gap-1 transition-all duration-200 hover:shadow-lg">
-        <button
-          onClick={() => setMapType('streets')}
-          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-md transition-all duration-200 cursor-pointer ${
-            mapType === 'streets'
-              ? 'bg-vovon-600 text-white shadow-sm'
-              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-          }`}
-          title={language === 'nl' ? 'Standaard kaartweergave' : 'Standard map view'}
-        >
-          <Layers className="w-3.5 h-3.5" />
-          <span>{language === 'nl' ? 'Kaart' : 'Map'}</span>
-        </button>
-        <button
-          onClick={() => setMapType('satellite')}
-          className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-md transition-all duration-200 cursor-pointer ${
-            mapType === 'satellite'
-              ? 'bg-vovon-600 text-white shadow-sm'
-              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-          }`}
-          title={language === 'nl' ? 'Satellietbeeld' : 'Satellite imagery'}
-        >
-          <Globe className="w-3.5 h-3.5" />
-          <span>{language === 'nl' ? 'Satelliet' : 'Satellite'}</span>
-        </button>
-      </div>
+    <div className="w-full flex flex-col gap-4 mt-16">
+      {/* Map container */}
+      <div className="w-full h-[500px] rounded-xl overflow-hidden shadow-lg border border-slate-200 relative z-0">
+        {/* Floating Map Style Switcher Widget */}
+        <div className="absolute top-4 right-4 z-[1000] bg-white/95 backdrop-blur-sm rounded-lg shadow-md border border-slate-200 p-1 flex gap-1 transition-all duration-200 hover:shadow-lg">
+          <button
+            onClick={() => setMapType('streets')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-md transition-all duration-200 cursor-pointer ${
+              mapType === 'streets'
+                ? 'bg-vovon-600 text-white shadow-sm'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+            }`}
+            title={language === 'nl' ? 'Standaard kaartweergave' : 'Standard map view'}
+          >
+            <Layers className="w-3.5 h-3.5" />
+            <span>{language === 'nl' ? 'Kaart' : 'Map'}</span>
+          </button>
+          <button
+            onClick={() => setMapType('satellite')}
+            className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-md transition-all duration-200 cursor-pointer ${
+              mapType === 'satellite'
+                ? 'bg-vovon-600 text-white shadow-sm'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+            }`}
+            title={language === 'nl' ? 'Satellietbeeld' : 'Satellite imagery'}
+          >
+            <Globe className="w-3.5 h-3.5" />
+            <span>{language === 'nl' ? 'Satelliet' : 'Satellite'}</span>
+          </button>
+        </div>
 
-      <MapContainer center={center} zoom={8} scrollWheelZoom={false} className="w-full h-full">
+        <MapContainer center={center} zoom={8} scrollWheelZoom={false} className="w-full h-full">
         {mapType === 'streets' ? (
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -190,7 +192,36 @@ const ProjectMap = ({ selectedProject, language }: ProjectMapProps) => {
         ))}
       </MapContainer>
     </div>
-  );
+
+    {/* Map Legend Block underneath the map */}
+    <div className="bg-white/95 backdrop-blur-sm rounded-xl border border-slate-200 p-4 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 justify-center shadow-sm">
+      <div className="text-[11px] font-extrabold text-vovon-950 uppercase tracking-widest flex items-center gap-1.5 shrink-0 border-b sm:border-b-0 sm:border-r border-slate-200 pb-2 sm:pb-0 sm:pr-6">
+        <Compass className="w-4 h-4 text-vovon-600" />
+        <span>{language === 'nl' ? 'Legenda' : 'Legend'}</span>
+      </div>
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 text-xs text-slate-700">
+        <div className="flex items-center gap-2.5">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 shrink-0 drop-shadow-sm" viewBox="0 0 24 24" fill="#99336f" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ width: '22px', height: '22px' }}>
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3" fill="white"></circle>
+          </svg>
+          <span className="font-semibold">
+            {language === 'nl' ? 'Lopende projecten / Zoekgebieden' : 'Ongoing projects / Search areas'}
+          </span>
+        </div>
+        <div className="flex items-center gap-2.5">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 shrink-0 drop-shadow-sm" viewBox="0 0 24 24" fill="#99336f" stroke="none" style={{ width: '22px', height: '22px' }}>
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#99336f" strokeWidth="2" strokeLinejoin="round"></path>
+            <polyline points="9 10 11.5 12.5 15.5 7.5" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"></polyline>
+          </svg>
+          <span className="font-semibold">
+            {language === 'nl' ? 'Projecten met planperiode' : 'Projects with planning period'}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 };
 
 export default ProjectMap;
