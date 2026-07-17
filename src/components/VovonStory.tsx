@@ -30,8 +30,11 @@ const VovonStory = ({ language }: VovonStoryProps) => {
               <p className="text-slate-600 leading-relaxed mb-6">
                 {t.description1}
               </p>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-slate-600 leading-relaxed mb-6">
                 {t.description2}
+              </p>
+              <p className="text-slate-700 leading-relaxed font-semibold border-l-4 border-vovon-600 pl-4 py-1 bg-vovon-50/50 rounded-r-lg">
+                {t.description3}
               </p>
             </div>
           </motion.div>

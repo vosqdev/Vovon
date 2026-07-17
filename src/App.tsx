@@ -21,6 +21,7 @@ import Netbewust from './components/Netbewust';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
+import CVPage from './components/CVPage';
 import { Language } from './translations';
 
 function ScrollHandler() {
@@ -73,6 +74,7 @@ export default function App() {
           <Route path="/qa" element={<Navigate to="/faq" replace />} />
           <Route path="/faq" element={<FAQ language={language} />} />
           <Route path="/netbewust" element={<Netbewust language={language} />} />
+          <Route path="/cv" element={<CVPage language={language} />} />
         </Routes>
         <Contact language={language} />
         <Footer language={language} />

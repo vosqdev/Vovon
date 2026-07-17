@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Target, Combine, Building2, User, Briefcase, Linkedin } from 'lucide-react';
+import { X, Target, Combine, Building2, User, Briefcase, Linkedin, FileText } from 'lucide-react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 interface FounderModalProps {
   isOpen: boolean;
@@ -49,7 +50,18 @@ export default function FounderModal({ isOpen, onClose }: FounderModalProps) {
                 className="w-12 h-12 rounded-full object-cover border-2 border-vovon-100"
               />
               <div>
-                <h3 className="text-lg font-bold text-slate-900">Patrick Vos</h3>
+                <div className="flex items-center gap-2">
+                  <Link 
+                    to="/cv" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-lg font-bold text-slate-900 hover:text-vovon-600 transition-colors flex items-center gap-1.5 group"
+                    onClick={onClose}
+                  >
+                    Patrick Vos
+                    <span className="text-[10px] font-black uppercase bg-vovon-100 text-vovon-700 px-1.5 py-0.5 rounded tracking-wider group-hover:bg-vovon-600 group-hover:text-white transition-all">Bekijk CV</span>
+                  </Link>
+                </div>
                 <p className="text-sm text-slate-500 font-medium">Oprichter & Regisseur VOVON</p>
               </div>
             </div>
@@ -221,15 +233,25 @@ export default function FounderModal({ isOpen, onClose }: FounderModalProps) {
                       </div>
                     </div>
                     
-                    <div className="mt-6 pt-5 border-t border-slate-100">
+                    <div className="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
+                      <Link 
+                        to="/cv"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center flex-1 py-2.5 px-4 bg-vovon-600 hover:bg-vovon-700 text-white text-sm font-bold rounded-xl transition-all shadow-md hover:scale-[1.02] active:scale-[0.98] group"
+                        onClick={onClose}
+                      >
+                        <FileText className="w-4 h-4 mr-2 group-hover:rotate-3 transition-transform" />
+                        Bekijk Volledig CV
+                      </Link>
                       <a 
                         href="https://www.linkedin.com/in/patrick-vos-49527726/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center w-full py-2.5 px-4 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 text-[#0a66c2] text-sm font-bold rounded-xl transition-colors group"
+                        className="inline-flex items-center justify-center flex-1 py-2.5 px-4 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 text-[#0a66c2] text-sm font-bold rounded-xl transition-colors group"
                       >
                         <Linkedin className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-                        Bekijk profiel op LinkedIn
+                        LinkedIn
                       </a>
                     </div>
                   </div>

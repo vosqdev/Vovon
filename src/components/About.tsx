@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { CheckCircle, Info } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Language, translations } from '../translations';
 import FounderModal from './FounderModal';
 
@@ -15,6 +16,30 @@ const About = ({ language }: AboutProps) => {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Real Estate & Energy Insight Block */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-16 p-8 rounded-3xl bg-gradient-to-br from-slate-50 to-vovon-50/20 border border-slate-100 shadow-sm relative overflow-hidden"
+          id="about-insight-block"
+        >
+          <div className="absolute top-0 right-0 w-32 h-32 bg-vovon-100/30 rounded-full blur-3xl pointer-events-none" />
+          <div className="max-w-4xl">
+            <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-4 flex items-center gap-2">
+              <span className="w-1.5 h-6 bg-vovon-600 rounded-full shrink-0" />
+              {t.insightTitle}
+            </h3>
+            <p className="text-slate-700 text-base sm:text-lg leading-relaxed mb-4 font-medium">
+              {t.insightText1}
+            </p>
+            <p className="text-vovon-600 text-base sm:text-lg leading-relaxed font-extrabold">
+              {t.insightText2}
+            </p>
+          </div>
+        </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           {/* Image Side */}
           <motion.div
@@ -34,8 +59,11 @@ const About = ({ language }: AboutProps) => {
             <div className="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-slate-100 rounded-2xl -z-10" />
             
             {/* Founder Card */}
-            <div 
-              className="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 max-w-xs transition-colors group"
+            <Link 
+              to="/cv"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 max-w-xs transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:border-vovon-200 cursor-pointer block"
             >
               <div className="flex items-center space-x-3">
                 <img 
@@ -44,11 +72,14 @@ const About = ({ language }: AboutProps) => {
                   className="w-10 h-10 rounded-full object-cover border border-slate-200"
                 />
                 <div className="flex-1">
-                  <p className="text-sm font-bold text-slate-900 group-hover:text-vovon-600 transition-colors">Patrick Vos</p>
+                  <div className="flex items-center gap-1.5">
+                    <p className="text-sm font-bold text-slate-900 group-hover:text-vovon-600 transition-colors">Patrick Vos</p>
+                    <span className="text-[9px] font-black uppercase bg-vovon-100 text-vovon-700 px-1 py-0.2 rounded group-hover:bg-vovon-600 group-hover:text-white transition-colors">CV</span>
+                  </div>
                   <p className="text-xs text-slate-500">{t.founderRole}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           </motion.div>
 
           {/* Text Side */}
