@@ -35,8 +35,8 @@ export const translations = {
         'Process Direction & Project Management',
       ],
       insightTitle: 'Looking at real estate and energy differently',
-      insightText1: 'We back gut feelings with numbers and data. With smart analysis tools and benchmark data, also for housing corporations, healthcare organizations, municipalities, and developers.',
-      insightText2: 'Make better real estate and energy decisions. We love to provide insight by visualizing it with data, thereby substantiating intuition.',
+      insightText1: 'Better decisions start with insight. VOVON Development combines practical experience with data, benchmark information, and smart analytical tools to make real estate and energy challenges clear and visually understandable.',
+      insightText2: 'We back gut feelings with facts, enabling us, as well as municipalities, housing corporations, healthcare organizations, and developers, to make choices based on data, risks, and opportunities.',
     },
     story: {
       title: 'The Origin of',
@@ -85,8 +85,8 @@ export const translations = {
       titleHighlight: 'Innovation',
       description: 'Data & AI make the difference. Using advanced web applications and AI tools to get a grip on real estate, energy, and projects. From feasibility to risk analysis, we bring clarity to complexity.',
       insightTitle: 'Looking at real estate and energy differently',
-      insightText1: 'We back gut feelings with numbers and data. With smart analysis tools and benchmark data, also for housing corporations, healthcare organizations, municipalities, and developers.',
-      insightText2: 'Make better real estate and energy decisions. We love to provide insight by visualizing it with data, thereby substantiating intuition.',
+      insightText1: 'Better decisions start with insight. VOVON Development combines practical experience with data, benchmark information, and smart analytical tools to make real estate and energy challenges clear and visually understandable.',
+      insightText2: 'We back gut feelings with facts, enabling us, as well as municipalities, housing corporations, healthcare organizations, and developers, to make choices based on data, risks, and opportunities.',
       features: [
         { title: 'Web Applications', description: 'For project structuring, monitoring, scenario analysis, and decision making.' },
         { title: 'AI Tools', description: 'For data enrichment, concept development, risk analysis, and strategic modeling.' },
@@ -193,8 +193,8 @@ export const translations = {
         'Procesregie & projectmanagement',
       ],
       insightTitle: 'Anders kijken naar vastgoed en energie',
-      insightText1: 'Wij staven onderbuikgevoel met cijfers en data. Met slimme analyse tools en benchmark data ook voor woningcorporaties, zorgpartijen, gemeente en ontwikkelaars.',
-      insightText2: 'Maak betere vastgoed en energie beslissingen. Wij geven graag inzicht door het vanuit data visueel te maken én daarmee onderbouwen wij het onderbuikgevoel.',
+      insightText1: 'Betere beslissingen beginnen met inzicht. VOVON Development combineert praktijkervaring met data, benchmarkinformatie en slimme analysetools om vastgoed- en energievraagstukken helder en visueel inzichtelijk te maken.',
+      insightText2: 'Wij onderbouwen het onderbuikgevoel met feiten, zodat wij, maar ook gemeenten, woningcorporaties, zorgorganisaties en ontwikkelaars keuzes kunnen maken op basis van data, risico\'s en kansen.',
     },
     story: {
       title: 'De Oorsprong van',
@@ -243,8 +243,8 @@ export const translations = {
       titleHighlight: 'Innovatie',
       description: 'Data & AI maken het verschil. Het gebruiken van geavanceerde webapplicaties en AI-tools om grip te krijgen op vastgoed, energie en projecten. Van haalbaarheid tot risicoanalyse, wij brengen helderheid in complexiteit.',
       insightTitle: 'Anders kijken naar vastgoed en energie',
-      insightText1: 'Wij staven onderbuikgevoel met cijfers en data. Met slimme analyse tools en benchmark data ook voor woningcorporaties, zorgpartijen, gemeente en ontwikkelaars.',
-      insightText2: 'Maak betere vastgoed en energie beslissingen. Wij geven graag inzicht door het vanuit data visueel te maken én daarmee onderbouwen wij het onderbuikgevoel.',
+      insightText1: 'Betere beslissingen beginnen met inzicht. VOVON Development combineert praktijkervaring met data, benchmarkinformatie en slimme analysetools om vastgoed- en energievraagstukken helder en visueel inzichtelijk te maken.',
+      insightText2: 'Wij onderbouwen het onderbuikgevoel met feiten, zodat wij, maar ook gemeenten, woningcorporaties, zorgorganisaties en ontwikkelaars keuzes kunnen maken op basis van data, risico\'s en kansen.',
       features: [
         { title: 'Webapplicaties', description: 'Voor projectstructurering, monitoring, scenario-analyse en besluitvorming.' },
         { title: 'AI Tools', description: 'Voor dataverrijking, conceptontwikkeling, risicoanalyse en strategische modellering.' },
