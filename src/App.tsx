@@ -22,6 +22,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
 import CVPage from './components/CVPage';
+import SummerVacationModal from './components/SummerVacationModal';
 import { Language } from './translations';
 
 function ScrollHandler() {
@@ -79,6 +80,7 @@ export default function App() {
         <Contact language={language} />
         <Footer language={language} />
         <CookieBanner />
+        <SummerVacationModal language={language} />
       </div>
     </BrowserRouter>
   );
