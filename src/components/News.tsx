@@ -21,6 +21,19 @@ interface NewsItem {
 
 const dummyItems: NewsItem[] = [
   {
+    id: '11',
+    type: 'article',
+    date: '29 juli 2026',
+    title: 'Artikel: Voorrang op het stroomnet — Wat er tot 1 januari 2027 gebeurt met netcapaciteit voor woningbouw',
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    featured: true,
+    content: [
+      'Netcapaciteit is in korte tijd van een technisch aansluitvraagstuk veranderd in een verdelingsvraagstuk met een juridische en bestuurlijke kern. Sinds 1 januari 2026 geldt het ACM-prioriteringskader; sinds 1 juli 2026 staan groot- en kleinverbruik in gebieden met netcongestie in één gezamenlijke wachtrij en is de reservering van capaciteit voor toekomstige woningbouw vervallen. Wie voorrang wil, moet die actief aanvragen en onderbouwen.',
+      'Daarmee verschuift de regie. Niet de ontwikkelaar, maar de gemeente is vanaf 1 oktober 2026 de formele indiener van transport- en prioriteringsverzoeken voor woningbouw, collectieve woonvormen en onderwijshuisvesting. De gemeente bepaalt via een volgordelijst welke projecten in welke volgorde worden ingediend.',
+      'De periode tot 1 januari 2027 is een eenmalig voorrangsvenster. Projecten die in die periode niet zijn aangevraagd én geprioriteerd, concurreren daarna op een volle markt met alle overige aanvragers, in volgorde van binnenkomst. Vovon Development beschrijft in dit artikel het nieuwe stelsel, het krappe tijdpad, de juridische en financiële risico’s, en een beproefde werkwijze om tijdig tot een uitvoerbaar én juridisch houdbaar besluit te komen.'
+    ]
+  },
+  {
     id: '10',
     type: 'news',
     date: '7 juli 2026',
