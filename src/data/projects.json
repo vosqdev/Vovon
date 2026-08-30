@@ -428,17 +428,17 @@
       "name": "Plan de Dijkjes",
       "latitude": 52.45684750355829,
       "longitude": 5.86174124235916,
-      "project_context": "Elburg – gebiedsontwikkeling plan de Dijkjes 1e gasloze woonwijk NoordWest Veluwe",
+      "project_context": "Elburg – gebiedsontwikkeling en woningbouw plan de Dijkjes (±225 woningen)",
       "planperiode": "2016-2020",
       "programma_items": [
         "woningbouw: ±225 woningen",
         "(openbaar)gebied: ca. 9 hectare",
-        "Energie&mobiliteit: gasloos"
+        "Duurzaamheid: 1e gasloze woonwijk NW-Veluwe"
       ],
       "ambitie_items": [
+        "Gebiedsontwikkeling & woningbouw",
         "Energieneutraal wijkconcept",
-        "90 NOM huurwoningen",
-        "Woonconcept Fijn Wonen"
+        "90 NOM huurwoningen"
       ],
       "partners_items": [
         "Van Wijnen",
@@ -723,13 +723,14 @@
       "name": "Chez Marknesse",
       "latitude": 52.70899575169119,
       "longitude": 5.877797877766849,
-      "project_context": "📍 Marknesse – transformatie van oude discotheek",
+      "project_context": "📍 Marknesse – transformatie van voormalige discotheek naar wellnesscomplex",
       "planperiode": "",
       "programma_items": [
+        "Wellness & ontspanning",
         "In onderzoek"
       ],
       "ambitie_items": [
-        "Revitalisering, transformatie"
+        "Revitalisering & herbestemming naar hoogwaardige wellness"
       ],
       "partners_items": [
         "Opdrachtgever Circul8 development"

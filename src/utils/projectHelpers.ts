@@ -49,19 +49,19 @@ export function formatProject(p: ProjectData, language: 'nl' | 'en' = 'nl'): For
   const tags: string[] = [];
 
   const isEnergy =
-    nameLower.includes('molenbeek') ||
-    nameLower.includes('hoorn') ||
-    contextLower.includes('dronten') ||
-    contextLower.includes('zeewolde') ||
-    nameLower.includes('bioscience') ||
-    nameLower.includes('ossenkampweg') ||
-    nameLower.includes('zandlaan') ||
-    nameLower.includes('laadplein') ||
-    allText.includes('energie') ||
-    allText.includes('gasloos') ||
-    allText.includes('nom') ||
-    allText.includes('bess') ||
-    allText.includes('netcongestie');
+    !nameLower.includes('dijkjes') &&
+    (nameLower.includes('molenbeek') ||
+      nameLower.includes('hoorn') ||
+      contextLower.includes('dronten') ||
+      contextLower.includes('zeewolde') ||
+      nameLower.includes('bioscience') ||
+      nameLower.includes('ossenkampweg') ||
+      nameLower.includes('zandlaan') ||
+      nameLower.includes('laadplein') ||
+      allText.includes('bess') ||
+      allText.includes('netcongestie') ||
+      (allText.includes('energie') && !allText.includes('woningbouw')) ||
+      (allText.includes('gasloos') && !allText.includes('woningbouw')));
 
   const isSocial =
     !nameLower.includes('harde') &&
@@ -81,7 +81,11 @@ export function formatProject(p: ProjectData, language: 'nl' | 'en' = 'nl'): For
       allText.includes('retail') ||
       allText.includes('commercieel') ||
       allText.includes('bog') ||
-      allText.includes('bedrijfsruimte'));
+      allText.includes('bedrijfsruimte') ||
+      allText.includes('wellness') ||
+      allText.includes('welness') ||
+      nameLower.includes('chez') ||
+      nameLower.includes('marknesse'));
 
   const isArea =
     allText.includes('gebiedsontwikkeling') ||
@@ -113,11 +117,16 @@ export function formatProject(p: ProjectData, language: 'nl' | 'en' = 'nl'): For
   } else if (isCommercial) {
     categoryKey = 'commercieel';
     iconType = 'commercial';
-    tags.push(language === 'nl' ? 'Commercieel' : 'Commercial');
-    if (allText.includes('supermarkt') || allText.includes('winkel')) {
-      tags.push(language === 'nl' ? 'Retail' : 'Retail');
-    } else if (allText.includes('bedrijf')) {
-      tags.push(language === 'nl' ? 'Bedrijfshuisvesting' : 'Business');
+    if (allText.includes('wellness') || allText.includes('welness') || nameLower.includes('chez') || nameLower.includes('marknesse')) {
+      tags.push(language === 'nl' ? 'Wellness & Leisure' : 'Wellness & Leisure');
+      tags.push(language === 'nl' ? 'Transformatie' : 'Transformation');
+    } else {
+      tags.push(language === 'nl' ? 'Commercieel' : 'Commercial');
+      if (allText.includes('supermarkt') || allText.includes('winkel')) {
+        tags.push(language === 'nl' ? 'Retail' : 'Retail');
+      } else if (allText.includes('bedrijf')) {
+        tags.push(language === 'nl' ? 'Bedrijfshuisvesting' : 'Business');
+      }
     }
   } else if (isArea) {
     categoryKey = 'gebied';
