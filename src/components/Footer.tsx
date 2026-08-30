@@ -40,7 +40,6 @@ const Footer = ({ language }: FooterProps) => {
               <li><Link to="/#references" className="hover:text-vovon-400 transition-colors">{navT.references}</Link></li>
               <li><Link to="/#news" className="hover:text-vovon-400 transition-colors">{navT.news}</Link></li>
               <li><Link to="/faq" className="hover:text-vovon-400 transition-colors">{navT.faq}</Link></li>
-              <li><Link to="/netbewust" className="hover:text-vovon-400 transition-colors">{navT.netbewust}</Link></li>
             </ul>
           </div>
 

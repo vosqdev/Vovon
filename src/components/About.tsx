@@ -1,9 +1,7 @@
 import { motion } from 'motion/react';
-import { CheckCircle, Info } from 'lucide-react';
-import { useState } from 'react';
+import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Language, translations } from '../translations';
-import FounderModal from './FounderModal';
 
 interface AboutProps {
   language: Language;
@@ -11,112 +9,190 @@ interface AboutProps {
 
 const About = ({ language }: AboutProps) => {
   const t = translations[language].about;
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Real Estate & Energy Insight Block */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mb-16 p-8 rounded-3xl bg-gradient-to-br from-slate-50 to-vovon-50/20 border border-slate-100 shadow-sm relative overflow-hidden"
-          id="about-insight-block"
-        >
-          <div className="absolute top-0 right-0 w-32 h-32 bg-vovon-100/30 rounded-full blur-3xl pointer-events-none" />
-          <div className="max-w-4xl">
-            <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-4 flex items-center gap-2">
-              <span className="w-1.5 h-6 bg-vovon-600 rounded-full shrink-0" />
-              {t.insightTitle}
-            </h3>
-            <p className="text-slate-700 text-base sm:text-lg leading-relaxed mb-4 font-medium">
-              {t.insightText1}
-            </p>
-            <p className="text-vovon-600 text-base sm:text-lg leading-relaxed font-extrabold">
-              {t.insightText2}
-            </p>
-          </div>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* Image Side */}
+    <section id="about">
+      {/* 1. Open Editorial Statement: Witte Achtergrond */}
+      <div className="bg-white text-slate-900 pt-24 pb-20 md:pt-32 md:pb-28 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          {/* Eyebrow */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 mb-6"
           >
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://www.image2url.com/r2/default/images/1778271748179-ee57e6f0-7d29-4d95-9b87-3d68fd339cdb.png"
-                alt="Patrick Vos"
-                className="w-full h-full object-cover transition-transform duration-700"
-              />
-            </div>
-            <div className="absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-slate-100 rounded-2xl -z-10" />
-            
-            {/* Founder Card */}
-            <Link 
-              to="/cv"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-md p-4 rounded-xl shadow-lg border border-slate-100 max-w-xs transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:border-vovon-200 cursor-pointer block"
+            <span className="w-6 h-px bg-vovon-600"></span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+              VOVON · {t.insightEyebrow}
+            </span>
+          </motion.div>
+
+          {/* Statement Headline */}
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-slate-900 tracking-tight leading-[1.18] max-w-5xl mb-12"
+          >
+            {language === 'nl' ? (
+              <>
+                Anders kijken naar <span className="font-semibold text-slate-900">vastgoed</span> en{' '}
+                <span className="font-semibold text-slate-900">energie</span>.
+              </>
+            ) : (
+              <>
+                Looking at <span className="font-semibold text-slate-900">real estate</span> and{' '}
+                <span className="font-semibold text-slate-900">energy</span> differently.
+              </>
+            )}
+          </motion.h2>
+
+          {/* Editorial Columns */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start pt-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="lg:col-span-6"
             >
-              <div className="flex items-center space-x-3">
-                <img 
-                  src="https://www.image2url.com/r2/default/images/1778272409083-db33f987-0a94-45f6-9667-4d00551c6598.png" 
-                  alt="Patrick Vos" 
-                  className="w-10 h-10 rounded-full object-cover border border-slate-200"
-                />
-                <div className="flex-1">
-                  <div className="flex items-center gap-1.5">
-                    <p className="text-sm font-bold text-slate-900 group-hover:text-vovon-600 transition-colors">Patrick Vos</p>
-                    <span className="text-[9px] font-black uppercase bg-vovon-100 text-vovon-700 px-1 py-0.2 rounded group-hover:bg-vovon-600 group-hover:text-white transition-colors">CV</span>
-                  </div>
-                  <p className="text-xs text-slate-500">{t.founderRole}</p>
-                </div>
-              </div>
-            </Link>
-          </motion.div>
+              <p className="text-lg md:text-xl text-slate-600 leading-relaxed font-normal">
+                {t.insightText1}
+              </p>
+            </motion.div>
 
-          {/* Text Side */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="h-px w-8 bg-vovon-500"></span>
-              <span className="text-vovon-600 font-semibold tracking-wider uppercase text-sm">{t.label}</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
-              {t.title} <span className="text-vovon-600">{t.titleHighlight}</span>
-            </h2>
-            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              {t.description1}
-            </p>
-            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-              {t.description2}
-            </p>
-            
-            <ul className="space-y-4">
-              {t.expertise.map((item, index) => (
-                <li key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="text-vovon-600 w-5 h-5 flex-shrink-0" />
-                  <span className="text-base text-slate-800 font-medium">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="lg:col-span-6 border-l-2 border-vovon-600 pl-6 lg:pl-8 py-1"
+            >
+              <p className="text-lg md:text-xl text-slate-900 font-medium leading-relaxed">
+                {t.insightText2}
+              </p>
+            </motion.div>
+          </div>
         </div>
       </div>
-      
-      {/* Founder Modal Overlay */}
-      <FounderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
+      {/* 2. De weg naar NetZero: Met achtergrondafbeelding en 30% filter */}
+      <div className="relative py-24 md:py-32 bg-slate-950 text-white overflow-hidden">
+        {/* Achtergrondafbeelding */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src="https://image2url.com/r2/default/images/1774706970301-eb9e8263-2b6a-407b-a700-13cdc2a1210d.jpg"
+            alt="VOVON NetZero Achtergrond"
+            className="w-full h-full object-cover object-center"
+            referrerPolicy="no-referrer"
+          />
+          {/* 30% Filter Overlay */}
+          <div className="absolute inset-0 bg-slate-950/30 backdrop-brightness-[0.45] backdrop-contrast-125" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-slate-950/80" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            
+            {/* Photography Column with Compact Sizing */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-4 max-w-md mx-auto lg:max-w-none w-full"
+            >
+              <div className="relative">
+                <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900">
+                  <img
+                    src="https://www.image2url.com/r2/default/images/1788086485348-dd731234-bfd7-4db2-b4d3-97b0f1df214d.jpg"
+                    alt="Over VOVON - De weg naar NetZero"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+
+                {/* Refined Image Caption / Profile Link */}
+                <div className="mt-3 flex items-center justify-between text-xs text-slate-400 pt-2.5 border-t border-white/15">
+                  <div>
+                    <span className="font-semibold text-white">Patrick Vos</span>
+                    <span className="mx-1.5 text-slate-600">·</span>
+                    <span>{t.founderRole}</span>
+                  </div>
+                  <Link
+                    to="/cv"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-vovon-400 font-semibold hover:text-vovon-300 transition-colors group"
+                  >
+                    <span>{t.viewProfile}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Narrative & 3 Expertise Areas Column */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:col-span-8 flex flex-col justify-between"
+            >
+              {/* Eyebrow & Title */}
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="w-6 h-px bg-vovon-400"></span>
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-vovon-400">
+                    {t.label}
+                  </span>
+                </div>
+
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-light text-white tracking-tight mb-8">
+                  {t.title}{' '}
+                  <span className="font-semibold text-white border-b-2 border-vovon-500 pb-0.5">
+                    {t.titleHighlight}
+                  </span>
+                </h3>
+
+                <div className="space-y-4 text-base md:text-lg text-slate-200 leading-relaxed max-w-2xl mb-12 font-light">
+                  <p>{t.description1}</p>
+                  <p>{t.description2}</p>
+                </div>
+              </div>
+
+              {/* 3 Clear Architectural Expertise Pillars */}
+              <div className="border-t border-white/20 divide-y divide-white/10">
+                {t.expertise.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.1 * index }}
+                    className="py-5 sm:py-6 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 items-baseline group"
+                  >
+                    <div className="sm:col-span-1 text-xs font-mono font-bold text-vovon-400">
+                      0{index + 1}
+                    </div>
+                    <div className="sm:col-span-5 font-semibold text-white text-base sm:text-lg tracking-tight group-hover:text-vovon-300 transition-colors">
+                      {item.title}
+                    </div>
+                    <div className="sm:col-span-6 text-sm text-slate-200 leading-relaxed font-light">
+                      {item.description}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

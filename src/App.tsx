@@ -17,7 +17,6 @@ import AIData from './components/AIData';
 import News from './components/News';
 import References from './components/References';
 import FAQ from './components/FAQ';
-import Netbewust from './components/Netbewust';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CookieBanner from './components/CookieBanner';
@@ -73,7 +72,7 @@ export default function App() {
           <Route path="/" element={<HomePage language={language} />} />
           <Route path="/qa" element={<Navigate to="/faq" replace />} />
           <Route path="/faq" element={<FAQ language={language} />} />
-          <Route path="/netbewust" element={<Netbewust language={language} />} />
+          <Route path="/netbewust" element={<Navigate to="/" replace />} />
           <Route path="/cv" element={<CVPage language={language} />} />
         </Routes>
         <Contact language={language} />
