@@ -24,6 +24,24 @@ interface NewsItem {
 
 const dummyItems: NewsItem[] = [
   {
+    id: '12',
+    type: 'article',
+    date: '30 augustus 2026',
+    readTime: '5 min leestijd',
+    title: 'Werkwijze Eerder Aanvragen oktober 2026 — Tijdsblokkenschema & Procedure',
+    image: 'https://www.image2url.com/r2/default/images/1788094970320-07a4e3d3-2c50-4df1-9f24-c0fdef7a72da.jpg',
+    featured: true,
+    lead: 'Vanaf 1 oktober 2026 start de landelijke werkwijze Eerder Aanvragen voor gemeenten. Lees hoe het tijdsblokkenschema per startbouwjaar werkt, hoe aanvragen via Mijnaansluiting.nl verlopen en wat de vervolgstappen zijn.',
+    content: [
+      'De werkwijze Eerder Aanvragen start op 1 oktober 2026. Omdat veel gemeenten tegelijkertijd aanvragen willen indienen, worden de aanvragen bij de start eenmalig gecoördineerd ingediend. Hiervoor zijn in oktober verschillende tijdsblokken afgesproken.',
+      'Het tijdsblokkenschema geldt alleen voor de start van Eerder Aanvragen. Eerder Aanvragen zelf is een blijvende werkwijze. Na afloop van het tijdsblokkenschema kunnen gemeenten vanaf 23 oktober doorlopend transportcapaciteit aanvragen voor nieuwe projecten, zodra voldoende projectinformatie beschikbaar is.',
+      'De tijdsblokken zijn bedoeld om te voorkomen dat alle gemeenten hun aanvragen op hetzelfde moment bij de netbeheerder indienen. Projecten die eerder tot uitvoering komen, kunnen eerder worden ingediend. Daarna volgen projecten die verder in de toekomst liggen. De planning loopt van 1 tot en met 22 oktober (startbouw 2028 t/m 2035).',
+      'Aanvragen verlopen via Mijnaansluiting.nl. Gemeenten moeten vóór 1 oktober een zakelijk account en gebruikersgroep met de juiste rechten hebben ingericht.',
+      'Let op: Eerder Aanvragen is géén garantie op transportcapaciteit. Ook met een tijdige en complete aanvraag is niet gegarandeerd dat het project op de gewenste datum capaciteit krijgt.',
+      'Bronvermelding: VNG.nl (Vereniging van Nederlandse Gemeenten).'
+    ]
+  },
+  {
     id: '11',
     type: 'article',
     date: '29 juli 2026',
@@ -173,7 +191,8 @@ const News = ({ language }: NewsProps) => {
     : dummyItems.filter(item => item.type === activeFilter);
 
   const featuredItem = filteredItems.length > 0 ? filteredItems[0] : null;
-  const listItems = filteredItems.length > 1 ? filteredItems.slice(1) : [];
+  const leftSubItems = filteredItems.length > 1 ? filteredItems.slice(1, 3) : [];
+  const rightListItems = filteredItems.length > 3 ? filteredItems.slice(3) : [];
 
   return (
     <section id="news" className="py-24 sm:py-32 bg-[#faf9f6] border-t border-slate-200/80">
@@ -237,81 +256,141 @@ const News = ({ language }: NewsProps) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25 }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-start"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-10 items-start"
           >
-            {/* Left Column: Compact Featured Story (Heroic Editorial Card) */}
+            {/* Left Column: Featured Hero Card + 2 Sub-Articles directly underneath */}
             {featuredItem ? (
-              <article
-                onClick={() => setSelectedItem(featuredItem)}
-                className="lg:col-span-6 xl:col-span-6 group cursor-pointer flex flex-col bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-slate-300 transition-all duration-300"
-              >
-                {/* Visual Imagery */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
-                  <img
-                    src={featuredItem.image}
-                    alt={featuredItem.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
-                  />
-                  <div className="absolute inset-0 bg-slate-950/5 group-hover:bg-transparent transition-colors duration-300" />
-                </div>
+              <div className="lg:col-span-7 xl:col-span-7 flex flex-col gap-6">
+                {/* Main Hero Card */}
+                <article
+                  onClick={() => setSelectedItem(featuredItem)}
+                  className="group cursor-pointer flex flex-col bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-slate-300 transition-all duration-300"
+                >
+                  {/* Visual Imagery */}
+                  <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                    <img
+                      src={featuredItem.image}
+                      alt={featuredItem.title}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                    />
+                    <div className="absolute inset-0 bg-slate-950/5 group-hover:bg-transparent transition-colors duration-300" />
+                  </div>
 
-                {/* Editorial Content */}
-                <div className="p-7 sm:p-9 flex flex-col flex-1 justify-between bg-white">
-                  <div>
-                    {/* Meta: Category · Date · ReadTime */}
-                    <div className="flex items-center gap-2.5 text-xs text-slate-500 font-medium mb-4">
-                      <span className="font-bold tracking-wider uppercase text-slate-900 text-[11px]">
-                        {categoryConfig[featuredItem.type][language]}
-                      </span>
-                      <span className="text-slate-300">/</span>
-                      <span>{featuredItem.date}</span>
-                      {featuredItem.readTime && (
-                        <>
-                          <span className="text-slate-300">·</span>
-                          <span className="text-slate-400">{featuredItem.readTime}</span>
-                        </>
-                      )}
+                  {/* Editorial Content */}
+                  <div className="p-6 sm:p-8 flex flex-col flex-1 justify-between bg-white">
+                    <div>
+                      {/* Meta: Category · Date · ReadTime */}
+                      <div className="flex items-center gap-2.5 text-xs text-slate-500 font-medium mb-3.5">
+                        <span className="font-bold tracking-wider uppercase text-slate-900 text-[11px]">
+                          {categoryConfig[featuredItem.type][language]}
+                        </span>
+                        <span className="text-slate-300">/</span>
+                        <span>{featuredItem.date}</span>
+                        {featuredItem.readTime && (
+                          <>
+                            <span className="text-slate-300">·</span>
+                            <span className="text-slate-400">{featuredItem.readTime}</span>
+                          </>
+                        )}
+                      </div>
+
+                      {/* Headline */}
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight leading-[1.25] mb-3.5 group-hover:text-vovon-700 transition-colors duration-200">
+                        {featuredItem.title}
+                      </h3>
+
+                      {/* Lead Paragraph */}
+                      <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal line-clamp-3 mb-5">
+                        {featuredItem.lead || (featuredItem.content && featuredItem.content[0])}
+                      </p>
                     </div>
 
-                    {/* Headline */}
-                    <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-[1.25] mb-4 group-hover:text-vovon-700 transition-colors duration-200">
-                      {featuredItem.title}
-                    </h3>
-
-                    {/* Lead Paragraph */}
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal line-clamp-3 mb-6">
-                      {featuredItem.lead || (featuredItem.content && featuredItem.content[0])}
-                    </p>
+                    {/* Editorial Link Accent */}
+                    <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 group-hover:text-vovon-600 transition-colors">
+                        <span>{t.readArticle || (language === 'nl' ? 'Lees volledig artikel' : 'Read full story')}</span>
+                        <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+                      </span>
+                    </div>
                   </div>
+                </article>
 
-                  {/* Editorial Link Accent */}
-                  <div className="pt-5 border-t border-slate-100 flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-900 group-hover:text-vovon-600 transition-colors">
-                      <span>{t.readArticle || (language === 'nl' ? 'Lees volledig artikel' : 'Read full story')}</span>
-                      <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
-                    </span>
+                {/* 2 Sub-Articles Underneath the Main Hero Story */}
+                {leftSubItems.length > 0 && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {leftSubItems.map((subItem) => (
+                      <article
+                        key={subItem.id}
+                        onClick={() => setSelectedItem(subItem)}
+                        className="group cursor-pointer flex flex-col bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-slate-300 transition-all duration-300"
+                      >
+                        {/* Sub-Article Thumbnail */}
+                        <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
+                          <img
+                            src={subItem.image}
+                            alt={subItem.title}
+                            className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-slate-950/5 group-hover:bg-transparent transition-colors duration-300" />
+                        </div>
+
+                        {/* Sub-Article Text Content */}
+                        <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between bg-white">
+                          <div>
+                            <div className="flex items-center gap-2 text-[11px] text-slate-500 font-medium mb-2.5">
+                              <span className="font-bold tracking-wider uppercase text-slate-900 text-[10px]">
+                                {categoryConfig[subItem.type][language]}
+                              </span>
+                              <span className="text-slate-300">/</span>
+                              <span>{subItem.date}</span>
+                            </div>
+
+                            <h4 className="text-sm sm:text-base font-bold text-slate-900 tracking-tight leading-snug group-hover:text-vovon-700 transition-colors duration-200 line-clamp-2 mb-2">
+                              {subItem.title}
+                            </h4>
+
+                            {subItem.lead && (
+                              <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed font-normal mb-3">
+                                {subItem.lead}
+                              </p>
+                            )}
+                          </div>
+
+                          <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <span className="inline-flex items-center gap-1 text-xs font-bold text-slate-900 group-hover:text-vovon-600 transition-colors">
+                              <span>{t.readMore || (language === 'nl' ? 'Lees meer' : 'Read more')}</span>
+                              <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+                            </span>
+                          </div>
+                        </div>
+                      </article>
+                    ))}
                   </div>
-                </div>
-              </article>
+                )}
+              </div>
             ) : (
-              <div className="lg:col-span-6 bg-white p-12 rounded-2xl border border-slate-200 text-center text-sm text-slate-500 font-medium">
+              <div className="lg:col-span-7 bg-white p-12 rounded-2xl border border-slate-200 text-center text-sm text-slate-500 font-medium">
                 {language === 'nl' ? 'Geen publicaties gevonden in deze categorie.' : 'No articles found in this category.'}
               </div>
             )}
 
-            {/* Right Column: Editorial Vertical Feed with Subtle Dividers */}
-            <div className="lg:col-span-6 xl:col-span-6 flex flex-col divide-y divide-slate-200/80 bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-7 shadow-2xs">
-              {listItems.map((item, index) => (
+            {/* Right Column: Editorial Vertical Feed with Remaining Articles */}
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col divide-y divide-slate-200/80 bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-6 shadow-2xs">
+              <div className="pb-3 px-1 text-xs font-bold uppercase tracking-wider text-slate-400">
+                {language === 'nl' ? 'Meer publicaties & archief' : 'More publications & archive'}
+              </div>
+              
+              {rightListItems.map((item, index) => (
                 <article
                   key={item.id}
                   onClick={() => setSelectedItem(item)}
-                  className={`group cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6 py-6 sm:py-7 ${
-                    index === 0 ? 'pt-2 sm:pt-3' : ''
-                  } ${index === listItems.length - 1 ? 'pb-2 sm:pb-3' : ''}`}
+                  className={`group cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-5 py-5 ${
+                    index === 0 ? 'pt-4' : ''
+                  } ${index === rightListItems.length - 1 ? 'pb-2' : ''}`}
                 >
                   {/* Text Details */}
                   <div className="flex-1 order-2 sm:order-1 min-w-0">
-                    <div className="flex items-center gap-2 text-xs text-slate-500 font-medium mb-2.5">
+                    <div className="flex items-center gap-2 text-xs text-slate-500 font-medium mb-1.5">
                       <span className="font-bold tracking-wider uppercase text-slate-900 text-[10px]">
                         {categoryConfig[item.type][language]}
                       </span>
@@ -319,12 +398,12 @@ const News = ({ language }: NewsProps) => {
                       <span>{item.date}</span>
                     </div>
 
-                    <h4 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-snug group-hover:text-vovon-700 transition-colors duration-200 line-clamp-2 mb-2">
+                    <h4 className="text-sm sm:text-base font-bold text-slate-900 tracking-tight leading-snug group-hover:text-vovon-700 transition-colors duration-200 line-clamp-2 mb-1.5">
                       {item.title}
                     </h4>
 
                     {item.lead && (
-                      <p className="text-xs sm:text-sm text-slate-500 line-clamp-2 leading-relaxed font-normal mb-3">
+                      <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed font-normal mb-2.5">
                         {item.lead}
                       </p>
                     )}
@@ -336,7 +415,7 @@ const News = ({ language }: NewsProps) => {
                   </div>
 
                   {/* High Quality Photography Thumbnail */}
-                  <div className="w-full sm:w-36 md:w-40 lg:w-36 xl:w-40 h-32 sm:h-26 shrink-0 rounded-xl overflow-hidden bg-slate-100 border border-slate-200/80 order-1 sm:order-2">
+                  <div className="w-full sm:w-28 md:w-32 lg:w-28 xl:w-32 h-28 sm:h-22 shrink-0 rounded-xl overflow-hidden bg-slate-100 border border-slate-200/80 order-1 sm:order-2">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -346,11 +425,11 @@ const News = ({ language }: NewsProps) => {
                 </article>
               ))}
 
-              {listItems.length === 0 && featuredItem && (
-                <div className="py-12 text-center text-xs text-slate-400 font-medium">
+              {rightListItems.length === 0 && (
+                <div className="py-8 text-center text-xs text-slate-400 font-medium">
                   {language === 'nl' 
-                    ? 'Einde van de selectie binnen dit filter.' 
-                    : 'End of items in this category.'}
+                    ? 'Geen verdere publicaties in dit filter.' 
+                    : 'No further items in this category.'}
                 </div>
               )}
             </div>

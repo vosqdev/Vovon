@@ -11,7 +11,6 @@ import About from './components/About';
 import VovonStory from './components/VovonStory';
 import Stats from './components/Stats';
 import Process from './components/Process';
-import ImageDivider from './components/ImageDivider';
 import Services from './components/Services';
 import AIData from './components/AIData';
 import News from './components/News';
@@ -51,7 +50,6 @@ function HomePage({ language }: { language: Language }) {
       <VovonStory language={language} />
       <Stats language={language} />
       <Process language={language} />
-      <ImageDivider />
       <Services language={language} />
       <AIData language={language} />
       <News language={language} />

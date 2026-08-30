@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Compass, Globe, Zap, Cpu, Battery, Users, Clock, CheckCircle2, Building2, ShieldAlert, FileText, ArrowRight, Scale, ListOrdered, AlertTriangle } from 'lucide-react';
+import { X, Compass, Globe, Zap, Cpu, Battery, Users, Clock, CheckCircle2, Building2, ShieldAlert, FileText, ArrowRight, Scale, ListOrdered, AlertTriangle, Calendar, ExternalLink, Info, CheckCircle, AlertCircle, Sparkles } from 'lucide-react';
 
 interface NewsModalProps {
   isOpen: boolean;
@@ -63,7 +63,349 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                   {item.title}
                 </h2>
 
-                {item.id === '11' ? (
+                {item.id === '12' ? (
+                  <div className="space-y-12 text-slate-700">
+                    
+                    {/* Header Badges & Source info */}
+                    <div className="flex flex-wrap items-center justify-between gap-3 p-4 bg-amber-50/80 border border-amber-200/80 rounded-2xl">
+                      <div className="flex items-center gap-2">
+                        <FileText className="w-5 h-5 text-amber-700 shrink-0" />
+                        <span className="text-xs font-bold uppercase tracking-wider text-amber-900">
+                          Onderdeel van Netcongestie — Werkwijze Eerder Aanvragen
+                        </span>
+                      </div>
+                      <a 
+                        href="https://vng.nl" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-vovon-700 hover:text-vovon-800 bg-white px-3 py-1.5 rounded-xl border border-amber-200 shadow-2xs hover:shadow-xs transition-all"
+                      >
+                        <span>Bron: VNG.nl</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+
+                    {/* Executive Summary Lead Callout */}
+                    <div className="p-6 bg-gradient-to-r from-slate-900 via-slate-950 to-slate-900 text-white rounded-2xl shadow-xl space-y-4">
+                      <div className="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-widest">
+                        <Zap className="w-4 h-4 fill-amber-400" />
+                        <span>Kerninzicht & Tijdsblokken</span>
+                      </div>
+                      <p className="text-sm sm:text-base leading-relaxed text-slate-200 font-medium">
+                        De werkwijze <strong>Eerder Aanvragen</strong> start officieel op <strong>1 oktober 2026</strong>. Om overbelasting te voorkomen en alle gemeenten gelijke kansen te bieden, worden de aanvragen bij de start eenmalig gecoördineerd ingediend via vaste <strong>tijdsblokken</strong> op basis van het geplande startbouwjaar. Vanaf <strong>23 oktober 2026</strong> kunnen gemeenten doorlopend transportcapaciteit aanvragen.
+                      </p>
+                      <div className="pt-2 border-t border-slate-700/80 text-xs text-slate-300 font-semibold flex items-center gap-2">
+                        <Clock className="w-4 h-4 text-amber-400 shrink-0" />
+                        <span>Gefaseerd tijdpad van 1 t/m 22 oktober 2026 (startbouw t/m 2028 tot t/m 2035)</span>
+                      </div>
+                    </div>
+
+                    {/* Section 1: Hoe verloopt het indienen vanaf 1 oktober? */}
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                        <span className="p-2 bg-vovon-100 text-vovon-600 rounded-xl text-base font-extrabold">1</span>
+                        Hoe verloopt het indienen vanaf 1 oktober?
+                      </h3>
+
+                      <p className="text-sm sm:text-base leading-relaxed text-slate-600">
+                        De werkwijze <strong>Eerder Aanvragen</strong> start op <strong>1 oktober 2026</strong>. Omdat veel gemeenten tegelijkertijd aanvragen willen indienen, worden de aanvragen bij de start eenmalig gecoördineerd ingediend. Hiervoor zijn in oktober verschillende tijdsblokken afgesproken.
+                      </p>
+
+                      <p className="text-sm sm:text-base leading-relaxed text-slate-600">
+                        Het tijdsblokkenschema geldt <em>alleen voor de start</em> van Eerder Aanvragen. Eerder Aanvragen zelf is een <strong>blijvende werkwijze</strong>. Na afloop van het tijdsblokkenschema kunnen gemeenten vanaf <strong>23 oktober</strong> doorlopend transportcapaciteit aanvragen voor nieuwe projecten, zodra voldoende projectinformatie beschikbaar is.
+                      </p>
+                    </div>
+
+                    {/* Section 2: Waarom wordt gewerkt met tijdsblokken? */}
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                        <span className="p-2 bg-vovon-100 text-vovon-600 rounded-xl text-base font-extrabold">2</span>
+                        Waarom wordt gewerkt met tijdsblokken?
+                      </h3>
+
+                      <p className="text-sm sm:text-base leading-relaxed text-slate-600">
+                        De tijdsblokken zijn bedoeld om te voorkomen dat alle gemeenten hun aanvragen op exact hetzelfde moment bij de netbeheerder indienen.
+                      </p>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                          <div className="flex items-center gap-2 text-xs font-bold text-slate-900 uppercase">
+                            <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+                            <span>Vroegtijdige Realisatie</span>
+                          </div>
+                          <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                            Projecten die eerder tot uitvoering komen, kunnen eerder worden ingediend.
+                          </p>
+                        </div>
+                        <div className="p-5 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                          <div className="flex items-center gap-2 text-xs font-bold text-slate-900 uppercase">
+                            <Clock className="w-4 h-4 text-vovon-600" />
+                            <span>Lange Termijn Plannen</span>
+                          </div>
+                          <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                            Daarna volgen projecten waarvan de realisatie verder in de toekomst ligt.
+                          </p>
+                        </div>
+                      </div>
+
+                      <p className="text-sm sm:text-base leading-relaxed text-slate-600">
+                        De planning in de tijdsblokken loopt van <strong>1 tot en met 22 oktober</strong>, waarbij telkens een volgend startbouwjaar wordt toegevoegd: van projecten met start bouw tot en met 2028 op 1 oktober tot projecten met start bouw tot en met 2035 op 22 oktober.
+                      </p>
+                    </div>
+
+                    {/* Section 3: Tijdsblokkenschema Tabel */}
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between">
+                        <h4 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+                          <Calendar className="w-5 h-5 text-vovon-600" />
+                          <span>Tijdsblokkenschema Eerder Aanvragen (Oktober 2026)</span>
+                        </h4>
+                        <span className="text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
+                          Start om 09.00 uur
+                        </span>
+                      </div>
+
+                      <div className="overflow-hidden border border-slate-200 rounded-2xl shadow-xs">
+                        <div className="overflow-x-auto">
+                          <table className="w-full text-left text-xs sm:text-sm">
+                            <thead className="bg-slate-900 text-white uppercase text-[11px] tracking-wider font-bold">
+                              <tr>
+                                <th className="py-3.5 px-4 sm:px-6">Datum & Tijdstip</th>
+                                <th className="py-3.5 px-4 sm:px-6">Indienen projecten met start bouwjaar</th>
+                                <th className="py-3.5 px-4 sm:px-6">Gepland opleverjaar</th>
+                              </tr>
+                            </thead>
+                            <tbody className="divide-y divide-slate-200 bg-white">
+                              <tr className="hover:bg-slate-50 transition-colors">
+                                <td className="py-3.5 px-4 sm:px-6 font-bold text-slate-900 whitespace-nowrap">
+                                  Per 1 oktober om 09.00 uur
+                                </td>
+                                <td className="py-3.5 px-4 sm:px-6 font-semibold text-vovon-700">
+                                  Startbouw t/m 2028
+                                </td>
+                                <td className="py-3.5 px-4 sm:px-6 text-slate-600 rowspan-8" rowSpan={8}>
+                                  <div className="font-semibold text-slate-900 bg-amber-50/90 border border-amber-200/80 rounded-xl p-3 text-center sm:text-left">
+                                    <div className="text-amber-800 font-bold text-xs uppercase tracking-wide mb-1">Geldende Opleverhorizon</div>
+                                    <div className="text-slate-800 text-sm font-extrabold">Uiterlijk oplevering in 2036</div>
+                                    <p className="text-[11px] text-slate-500 mt-1 font-normal">
+                                      Voor alle tijdsblokken geldt een maximale oplevering tot en met 2036.
+                                    </p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr className="hover:bg-slate-50 transition-colors">
+                                <td className="py-3 px-4 sm:px-6 font-medium text-slate-900 whitespace-nowrap">
+                                  Per 6 oktober om 09.00 uur
+                                </td>
+                                <td className="py-3 px-4 sm:px-6 font-semibold text-slate-700">
+                                  Startbouw t/m 2029
+                                </td>
+                              </tr>
+                              <tr className="hover:bg-slate-50 transition-colors">
+                                <td className="py-3 px-4 sm:px-6 font-medium text-slate-900 whitespace-nowrap">
+                                  Per 8 oktober om 09.00 uur
+                                </td>
+                                <td className="py-3 px-4 sm:px-6 font-semibold text-slate-700">
+                                  Startbouw t/m 2030
+                                </td>
+                              </tr>
+                              <tr className="hover:bg-slate-50 transition-colors">
+                                <td className="py-3 px-4 sm:px-6 font-medium text-slate-900 whitespace-nowrap">
+                                  Per 12 oktober om 09.00 uur
+                                </td>
+                                <td className="py-3 px-4 sm:px-6 font-semibold text-slate-700">
+                                  Startbouw t/m 2031
+                                </td>
+                              </tr>
+                              <tr className="hover:bg-slate-50 transition-colors">
+                                <td className="py-3 px-4 sm:px-6 font-medium text-slate-900 whitespace-nowrap">
+                                  Per 14 oktober om 09.00 uur
+                                </td>
+                                <td className="py-3 px-4 sm:px-6 font-semibold text-slate-700">
+                                  Startbouw t/m 2032
+                                </td>
+                              </tr>
+                              <tr className="hover:bg-slate-50 transition-colors">
+                                <td className="py-3 px-4 sm:px-6 font-medium text-slate-900 whitespace-nowrap">
+                                  Per 16 oktober om 09.00 uur
+                                </td>
+                                <td className="py-3 px-4 sm:px-6 font-semibold text-slate-700">
+                                  Startbouw t/m 2033
+                                </td>
+                              </tr>
+                              <tr className="hover:bg-slate-50 transition-colors">
+                                <td className="py-3 px-4 sm:px-6 font-medium text-slate-900 whitespace-nowrap">
+                                  Per 20 oktober om 09.00 uur
+                                </td>
+                                <td className="py-3 px-4 sm:px-6 font-semibold text-slate-700">
+                                  Startbouw t/m 2034
+                                </td>
+                              </tr>
+                              <tr className="hover:bg-slate-50 transition-colors">
+                                <td className="py-3 px-4 sm:px-6 font-medium text-slate-900 whitespace-nowrap">
+                                  Per 22 oktober om 09.00 uur
+                                </td>
+                                <td className="py-3 px-4 sm:px-6 font-semibold text-slate-700">
+                                  Startbouw t/m 2035
+                                </td>
+                              </tr>
+                              <tr className="bg-emerald-50/70 hover:bg-emerald-50 transition-colors border-t-2 border-emerald-200">
+                                <td className="py-3.5 px-4 sm:px-6 font-bold text-emerald-950 whitespace-nowrap">
+                                  Per 23 oktober
+                                </td>
+                                <td className="py-3.5 px-4 sm:px-6 font-bold text-emerald-900" colSpan={2}>
+                                  Einde tijdsblokkenschema — Vanaf heden doorlopend aanvragen indienen
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Section 4: Aanvragen indienen via Mijnaansluiting.nl */}
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                        <span className="p-2 bg-vovon-100 text-vovon-600 rounded-xl text-base font-extrabold">3</span>
+                        Aanvragen indienen via Mijnaansluiting.nl
+                      </h3>
+
+                      <p className="text-sm sm:text-base leading-relaxed text-slate-600">
+                        Gemeenten dienen hun capaciteitsverzoeken in via <strong>Mijnaansluiting.nl</strong>. Hiervoor moet binnen de gemeente vooraf een gebruikersgroep zijn ingericht en moeten de juiste rechten om capaciteitsverzoeken te doen zijn toegekend.
+                      </p>
+
+                      <div className="p-5 bg-slate-50 border border-slate-200/90 rounded-2xl space-y-3">
+                        <h5 className="text-xs font-bold text-slate-900 uppercase tracking-wider">
+                          Nog niet geregeld binnen uw gemeente?
+                        </h5>
+                        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                          Bekijk de werkinstructie van Mijnaansluiting.nl voor gemeenten. Hierin leest u hoe u een zakelijk account en gebruikersgroep inricht, collega's toegang geeft en de benodigde rechten aanvraagt.
+                        </p>
+                      </div>
+
+                      {/* Important Warning Callout */}
+                      <div className="p-5 bg-amber-500/10 border-l-4 border-amber-500 rounded-r-2xl space-y-1">
+                        <div className="flex items-center gap-2 text-amber-900 font-extrabold text-sm">
+                          <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+                          <span>Let op: Handel vóór 1 oktober!</span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-amber-950 font-medium leading-relaxed">
+                          Regel de inrichting van het zakelijk account en de gebruikersgroep ruim vóór 1 oktober, zodat uw gemeente vanaf het juiste tijdsblok direct aanvragen kan indienen zonder vertraging.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Section 5: Wat gebeurt er na indiening? */}
+                    <div className="space-y-4">
+                      <h3 className="text-2xl font-bold text-slate-900 flex items-center gap-3">
+                        <span className="p-2 bg-vovon-100 text-vovon-600 rounded-xl text-base font-extrabold">4</span>
+                        Wat gebeurt er na indiening?
+                      </h3>
+
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-3 p-4 bg-slate-50 border border-slate-200 rounded-2xl">
+                          <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                            A
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-slate-900 mb-1">Compleetheidscontrole</h5>
+                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                              De netbeheerder controleert als eerste stap of de ingediende aanvraag inhoudelijk en administratief compleet is.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3 p-4 bg-slate-50 border border-slate-200 rounded-2xl">
+                          <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                            B
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-slate-900 mb-1">Plaatsing op de wachtlijst</h5>
+                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                              Een complete aanvraag voor transportcapaciteit kan vervolgens op de formele wachtlijst van de netbeheerder worden geplaatst.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3 p-4 bg-purple-50/80 border border-purple-200 rounded-2xl">
+                          <div className="w-6 h-6 rounded-full bg-purple-200 text-purple-900 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                            C
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-purple-950 mb-1">Toetsing Maatschappelijke Prioriteit & Bewijslast</h5>
+                            <p className="text-xs sm:text-sm text-purple-900 leading-relaxed">
+                              Wanneer voor het project ook maatschappelijke prioriteit wordt aangevraagd, beoordeelt de netbeheerder daarnaast of aan de daarvoor geldende wettelijke voorwaarden en strenge bewijslast wordt voldaan.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3 p-4 bg-slate-50 border border-slate-200 rounded-2xl">
+                          <div className="w-6 h-6 rounded-full bg-slate-200 text-slate-800 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                            D
+                          </div>
+                          <div>
+                            <h5 className="text-sm font-bold text-slate-900 mb-1">Capaciteitsverdeling conform Prioriteringskader</h5>
+                            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                              Zodra er transportcapaciteit beschikbaar komt, verdeelt de netbeheerder deze volgens de geldende regels en de positie van aanvragen op de wachtlijst. Het prioriteringskader bepaalt daarbij welke aanvragen voorrang kunnen krijgen.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Section 6: Let op: Eerder Aanvragen is geen garantie */}
+                    <div className="p-6 bg-red-50 border border-red-200 rounded-2xl space-y-3">
+                      <div className="flex items-center gap-2 text-red-700 font-extrabold text-sm uppercase tracking-wide">
+                        <AlertTriangle className="w-5 h-5 text-red-600 shrink-0" />
+                        <span>Cruciaal Uitgangspunt: Eerder Aanvragen is geen garantie op transportcapaciteit</span>
+                      </div>
+                      <p className="text-xs sm:text-sm text-red-950 leading-relaxed font-medium">
+                        Ook met een tijdige en complete aanvraag is <strong>niet gegarandeerd</strong> dat het project op de gewenste datum transportcapaciteit krijgt. Hoeveel capaciteit beschikbaar is en wanneer uitbreiding van het elektriciteitsnet gereed is, verschilt sterk per regio en per station.
+                      </p>
+                    </div>
+
+                    {/* Section 7: Hoe VOVON helpt */}
+                    <div className="p-6 bg-slate-900 text-white rounded-2xl shadow-xl space-y-4">
+                      <div className="flex items-center gap-2 text-vovon-400 font-bold text-xs uppercase tracking-widest">
+                        <Building2 className="w-4 h-4 text-vovon-400" />
+                        <span>Klaar om aanvragen voor te bereiden?</span>
+                      </div>
+                      <h4 className="text-lg sm:text-xl font-extrabold text-white">
+                        Ondersteuning voor gemeenten en ontwikkelpartners door VOVON Development
+                      </h4>
+                      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        VOVON Development ondersteunt gemeenten en marktpartijen bij het tijdig gereedmaken van complete projectdossiers, prioriteringstoetsen, netbewuste quickscans en lokale flexibiliteitsconcepten. Zo zorgt u dat uw aanvragen niet stranden op ontbrekende bewijslast of vormfouten.
+                      </p>
+                      <div className="pt-2 flex flex-wrap items-center gap-3">
+                        <a
+                          href="#contact"
+                          onClick={onClose}
+                          className="inline-flex items-center gap-2 px-5 py-2.5 bg-vovon-600 hover:bg-vovon-700 text-white rounded-xl text-xs font-bold shadow-md transition-all cursor-pointer"
+                        >
+                          <span>Neem contact op voor projectbegeleiding</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
+                    </div>
+
+                    {/* Source citation footer */}
+                    <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-500">
+                      <div>
+                        <strong>Bronvermelding:</strong> VNG (Vereniging van Nederlandse Gemeenten) — <em>Onderdeel van Netcongestie & Werkwijze Eerder Aanvragen</em>.
+                      </div>
+                      <a 
+                        href="https://vng.nl" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-vovon-600 hover:text-vovon-700 font-bold underline"
+                      >
+                        <span>vng.nl raadplegen</span>
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+
+                  </div>
+                ) : item.id === '11' ? (
                   <div className="space-y-12 text-slate-700">
                     
                     {/* Subtitle / Header Badge */}

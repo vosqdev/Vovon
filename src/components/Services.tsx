@@ -225,26 +225,47 @@ const Services = ({ language }: ServicesProps) => {
       : null;
 
   return (
-    <section id="services" className="py-24 sm:py-32 bg-[#faf9f6] border-y border-slate-200/60 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Editorial Section Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <span className="w-5 h-px bg-vovon-600"></span>
-            <span className="text-vovon-600 font-bold uppercase tracking-widest text-xs">
-              {t.label}
-            </span>
-          </div>
-          
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-5">
-            {t.title}
-          </h2>
-          
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            {t.subtitle}
-          </p>
+    <section id="services" className="relative bg-[#faf9f6] border-y border-slate-200/60 overflow-hidden">
+      {/* Background Billboard Hero Banner (Image 2 as background for text from Image 1) */}
+      <div className="relative overflow-hidden bg-slate-950 py-20 sm:py-28 lg:py-32 border-b border-slate-800">
+        {/* Background Image with Dark Vignette & Color Grading */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://image2url.com/r2/default/images/1773505071715-7820ce8f-6c91-490c-a7e1-44ea94120ce3.png"
+            alt="VOVON Billboard - Onze Diensten"
+            className="w-full h-full object-cover object-center scale-102"
+          />
+          {/* Subtle Gradient Overlay for Balanced Visibility and Legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/45 to-slate-950/20" />
+          <div className="absolute inset-0 bg-slate-950/25" />
         </div>
 
+        {/* Text Content Overlay (from Image 1) */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            {/* Small Category Eyebrow with Line */}
+            <div className="inline-flex items-center gap-2.5 mb-4 sm:mb-5">
+              <span className="w-6 h-0.5 bg-vovon-400"></span>
+              <span className="text-vovon-400 font-bold uppercase tracking-widest text-xs sm:text-sm drop-shadow-sm">
+                {t.label}
+              </span>
+            </div>
+
+            {/* Headline */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white tracking-tight leading-[1.12] mb-5 sm:mb-6 drop-shadow-md">
+              {t.title}
+            </h2>
+
+            {/* Subtitle */}
+            <p className="text-base sm:text-lg lg:text-xl text-slate-100 leading-relaxed font-normal max-w-2xl drop-shadow-sm">
+              {t.subtitle}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Grid Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Editorial Grid: 3 columns x 2 rows with fine architectural divider lines */}
         <div className="bg-white border border-slate-200/90 rounded-2xl shadow-xs overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x lg:divide-x divide-slate-200/80">
