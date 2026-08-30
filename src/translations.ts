@@ -117,14 +117,17 @@ export const translations = {
       }
     },
     news: {
-      title: 'Be further inspired',
+      label: 'KNOWLEDGE & INSIGHTS',
+      title: 'What drives us.',
+      subtitle: 'Developments, insights, and ideas at the intersection of real estate, area development, and energy.',
       filters: {
         all: 'All',
         news: 'News',
-        article: 'Article',
-        insight: 'Insight'
+        article: 'Articles',
+        insight: 'Insights'
       },
       readMore: 'Read more',
+      readArticle: 'Read full story',
     },
     references: {
       label: 'References',
@@ -289,14 +292,17 @@ export const translations = {
       }
     },
     news: {
-      title: 'Laat je verder inspireren',
+      label: 'KENNIS & INZICHT',
+      title: 'Wat ons bezighoudt.',
+      subtitle: 'Ontwikkelingen, inzichten en ideeën op het snijvlak van vastgoed, gebied en energie.',
       filters: {
         all: 'Alles',
         news: 'Nieuws',
-        article: 'Artikel',
-        insight: 'Insight'
+        article: 'Artikelen',
+        insight: 'Insights'
       },
       readMore: 'Lees meer',
+      readArticle: 'Lees volledig artikel',
     },
     references: {
       label: 'Referenties',
