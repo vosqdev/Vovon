@@ -29,14 +29,66 @@
   }
 }
 
-/* Custom Leaflet Popup Styling */
+/* Premium Leaflet Popup & Map Styling */
+.vovon-subdued-map .leaflet-tile-pane {
+  filter: saturate(0.45) brightness(1.02) contrast(0.98);
+  transition: filter 0.3s ease;
+}
+
+.vovon-subdued-map.satellite-mode .leaflet-tile-pane {
+  filter: none;
+}
+
 .vovon-popup .leaflet-popup-content-wrapper {
-  border-radius: 0.75rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 0 !important;
+  border-radius: 22px !important;
+  box-shadow: 0 20px 35px -8px rgba(15, 23, 42, 0.2), 0 8px 16px -4px rgba(15, 23, 42, 0.08) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  background: #ffffff !important;
+  overflow: hidden !important;
 }
 
 .vovon-popup .leaflet-popup-content {
-  margin: 16px;
+  margin: 0 !important;
+  line-height: normal !important;
+  width: auto !important;
+}
+
+.vovon-popup .leaflet-popup-tip-container {
+  margin-top: -1px;
+}
+
+.vovon-popup .leaflet-popup-tip {
+  background: #ffffff !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.vovon-popup .leaflet-popup-close-button {
+  top: 14px !important;
+  right: 14px !important;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 9999px !important;
+  background: rgba(241, 245, 249, 0.8) !important;
+  color: #64748b !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  transition: all 0.2s ease !important;
+  z-index: 20 !important;
+}
+
+.vovon-popup .leaflet-popup-close-button:hover {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* Custom Marker Container Reset */
+.vovon-custom-marker-icon {
+  background: transparent !important;
+  border: none !important;
 }
 
 /* Markdown Styling */
