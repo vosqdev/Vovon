@@ -4,6 +4,7 @@ import { MapPin, Home, Briefcase, Landmark, Zap } from 'lucide-react';
 import { Language, translations } from '../translations';
 import ProjectMap from './ProjectMap';
 import CategoryProjectsModal from './CategoryProjectsModal';
+import PartnerTicker from './PartnerTicker';
 
 interface ReferencesProps {
   language: Language;
@@ -114,6 +115,9 @@ const References = ({ language }: ReferencesProps) => {
           
           <ProjectMap selectedProject={selectedProject} language={language} />
         </div>
+
+        {/* Dual-Direction Continuous Partner Strip */}
+        <PartnerTicker language={language} />
       </div>
 
       {selectedCategory && (

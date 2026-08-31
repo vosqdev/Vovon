@@ -142,11 +142,11 @@ const VovonStory = ({ language }: VovonStoryProps) => {
                 </a>
 
                 <a
-                  href="tel:+31653844888"
+                  href="tel:+31611692001"
                   className="inline-flex items-center gap-2 px-4 py-3 text-sm font-medium text-slate-700 hover:text-vovon-600 border border-slate-300 hover:border-vovon-300 bg-white rounded-lg transition-colors"
                 >
                   <Phone className="w-4 h-4 text-vovon-600" />
-                  <span>+31 (0)6 53 84 48 88</span>
+                  <span>+31 (0)6 116 92 001</span>
                 </a>
               </div>
             </div>

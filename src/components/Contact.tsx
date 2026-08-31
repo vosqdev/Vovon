@@ -71,7 +71,7 @@ const Contact = ({ language }: ContactProps) => {
                 <div>
                   <h3 className="text-lg font-semibold text-slate-900">{t.info.phone}</h3>
                   <a href="tel:+31611692001" className="text-slate-600 hover:text-vovon-600 transition-colors">
-                    +31 6 116 92 001
+                    +31 (0)6 116 92 001
                   </a>
                 </div>
               </div>
