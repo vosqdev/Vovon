@@ -24,8 +24,13 @@ const Process = ({ language }: ProcessProps) => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">{t.title}</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-vovon-100/80 border border-vovon-200 text-vovon-700 text-xs font-bold uppercase tracking-widest mb-4">
+            {t.label}
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+            {t.title}
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
             {t.subtitle}
           </p>
         </motion.div>

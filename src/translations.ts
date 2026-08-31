@@ -67,7 +67,8 @@ export const translations = {
       objects: 'Real Estate Objects',
     },
     process: {
-      title: 'Our Working Method',
+      label: 'OUR METHODOLOGY',
+      title: 'No real estate without energy, no area without vision.',
       subtitle: 'A structured approach from initial idea to successful operation.',
       steps: [
         { title: 'Idea', description: 'Initial concept and feasibility' },
@@ -242,7 +243,8 @@ export const translations = {
       objects: 'Vastgoed Objecten',
     },
     process: {
-      title: 'Onze Werkwijze',
+      label: 'ONZE WERKWIJZE',
+      title: 'Zonder energie geen vastgoed, zonder visie geen gebied.',
       subtitle: 'Een gestructureerde aanpak van idee tot succesvolle exploitatie.',
       steps: [
         { title: 'Idee', description: 'Initieel concept en haalbaarheid' },
