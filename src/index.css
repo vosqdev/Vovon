@@ -138,13 +138,13 @@
 .animate-marquee-left {
   display: flex;
   width: max-content;
-  animation: marquee-to-left 45s linear infinite;
+  animation: marquee-to-left 80s linear infinite;
   will-change: transform;
 }
 
 .animate-marquee-right {
   display: flex;
   width: max-content;
-  animation: marquee-to-right 45s linear infinite;
+  animation: marquee-to-right 80s linear infinite;
   will-change: transform;
 }
