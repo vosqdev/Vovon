@@ -231,8 +231,8 @@ const Services = ({ language }: ServicesProps) => {
         {/* Background Image with Dark Vignette & Color Grading */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://image2url.com/r2/default/images/1773505071715-7820ce8f-6c91-490c-a7e1-44ea94120ce3.png"
-            alt="VOVON Billboard - Onze Diensten"
+            src="https://www.image2url.com/r2/default/images/1788463202989-92b16808-dc29-4225-8d51-61c6ca688e6b.png"
+            alt="VOVON - Onze Diensten"
             className="w-full h-full object-cover object-center scale-102"
           />
           {/* Subtle Gradient Overlay for Balanced Visibility and Legibility */}

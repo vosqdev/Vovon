@@ -6,7 +6,7 @@ const ImageDivider = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://image2url.com/r2/default/images/1773505071715-7820ce8f-6c91-490c-a7e1-44ea94120ce3.png"
+          src="https://www.image2url.com/r2/default/images/1788463202989-92b16808-dc29-4225-8d51-61c6ca688e6b.png"
           alt="VOVON Projects"
           className="w-full h-full object-cover"
         />

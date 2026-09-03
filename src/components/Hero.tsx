@@ -14,8 +14,8 @@ const Hero = ({ language }: HeroProps) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://image2url.com/r2/default/images/1773423835376-e9d86027-8602-4ed3-af9f-708981dab43d.png"
-          alt="Modern Architecture"
+          src="https://www.image2url.com/r2/default/images/1788462929588-422d2608-f0f8-482e-a4b1-6a30e4298b99.png"
+          alt="VOVON Duurzaam Vastgoed & Energietransitie"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-slate-900/50 mix-blend-multiply" />
