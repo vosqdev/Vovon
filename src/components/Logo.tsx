@@ -1,20 +1,18 @@
 export const Logo = ({ className = "", variant = "light" }: { className?: string, variant?: 'light' | 'dark' }) => {
-  const imgSrc = variant === 'dark' 
-    ? "https://image2url.com/r2/default/images/1773421788209-50b1f125-1292-4c2a-9751-f63b3d357d58.png"
-    : "https://image2url.com/r2/default/images/1773421654866-3632d637-ba69-4ef0-bea2-a6cd7b2917e6.png";
+  const imgSrc = "https://www.image2url.com/r2/default/images/1788460686529-96bb1987-5a9d-405b-b3a0-87525d513e6f.png";
 
   return (
     <div className={`flex items-center ${className}`}>
       <img 
         src={imgSrc} 
         alt="VOVON Logo" 
-        className="h-full w-auto object-contain"
-      onError={(e) => {
-        e.currentTarget.style.display = 'none';
-        const fallback = e.currentTarget.nextElementSibling as HTMLElement;
-        if (fallback) fallback.style.display = 'block';
-      }}
-    />
+        className={`h-full w-auto object-contain ${variant === 'light' ? 'filter drop-shadow-[0_1px_4px_rgba(255,255,255,0.7)]' : ''}`}
+        onError={(e) => {
+          e.currentTarget.style.display = 'none';
+          const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+          if (fallback) fallback.style.display = 'block';
+        }}
+      />
     <svg 
       viewBox="0 0 400 100" 
       className="h-full w-auto" 

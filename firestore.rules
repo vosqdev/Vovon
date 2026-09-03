@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Media collection for Central Media Library
+    match /media/{mediaId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Dynamic news and custom projects
+    match /news/{newsId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    match /projects/{projectId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}

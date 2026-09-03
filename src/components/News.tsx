@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ArrowUpRight, Clock, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Clock, Sparkles, Plus, X, UploadCloud, FileText } from 'lucide-react';
+import { collection, getDocs, setDoc, doc, query, orderBy } from 'firebase/firestore';
+import { db } from '../lib/firebase';
 import { Language, translations } from '../translations';
 import NewsModal from './NewsModal';
+import ImageUploader from './media/ImageUploader';
+import ResponsiveImage from './media/ResponsiveImage';
 
 interface NewsProps {
   language: Language;
@@ -16,6 +20,9 @@ interface NewsItem {
   date: string;
   title: string;
   image: string;
+  thumbnailUrl?: string;
+  mediumUrl?: string;
+  fullUrl?: string;
   featured?: boolean;
   content?: string[];
   readTime?: string;
@@ -178,6 +185,98 @@ const News = ({ language }: NewsProps) => {
   const t = translations[language].news;
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
   const [selectedItem, setSelectedItem] = useState<NewsItem | null>(null);
+  const [items, setItems] = useState<NewsItem[]>(dummyItems);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+
+  // New Article Form State
+  const [newTitle, setNewTitle] = useState('');
+  const [newType, setNewType] = useState<'news' | 'article' | 'insight'>('article');
+  const [newReadTime, setNewReadTime] = useState('4 min leestijd');
+  const [newDate, setNewDate] = useState(
+    new Date().toLocaleDateString('nl-NL', { day: 'numeric', month: 'long', year: 'numeric' })
+  );
+  const [newLead, setNewLead] = useState('');
+  const [newContent, setNewContent] = useState('');
+  const [uploadedImage, setUploadedImage] = useState<{
+    url: string;
+    thumbnailUrl?: string;
+    mediumUrl?: string;
+    fullUrl?: string;
+  } | null>(null);
+  const [isSavingArticle, setIsSavingArticle] = useState(false);
+
+  // Load any newly added articles from Firestore
+  useEffect(() => {
+    const fetchArticles = async () => {
+      try {
+        const q = query(collection(db, 'news'), orderBy('date', 'desc'));
+        const snap = await getDocs(q);
+        if (!snap.empty) {
+          const fetched: NewsItem[] = [];
+          snap.forEach((docSnap) => {
+            fetched.push({ id: docSnap.id, ...docSnap.data() } as NewsItem);
+          });
+          // Merge avoiding duplicates
+          setItems((prev) => {
+            const existingIds = new Set(fetched.map((f) => f.id));
+            const filteredPrev = prev.filter((p) => !existingIds.has(p.id));
+            return [...fetched, ...filteredPrev];
+          });
+        }
+      } catch (err) {
+        console.warn('Could not load extra news from firestore:', err);
+      }
+    };
+    fetchArticles();
+  }, []);
+
+  const handleSaveArticle = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newTitle.trim() || !uploadedImage?.url) {
+      alert('Vul a.u.b. minimaal een titel in en upload een afbeelding.');
+      return;
+    }
+
+    setIsSavingArticle(true);
+    const newId = `news-${Date.now()}`;
+    const paragraphs = newContent
+      .split('\n\n')
+      .map((p) => p.trim())
+      .filter(Boolean);
+
+    const articleItem: NewsItem = {
+      id: newId,
+      type: newType,
+      date: newDate,
+      readTime: newReadTime,
+      title: newTitle.trim(),
+      image: uploadedImage.fullUrl || uploadedImage.url,
+      thumbnailUrl: uploadedImage.thumbnailUrl,
+      mediumUrl: uploadedImage.mediumUrl,
+      fullUrl: uploadedImage.fullUrl,
+      featured: true,
+      lead: newLead.trim(),
+      content: paragraphs.length > 0 ? paragraphs : [newLead.trim()]
+    };
+
+    try {
+      await setDoc(doc(db, 'news', newId), articleItem);
+      setItems((prev) => [articleItem, ...prev]);
+      setIsAddModalOpen(false);
+      // Reset form
+      setNewTitle('');
+      setNewLead('');
+      setNewContent('');
+      setUploadedImage(null);
+    } catch (err) {
+      console.error('Error saving news article:', err);
+      // Still add locally
+      setItems((prev) => [articleItem, ...prev]);
+      setIsAddModalOpen(false);
+    } finally {
+      setIsSavingArticle(false);
+    }
+  };
 
   const filterOptions: { id: FilterType; label: string }[] = [
     { id: 'all', label: t.filters.all },
@@ -187,8 +286,8 @@ const News = ({ language }: NewsProps) => {
   ];
 
   const filteredItems = activeFilter === 'all'
-    ? dummyItems
-    : dummyItems.filter(item => item.type === activeFilter);
+    ? items
+    : items.filter(item => item.type === activeFilter);
 
   const featuredItem = filteredItems.length > 0 ? filteredItems[0] : null;
   const leftSubItems = filteredItems.length > 1 ? filteredItems.slice(1, 3) : [];
@@ -217,35 +316,37 @@ const News = ({ language }: NewsProps) => {
             </p>
           </div>
 
-          {/* Minimalist Editorial Navigation Tabs: Alles · Nieuws · Artikelen · Insights */}
-          <nav 
-            className="flex items-center gap-6 sm:gap-8 overflow-x-auto pb-1 text-sm font-medium shrink-0 scrollbar-none"
-            aria-label="Filter categorieën"
-          >
-            {filterOptions.map((filter) => {
-              const isActive = activeFilter === filter.id;
-              return (
-                <button
-                  key={filter.id}
-                  onClick={() => setActiveFilter(filter.id)}
-                  className={`group relative pb-2 transition-colors duration-200 text-sm whitespace-nowrap cursor-pointer ${
-                    isActive
-                      ? 'text-slate-950 font-bold'
-                      : 'text-slate-500 hover:text-slate-900 font-medium'
-                  }`}
-                >
-                  <span>{filter.label}</span>
-                  {isActive && (
-                    <motion.span
-                      layoutId="activeNewsFilterUnderline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-vovon-600 rounded-full"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                </button>
-              );
-            })}
-          </nav>
+          <div className="flex items-center gap-3 flex-wrap">
+            {/* Minimalist Editorial Navigation Tabs: Alles · Nieuws · Artikelen · Insights */}
+            <nav 
+              className="flex items-center gap-6 sm:gap-8 overflow-x-auto pb-1 text-sm font-medium shrink-0 scrollbar-none"
+              aria-label="Filter categorieën"
+            >
+              {filterOptions.map((filter) => {
+                const isActive = activeFilter === filter.id;
+                return (
+                  <button
+                    key={filter.id}
+                    onClick={() => setActiveFilter(filter.id)}
+                    className={`group relative pb-2 transition-colors duration-200 text-sm whitespace-nowrap cursor-pointer ${
+                      isActive
+                        ? 'text-slate-950 font-bold'
+                        : 'text-slate-500 hover:text-slate-900 font-medium'
+                    }`}
+                  >
+                    <span>{filter.label}</span>
+                    {isActive && (
+                      <motion.span
+                        layoutId="activeNewsFilterUnderline"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-vovon-600 rounded-full"
+                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                  </button>
+                );
+              })}
+            </nav>
+          </div>
         </div>
 
         {/* Editorial Architecture Layout: Left Heroic Story + Right Clean List */}
@@ -268,8 +369,11 @@ const News = ({ language }: NewsProps) => {
                 >
                   {/* Visual Imagery */}
                   <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
-                    <img
-                      src={featuredItem.image}
+                    <ResponsiveImage
+                      src={featuredItem.mediumUrl || featuredItem.image}
+                      thumbnailUrl={featuredItem.thumbnailUrl}
+                      mediumUrl={featuredItem.mediumUrl}
+                      fullUrl={featuredItem.fullUrl || featuredItem.image}
                       alt={featuredItem.title}
                       className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
                     />
@@ -282,7 +386,7 @@ const News = ({ language }: NewsProps) => {
                       {/* Meta: Category · Date · ReadTime */}
                       <div className="flex items-center gap-2.5 text-xs text-slate-500 font-medium mb-3.5">
                         <span className="font-bold tracking-wider uppercase text-slate-900 text-[11px]">
-                          {categoryConfig[featuredItem.type][language]}
+                          {categoryConfig[featuredItem.type]?.[language] || featuredItem.type}
                         </span>
                         <span className="text-slate-300">/</span>
                         <span>{featuredItem.date}</span>
@@ -326,8 +430,11 @@ const News = ({ language }: NewsProps) => {
                       >
                         {/* Sub-Article Thumbnail */}
                         <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
-                          <img
-                            src={subItem.image}
+                          <ResponsiveImage
+                            src={subItem.thumbnailUrl || subItem.image}
+                            thumbnailUrl={subItem.thumbnailUrl}
+                            mediumUrl={subItem.mediumUrl}
+                            fullUrl={subItem.fullUrl || subItem.image}
                             alt={subItem.title}
                             className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                           />
@@ -339,7 +446,7 @@ const News = ({ language }: NewsProps) => {
                           <div>
                             <div className="flex items-center gap-2 text-[11px] text-slate-500 font-medium mb-2.5">
                               <span className="font-bold tracking-wider uppercase text-slate-900 text-[10px]">
-                                {categoryConfig[subItem.type][language]}
+                                {categoryConfig[subItem.type]?.[language] || subItem.type}
                               </span>
                               <span className="text-slate-300">/</span>
                               <span>{subItem.date}</span>
@@ -392,7 +499,7 @@ const News = ({ language }: NewsProps) => {
                   <div className="flex-1 order-2 sm:order-1 min-w-0">
                     <div className="flex items-center gap-2 text-xs text-slate-500 font-medium mb-1.5">
                       <span className="font-bold tracking-wider uppercase text-slate-900 text-[10px]">
-                        {categoryConfig[item.type][language]}
+                        {categoryConfig[item.type]?.[language] || item.type}
                       </span>
                       <span className="text-slate-300">/</span>
                       <span>{item.date}</span>
@@ -416,8 +523,11 @@ const News = ({ language }: NewsProps) => {
 
                   {/* High Quality Photography Thumbnail */}
                   <div className="w-full sm:w-28 md:w-32 lg:w-28 xl:w-32 h-28 sm:h-22 shrink-0 rounded-xl overflow-hidden bg-slate-100 border border-slate-200/80 order-1 sm:order-2">
-                    <img
-                      src={item.image}
+                    <ResponsiveImage
+                      src={item.thumbnailUrl || item.image}
+                      thumbnailUrl={item.thumbnailUrl}
+                      mediumUrl={item.mediumUrl}
+                      fullUrl={item.fullUrl || item.image}
                       alt={item.title}
                       className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                     />
@@ -438,13 +548,167 @@ const News = ({ language }: NewsProps) => {
 
       </div>
 
+      {/* Add New Article Modal using ImageUploader */}
+      {isAddModalOpen && (
+        <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm overflow-y-auto">
+          <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl p-6 sm:p-8 my-8 border border-slate-200">
+            <div className="flex items-center justify-between border-b border-slate-100 pb-4 mb-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-vovon-50 text-vovon-600 flex items-center justify-center">
+                  <FileText className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900">
+                    {language === 'nl' ? 'Nieuw Artikel Toevoegen' : 'Add New Article'}
+                  </h3>
+                  <p className="text-xs text-slate-500">
+                    {language === 'nl'
+                      ? 'Met centrale WebP upload en Media Library koppeling'
+                      : 'With central WebP upload & Media Library integration'}
+                  </p>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setIsAddModalOpen(false)}
+                className="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveArticle} className="space-y-4 text-xs sm:text-sm">
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Titel *
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={newTitle}
+                  onChange={(e) => setNewTitle(e.target.value)}
+                  placeholder="bijv. Strategische Netcongestie Oplossingen voor 2027"
+                  className="w-full px-3.5 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-vovon-500"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                    Type
+                  </label>
+                  <select
+                    value={newType}
+                    onChange={(e) => setNewType(e.target.value as any)}
+                    className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none"
+                  >
+                    <option value="article">Artikel</option>
+                    <option value="news">Nieuws</option>
+                    <option value="insight">Insight</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                    Datum
+                  </label>
+                  <input
+                    type="text"
+                    value={newDate}
+                    onChange={(e) => setNewDate(e.target.value)}
+                    className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">
+                    Leestijd
+                  </label>
+                  <input
+                    type="text"
+                    value={newReadTime}
+                    onChange={(e) => setNewReadTime(e.target.value)}
+                    className="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none"
+                  />
+                </div>
+              </div>
+
+              {/* Reusable ImageUploader Integration */}
+              <div className="pt-2">
+                <ImageUploader
+                  label="Hoofdafbeelding van artikel *"
+                  sublabel="Sleep bestand, plak met Ctrl+V, blader of kies uit Media Library. Automatisch WebP & max 2 MB."
+                  defaultCategory="Nieuws"
+                  aspectRatio="16/9"
+                  onChange={(res) => {
+                    setUploadedImage({
+                      url: res.url,
+                      thumbnailUrl: res.thumbnailUrl,
+                      mediumUrl: res.mediumUrl,
+                      fullUrl: res.fullUrl
+                    });
+                  }}
+                  onRemove={() => setUploadedImage(null)}
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Introductie / Lead *
+                </label>
+                <textarea
+                  rows={2}
+                  required
+                  value={newLead}
+                  onChange={(e) => setNewLead(e.target.value)}
+                  placeholder="Korte samenvatting van de publicatie..."
+                  className="w-full px-3.5 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-vovon-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 mb-1">
+                  Volledige tekst (alinea's gescheiden door dubbele Enter)
+                </label>
+                <textarea
+                  rows={4}
+                  value={newContent}
+                  onChange={(e) => setNewContent(e.target.value)}
+                  placeholder="Schrijf hier de volledige inhoud van het artikel..."
+                  className="w-full px-3.5 py-2 text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:outline-none focus:border-vovon-500"
+                />
+              </div>
+
+              <div className="flex items-center justify-end gap-3 pt-3 border-t border-slate-100">
+                <button
+                  type="button"
+                  onClick={() => setIsAddModalOpen(false)}
+                  className="px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100 rounded-xl"
+                >
+                  Annuleren
+                </button>
+                <button
+                  type="submit"
+                  disabled={isSavingArticle || !uploadedImage?.url}
+                  className="px-6 py-2 bg-vovon-600 hover:bg-vovon-700 text-white font-bold text-xs rounded-xl shadow-xs disabled:opacity-50 flex items-center gap-2"
+                >
+                  <Plus className="w-4 h-4" />
+                  <span>{isSavingArticle ? 'Opslaan...' : 'Artikel Publiceren'}</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
       {/* Full Content Modal */}
       <NewsModal
         isOpen={selectedItem !== null}
         onClose={() => setSelectedItem(null)}
         item={selectedItem ? {
           ...selectedItem,
-          type: categoryConfig[selectedItem.type][language]
+          type: categoryConfig[selectedItem.type]?.[language] || selectedItem.type
         } : null}
       />
     </section>

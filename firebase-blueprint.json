@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/master/schema/firestore-blueprint.json",
+  "entities": {
+    "media": {
+      "title": "Media Item",
+      "description": "Metadata for central media library items with 3 optimized image variants (thumbnail, medium, full) stored in Firebase Cloud Storage.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "filename": { "type": "string" },
+        "storagePath": { "type": "string" },
+        "url": { "type": "string" },
+        "thumbnailUrl": { "type": "string" },
+        "mediumUrl": { "type": "string" },
+        "fullUrl": { "type": "string" },
+        "altText": { "type": "string" },
+        "title": { "type": "string" },
+        "projectId": { "type": "string" },
+        "category": { "type": "string", "enum": ["Project", "Gebied", "Nieuws", "Impressie", "Kaart", "Logo", "Overig"] },
+        "uploadedBy": { "type": "string" },
+        "uploadedAt": { "type": "string" },
+        "width": { "type": "number" },
+        "height": { "type": "number" },
+        "thumbnailWidth": { "type": "number" },
+        "thumbnailHeight": { "type": "number" },
+        "mediumWidth": { "type": "number" },
+        "mediumHeight": { "type": "number" },
+        "fullWidth": { "type": "number" },
+        "fullHeight": { "type": "number" },
+        "originalFileSize": { "type": "number" },
+        "optimizedFileSize": { "type": "number" },
+        "thumbnailFileSize": { "type": "number" },
+        "mediumFileSize": { "type": "number" },
+        "fullFileSize": { "type": "number" },
+        "mimeType": { "type": "string" }
+      },
+      "required": ["id", "filename", "url", "thumbnailUrl", "mediumUrl", "fullUrl", "category", "uploadedAt"]
+    }
+  }
+}

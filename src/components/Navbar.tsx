@@ -15,7 +15,9 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
   const [scrolled, setScrolled] = useState(false);
   const t = translations[language].nav;
   const location = useLocation();
-  const isNavPage = location.pathname === '/faq';
+  const isNavPage = 
+    location.pathname === '/faq' || 
+    location.pathname === '/cv';
 
   useEffect(() => {
     const handleScroll = () => {
