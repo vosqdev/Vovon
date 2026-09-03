@@ -1,12 +1,15 @@
 export const Logo = ({ className = "", variant = "light" }: { className?: string, variant?: 'light' | 'dark' }) => {
-  const imgSrc = "https://www.image2url.com/r2/default/images/1788460686529-96bb1987-5a9d-405b-b3a0-87525d513e6f.png";
+  const imgSrc = variant === 'dark' 
+    ? "https://www.image2url.com/r2/default/images/1788461365042-bab7b764-ee46-4144-b522-9a0ef45bbbda.png"
+    : "https://www.image2url.com/r2/default/images/1788460686529-96bb1987-5a9d-405b-b3a0-87525d513e6f.png";
 
   return (
     <div className={`flex items-center ${className}`}>
       <img 
         src={imgSrc} 
         alt="VOVON Logo" 
-        className={`h-full w-auto object-contain ${variant === 'light' ? 'filter drop-shadow-[0_1px_4px_rgba(255,255,255,0.7)]' : ''}`}
+        key={variant}
+        className={`h-full w-auto object-contain transition-all duration-200 ${variant === 'light' ? 'filter drop-shadow-[0_1px_4px_rgba(255,255,255,0.7)]' : ''}`}
         onError={(e) => {
           e.currentTarget.style.display = 'none';
           const fallback = e.currentTarget.nextElementSibling as HTMLElement;
