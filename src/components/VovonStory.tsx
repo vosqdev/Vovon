@@ -33,7 +33,7 @@ const VovonStory = ({ language }: VovonStoryProps) => {
   ];
 
   return (
-    <section className="py-24 md:py-32 bg-slate-50/70 border-t border-slate-200/80">
+    <section id="story" className="py-24 md:py-32 bg-slate-50/70 border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
