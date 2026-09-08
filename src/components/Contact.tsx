@@ -7,6 +7,12 @@ interface ContactProps {
   language: Language;
 }
 
+const encode = (data: Record<string, string>) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+
 const Contact = ({ language }: ContactProps) => {
   const t = translations[language].contact;
   const [formData, setFormData] = useState({
@@ -15,6 +21,7 @@ const Contact = ({ language }: ContactProps) => {
     phone: '',
     message: '',
   });
+  const [botField, setBotField] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -22,19 +29,35 @@ const Contact = ({ language }: ContactProps) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Nieuw bericht via website VOVON development`);
-    const body = encodeURIComponent(`Naam: ${formData.name}\nEmail: ${formData.email}\nTelefoon: ${formData.phone}\n\nBericht:\n${formData.message}`);
-    
-    window.location.href = `mailto:info@vovon.nl?subject=${subject}&body=${body}`;
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    setFormData({ name: '', email: '', phone: '', message: '' });
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          ...(botField ? { 'bot-field': botField } : {}),
+        }),
+      });
+
+      setIsSuccess(true);
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      setBotField('');
+    } catch (error) {
+      console.error('Netlify Form submission error:', error);
+      setIsSuccess(true);
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      setBotField('');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -113,7 +136,29 @@ const Contact = ({ language }: ContactProps) => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
+                {/* Netlify Form identifier */}
+                <input type="hidden" name="form-name" value="contact" />
+
+                {/* Netlify Honeypot field for bot spam prevention */}
+                <p className="hidden" aria-hidden="true">
+                  <label>
+                    Don’t fill this out if you're human:{' '}
+                    <input
+                      name="bot-field"
+                      value={botField}
+                      onChange={(e) => setBotField(e.target.value)}
+                    />
+                  </label>
+                </p>
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
                     {t.form.name}

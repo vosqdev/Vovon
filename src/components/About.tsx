@@ -1,6 +1,4 @@
 import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Language, translations } from '../translations';
 
 interface AboutProps {
@@ -108,29 +106,11 @@ const About = ({ language }: AboutProps) => {
               <div className="relative">
                 <div className="aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-slate-900">
                   <img
-                    src="https://www.image2url.com/r2/default/images/1788086485348-dd731234-bfd7-4db2-b4d3-97b0f1df214d.jpg"
+                    src="https://www.image2url.com/r2/default/images/1788503359695-aefa0cc2-81e4-4916-9a4f-f341ea8f9d5f.png"
                     alt="Over VOVON - De weg naar NetZero"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                     referrerPolicy="no-referrer"
                   />
-                </div>
-
-                {/* Refined Image Caption / Profile Link */}
-                <div className="mt-3 flex items-center justify-between text-xs text-slate-400 pt-2.5 border-t border-white/15">
-                  <div>
-                    <span className="font-semibold text-white">Patrick Vos</span>
-                    <span className="mx-1.5 text-slate-600">·</span>
-                    <span>{t.founderRole}</span>
-                  </div>
-                  <Link
-                    to="/cv"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-vovon-400 font-semibold hover:text-vovon-300 transition-colors group"
-                  >
-                    <span>{t.viewProfile}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </Link>
                 </div>
               </div>
             </motion.div>
