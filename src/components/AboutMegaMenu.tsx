@@ -33,10 +33,10 @@ export const AboutMegaMenu: React.FC<AboutMegaMenuProps> = ({
     title: isNl ? 'Over VOVON' : 'About VOVON',
     card1: {
       tag: isNl ? 'VOVON OPRICHTER' : 'VOVON FOUNDER',
-      title: isNl ? 'Maak kennis met Patrick Vos' : 'Meet Patrick Vos & the team',
-      badge: isNl ? 'Bekijk CV & Profiel' : 'View CV & Profile',
-      href: '/cv',
-      isExternal: true,
+      title: isNl ? 'Maak kennis met Patrick Vos' : 'Meet Patrick Vos',
+      badge: isNl ? 'Lees over mij' : 'Read about me',
+      href: '/over-mij',
+      isExternal: false,
       image: 'https://www.image2url.com/r2/default/images/1788503359695-aefa0cc2-81e4-4916-9a4f-f341ea8f9d5f.png',
     },
     card2: {

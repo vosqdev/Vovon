@@ -22,7 +22,9 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
   const location = useLocation();
   const isNavPage = 
     location.pathname === '/faq' || 
-    location.pathname === '/cv';
+    location.pathname === '/cv' ||
+    location.pathname === '/over-mij' ||
+    location.pathname === '/over-patrick';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -242,6 +244,13 @@ const Navbar = ({ language, setLanguage }: NavbarProps) => {
                       {/* Mobile Accordion Submenu */}
                       {mobileAboutExpanded && (
                         <div className="pl-6 pr-3 pb-3 space-y-2 bg-slate-50/70 rounded-lg mb-2">
+                          <Link
+                            to="/over-mij"
+                            onClick={() => setIsOpen(false)}
+                            className="block py-1.5 text-sm text-vovon-600 hover:text-vovon-700 font-semibold"
+                          >
+                            {language === 'nl' ? '• Over Patrick Vos (Oprichter)' : '• About Patrick Vos (Founder)'}
+                          </Link>
                           <Link
                             to="/#about"
                             onClick={() => setIsOpen(false)}

@@ -431,14 +431,23 @@ export default function CVPage({ language }: CVPageProps) {
   return (
     <div className="min-h-screen bg-slate-50 pt-28 pb-16 print:bg-white print:p-0 print:pt-0">
       {/* Action Bar (Hidden when printing) */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 flex justify-between items-center print:hidden">
-        <Link 
-          to="/"
-          className="inline-flex items-center text-sm font-bold text-slate-600 hover:text-vovon-600 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4 mr-1.5" />
-          {t.back}
-        </Link>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 flex flex-wrap gap-3 justify-between items-center print:hidden">
+        <div className="flex items-center gap-4">
+          <Link 
+            to="/"
+            className="inline-flex items-center text-sm font-bold text-slate-600 hover:text-vovon-600 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4 mr-1.5" />
+            {t.back}
+          </Link>
+          <span className="text-slate-300">|</span>
+          <Link 
+            to="/over-mij"
+            className="inline-flex items-center text-xs font-bold text-vovon-600 hover:text-vovon-700 bg-vovon-50 hover:bg-vovon-100 px-3 py-1.5 rounded-lg border border-vovon-200/80 transition-colors"
+          >
+            {language === 'nl' ? '← Lees over Patrick' : '← Read about Patrick'}
+          </Link>
+        </div>
         <button 
           onClick={handlePrint}
           className="inline-flex items-center gap-2 px-4 py-2 bg-vovon-600 text-white rounded-xl shadow-md hover:bg-vovon-700 font-bold text-sm transition-all hover:scale-105 active:scale-95 cursor-pointer"
