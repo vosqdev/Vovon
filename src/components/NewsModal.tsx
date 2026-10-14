@@ -159,7 +159,7 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                     <div className="my-8">
                       <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-950 relative group">
                         <img 
-                          src="https://www.image2url.com/r2/default/images/1791987396183-f868fa8c-1b3b-43c8-a8ec-3990d18ceea4.png" 
+                          src="https://www.image2url.com/r2/default/images/1791987482180-eff74d7a-6957-48fe-8d04-659b41c6a327.png" 
                           alt="Integraal energiesysteem gebiedsontwikkeling" 
                           className="w-full h-72 sm:h-96 object-cover object-center brightness-[0.80] contrast-[1.05] group-hover:scale-102 transition-transform duration-700" 
                         />
