@@ -12,6 +12,7 @@ interface NewsModalProps {
     title: string;
     image: string;
     content?: string[];
+    author?: string;
   } | null;
 }
 
@@ -52,11 +53,17 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
               </div>
 
               <div className="p-8 sm:p-12">
-                <div className="flex items-center space-x-4 mb-6">
+                <div className="flex flex-wrap items-center gap-3 mb-6">
                   <span className="bg-slate-100 px-3 py-1 text-sm font-bold text-slate-900 rounded-full">
                     {item.type}
                   </span>
                   <span className="text-sm font-bold text-slate-500">{item.date}</span>
+                  {item.author && (
+                    <>
+                      <span className="text-slate-300">·</span>
+                      <span className="text-sm font-semibold text-slate-700">{item.author}</span>
+                    </>
+                  )}
                 </div>
                 
                 <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-8 leading-tight">
@@ -95,7 +102,7 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                         &ldquo;De toekomst van onze warmtevoorziening verandert. Nieuwe inzichten van het Planbureau voor de Leefomgeving (PBL) en recente voorstellen van de Autoriteit Consument &amp; Markt (ACM) maken duidelijk dat niet alleen de warmtebron, maar vooral de samenhang tussen verwarmen, koelen, elektriciteitsverbruik en netcapaciteit bepalend wordt voor een toekomstbestendige gebiedsontwikkeling.&rdquo;
                       </p>
                       <div className="pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-medium relative z-10">
-                        <span>Auteur: Ing. Henk Jan Vos — VOVON development</span>
+                        <span>Auteur: Ing. Patrick Vos — VOVON development</span>
                         <span className="text-slate-500">Gepubliceerd: 11 oktober 2026</span>
                       </div>
                     </div>
@@ -480,6 +487,9 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                         <h4 className="text-lg font-bold text-slate-900">
                           VOVON development
                         </h4>
+                        <p className="text-xs font-semibold text-slate-800">
+                          Auteur: Ing. Patrick Vos — VOVON development
+                        </p>
                         <p className="text-xs sm:text-sm text-slate-600 font-medium">
                           Gebiedsontwikkeling | Vastgoed | Energie
                         </p>

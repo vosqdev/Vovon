@@ -27,6 +27,7 @@ interface NewsItem {
   content?: string[];
   readTime?: string;
   lead?: string;
+  author?: string;
 }
 
 const dummyItems: NewsItem[] = [
@@ -34,6 +35,7 @@ const dummyItems: NewsItem[] = [
     id: '13',
     type: 'article',
     date: '11 oktober 2026',
+    author: 'Ing. Patrick Vos — VOVON development',
     readTime: '7 min leestijd',
     title: 'De warmtetransitie vraagt om een nieuwe rekensom: van warmtenet naar integraal energiesysteem',
     image: 'https://www.image2url.com/r2/default/images/1791987396183-f868fa8c-1b3b-43c8-a8ec-3990d18ceea4.png',
@@ -433,6 +435,12 @@ const News = ({ language }: NewsProps) => {
                         </span>
                         <span className="text-slate-300">/</span>
                         <span>{featuredItem.date}</span>
+                        {featuredItem.author && (
+                          <>
+                            <span className="text-slate-300">·</span>
+                            <span className="text-slate-700 font-semibold">{featuredItem.author}</span>
+                          </>
+                        )}
                         {featuredItem.readTime && (
                           <>
                             <span className="text-slate-300">·</span>
