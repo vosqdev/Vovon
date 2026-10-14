@@ -2,7 +2,7 @@
   "dataset_name": "VOVON Projects",
   "source_file": "Projects VOVON.kml",
   "coordinate_system": "WGS84 (latitude/longitude)",
-  "project_count": 51,
+  "project_count": 60,
   "projects": [
     {
       "id": 1,
@@ -1066,6 +1066,27 @@
       ],
       "partners_items": [
         "Opdrachtgever Circul8 development"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Zerboltstraat Zwolle",
+      "latitude": 52.521165,
+      "longitude": 6.108246,
+      "project_context": "📍 Zwolle – Diezerpoort: Voor de herstructurering van de Zerboltstraat in Zwolle adviseert VOVON woningcorporatie deltaWonen over een toekomstbestendig energieconcept voor 241 woningen, verdeeld over vier bouwblokken. Centraal staat de integrale afstemming tussen sloop-nieuwbouw, stedenbouw, duurzame warmtevoorziening, netcapaciteit en mobiliteit. VOVON gaf advies hoe een all-electric energieconcept ruimtelijk, technisch en economisch haalbaar kan worden ingepast, met aandacht voor betaalbare woonlasten, slimme energieoplossingen en een gefaseerde realisatie.",
+      "planperiode": "Verkenning & planvorming",
+      "programma_items": [
+        "woningbouw: 241 woningen (verdeeld over 4 bouwblokken)",
+        "voorzieningen: all-electric energieconcept, netbewuste laadinfra & slimme energiesturing",
+        "(openbaar)gebied: herstructurering Diezerpoort met integrale afstemming sloop-nieuwbouw"
+      ],
+      "ambitie_items": [
+        "Netbewuste woningbouwontwikkeling en duurzame warmtevoorziening afgestemd op beschikbare netcapaciteit",
+        "Betaalbare woonlasten, ruimtelijke inpassing van energieassets en gefaseerde realisatie"
+      ],
+      "partners_items": [
+        "Opdrachtgever deltaWonen",
+        "Rol VOVON: Energieconceptontwikkeling, netbewust bouwen en ruimtelijk-technisch advies"
       ]
     }
   ]

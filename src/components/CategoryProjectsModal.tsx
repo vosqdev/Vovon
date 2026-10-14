@@ -56,6 +56,7 @@ const getProjectsForCategory = (category: string) => {
   });
 
   if (normalizedCategory === 'wonen' || normalizedCategory === 'woningbouw') {
+    const zerbolt = filtered.find((p: any) => (p.name || '').toLowerCase().includes('zerbolt'));
     const trefpunt = filtered.find((p: any) => (p.name || '').toLowerCase().includes('trefpunt'));
     const dijkjes = filtered.find((p: any) => (p.name || '').toLowerCase().includes('dijkjes'));
     const viventra = filtered.find((p: any) => (p.name || '').toLowerCase().includes('viventra'));
@@ -64,10 +65,11 @@ const getProjectsForCategory = (category: string) => {
     
     filtered = filtered.filter((p: any) => {
       const name = (p.name || '').toLowerCase();
-      return !name.includes('trefpunt') && !name.includes('dijkjes') && !name.includes('viventra') && !name.includes('sportfondsen') && !name.includes('soesterhof');
+      return !name.includes('zerbolt') && !name.includes('trefpunt') && !name.includes('dijkjes') && !name.includes('viventra') && !name.includes('sportfondsen') && !name.includes('soesterhof');
     });
     
-    // Place them at index 1 and 2 (so they are 2nd and 3rd)
+    // Place Zerboltstraat prominently at the top
+    if (zerbolt) filtered.unshift(zerbolt);
     if (trefpunt) filtered.splice(1, 0, trefpunt);
     if (dijkjes) filtered.splice(2, 0, dijkjes);
     if (viventra) filtered.splice(3, 0, viventra);

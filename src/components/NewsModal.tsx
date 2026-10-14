@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Compass, Globe, Zap, Cpu, Battery, Users, Clock, CheckCircle2, Building2, ShieldAlert, FileText, ArrowRight, Scale, ListOrdered, AlertTriangle, Calendar, ExternalLink, Info, CheckCircle, AlertCircle, Sparkles } from 'lucide-react';
+import { X, Compass, Globe, Zap, Cpu, Battery, Users, Clock, CheckCircle2, Building2, ShieldAlert, FileText, ArrowRight, Scale, ListOrdered, AlertTriangle, Calendar, ExternalLink, Info, CheckCircle, AlertCircle, Sparkles, Flame, ThermometerSnowflake, Layers, Network, ArrowUpRight } from 'lucide-react';
 
 interface NewsModalProps {
   isOpen: boolean;
@@ -63,7 +63,447 @@ export default function NewsModal({ isOpen, onClose, item }: NewsModalProps) {
                   {item.title}
                 </h2>
 
-                {item.id === '12' ? (
+                {item.id === '13' ? (
+                  <div className="space-y-12 text-slate-700">
+                    
+                    {/* Header Badges & Source info */}
+                    <div className="flex flex-wrap items-center justify-between gap-3 p-4 bg-slate-900 text-white rounded-2xl shadow-md border border-slate-800">
+                      <div className="flex items-center gap-2.5">
+                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span className="text-xs font-bold uppercase tracking-wider text-slate-200">
+                          VOVON development | Nieuws &amp; inzichten | 11 oktober 2026
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">
+                          7 min leestijd
+                        </span>
+                        <span className="text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                          Warmtetransitie &amp; Energie
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Executive Intro Lead Callout */}
+                    <div className="p-6 sm:p-8 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white rounded-3xl shadow-xl space-y-4 border border-slate-800/80 relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-80 h-80 bg-vovon-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+                      <div className="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-widest relative z-10">
+                        <Zap className="w-4 h-4 fill-amber-400 text-amber-400" />
+                        <span>Kerninzicht &amp; Beleidskader</span>
+                      </div>
+                      <p className="text-base sm:text-lg leading-relaxed text-slate-100 font-medium relative z-10 italic">
+                        &ldquo;De toekomst van onze warmtevoorziening verandert. Nieuwe inzichten van het Planbureau voor de Leefomgeving (PBL) en recente voorstellen van de Autoriteit Consument &amp; Markt (ACM) maken duidelijk dat niet alleen de warmtebron, maar vooral de samenhang tussen verwarmen, koelen, elektriciteitsverbruik en netcapaciteit bepalend wordt voor een toekomstbestendige gebiedsontwikkeling.&rdquo;
+                      </p>
+                      <div className="pt-3 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 font-medium relative z-10">
+                        <span>Auteur: Ing. Henk Jan Vos — VOVON development</span>
+                        <span className="text-slate-500">Gepubliceerd: 11 oktober 2026</span>
+                      </div>
+                    </div>
+
+                    {/* Section 1: Van aardgasvrij naar toekomstbestendig */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-vovon-100 text-vovon-700 flex items-center justify-center font-bold text-lg">
+                          01
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                          Van aardgasvrij naar toekomstbestendig
+                        </h3>
+                      </div>
+                      <div className="space-y-4 text-base leading-relaxed text-slate-700 pl-0 sm:pl-13">
+                        <p>
+                          Het PBL heeft op 7 oktober 2026 de geactualiseerde Startanalyse Aardgasvrije Buurten gepubliceerd. Een belangrijke verandering is dat klimaatneutraal gas, waaronder groen gas, in het eindbeeld van de gebouwde omgeving een veel beperktere rol krijgt.
+                        </p>
+                        <p>
+                          Daarmee komt een fundamentele vraag nadrukkelijker op tafel: welke warmte-infrastructuur is op de lange termijn technisch, economisch én maatschappelijk houdbaar?
+                        </p>
+                        <p>
+                          De discussie gaat daarbij niet uitsluitend over de keuze tussen een warmtenet of een individuele warmtepomp. Het gaat over de ontwikkeling van een energiesysteem dat ook over twintig of dertig jaar betaalbaar, flexibel en betrouwbaar functioneert.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Section 2: Warmtenetten: een investering voor decennia */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-vovon-100 text-vovon-700 flex items-center justify-center font-bold text-lg">
+                          02
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                          Warmtenetten: een investering voor decennia
+                        </h3>
+                      </div>
+                      <div className="space-y-4 text-base leading-relaxed text-slate-700 pl-0 sm:pl-13">
+                        <p>
+                          Hoge- en middentemperatuurwarmtenetten (HT/MT) kunnen onder de juiste omstandigheden een efficiënte oplossing zijn, met name in dichtbebouwde gebieden met voldoende warmtevraag en een betrouwbare, betaalbare warmtebron.
+                        </p>
+                        <p>
+                          Tegelijkertijd kennen deze systemen een structurele kwetsbaarheid: de businesscase is sterk afhankelijk van voldoende en langdurige warmteafname.
+                        </p>
+                        <p>
+                          Naarmate gebouwen beter worden geïsoleerd, neemt de warmtevraag af. Bovendien groeit de behoefte aan actieve koeling. Bewoners kunnen daardoor besluiten een eigen airco of lucht-luchtwarmtepomp te installeren.
+                        </p>
+                        <p>
+                          Dat heeft een interessant neveneffect. Een installatie die aanvankelijk uitsluitend voor koeling wordt aangeschaft, kan in het voor- en najaar ook efficiënt verwarmen.
+                        </p>
+                        <p>
+                          Wanneer een steeds groter deel van de warmtevraag buiten het collectieve warmtenet wordt ingevuld, kunnen de vaste infrastructuurkosten over minder geleverde gigajoules worden verdeeld. Daarmee ontstaat het risico op een negatieve economische spiraal: minder warmteafname, hogere kosten per eenheid en een verdere afname van de aantrekkelijkheid.
+                        </p>
+                        <p className="p-4 bg-amber-50 border-l-4 border-amber-500 rounded-r-xl text-slate-800 font-medium">
+                          Dit is geen onvermijdelijk scenario voor ieder warmtenet, maar wel een risico dat bij investeringsbeslissingen expliciet moet worden doorgerekend.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Afbeelding boven het vergelijkingsoverzicht met donker filter */}
+                    <div className="my-8">
+                      <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200/80 bg-slate-950 relative group">
+                        <img 
+                          src="https://www.image2url.com/r2/default/images/1791987396183-f868fa8c-1b3b-43c8-a8ec-3990d18ceea4.png" 
+                          alt="Integraal energiesysteem gebiedsontwikkeling" 
+                          className="w-full h-72 sm:h-96 object-cover object-center brightness-[0.80] contrast-[1.05] group-hover:scale-102 transition-transform duration-700" 
+                        />
+                        {/* Subtiel donker overlay filter voor premium contrast */}
+                        <div className="absolute inset-0 bg-slate-950/25 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent pointer-events-none"></div>
+                        <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-white pointer-events-none">
+                          <span className="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-slate-900/90 text-amber-300 backdrop-blur-md mb-2 inline-block border border-slate-700/80 shadow-sm">
+                            Integraal Energiesysteem &amp; Gebiedsontwikkeling
+                          </span>
+                          <p className="text-xs sm:text-sm text-slate-200 font-medium drop-shadow-md">
+                            Samenhang tussen warmtebronnen, koudevraag, gebouwisolatie en netcapaciteit in de praktijk.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Visual System Comparison Grid */}
+                    <div className="my-8">
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200/80 space-y-2">
+                          <div className="flex items-center gap-2 text-rose-700 font-bold text-xs uppercase tracking-wider">
+                            <Flame className="w-4 h-4" />
+                            <span>HT / MT Warmtenetten</span>
+                          </div>
+                          <p className="text-xs text-slate-600 leading-relaxed">
+                            Collectief leidingnet. Gevoelig voor vraaguitval bij vergaande isolatie; levert doorgaans géén actieve seizoenskoeling.
+                          </p>
+                        </div>
+                        <div className="p-4 bg-emerald-50/70 rounded-2xl border border-emerald-200/80 space-y-2">
+                          <div className="flex items-center gap-2 text-emerald-700 font-bold text-xs uppercase tracking-wider">
+                            <ThermometerSnowflake className="w-4 h-4" />
+                            <span>ZLT &amp; WKO Netten</span>
+                          </div>
+                          <p className="text-xs text-slate-600 leading-relaxed">
+                            Zeer lage temperatuur met warmte- en koudeopslag. Ideaal voor uitwisseling tussen wonen, werken en seizoensbuffering.
+                          </p>
+                        </div>
+                        <div className="p-4 bg-blue-50/70 rounded-2xl border border-blue-200/80 space-y-2">
+                          <div className="flex items-center gap-2 text-blue-700 font-bold text-xs uppercase tracking-wider">
+                            <Zap className="w-4 h-4" />
+                            <span>All-Electric &amp; Flexibiliteit</span>
+                          </div>
+                          <p className="text-xs text-slate-600 leading-relaxed">
+                            Warmtepompen met slimme sturing, batterij-opslag en dynamische respons op nieuwe tijdsafhankelijke ACM-nettarieven.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Section 3: Koeling verandert de businesscase */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-vovon-100 text-vovon-700 flex items-center justify-center font-bold text-lg">
+                          03
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                          Koeling verandert de businesscase
+                        </h3>
+                      </div>
+                      <div className="space-y-4 text-base leading-relaxed text-slate-700 pl-0 sm:pl-13">
+                        <p>
+                          De warmtetransitie wordt nog te vaak uitsluitend benaderd als een verwarmingsvraagstuk. Maar door beter geïsoleerde gebouwen, warmere zomers en toenemende comforteisen wordt koeling een steeds belangrijker onderdeel van de energievoorziening.
+                        </p>
+                        <p>
+                          Daarmee verandert ook de vergelijking tussen collectieve en individuele oplossingen.
+                        </p>
+                        <p>
+                          Een warmtepomp kan, afhankelijk van het gekozen afgiftesysteem, zowel verwarmen als koelen. Zeerlagetemperatuurnetten (ZLT), bijvoorbeeld in combinatie met warmte-koudeopslag (WKO), bieden daarnaast mogelijkheden om warmte en koude tussen gebouwen en seizoenen uit te wisselen.
+                        </p>
+                        <p>
+                          Voor nieuwe gebiedsontwikkelingen is daarom de vraag niet alleen hoeveel warmte een wijk nodig heeft, maar vooral hoe de totale energiebehoefte zich gedurende het jaar ontwikkelt.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Section 4: ACM verandert de spelregels: vanaf 2028 en 2029 */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-lg">
+                          04
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                          ACM verandert de spelregels: vanaf 2028 en 2029
+                        </h3>
+                      </div>
+                      <div className="space-y-4 text-base leading-relaxed text-slate-700 pl-0 sm:pl-13">
+                        <p>
+                          Op 8 oktober 2026 publiceerde de ACM twee ontwerpbesluiten voor nieuwe tijdsafhankelijke transporttarieven voor elektriciteit.
+                        </p>
+                        <p>
+                          Deze voorstellen zijn bijzonder relevant voor vastgoedontwikkeling, collectieve energiesystemen en de exploitatie van warmte- en koudevoorzieningen.
+                        </p>
+                        <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                          <p className="font-bold text-slate-900">
+                            Voor grootverbruikers op regionale elektriciteitsnetten is invoering voorzien per 1 januari 2028.
+                          </p>
+                          <p className="text-sm text-slate-600">
+                            Het transporttarief wordt daarbij afhankelijk van het moment waarop het elektriciteitsnet wordt gebruikt. Elektriciteitsafname op drukke momenten wordt relatief duurder dan op rustige momenten.
+                          </p>
+                        </div>
+                        <div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl space-y-2">
+                          <p className="font-bold text-slate-900">
+                            Voor kleinverbruikers, waaronder huishoudens en kleine bedrijven met een aansluiting tot en met 3×80 ampère, is invoering voorzien per 1 januari 2029.
+                          </p>
+                          <p className="text-sm text-slate-600">
+                            Volgens het voorstel blijft gemiddeld een derde van het transporttarief vast en wordt twee derde afhankelijk van het elektriciteitsverbruik en het tijdstip daarvan.
+                          </p>
+                        </div>
+                        <p>
+                          Hiermee verandert de economische logica van elektrificatie.
+                        </p>
+                        <p>
+                          Niet uitsluitend het jaarlijkse elektriciteitsverbruik bepaalt straks de netkosten, maar ook het moment waarop elektriciteit wordt afgenomen.
+                        </p>
+                        <p>
+                          Een warmtepomp die slim wordt aangestuurd, een elektrische auto die buiten de piekuren wordt geladen of een collectief energiesysteem dat pieken kan beperken, krijgt daarmee een andere economische positie dan een installatie zonder flexibiliteit.
+                        </p>
+                        <p>
+                          De ACM verwacht op basis van berekeningen van netbeheerders dat de nieuwe kleinverbruikerstarieven de huishoudelijke piekbelasting met circa 10% kunnen verlagen. Dat zou ruimte kunnen creëren voor ongeveer 700.000 extra woningaansluitingen zonder directe netuitbreiding.
+                        </p>
+                        <p className="text-xs text-slate-500 italic">
+                          De ontwerpbesluiten zijn nog niet definitief.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* DEDICATED IMAGE SPACE 2: Modern Urban Grid & Timeline Infographic */}
+                    <div className="my-8 space-y-4">
+                      {/* ACM Key Timeline Card */}
+                      <div className="p-6 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white rounded-3xl shadow-xl border border-slate-700/80 space-y-5">
+                        <div className="flex items-center justify-between flex-wrap gap-2">
+                          <div className="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-widest">
+                            <Clock className="w-4 h-4" />
+                            <span>Tijdlijn &amp; Capaciteitswinst ACM</span>
+                          </div>
+                          <span className="text-xs px-3 py-1 bg-amber-500/20 text-amber-300 font-semibold rounded-full border border-amber-500/30">
+                            Ontwerpbesluiten 8 okt 2026
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                          <div className="p-4 bg-slate-800/90 rounded-2xl border border-slate-700">
+                            <span className="text-xs text-amber-400 font-bold block mb-1">1 januari 2028</span>
+                            <h4 className="text-sm font-bold text-white mb-1">Grootverbruikers</h4>
+                            <p className="text-xs text-slate-300">Tijdsafhankelijke transporttarieven op regionale netten; piek vs. dal prikkels.</p>
+                          </div>
+                          <div className="p-4 bg-slate-800/90 rounded-2xl border border-slate-700">
+                            <span className="text-xs text-amber-400 font-bold block mb-1">1 januari 2029</span>
+                            <h4 className="text-sm font-bold text-white mb-1">Kleinverbruikers (&le; 3&times;80A)</h4>
+                            <p className="text-xs text-slate-300">1/3 vast, 2/3 tijds- en verbruiksafhankelijk. Stimulans voor slimme laadpalen en warmtepompen.</p>
+                          </div>
+                          <div className="p-4 bg-amber-500/10 rounded-2xl border border-amber-500/30">
+                            <span className="text-xs text-amber-300 font-bold block mb-1">+700.000 Woningen</span>
+                            <h4 className="text-sm font-bold text-white mb-1">Netwinst door 10% Piekverlaging</h4>
+                            <p className="text-xs text-slate-300">Netruimte voor honderdduizenden extra aansluitingen zonder onmiddellijke netverzwaring.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Photo 2 */}
+                      <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-900 relative group">
+                        <img 
+                          src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=85" 
+                          alt="Elektriciteitsinfrastructuur en netcapaciteit" 
+                          className="w-full h-64 sm:h-80 object-cover object-center group-hover:scale-102 transition-transform duration-700" 
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+                        <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 text-white pointer-events-none">
+                          <span className="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-slate-800/90 text-amber-300 backdrop-blur-md mb-2 inline-block border border-slate-700">
+                            Netcapaciteit &amp; Stuurbaar Vermogen
+                          </span>
+                          <p className="text-xs sm:text-sm text-slate-200 font-medium drop-shadow-md">
+                            Het transporttarief wordt afhankelijk van het tijdstip van gebruik. Flexibiliteit in het ontwerp voorkomt onnodige netcongestie.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Section 5: Wat betekent dit voor warmtenetten? */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-vovon-100 text-vovon-700 flex items-center justify-center font-bold text-lg">
+                          05
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                          Wat betekent dit voor warmtenetten?
+                        </h3>
+                      </div>
+                      <div className="space-y-4 text-base leading-relaxed text-slate-700 pl-0 sm:pl-13">
+                        <p>
+                          De nieuwe nettarieven maken de afweging tussen warmtenetten en warmtepompen complexer, maar ook interessanter.
+                        </p>
+                        <p>
+                          Een collectief warmtesysteem met grote elektrische warmtepompen kan profiteren van slim gestuurde productie, thermische buffers en warmteopslag. Daarmee kan de elektriciteitsvraag deels worden verschoven naar momenten waarop het net minder zwaar wordt belast.
+                        </p>
+                        <p>
+                          Anderzijds kunnen individuele warmtepompen, in combinatie met woningisolatie, thermische massa, slimme sturing en eventueel opslag, eveneens bijdragen aan flexibel netgebruik.
+                        </p>
+                        <p>
+                          Het is daarom te eenvoudig om te stellen dat collectieve warmte altijd netvriendelijker is dan individuele elektrificatie, of andersom.
+                        </p>
+                        <p className="font-semibold text-slate-900">
+                          De werkelijke vergelijking moet plaatsvinden op basis van gelijktijdigheid, piekvermogen, lokale netcapaciteit, flexibiliteit, investeringskosten, exploitatiekosten en de uiteindelijke woonlasten.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Section 6: Van warmteoplossing naar gebiedsenergiesysteem */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-vovon-100 text-vovon-700 flex items-center justify-center font-bold text-lg">
+                          06
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                          Van warmteoplossing naar gebiedsenergiesysteem
+                        </h3>
+                      </div>
+                      <div className="space-y-4 text-base leading-relaxed text-slate-700 pl-0 sm:pl-13">
+                        <p>
+                          Bij VOVON development zien wij de warmtetransitie nadrukkelijk als onderdeel van een bredere ruimtelijke en energetische opgave.
+                        </p>
+                        <p>
+                          De ontwikkeling van een nieuwe woonwijk, de herstructurering van een bestaande buurt of de verduurzaming van een bedrijventerrein vraagt om een integrale benadering.
+                        </p>
+                        <p>
+                          Daarin worden warmte, koude, elektriciteit, mobiliteit, opslag en netcapaciteit vanaf de eerste planfase met elkaar verbonden.
+                        </p>
+                        <p>
+                          Dat betekent dat bij gebiedsontwikkeling niet alleen de energieprestatie van individuele gebouwen wordt beoordeeld, maar ook de gezamenlijke impact op het energiesysteem.
+                        </p>
+                        <p>
+                          Denk aan de combinatie van warmtepompen, collectieve warmte-koudeopslag, laadinfrastructuur, zonnepanelen, batterijen en slimme energiesturing.
+                        </p>
+                        <p>
+                          Juist de onderlinge samenhang kan bepalend zijn voor de benodigde aansluitcapaciteit, de haalbaarheid bij netcongestie en de totale maatschappelijke kosten.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Section 7: De laagste energierekening begint bij het ontwerp */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-vovon-100 text-vovon-700 flex items-center justify-center font-bold text-lg">
+                          07
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                          De laagste energierekening begint bij het ontwerp
+                        </h3>
+                      </div>
+                      <div className="space-y-4 text-base leading-relaxed text-slate-700 pl-0 sm:pl-13">
+                        <p>
+                          Voor gemeenten, woningcorporaties, ontwikkelaars en beleggers ligt hier een belangrijke verantwoordelijkheid.
+                        </p>
+                        <p>
+                          Een energiesysteem dat vandaag aantrekkelijk lijkt vanwege beperkte initiële investeringen, kan op termijn duur blijken door hoge vaste lasten, beperkte flexibiliteit of onvoldoende mogelijkheden voor koeling.
+                        </p>
+                        <p>
+                          Omgekeerd kan een hogere initiële investering in een flexibel energiesysteem zich terugverdienen door lagere exploitatiekosten, betere benutting van netcapaciteit en toekomstbestendigheid.
+                        </p>
+                        <p>
+                          Daarom zouden alternatieven voor warmtevoorziening niet alleen op basis van investeringskosten of kosten per gigajoule moeten worden beoordeeld, maar op de integrale kosten over de levensduur van het systeem.
+                        </p>
+                        <p className="font-semibold text-slate-900">
+                          Daarbij horen nadrukkelijk ook de woonlasten van bewoners.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Section 8: Onze conclusie: niet de warmtetechniek, maar het energiesysteem moet centraal staan */}
+                    <div className="space-y-5">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-lg">
+                          08
+                        </div>
+                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                          Onze conclusie: niet de warmtetechniek, maar het energiesysteem moet centraal staan
+                        </h3>
+                      </div>
+                      <div className="space-y-4 text-base leading-relaxed text-slate-700 pl-0 sm:pl-13">
+                        <p>
+                          De toekomst van de warmtevoorziening is geen keuze tussen uitsluitend warmtenetten of individuele warmtepompen.
+                        </p>
+                        <p>
+                          Beide kunnen onderdeel zijn van een toekomstbestendig energiesysteem. De vraag is welke combinatie op een specifieke locatie de beste prestaties levert op betaalbaarheid, leveringszekerheid, duurzaamheid, comfort en netbelasting.
+                        </p>
+                        <p>
+                          De nieuwe ACM-tarieven versterken het belang van flexibiliteit en maken het noodzakelijk om verder te kijken dan de traditionele warmtebusinesscase.
+                        </p>
+                        <p>
+                          Wie vandaag een gebied ontwikkelt zonder rekening te houden met koeling, elektrische mobiliteit, piekbelasting en toekomstige nettarieven, loopt het risico een energiesysteem voor gisteren te bouwen.
+                        </p>
+                        <p className="font-medium text-slate-900">
+                          Bij VOVON development geloven wij daarom in netbewuste gebiedsontwikkeling, waarbij ruimte, energie en uitvoering vanaf het begin integraal worden ontworpen.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Core Motto & Quote Banner */}
+                    <div className="p-8 sm:p-10 bg-slate-900 text-white rounded-3xl shadow-xl text-center space-y-4 border border-slate-800 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-radial-gradient from-vovon-500/10 via-transparent to-transparent pointer-events-none"></div>
+                      <span className="text-xs font-bold uppercase tracking-widest text-amber-400 block">
+                        Kernvisie VOVON Development
+                      </span>
+                      <blockquote className="text-xl sm:text-2xl font-bold text-slate-100 italic tracking-tight">
+                        &ldquo;Zonder energie geen vastgoed en zonder visie geen gebied.&rdquo;
+                      </blockquote>
+                      <p className="text-xs text-slate-400 pt-2">
+                        Integraal regisseurschap in gebiedsontwikkeling, vastgoed en energietransitie
+                      </p>
+                    </div>
+
+                    {/* Signature & Advisory CTA Block */}
+                    <div className="p-8 bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl border border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+                      <div className="space-y-2 text-center sm:text-left">
+                        <div className="inline-block px-3 py-1 bg-vovon-100 text-vovon-800 text-xs font-bold rounded-lg uppercase tracking-wider">
+                          Deskundig advies &amp; haalbaarheid
+                        </div>
+                        <h4 className="text-lg font-bold text-slate-900">
+                          VOVON development
+                        </h4>
+                        <p className="text-xs sm:text-sm text-slate-600 font-medium">
+                          Gebiedsontwikkeling | Vastgoed | Energie
+                        </p>
+                        <p className="text-xs text-slate-500">
+                          Adviseert en ondersteunt gemeenten, woningcorporaties en ontwikkelende partijen bij de integrale koppeling tussen gebiedsontwikkeling, energie-infrastructuur en netcapaciteit.
+                        </p>
+                        <p className="text-xs font-bold text-vovon-700">
+                          www.vovon.nl
+                        </p>
+                      </div>
+                      <div className="shrink-0 flex flex-col items-center sm:items-end gap-3">
+                        <a
+                          href="#contact"
+                          onClick={onClose}
+                          className="inline-flex items-center gap-2 px-6 py-3 bg-vovon-600 hover:bg-vovon-700 text-white rounded-xl text-sm font-bold shadow-md hover:shadow-lg transition-all cursor-pointer"
+                        >
+                          <span>Neem direct contact op</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                ) : item.id === '12' ? (
                   <div className="space-y-12 text-slate-700">
                     
                     {/* Header Badges & Source info */}

@@ -94,7 +94,14 @@ export function formatProject(p: ProjectData, language: 'nl' | 'en' = 'nl'): For
     allText.includes('uitleg') ||
     allText.includes('mixed use');
 
-  if (isEnergy) {
+  const isZerbolt = nameLower.includes('zerboltstraat') || allText.includes('zerboltstraat');
+
+  if (isZerbolt) {
+    categoryKey = 'wonen';
+    iconType = 'home';
+    tags.push(language === 'nl' ? 'Netbewust wonen' : 'Grid-aware Housing');
+    tags.push(language === 'nl' ? 'Energieconcept' : 'Energy Concept');
+  } else if (isEnergy) {
     categoryKey = 'energie';
     iconType = 'energy';
     tags.push(language === 'nl' ? 'Energie & NetZero' : 'Energy & NetZero');
@@ -197,7 +204,15 @@ export function formatProject(p: ProjectData, language: 'nl' | 'en' = 'nl'): For
     rol = language === 'nl' ? 'Projectregie VOVON' : 'Project Direction VOVON';
   }
 
-  const isCompleted = Boolean(hasPlan);
+  const isOngoingStatus =
+    !hasPlan ||
+    p.planperiode!.toLowerCase().includes('verkenning') ||
+    p.planperiode!.toLowerCase().includes('onderzoek') ||
+    p.planperiode!.toLowerCase().includes('planvorming') ||
+    p.planperiode!.toLowerCase().includes('scouting') ||
+    p.planperiode!.toLowerCase().includes('lopend');
+
+  const isCompleted = Boolean(hasPlan) && !isOngoingStatus;
   const streetViewUrl = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${p.latitude},${p.longitude}`;
 
   return {
